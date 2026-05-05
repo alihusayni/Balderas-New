@@ -4,6 +4,7 @@ import { Anton, Geist, Geist_Mono } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
+import { SiteShell } from "@/components/site-shell";
 import { SiteHeader } from "@/components/site-header";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { SITE, getLocalBusinessJsonLd } from "@/lib/seo";
@@ -195,9 +196,13 @@ export default function RootLayout({
           zIndex={2000}
         />
         <SmoothScroll />
-        <SiteHeader />
+        <SiteShell>
+          <SiteHeader />
+        </SiteShell>
         {children}
-        <SiteFooter />
+        <SiteShell>
+          <SiteFooter />
+        </SiteShell>
       </body>
     </html>
   );
