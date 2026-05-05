@@ -28,18 +28,18 @@ export const SITE = {
   /** California C-21 contractor license number — fill when available. */
   c21LicenseNumber: "",
   telephone: "(714) 340-8108",
-  email: "",
+  email: "info@demolitionoc.com",
   address: {
     streetAddress: "",
-    addressLocality: "",
-    addressRegion: "",
+    addressLocality: "Tustin",
+    addressRegion: "CA",
     postalCode: "",
-    addressCountry: "",
+    addressCountry: "US",
   },
   /** Set when you have a verified office / yard location for maps rich results. */
   geo: {
-    latitude: null as number | null,
-    longitude: null as number | null,
+    latitude: 33.7459 as number | null,
+    longitude: -117.8265 as number | null,
   },
   areasServed: [
     "Tustin, CA",
