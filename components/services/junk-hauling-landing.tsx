@@ -86,7 +86,7 @@ export function JunkHaulingLanding() {
           priority
         />
 
-        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1400px] items-end px-6 pb-20 lg:px-10">
+        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1400px] items-end px-6 pb-[180px] lg:px-10">
           <div className="max-w-[920px] text-[var(--color-brand-white)]">
             <HeroHeading className="max-w-[920px]">
               Professional Junk Hauling Services Across Orange County
