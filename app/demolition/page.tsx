@@ -52,25 +52,34 @@ const demolitionBreadcrumbJsonLd = getBreadcrumbJsonLd([
 
 const DEMOLITION_CONTACT_FIELDS: ContactFormField[] = [
   {
-    id: "quote-name",
+    id: "name",
     label: "Name",
     type: "text",
     placeholder: "Your full name",
     width: "half",
   },
   {
-    id: "quote-address",
-    label: "Project Address",
+    id: "phone",
+    label: "Phone Number",
     type: "text",
-    placeholder: "Enter project address",
+    inputType: "tel",
+    placeholder: "Enter your phone number",
     width: "half",
   },
   {
-    id: "quote-demolition-type",
+    id: "email",
+    label: "Email Address",
+    type: "text",
+    inputType: "email",
+    placeholder: "Enter your email",
+    width: "half",
+  },
+  {
+    id: "service",
     label: "Type of Demolition Needed",
     type: "select",
     placeholder: "Select Demo needed",
-    width: "full",
+    width: "half",
     options: [
       { value: "interior-residential", label: "Interior Residential" },
       { value: "exterior-structural", label: "Exterior & Structural" },
@@ -78,18 +87,12 @@ const DEMOLITION_CONTACT_FIELDS: ContactFormField[] = [
     ],
   },
   {
-    id: "quote-budget",
-    label: "Budget",
-    type: "text",
-    placeholder: "Enter your budget",
-    width: "half",
-  },
-  {
-    id: "quote-timeline",
-    label: "Project Timeline",
-    type: "text",
-    placeholder: "Enter project timeline",
-    width: "half",
+    id: "message",
+    label: "Project Details",
+    type: "textarea",
+    placeholder: "Budget, timeline, address, or anything else we should know",
+    width: "full",
+    rows: 4,
   },
 ];
 

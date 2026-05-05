@@ -13,17 +13,61 @@ const RECIPIENT = process.env.CONTACT_EMAIL ?? "ali.h@toporganicleads.com";
 const SENDER =
   process.env.RESEND_FROM_EMAIL ?? "Balderas Demolition <onboarding@resend.dev>";
 
+/** Known field IDs → display labels */
+const LABEL_MAP: Record<string, string> = {
+  name: "Name",
+  phone: "Phone",
+  email: "Email",
+  service: "Service",
+  message: "Message",
+};
+
+function fieldLabel(key: string): string {
+  return (
+    LABEL_MAP[key] ??
+    key
+      .replace(/^(home-contact-|quote-|res-|int-|com-|con-|junk-|dumpster-)/, "")
+      .replace(/[-_]/g, " ")
+      .replace(/\b\w/g, (c) => c.toUpperCase())
+  );
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, phone, service, message } = body;
 
-    if (!name || !phone) {
+    // Extract core fields — try standard IDs first, then fall back to prefixed
+    const name =
+      body.name || body["home-contact-name"] || body["quote-name"] ||
+      body["res-name"] || body["int-name"] || body["com-name"] ||
+      body["con-name"] || body["junk-name"] || body["dumpster-name"] || "";
+    const phone =
+      body.phone || body["home-contact-phone"] || body["junk-phone"] ||
+      body["dumpster-phone"] || "";
+    const email = body.email || "";
+
+    if (!name) {
       return NextResponse.json(
-        { error: "Name and phone number are required." },
+        { error: "Name is required." },
         { status: 400 },
       );
     }
+
+    // Build rows for ALL submitted fields
+    const rows = Object.entries(body as Record<string, string>)
+      .filter(([, v]) => v && v.trim() !== "")
+      .map(
+        ([key, value]) => `
+          <tr>
+            <td style="padding: 12px 0; border-bottom: 1px solid #eee; font-weight: bold; width: 140px; color: #333; vertical-align: top;">${escapeHtml(fieldLabel(key))}</td>
+            <td style="padding: 12px 0; border-bottom: 1px solid #eee; color: #555;">${
+              key.includes("phone")
+                ? `<a href="tel:${escapeHtml(value)}" style="color: #dc5a31;">${escapeHtml(value)}</a>`
+                : escapeHtml(value)
+            }</td>
+          </tr>`,
+      )
+      .join("");
 
     const { data, error } = await getResend().emails.send({
       from: SENDER,
@@ -37,26 +81,7 @@ export async function POST(request: Request) {
           </div>
           <div style="padding: 24px; background: #f9f9f9;">
             <table style="width: 100%; border-collapse: collapse;">
-              <tr>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eee; font-weight: bold; width: 140px; color: #333;">Name</td>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eee; color: #555;">${escapeHtml(name)}</td>
-              </tr>
-              ${email ? `<tr>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eee; font-weight: bold; color: #333;">Email</td>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eee; color: #555;">${escapeHtml(email)}</td>
-              </tr>` : ""}
-              <tr>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eee; font-weight: bold; color: #333;">Phone</td>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eee; color: #555;"><a href="tel:${escapeHtml(phone)}" style="color: #dc5a31;">${escapeHtml(phone)}</a></td>
-              </tr>
-              ${service ? `<tr>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eee; font-weight: bold; color: #333;">Service</td>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eee; color: #555;">${escapeHtml(service)}</td>
-              </tr>` : ""}
-              ${message ? `<tr>
-                <td style="padding: 12px 0; font-weight: bold; color: #333; vertical-align: top;">Message</td>
-                <td style="padding: 12px 0; color: #555;">${escapeHtml(message)}</td>
-              </tr>` : ""}
+              ${rows}
             </table>
           </div>
           <div style="padding: 16px 24px; background: #06182C; text-align: center;">

@@ -19,14 +19,14 @@ export default function HomePage() {
   const [parallaxY, setParallaxY] = useState(0);
   const homeContactFields: ContactFormField[] = [
     {
-      id: "home-contact-name",
+      id: "name",
       label: "Name",
       type: "text",
       placeholder: "Your full name",
       width: "half",
     },
     {
-      id: "home-contact-phone",
+      id: "phone",
       label: "Phone Number",
       type: "text",
       inputType: "tel",
@@ -34,11 +34,19 @@ export default function HomePage() {
       width: "half",
     },
     {
-      id: "home-contact-service",
+      id: "email",
+      label: "Email Address",
+      type: "text",
+      inputType: "email",
+      placeholder: "Enter your email",
+      width: "half",
+    },
+    {
+      id: "service",
       label: "Service Needed",
       type: "select",
       placeholder: "Select service",
-      width: "full",
+      width: "half",
       options: [
         { value: "demolition", label: "Demolition" },
         { value: "junk-removal", label: "Junk Removal" },
@@ -46,7 +54,7 @@ export default function HomePage() {
       ],
     },
     {
-      id: "home-contact-message",
+      id: "message",
       label: "Message/Special Request",
       type: "textarea",
       placeholder: "Anything else we should know?",
