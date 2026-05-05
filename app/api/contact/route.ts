@@ -11,7 +11,7 @@ const RECIPIENT = process.env.CONTACT_EMAIL ?? "ali.h@toporganicleads.com";
 
 // Use verified domain sender when available, otherwise Resend default
 const SENDER =
-  process.env.RESEND_FROM_EMAIL ?? "Balderas Demolition <onboarding@resend.dev>";
+  process.env.RESEND_FROM_EMAIL ?? "Balderas Demolition <noreply@demolitionoc.com>";
 
 export async function POST(request: Request) {
   try {
