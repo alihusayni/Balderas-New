@@ -7,7 +7,7 @@ function getResend() {
   return new Resend(key);
 }
 
-const RECIPIENT = process.env.CONTACT_EMAIL ?? "ali.h@toporganicleads.com";
+const RECIPIENT = process.env.CONTACT_EMAIL ?? "balderas293@gmail.com";
 
 // Use verified domain sender when available, otherwise Resend default
 const SENDER =
