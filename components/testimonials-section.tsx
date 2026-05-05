@@ -13,10 +13,10 @@ type Testimonial = {
 
 const TESTIMONIALS: Testimonial[] = [
   {
-    name: "Nancy T",
-    date: "January 18",
-    text: "Israel and his team were great to work with! Quick, efficient, and got the job done! I would definitely recommend them to others... See more",
-    image: "/images/homepage/testimonial/1.webp",
+    name: "Cindy Young-West",
+    date: "April 2025",
+    text: "Great experience! Ordered a trailer for whole-house trash out. Abel was on time and courteous. Highly recommend!",
+    image: "/images/homepage/testimonial/cindy.jpg",
   },
   {
     name: "Valerie D",
