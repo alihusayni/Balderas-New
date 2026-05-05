@@ -120,31 +120,46 @@ export function SiteFooter() {
             ))}
           </nav>
 
-          <ul className="flex items-center gap-6">
-            {SOCIALS.map(({ label, href, Icon }) => (
-              <li key={label}>
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label={label}
-                  className="inline-flex items-center justify-center text-white transition-colors hover:text-(--color-brand-orange)"
-                >
-                  <Icon className="size-[18px]" />
-                </a>
-              </li>
-            ))}
-          </ul>
         </div>
 
         <div className="h-px w-full bg-white/10" />
 
         <div className="flex flex-col items-center justify-between gap-3 font-maison text-[18px] font-medium leading-[22px] tracking-[-0.02em] text-white sm:flex-row">
           <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
+            <Link
+              href="/terms"
+              className="transition-colors hover:text-(--color-brand-orange)"
+            >
+              Terms of use
+            </Link>
+            <Link
+              href="/privacy"
+              className="transition-colors hover:text-(--color-brand-orange)"
+            >
+              Privacy &amp; Environmental Policy
+            </Link>
           </div>
-          <SimpleText className="text-[18px] font-medium leading-[22px] tracking-[-0.02em] text-white">
+          <SimpleText className="text-[14px] font-medium leading-[22px] tracking-[-0.02em] text-white/80 sm:text-[16px]">
             Copyright &copy; {year} Balderas Demolition Inc. All Rights
-            Reserved.
+            Reserved. Powered by{" "}
+            <a
+              href="https://www.toporganicleads.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-white underline underline-offset-2 transition-colors hover:text-(--color-brand-orange)"
+            >
+              Top Organic Leads
+            </a>
+            {" "}and{" "}
+            <a
+              href="https://www.despora.ai"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-white underline underline-offset-2 transition-colors hover:text-(--color-brand-orange)"
+            >
+              Despora
+            </a>
+            .
           </SimpleText>
         </div>
       </div>
