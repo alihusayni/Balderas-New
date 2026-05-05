@@ -14,27 +14,27 @@ type Testimonial = {
 const TESTIMONIALS: Testimonial[] = [
   {
     name: "Cindy Young-West",
-    date: "April 2025",
+    date: "April 2026",
     text: "Great experience! Ordered a trailer for whole-house trash out. Abel was on time and courteous. Highly recommend!",
     image: "/images/homepage/testimonial/cindy.jpg",
   },
   {
-    name: "Valerie D",
-    date: "December 12, 2025",
-    text: "Balderas Demolition excelled in all 5 areas above. They were all that, courteous and considerate, and they did an awesome and efficient job...See more",
-    image: "/images/homepage/testimonial/2.webp",
+    name: "Patricia Andrews",
+    date: "February 2026",
+    text: "Very happy with their service. I would definitely use them again. They arrived exactly at the time they said. Very polite, very friendly. And a very reasonable price.",
+    image: "/images/homepage/testimonial/patricia.jpg",
   },
   {
-    name: "Lauren b.",
-    date: "December 12, 2025",
-    text: "Hauled away heavy table and chairs in no time, and also was able to schedule me in so quickly",
-    image: "/images/homepage/testimonial/3.webp",
+    name: "Nancy Thompson",
+    date: "January 2026",
+    text: "I had a great experience with Balderas! They got the job done quickly and efficiently and I look forward to working with them again when I need to!",
+    image: "/images/homepage/testimonial/nancy.jpg",
   },
   {
-    name: "Sharlene H",
-    date: "December 12, 2025",
-    text: "The team was very quick and handled everything perfectly, I’m so grateful for their support and professionalism.",
-    image: "/images/homepage/testimonial/1.webp",
+    name: "Brice Nzeukou",
+    date: "December 2025",
+    text: "Great and professional service. They worked quickly, communicated well ahead of time, and were competitive with price. I'll definitely consider them again!",
+    image: "/images/homepage/testimonial/brice.jpg",
   },
 ];
 
