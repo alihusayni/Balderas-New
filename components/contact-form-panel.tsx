@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useMemo, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 
 type BaseField = {
@@ -45,12 +45,31 @@ export function ContactFormPanel({
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle",
   );
+  const [captchaAnswer, setCaptchaAnswer] = useState("");
+  const [captchaError, setCaptchaError] = useState(false);
+
+  const captcha = useMemo(() => {
+    const a = Math.floor(Math.random() * 9) + 1;
+    const b = Math.floor(Math.random() * 9) + 1;
+    return { a, b, sum: a + b };
+  }, []);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    // Honeypot check
+    const form = e.currentTarget;
+    const hp = form.elements.namedItem("website") as HTMLInputElement | null;
+    if (hp && hp.value) return;
+
+    // Captcha check
+    if (parseInt(captchaAnswer, 10) !== captcha.sum) {
+      setCaptchaError(true);
+      return;
+    }
+    setCaptchaError(false);
     setStatus("sending");
 
-    const form = e.currentTarget;
     const data: Record<string, string> = {};
     for (const field of fields) {
       const el = form.elements.namedItem(field.id) as
@@ -171,6 +190,43 @@ export function ContactFormPanel({
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Honeypot — hidden from humans, bots fill it */}
+          <div className="absolute left-[-9999px]" aria-hidden="true">
+            <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+          </div>
+
+          {/* Simple math captcha */}
+          <div className="w-full">
+            <label
+              htmlFor="captcha"
+              className="font-maison text-[15px] font-normal leading-[22px] tracking-[-0.02em] text-[#2f3745] sm:text-[16px] sm:leading-[24px] md:text-[18px] md:leading-[26px] lg:text-[20px] lg:leading-[29px]"
+            >
+              What is {captcha.a} + {captcha.b}?
+            </label>
+            <div className="mt-2">
+              <input
+                id="captcha"
+                type="text"
+                inputMode="numeric"
+                value={captchaAnswer}
+                onChange={(e) => {
+                  setCaptchaAnswer(e.target.value);
+                  setCaptchaError(false);
+                }}
+                placeholder="Your answer"
+                required
+                className={`h-[52px] w-full max-w-[200px] border-2 bg-[#F2F2F2] px-3 py-2 font-maison text-[15px] font-normal text-[#2f3745] placeholder:text-[#C4C8D3] focus:outline-none sm:h-[56px] sm:px-[12px] sm:py-[9px] sm:text-[16px] md:h-[60px] md:text-[18px] ${
+                  captchaError ? "border-red-400" : "border-transparent"
+                }`}
+              />
+              {captchaError && (
+                <p className="mt-1 font-maison text-sm text-red-500">
+                  Incorrect answer. Please try again.
+                </p>
+              )}
+            </div>
           </div>
 
           <div className="flex w-full flex-col items-start gap-3">
