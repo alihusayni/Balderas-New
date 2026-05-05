@@ -4,13 +4,16 @@ import type { NextRequest } from "next/server";
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Allow the gate page, gate API, and static assets through
+  // Allow the gate page, gate API, static assets, and metadata files through
   if (
     pathname === "/gate" ||
     pathname.startsWith("/api/gate") ||
     pathname.startsWith("/_next") ||
     pathname.startsWith("/favicon") ||
-    pathname.match(/\.(ico|png|jpg|jpeg|svg|webp|css|js|woff|woff2|ttf)$/)
+    pathname === "/manifest.webmanifest" ||
+    pathname === "/robots.txt" ||
+    pathname === "/sitemap.xml" ||
+    pathname.match(/\.(ico|png|jpg|jpeg|svg|webp|css|js|woff|woff2|ttf|json)$/)
   ) {
     return NextResponse.next();
   }
