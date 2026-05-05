@@ -37,19 +37,9 @@ const maisonNeue = localFont({
       style: "normal",
     },
     {
-      path: "../public/fonts/maison/MaisonNeue-LightItalic.ttf",
-      weight: "300",
-      style: "italic",
-    },
-    {
       path: "../public/fonts/maison/MaisonNeue-Book.ttf",
       weight: "400",
       style: "normal",
-    },
-    {
-      path: "../public/fonts/maison/MaisonNeue-BookItalic.ttf",
-      weight: "400",
-      style: "italic",
     },
     {
       path: "../public/fonts/maison/MaisonNeue-Medium.ttf",
@@ -57,29 +47,14 @@ const maisonNeue = localFont({
       style: "normal",
     },
     {
-      path: "../public/fonts/maison/MaisonNeue-MediumItalic.ttf",
-      weight: "500",
-      style: "italic",
-    },
-    {
       path: "../public/fonts/maison/MaisonNeue-Demi.ttf",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../public/fonts/maison/MaisonNeue-DemiItalic.ttf",
-      weight: "600",
-      style: "italic",
-    },
-    {
       path: "../public/fonts/maison/MaisonNeue-Bold.ttf",
       weight: "700",
       style: "normal",
-    },
-    {
-      path: "../public/fonts/maison/MaisonNeue-BoldItalic.ttf",
-      weight: "700",
-      style: "italic",
     },
   ],
 });

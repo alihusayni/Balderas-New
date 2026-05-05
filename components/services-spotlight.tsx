@@ -8,7 +8,7 @@ export function ServicesSpotlight() {
   return (
     <section className="relative w-full overflow-hidden">
       <Image
-        src="/images/homepage/servicesSpotlight.png"
+        src="/images/homepage/servicesSpotlight.webp"
         alt="Dumpster rental service spotlight"
         fill
         className="object-cover"

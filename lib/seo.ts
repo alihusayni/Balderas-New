@@ -19,7 +19,7 @@ export const SITE = {
     "",
   ),
   locale: "en_US",
-  defaultOgImage: "/images/homepage/hero.jpg",
+  defaultOgImage: "/images/homepage/hero.webp",
   defaultOgImageAlt:
     "Balderas Demolition Inc. crew on a residential demolition site in Orange County",
   /** X (Twitter) handle, e.g. `@balderasdemo` — leave empty until you have one. */

@@ -66,7 +66,7 @@ const ROWS: Row[] = [
         ,
       },
     ],
-    imageSrc: "/images/homepage/hero.jpg",
+    imageSrc: "/images/homepage/hero.webp",
     imageAlt: "Demolition work preview",
     imageLeft: true,
   },

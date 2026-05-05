@@ -83,7 +83,7 @@ export default function HomePage() {
     <main className="flex min-h-screen flex-col bg-[var(--color-brand-dark)]">
       <section className="relative min-h-[100svh] w-full overflow-hidden pt-[clamp(10.5rem,18vh,12rem)] lg:pt-[clamp(8.75rem,12vh,9rem)]">
         <Image
-          src="/images/homepage/hero.jpg"
+          src="/images/homepage/hero.webp"
           alt="Demolition service hero"
           fill
           priority
