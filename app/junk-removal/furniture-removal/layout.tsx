@@ -36,7 +36,7 @@ const furnitureServiceJsonLd = getServiceJsonLd({
 
 const furnitureBreadcrumbJsonLd = getBreadcrumbJsonLd([
   { name: "Home", path: "/" },
-  { name: "Junk Removal", path: "/services/junk-removal" },
+  { name: "Junk Removal", path: "/junk-removal" },
   { name: "Furniture Removal", path: "/junk-removal/furniture-removal" },
 ]);
 

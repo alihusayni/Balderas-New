@@ -9,64 +9,27 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      { source: "/contact", destination: "/#contact", permanent: true },
       { source: "/about", destination: "/about-us", permanent: true },
+      // Old /services/* → new silo roots
+      { source: "/services/demolition", destination: "/demolition", permanent: true },
+      { source: "/services/junk-removal", destination: "/junk-removal", permanent: true },
+      { source: "/services/dumpsters-rental", destination: "/dumpster-rental", permanent: true },
+      { source: "/services/dumpsters-rental/waste-disposal", destination: "/dumpster-rental/waste-disposal", permanent: true },
+      { source: "/services/dumpsters-rental/junk-hauling", destination: "/dumpster-rental/junk-hauling", permanent: true },
+      { source: "/services", destination: "/demolition", permanent: true },
+      // Old typo redirects
+      { source: "/demolition/residentials", destination: "/demolition/residential", permanent: true },
+      { source: "/commercial-demolition", destination: "/demolition/commercial", permanent: true },
+      // Article typo redirect
       {
-        source: "/services/demolition",
-        destination: "/demolition",
+        source: "/resources/the-high-cost-of-cheap-why-a-licensed-demolition-contractor-is-non-negotiable",
+        destination: "/demolition/the-high-cost-of-cheap-why-a-licensed-demolition-contractor-is-non-negotionable",
         permanent: true,
       },
-      {
-        source: "/demolition/residentials",
-        destination: "/demolition/residential",
-        permanent: true,
-      },
-      {
-        source: "/commercial-demolition",
-        destination: "/demolition/commercial",
-        permanent: true,
-      },
-      {
-        source: "/demolition/house-demolition-costs-process",
-        destination: "/resources/house-demolition-costs-process",
-        permanent: true,
-      },
-      {
-        source:
-          "/resources/the-high-cost-of-cheap-why-a-licensed-demolition-contractor-is-non-negotiable",
-        destination:
-          "/resources/the-high-cost-of-cheap-why-a-licensed-demolition-contractor-is-non-negotionable",
-        permanent: true,
-      },
-      {
-        source: "/demolition/concrete-removal-hauling/",
-        destination: "/demolition/concrete-removal-hauling",
-        permanent: true,
-      },
-      {
-        source: "/junk-removal/furniture-removal/",
-        destination: "/junk-removal/furniture-removal",
-        permanent: true,
-      },
-      {
-        source: "/junk-removal/same-day/",
-        destination: "/junk-removal/same-day",
-        permanent: true,
-      },
-      {
-        source: "/junk-removal/estate-cleanout/",
-        destination: "/junk-removal/estate-cleanout",
-        permanent: true,
-      },
-      {
-        source: "/dumpster-rental/waste-disposal",
-        destination: "/services/dumpsters-rental/waste-disposal",
-        permanent: true,
-      },
-      {
-        source: "/dumpster-rental/junk-hauling",
-        destination: "/services/dumpsters-rental/junk-hauling",
-        permanent: true,
-      },
+      // Stale legacy links
+      { source: "/blog", destination: "/resources", permanent: true },
+      { source: "/project", destination: "/", permanent: true },
     ];
   },
 };

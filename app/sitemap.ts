@@ -22,18 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
-    {
-      url: absoluteUrl("/contact"),
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: absoluteUrl("/services"),
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
+    // Demolition silo
     {
       url: absoluteUrl("/demolition"),
       lastModified,
@@ -64,8 +53,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.82,
     },
+    // Junk Removal silo
     {
-      url: absoluteUrl("/services/junk-removal"),
+      url: absoluteUrl("/junk-removal"),
       lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
@@ -88,20 +78,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.85,
     },
+    // Dumpster Rental silo
     {
-      url: absoluteUrl("/services/dumpsters-rental"),
+      url: absoluteUrl("/dumpster-rental"),
       lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: absoluteUrl("/services/dumpsters-rental/waste-disposal"),
+      url: absoluteUrl("/dumpster-rental/waste-disposal"),
       lastModified,
       changeFrequency: "monthly",
       priority: 0.85,
     },
     {
-      url: absoluteUrl("/services/dumpsters-rental/junk-hauling"),
+      url: absoluteUrl("/dumpster-rental/junk-hauling"),
       lastModified,
       changeFrequency: "monthly",
       priority: 0.85,

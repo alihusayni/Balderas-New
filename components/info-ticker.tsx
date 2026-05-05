@@ -42,6 +42,7 @@ export function InfoTicker({ className }: InfoTickerProps) {
                   alt=""
                   width={14}
                   height={14}
+                  style={{ width: "auto", height: "auto" }}
                   aria-hidden
                 />
               )}

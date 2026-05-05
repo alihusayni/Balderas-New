@@ -93,7 +93,7 @@ export default function HomePage() {
 
         <div className="absolute inset-0  bg-[#06182C]/68" />
 
-        <div className="relative z-10 mx-auto flex min-h-[calc(100svh-1.5rem)] w-full max-w-[1400px] items-end px-5 pb-[clamp(6rem,3vh,3rem)] pt-[env(safe-area-inset-top,0px)] md:px-8 lg:px-10">
+        <div className="relative z-10 mx-auto flex min-h-[calc(100svh-1.5rem)] w-full max-w-[1400px] items-end px-5 pb-[clamp(12.25rem,12vh,9rem)] pt-[env(safe-area-inset-top,0px)] md:px-8 lg:px-10">
           <div className="max-w-[760px] text-[var(--color-brand-white)] md:max-w-[680px] lg:max-w-[760px]">
            <div className="flex items-center mb-4 sm:mb-8 gap-2 md:gap-2.5">
             <Image
@@ -102,6 +102,7 @@ export default function HomePage() {
               width={18}
               height={18}
               className="h-[18px] w-auto sm:h-[20px] md:h-[24px]"
+              style={{ width: "auto" }}
             />
             <p className="[font-family:var(--font-anton)] text-sm font-medium tracking-[0.08em] sm:text-base md:text-lg lg:text-xl">
               ORANGE COUNTY&apos;S TOP CHOICE
@@ -116,10 +117,10 @@ export default function HomePage() {
               systematic, and committed to your satisfaction.
             </HeroSubheading>
             <HeroCtas
-              primaryHref="/contact"
+              primaryHref="#contact"
               primaryLabel="Get Free Quote"
-              secondaryHref="/demolition"
-              secondaryLabel="View Services"
+              secondaryHref="tel:+17143408108"
+              secondaryLabel="(714) 340-8108"
             />
           </div>
         </div>

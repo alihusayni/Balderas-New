@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import localFont from "next/font/local";
 import { Anton, Geist, Geist_Mono } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
@@ -154,6 +155,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} ${maisonNeue.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
@@ -161,6 +164,27 @@ export default function RootLayout({
           id="ld-local-business"
           data={getLocalBusinessJsonLd()}
         />
+
+        {/* Google Analytics (GA4) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XPJS9MX8L9"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XPJS9MX8L9');
+          `}
+        </Script>
+
+        {/* CallRail phone swap */}
+        <Script
+          src="//cdn.callrail.com/companies/556435243/b8b07fe969694226ed37/12/swap.js"
+          strategy="afterInteractive"
+        />
+
         <NextTopLoader
           color="#dc5a31"
           height={3}

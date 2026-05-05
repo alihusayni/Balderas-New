@@ -48,7 +48,7 @@ space-y-[12px] sm:space-y-[10px] md:space-y-[6px] lg:-space-y-6">
             className="mt-8 hidden lg:inline-flex lg:w-fit xl:w-[350px]"
           >
             <Link
-              href="/contact"
+              href="/#contact"
               className="font-maison text-[14px] font-bold sm:text-[15px] md:text-base lg:text-[17px]"
             >
               Get Free Quote
@@ -71,7 +71,7 @@ space-y-[12px] sm:space-y-[10px] md:space-y-[6px] lg:-space-y-6">
           className="mt-0 w-full justify-self-stretch md:mt-2 md:w-auto md:justify-self-start lg:hidden"
         >
           <Link
-            href="/contact"
+            href="/#contact"
             className="font-maison text-[14px] font-bold sm:text-[15px] md:text-[17px]"
           >
             Get Free Quote

@@ -35,7 +35,7 @@ const sameDayServiceJsonLd = getServiceJsonLd({
 
 const sameDayBreadcrumbJsonLd = getBreadcrumbJsonLd([
   { name: "Home", path: "/" },
-  { name: "Junk Removal", path: "/services/junk-removal" },
+  { name: "Junk Removal", path: "/junk-removal" },
   { name: "Same Day Junk Removal", path: "/junk-removal/same-day" },
 ]);
 

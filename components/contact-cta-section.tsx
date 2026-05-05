@@ -56,6 +56,7 @@ export function ContactCtaSection(props: ContactCtaSectionProps) {
 
   return (
     <section
+      id="contact"
       className={cn(
         "relative w-full overflow-hidden py-10 sm:py-12 md:py-14 lg:py-16",
         className,

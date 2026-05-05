@@ -27,7 +27,7 @@ const MAIN_NAV: NavItem[] = [
   { label: "HOME", href: "/" },
   { label: "ABOUT", href: "/about-us" },
   {
-    label: "SERVICES",
+    label: "DEMOLITION",
     href: "/demolition",
     children: [
       { label: "Residential Demolition", href: "/demolition/residential" },
@@ -37,36 +37,31 @@ const MAIN_NAV: NavItem[] = [
         label: "Concrete Removal & Hauling",
         href: "/demolition/concrete-removal-hauling",
       },
-      { label: "Junk Removal", href: "/services/junk-removal" },
-      {
-        label: "Furniture Removal",
-        href: "/junk-removal/furniture-removal",
-      },
-      {
-        label: "Same Day Junk Removal",
-        href: "/junk-removal/same-day",
-      },
-      {
-        label: "Estate Cleanout",
-        href: "/junk-removal/estate-cleanout",
-      },
-      { label: "Dumpster Rentals", href: "/services/dumpsters-rental" },
-      {
-        label: "Waste Disposal",
-        href: "/services/dumpsters-rental/waste-disposal",
-      },
-      {
-        label: "Junk Hauling",
-        href: "/services/dumpsters-rental/junk-hauling",
-      },
+    ],
+  },
+  {
+    label: "JUNK REMOVAL",
+    href: "/junk-removal",
+    children: [
+      { label: "Furniture Removal", href: "/junk-removal/furniture-removal" },
+      { label: "Same Day Junk Removal", href: "/junk-removal/same-day" },
+      { label: "Estate Cleanout", href: "/junk-removal/estate-cleanout" },
+    ],
+  },
+  {
+    label: "DUMPSTER RENTAL",
+    href: "/dumpster-rental",
+    children: [
+      { label: "Waste Disposal", href: "/dumpster-rental/waste-disposal" },
+      { label: "Junk Hauling", href: "/dumpster-rental/junk-hauling" },
     ],
   },
   { label: "RESOURCES", href: "/resources" },
-  { label: "CONTACT", href: "/contact" },
+  { label: "CONTACT", href: "/#contact" },
 ];
 
 const CONTACT_NAV =
-  MAIN_NAV.find((item) => item.href === "/contact") ?? MAIN_NAV[MAIN_NAV.length - 1];
+  MAIN_NAV.find((item) => item.href === "/#contact") ?? MAIN_NAV[MAIN_NAV.length - 1];
 
 /** Keep mobile top-level list manageable: everything except CONTACT (shown as CTA). */
 const MOBILE_MAIN_NAV = MAIN_NAV.filter((item) => item.href !== CONTACT_NAV.href);
@@ -127,21 +122,20 @@ export function SiteHeader() {
   const isKnownPath =
     pathname === "/" ||
     pathname === "/about-us" ||
-    pathname === "/contact" ||
+    pathname === "/#contact" ||
     pathname === "/resources" ||
     pathname === "/demolition" ||
     pathname === "/demolition/residential" ||
     pathname === "/demolition/residential/interior" ||
     pathname === "/demolition/commercial" ||
     pathname === "/demolition/concrete-removal-hauling" ||
-    pathname === "/services" ||
-    pathname === "/services/junk-removal" ||
-    pathname === "/services/dumpsters-rental" ||
-    pathname === "/services/dumpsters-rental/waste-disposal" ||
-    pathname === "/services/dumpsters-rental/junk-hauling" ||
+    pathname === "/junk-removal" ||
     pathname === "/junk-removal/furniture-removal" ||
     pathname === "/junk-removal/same-day" ||
     pathname === "/junk-removal/estate-cleanout" ||
+    pathname === "/dumpster-rental" ||
+    pathname === "/dumpster-rental/waste-disposal" ||
+    pathname === "/dumpster-rental/junk-hauling" ||
     pathname === "/faq" ||
     pathname === "/reviews" ||
     isKnownArticleDetail;

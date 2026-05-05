@@ -35,7 +35,7 @@ const estateServiceJsonLd = getServiceJsonLd({
 
 const estateBreadcrumbJsonLd = getBreadcrumbJsonLd([
   { name: "Home", path: "/" },
-  { name: "Junk Removal", path: "/services/junk-removal" },
+  { name: "Junk Removal", path: "/junk-removal" },
   { name: "Estate Cleanout", path: "/junk-removal/estate-cleanout" },
 ]);
 

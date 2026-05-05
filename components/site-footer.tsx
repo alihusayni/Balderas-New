@@ -11,10 +11,11 @@ type NavItem = {
 const FOOTER_NAV: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about-us" },
-  { label: "Project", href: "/project" },
-  { label: "Services", href: "/demolition" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
+  { label: "Demolition", href: "/demolition" },
+  { label: "Junk Removal", href: "/junk-removal" },
+  { label: "Dumpster Rental", href: "/dumpster-rental" },
+  { label: "Resources", href: "/resources" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 type SocialItem = {
@@ -140,18 +141,6 @@ export function SiteFooter() {
 
         <div className="flex flex-col items-center justify-between gap-3 font-maison text-[18px] font-medium leading-[22px] tracking-[-0.02em] text-white sm:flex-row">
           <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
-            <Link
-              href="/terms"
-              className="transition-colors hover:text-(--color-brand-orange)"
-            >
-              Terms of use
-            </Link>
-            <Link
-              href="/privacy"
-              className="transition-colors hover:text-(--color-brand-orange)"
-            >
-              Privacy &amp; Environmental Policy
-            </Link>
           </div>
           <SimpleText className="text-[18px] font-medium leading-[22px] tracking-[-0.02em] text-white">
             Copyright &copy; {year} Balderas Demolition Inc. All Rights

@@ -57,6 +57,7 @@ export type Article = {
 export const ARTICLES: Article[] = [
   {
     slug: "house-demolition-costs-process",
+    canonicalPath: "/demolition/house-demolition-costs-process",
     seoTitle: "House Demolition Costs & Process Orange County (2026 Guide)",
     title:
       "The Ultimate Guide to House Demolition in Orange County: Process, Regulations, and 2026 Cost Expectations",
@@ -325,12 +326,13 @@ export const ARTICLES: Article[] = [
       description:
         "Free on-site consultation for residential demolition across Orange County\u2014permits, labor, hauling, and final sweep, explained upfront.",
       label: "Contact Balderas Demolition Inc.",
-      href: "/contact",
+      href: "/#contact",
       backgroundSrc: "/images/article/3.jpg",
     },
   },
   {
     slug: "hut-top-structure-removal",
+    canonicalPath: "/demolition/hut-top-structure-removal",
     seoTitle:
       "Hut Top & Structure Removal Costs Orange County | Balderas Demolition Inc.",
     title:
@@ -507,12 +509,13 @@ export const ARTICLES: Article[] = [
       description:
         "Tell us about your backyard hut, gazebo, or accessory structure\u2014we\u2019ll walk you through scope, permits, and a clear, upfront price.",
       label: "Request a Free Hut Removal Quote",
-      href: "/contact",
+      href: "/#contact",
       backgroundSrc: "/images/article/3.jpg",
     },
   },
   {
     slug: "the-high-cost-of-cheap-why-a-licensed-demolition-contractor-is-non-negotionable",
+    canonicalPath: "/demolition/the-high-cost-of-cheap-why-a-licensed-demolition-contractor-is-non-negotionable",
     title:
       "The High Cost of \u201CCheap\u201D: Why a Licensed Demolition Contractor is Non-Negotiable in Orange County",
     description:
@@ -680,12 +683,13 @@ export const ARTICLES: Article[] = [
       description:
         "The \u201Csavings\u201D from hiring an unlicensed contractor are an illusion. One accident, one missed permit, or one asbestos exposure will cost you 10x what you saved.",
       label: "Verify Our License & Get a Quote",
-      href: "/contact",
+      href: "/#contact",
       backgroundSrc: "/images/article/3.jpg",
     },
   },
   {
     slug: "affordable-dumpster-rental-and-demolition-services",
+    canonicalPath: "/dumpster-rental/affordable-dumpster-rental-and-demolition-services",
     title:
       "Affordable Dumpster Rental and Demolition Services in Orange County: Get a Free Quote Today",
     description:
@@ -707,6 +711,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: "top-reasons-to-hire-a-professional-junk-removal",
+    canonicalPath: "/junk-removal/top-reasons-to-hire-a-professional-junk-removal",
     title: "Top Reasons to Hire a Professional Junk Removal Service",
     description:
       "When you\u2019re dealing with unwanted clutter in your home or business, hiring a professional junk removal company can save you time, effort, and stress...",
@@ -726,6 +731,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: "systematic-project-control",
+    canonicalPath: "/demolition/systematic-project-control",
     title: "Systematic Project Control",
     description:
       "Every step is planned and executed with precision to keep your project on track and stress-free.",
@@ -745,6 +751,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: "fast-and-hassle-free-junk-removal",
+    canonicalPath: "/junk-removal/fast-and-hassle-free-junk-removal",
     title: "Fast & Hassle-Free Junk Removal",
     description:
       "From old furniture to construction debris, we handle all the heavy lifting so you don\u2019t have to. See more",
@@ -764,6 +771,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: "choose-the-right-dumpster-for-your-project",
+    canonicalPath: "/dumpster-rental/choose-the-right-dumpster-for-your-project",
     title: "Choose the Right Dumpster for Your Project",
     description:
       "Learn how selecting the right dumpster size can save you money and keep your cleanup running smoothly. See more",
@@ -783,6 +791,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: "safe-controlled-demolition-process",
+    canonicalPath: "/demolition/safe-controlled-demolition-process",
     title: "Safe, Controlled Demolition Process",
     description:
       "Our systematic approach ensures every project is handled with precision, safety, and minimal disruption.",
