@@ -53,7 +53,14 @@ export function WhyTrustSection() {
 
             <p className="font-maison max-w-[520px] justify-self-start pt-1 text-base font-black leading-[1.05] text-white sm:text-lg md:text-xl lg:justify-self-end">
               We offer systematic planning, safe work practices, and a 100%
-              commitment to your satisfaction across Orange County.
+              commitment to your satisfaction across Orange County — including
+              Anaheim, Santa Ana, Irvine, Huntington Beach, Garden Grove,
+              Orange, Fullerton, Costa Mesa, Mission Viejo, Westminster,
+              Newport Beach, Buena Park, Lake Forest, Tustin, Yorba Linda,
+              San Clemente, Laguna Niguel, La Habra, Fountain Valley,
+              Placentia, Laguna Beach, Brea, Stanton, Cypress, Dana Point,
+              Aliso Viejo, Laguna Hills, Rancho Santa Margarita, San Juan
+              Capistrano, and surrounding communities.
             </p>
           </div>
         </div>
