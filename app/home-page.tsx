@@ -117,7 +117,7 @@ export default function HomePage() {
             </p>
             </div>
             <HeroHeading>
-              Demolishing, Dumpster Rentals, &amp; Junk Removal in Orange County
+              Demolishing, Dumpster Rentals &amp; Junk Removal in Orange County
             </HeroHeading>
             <HeroSubheading>
               From tearing down a kitchen to hauling away years of garage
