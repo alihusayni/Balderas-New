@@ -129,6 +129,7 @@ export default function HomePage() {
               primaryLabel="Get Free Quote"
               secondaryHref="tel:+17143408108"
               secondaryLabel="(714) 340-8108"
+              showSecondaryArrow={false}
             />
           </div>
         </div>
