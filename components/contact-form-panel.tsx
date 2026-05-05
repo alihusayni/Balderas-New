@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 
 type BaseField = {
@@ -39,10 +42,77 @@ export function ContactFormPanel({
   submitLabel,
   className,
 }: ContactFormPanelProps) {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+    "idle",
+  );
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("sending");
+
+    const form = e.currentTarget;
+    const data: Record<string, string> = {};
+    for (const field of fields) {
+      const el = form.elements.namedItem(field.id) as
+        | HTMLInputElement
+        | HTMLTextAreaElement
+        | HTMLSelectElement
+        | null;
+      if (el) data[field.id] = el.value;
+    }
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        setStatus("sent");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  }
+
+  if (status === "sent") {
+    return (
+      <div className={className}>
+        <div className="flex w-full flex-col items-center justify-center gap-4 bg-white p-8 sm:p-10 md:p-[30px] md:min-h-[300px]">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
+            <svg className="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h3 className="font-anton text-xl uppercase tracking-wide text-[var(--color-brand-navy)] sm:text-2xl">
+            Message Sent!
+          </h3>
+          <p className="text-center font-maison text-[15px] text-gray-600 sm:text-base">
+            Thank you for reaching out. Abel will get back to you shortly.
+          </p>
+          <button
+            type="button"
+            onClick={() => setStatus("idle")}
+            className="mt-2 font-maison text-sm font-medium text-[var(--color-brand-orange)] underline underline-offset-2 transition-colors hover:text-[var(--color-brand-navy)]"
+          >
+            Send another message
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={className}>
       <div className="w-full bg-white p-5 sm:p-6 md:p-[30px]">
-        <form className="flex w-full flex-col gap-8 sm:gap-10 md:gap-[52px]">
+        <form
+          onSubmit={handleSubmit}
+          className="flex w-full flex-col gap-8 sm:gap-10 md:gap-[52px]"
+        >
           <div className="grid w-full grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2">
             {fields.map((field) => (
               <div key={field.id} className={fieldWidthClass(field.width)}>
@@ -59,6 +129,7 @@ export function ContactFormPanel({
                     <div className="relative flex h-[52px] w-full items-center justify-between bg-[#F2F2F2] px-3 py-2 sm:h-[56px] sm:px-[12px] sm:py-[9px] md:h-[60px]">
                       <select
                         id={field.id}
+                        name={field.id}
                         defaultValue=""
                         className="h-full w-full appearance-none border-none bg-transparent pr-7 font-maison text-[15px] font-normal text-[#C4C8D3] focus:outline-none sm:pr-8 sm:text-[16px] md:text-[18px]"
                       >
@@ -82,6 +153,7 @@ export function ContactFormPanel({
                   ) : field.type === "textarea" ? (
                     <textarea
                       id={field.id}
+                      name={field.id}
                       rows={field.rows ?? 4}
                       placeholder={field.placeholder}
                       className="h-[100px] w-full resize-none border-none bg-[#F2F2F2] px-3 py-2 font-maison text-[15px] font-normal text-[#2f3745] placeholder:text-[#C4C8D3] focus:outline-none sm:h-[110px] sm:px-[12px] sm:py-[9px] sm:text-[16px] md:h-[120px] md:text-[18px]"
@@ -89,8 +161,10 @@ export function ContactFormPanel({
                   ) : (
                     <input
                       id={field.id}
+                      name={field.id}
                       type={field.inputType ?? "text"}
                       placeholder={field.placeholder}
+                      required={field.id === "name" || field.id === "phone"}
                       className="h-[52px] w-full border-none bg-[#F2F2F2] px-3 py-2 font-maison text-[15px] font-normal text-[#2f3745] placeholder:text-[#C4C8D3] focus:outline-none sm:h-[56px] sm:px-[12px] sm:py-[9px] sm:text-[16px] md:h-[60px] md:text-[18px]"
                     />
                   )}
@@ -99,21 +173,28 @@ export function ContactFormPanel({
             ))}
           </div>
 
-          <div className="flex w-full justify-start">
+          <div className="flex w-full flex-col items-start gap-3">
             <Button
               type="submit"
               variant="heroPrimary"
               size="hero"
-              className="w-full min-w-0 gap-2 sm:w-auto sm:min-w-[200px] sm:gap-3 md:min-w-[220px]"
+              disabled={status === "sending"}
+              className="w-full min-w-0 gap-2 sm:w-auto sm:min-w-[200px] sm:gap-3 md:min-w-[220px] disabled:opacity-60"
             >
               <span className="inline-flex min-h-[20px] items-center justify-center font-maison text-[16px] font-bold leading-[1] tracking-[-0.02em] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px]">
-                {submitLabel}
+                {status === "sending" ? "Sending..." : submitLabel}
               </span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="white"/>
-</svg>
-
+              {status !== "sending" && (
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="white"/>
+                </svg>
+              )}
             </Button>
+            {status === "error" && (
+              <p className="font-maison text-sm text-red-500">
+                Something went wrong. Please try again or call us directly.
+              </p>
+            )}
           </div>
         </form>
       </div>
