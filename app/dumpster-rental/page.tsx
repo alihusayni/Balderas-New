@@ -79,7 +79,7 @@ export default function DumpstersRentalPage() {
           priority
         />
 
-        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1400px] items-end px-6 pb-20 lg:px-10">
+        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1400px] items-end px-6 pb-[180px] lg:px-10">
           <div className="max-w-[900px] text-[var(--color-brand-white)]">
             <HeroHeading className="lg:text-[6.2vw] lg:leading-[1.05] xl:text-[4vw]">
               Affordable Dumpster Rental Orange County: You Load It, We Haul It
