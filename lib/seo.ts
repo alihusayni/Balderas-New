@@ -30,16 +30,16 @@ export const SITE = {
   telephone: "(714) 340-8108",
   email: "info@demolitionoc.com",
   address: {
-    streetAddress: "",
-    addressLocality: "Tustin",
+    streetAddress: "11431 Westminster Ave",
+    addressLocality: "Garden Grove",
     addressRegion: "CA",
-    postalCode: "",
+    postalCode: "92843",
     addressCountry: "US",
   },
   /** Set when you have a verified office / yard location for maps rich results. */
   geo: {
-    latitude: 33.7459 as number | null,
-    longitude: -117.8265 as number | null,
+    latitude: 33.7748 as number | null,
+    longitude: -117.9463 as number | null,
   },
   areasServed: [
     "Tustin, CA",
@@ -62,15 +62,10 @@ export const SITE = {
         "Wednesday",
         "Thursday",
         "Friday",
+        "Saturday",
       ],
-      opens: "07:00",
-      closes: "17:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification" as const,
-      dayOfWeek: ["Saturday"],
       opens: "08:00",
-      closes: "14:00",
+      closes: "19:00",
     },
   ],
   social: {
