@@ -107,8 +107,8 @@ export function WasteDisposalLanding() {
               primaryHref="/contact"
               primaryLabel="Get a Free Quote"
               primaryButtonClassName="lg:w-[260px] xl:w-[280px]"
-              secondaryHref={telHref}
-              secondaryLabel="Call Abel Today"
+              secondaryHref="tel:+17143408108"
+              secondaryLabel="(714) 340-8108"
               showSecondaryArrow={false}
             />
           </div>

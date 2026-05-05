@@ -111,8 +111,8 @@ export function JunkHaulingLanding() {
               primaryHref="/contact"
               primaryLabel="Get a Hauling Quote"
               primaryButtonClassName="lg:w-[260px] xl:w-[280px]"
-              secondaryHref={telHref}
-              secondaryLabel="Call Abel for a Fast Estimate"
+              secondaryHref="tel:+17143408108"
+              secondaryLabel="(714) 340-8108"
               secondaryButtonClassName="sm:w-auto md:w-auto sm:shrink-0"
               showSecondaryArrow={false}
             />

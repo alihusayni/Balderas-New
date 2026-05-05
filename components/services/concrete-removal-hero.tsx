@@ -52,8 +52,8 @@ export function ConcreteRemovalHero({
           <HeroCtas
             primaryHref={quoteHref}
             primaryLabel="Get a Concrete Removal Quote"
-            secondaryHref={callHref}
-            secondaryLabel="Call Abel Now"
+            secondaryHref="tel:+17143408108"
+            secondaryLabel="(714) 340-8108"
             showSecondaryArrow={false}
             primaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[280px]"
             secondaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[220px]"

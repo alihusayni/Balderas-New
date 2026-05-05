@@ -149,8 +149,8 @@ export function EstateCleanoutLanding() {
               primaryHref={CONSULTATION_HASH}
               primaryLabel="Request a Private Consultation"
               primaryButtonClassName="lg:min-w-[300px] lg:w-auto xl:min-w-[340px]"
-              secondaryHref={telHref}
-              secondaryLabel="Call Abel Today"
+              secondaryHref="tel:+17143408108"
+              secondaryLabel="(714) 340-8108"
               secondaryButtonClassName="md:min-w-[240px] md:w-auto lg:w-[280px]"
               showSecondaryArrow={false}
             />

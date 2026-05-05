@@ -147,8 +147,8 @@ export function SameDayJunkRemovalLanding() {
               primaryHref={telHref}
               primaryLabel="Call for Same Day Service"
               primaryButtonClassName="lg:w-[300px] xl:w-[340px]"
-              secondaryHref={smsHref}
-              secondaryLabel="Text a Photo for an Instant Quote"
+              secondaryHref="tel:+17143408108"
+              secondaryLabel="(714) 340-8108"
               secondaryButtonClassName="md:min-w-[260px] md:w-[280px] lg:w-[340px] xl:w-[400px] 2xl:w-[440px]"
               showSecondaryArrow={false}
             />

@@ -39,8 +39,8 @@ export function DemolitionServicesHero() {
           <HeroCtas
             primaryHref="/contact"
             primaryLabel="Request a Free Estimate"
-            secondaryHref="/contact"
-            secondaryLabel="Call Abel Now"
+            secondaryHref="tel:+17143408108"
+            secondaryLabel="(714) 340-8108"
             showSecondaryArrow={false}
             primaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[200px]"
           />

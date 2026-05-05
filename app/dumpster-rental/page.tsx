@@ -99,8 +99,8 @@ export default function DumpstersRentalPage() {
               primaryHref="/contact"
               primaryLabel="Dumpster Sizes & Pricing"
               primaryButtonClassName="lg:w-[250px] xl:w-[270px]"
-              secondaryHref="/contact"
-              secondaryLabel="Call Abel to Schedule"
+              secondaryHref="tel:+17143408108"
+              secondaryLabel="(714) 340-8108"
               showSecondaryArrow={false}
             />
           </div>

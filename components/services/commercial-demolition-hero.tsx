@@ -49,8 +49,8 @@ export function CommercialDemolitionHero({
           <HeroCtas
             primaryHref={quoteHref}
             primaryLabel="Request a Commercial Bid"
-            secondaryHref={callHref}
-            secondaryLabel="Call Our Project Manager"
+            secondaryHref="tel:+17143408108"
+            secondaryLabel="(714) 340-8108"
             showSecondaryArrow={false}
             primaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[280px]"
             secondaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[260px]"

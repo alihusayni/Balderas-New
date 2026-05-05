@@ -154,8 +154,8 @@ export function FurnitureRemovalLanding() {
               primaryHref="/contact"
               primaryLabel="Get a Furniture Removal Quote"
               primaryButtonClassName="lg:w-[300px] xl:w-[340px]"
-              secondaryHref={textPhotoHref}
-              secondaryLabel="Text a Photo for a Fast Estimate"
+              secondaryHref="tel:+17143408108"
+              secondaryLabel="(714) 340-8108"
               secondaryButtonClassName="md:min-w-[260px] md:w-[280px] lg:w-[340px] xl:w-[400px] 2xl:w-[440px]"
               showSecondaryArrow={false}
             />
