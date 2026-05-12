@@ -46,7 +46,6 @@ const demolitionServiceJsonLd = getServiceJsonLd({
 
 const demolitionBreadcrumbJsonLd = getBreadcrumbJsonLd([
   { name: "Home", path: "/" },
-  { name: "Services", path: "/services" },
   { name: "Demolition", path: "/demolition" },
 ]);
 

@@ -223,7 +223,7 @@ export default function AboutPage() {
         ctas={[
           {
             label: "Get a Quote from Abel",
-            href: "/contact",
+            href: "/#contact",
             variant: "primary",
             showArrow: false,
           },

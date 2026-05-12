@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useMemo, type FormEvent } from "react";
+import { useState, useEffect, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
+import { useFormSubmit } from "@/hooks/use-form-submit";
 
 type BaseField = {
   id: string;
@@ -42,16 +43,16 @@ export function ContactFormPanel({
   submitLabel,
   className,
 }: ContactFormPanelProps) {
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
-    "idle",
-  );
+  const { status, submit, reset } = useFormSubmit();
   const [captchaAnswer, setCaptchaAnswer] = useState("");
   const [captchaError, setCaptchaError] = useState(false);
 
-  const captcha = useMemo(() => {
+  const [captcha, setCaptcha] = useState<{ a: number; b: number; sum: number } | null>(null);
+
+  useEffect(() => {
     const a = Math.floor(Math.random() * 9) + 1;
     const b = Math.floor(Math.random() * 9) + 1;
-    return { a, b, sum: a + b };
+    setCaptcha({ a, b, sum: a + b });
   }, []);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -63,12 +64,11 @@ export function ContactFormPanel({
     if (hp && hp.value) return;
 
     // Captcha check
-    if (parseInt(captchaAnswer, 10) !== captcha.sum) {
+    if (!captcha || parseInt(captchaAnswer, 10) !== captcha.sum) {
       setCaptchaError(true);
       return;
     }
     setCaptchaError(false);
-    setStatus("sending");
 
     const data: Record<string, string> = {};
     for (const field of fields) {
@@ -80,22 +80,8 @@ export function ContactFormPanel({
       if (el) data[field.id] = el.value;
     }
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      if (res.ok) {
-        setStatus("sent");
-        form.reset();
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
+    const ok = await submit(data);
+    if (ok) form.reset();
   }
 
   if (status === "sent") {
@@ -115,7 +101,7 @@ export function ContactFormPanel({
           </p>
           <button
             type="button"
-            onClick={() => setStatus("idle")}
+            onClick={reset}
             className="mt-2 font-maison text-sm font-medium text-[var(--color-brand-orange)] underline underline-offset-2 transition-colors hover:text-[var(--color-brand-navy)]"
           >
             Send another message
@@ -203,7 +189,7 @@ export function ContactFormPanel({
               htmlFor="captcha"
               className="font-maison text-[15px] font-normal leading-[22px] tracking-[-0.02em] text-[#2f3745] sm:text-[16px] sm:leading-[24px] md:text-[18px] md:leading-[26px] lg:text-[20px] lg:leading-[29px]"
             >
-              What is {captcha.a} + {captcha.b}?
+              What is {captcha ? `${captcha.a} + ${captcha.b}` : "…"}?
             </label>
             <div className="mt-2">
               <input

@@ -218,7 +218,7 @@ export default function ResourcesPage() {
         <div className="mx-auto flex w-full max-w-[1400px] flex-col items-center gap-12 px-6 lg:gap-16 lg:px-10">
           <div className="flex w-full flex-col items-center gap-4 text-center">
             <MainHeading className="text-[#0b0300]">
-              Frequently Asked Question
+              Frequently Asked Questions
             </MainHeading>
             <SimpleText className="max-w-[590px] text-[#0b0300]">
               Find answers to your questions right here, and don&rsquo;t
@@ -241,7 +241,7 @@ export default function ResourcesPage() {
               className="h-[56px] w-full bg-[#D1D4DB] text-[#0b0300] hover:bg-[#bfc3cc] sm:h-[64px] sm:w-[300px] md:h-[72px] lg:h-[80px]"
             >
               <Link
-                href="/contact"
+                href="/#contact"
                 className="font-maison text-[16px] font-bold tracking-[-0.02em] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px]"
               >
                 Contact Us
@@ -254,7 +254,7 @@ export default function ResourcesPage() {
               className="h-[56px] w-full gap-3 bg-[#0B0300] text-white hover:bg-black sm:h-[64px] sm:gap-4 sm:w-[300px] md:h-[72px] lg:h-[80px] lg:gap-5"
             >
               <Link
-                href="/faq"
+                href="/resources"
                 className="font-maison flex items-center gap-3 text-[16px] font-bold tracking-[-0.02em] sm:gap-4 sm:text-[18px] md:text-[20px] lg:gap-5 lg:text-[22px] xl:text-[24px]"
               >
                 <span>Find More FAQs</span>

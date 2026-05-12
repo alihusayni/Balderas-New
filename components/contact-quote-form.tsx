@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import type { FormEvent } from "react";
 import { SimpleText } from "@/components/simple-text";
 import { cn } from "@/lib/utils";
+import { useFormSubmit } from "@/hooks/use-form-submit";
 
 const STEPS = ["Services", "Project Details", "Your Info"] as const;
 
@@ -49,7 +50,11 @@ export function ContactQuoteForm({
   const [projectDetails, setProjectDetails] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const { status, submit } = useFormSubmit();
+
+  const sending = status === "sending";
+  const submitted = status === "sent";
+  const error = status === "error";
 
   const canProceed = useMemo(() => {
     if (step === 0) return selected.length > 0;
@@ -66,10 +71,16 @@ export function ContactQuoteForm({
     );
   };
 
-  const onSubmit = (e: FormEvent) => {
+  const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!canProceed) return;
-    setSubmitted(true);
+
+    await submit({
+      name,
+      phone,
+      service: selected.join(", "),
+      message: projectDetails,
+    });
   };
 
   const embedded = variant === "embedded";
@@ -248,17 +259,22 @@ export function ContactQuoteForm({
           ) : (
             <button
               type="submit"
-              disabled={!canProceed}
+              disabled={!canProceed || sending}
               className={cn(
                 "[font-family:var(--font-maison)] inline-flex h-[48px] min-w-[120px] items-center justify-center gap-2 rounded-[6px] border px-6 text-[14px] font-bold transition-opacity text-[var(--color-brand-white)]",
-                canProceed
+                canProceed && !sending
                   ? "border-transparent bg-[var(--color-brand-orange)] hover:opacity-90"
                   : "cursor-not-allowed border-transparent bg-neutral-400",
               )}
             >
-              <span>Submit</span>
-              <ChevronRight className="size-3.5" />
+              <span>{sending ? "Sending..." : "Submit"}</span>
+              {!sending && <ChevronRight className="size-3.5" />}
             </button>
+          )}
+          {error && (
+            <p className="[font-family:var(--font-maison)] mt-3 text-[13px] text-red-500">
+              Something went wrong. Please try again or call us directly.
+            </p>
           )}
         </div>
       </div>

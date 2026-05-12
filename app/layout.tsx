@@ -8,6 +8,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteShell } from "@/components/site-shell";
 import { SiteHeader } from "@/components/site-header";
 import { SmoothScroll } from "@/components/smooth-scroll";
+import { CookieConsent } from "@/components/cookie-consent";
 import { SITE, getLocalBusinessJsonLd } from "@/lib/seo";
 import "./globals.css";
 
@@ -128,7 +129,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon_new.ico", type: "image/svg+xml" },
+      { url: "/favicon_new.ico", type: "image/x-icon" },
       { url: "/favicon.ico?v=4", type: "image/x-icon" },
     ],
     shortcut: "/favicon.ico?v=4",
@@ -202,6 +203,7 @@ export default function RootLayout({
         <SiteShell>
           <SiteFooter />
         </SiteShell>
+        <CookieConsent />
       </body>
     </html>
   );
