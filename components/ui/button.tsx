@@ -9,7 +9,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         heroPrimary:
-          "bg-[var(--color-brand-orange)] text-[var(--color-brand-white)] hover:opacity-90",
+          "bg-[var(--color-brand-orange)] text-[#0b0300] hover:opacity-90",
         heroSecondary:
           "bg-[var(--color-brand-dark)] text-[var(--color-brand-white)] hover:bg-black",
         /** Solid white for primary actions on dark photo overlays (e.g. CTA band). */

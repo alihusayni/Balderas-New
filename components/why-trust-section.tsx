@@ -85,7 +85,7 @@ export function WhyTrustSection() {
                 className={
                   card.highlighted
                     ? "[font-family:var(--font-anton)] text-[44px] leading-none text-white sm:text-[32px]"
-                    : "[font-family:var(--font-anton)] text-[44px] leading-none text-[#55617e] sm:text-[32px]"
+                    : "[font-family:var(--font-anton)] text-[44px] leading-none text-[#1e2740] sm:text-[32px]"
                 }
               >
                 {card.stat}
@@ -94,7 +94,7 @@ export function WhyTrustSection() {
                 className={
                   card.highlighted
                     ? "font-maison mt-5 text-[30px] font-bold leading-[1.05] text-white sm:text-[24px]"
-                    : "font-maison mt-5 text-[30px] font-bold leading-[1.05] text-[#3e4a67] sm:text-[24px]"
+                    : "font-maison mt-5 text-[30px] font-bold leading-[1.05] text-[#1e2740] sm:text-[24px]"
                 }
               >
                 {card.title}
@@ -102,8 +102,8 @@ export function WhyTrustSection() {
               <SimpleText
                 className={
                   card.highlighted
-                    ? "mt-4 max-w-[280px] font-medium leading-[1.35] text-white/95"
-                    : "mt-4 max-w-[280px] font-medium leading-[1.35] text-[#4b5977]"
+                    ? "mt-4 max-w-[280px] font-medium leading-[1.35] text-white"
+                    : "mt-4 max-w-[280px] font-medium leading-[1.35] text-[#2e3a55]"
                 }
               >
                 {card.description}

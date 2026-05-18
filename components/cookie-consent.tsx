@@ -59,14 +59,14 @@ export function CookieConsent() {
           <button
             type="button"
             onClick={() => respond("declined")}
-            className="font-maison text-[13px] font-medium text-white/60 underline underline-offset-2 transition-colors hover:text-white sm:text-[14px]"
+            className="font-maison text-[13px] font-medium text-white/90 underline underline-offset-2 transition-colors hover:text-white sm:text-[14px]"
           >
             Decline
           </button>
           <button
             type="button"
             onClick={() => respond("accepted")}
-            className="rounded-md bg-[var(--color-brand-orange)] px-5 py-2 font-maison text-[13px] font-bold text-white transition-opacity hover:opacity-90 sm:text-[14px]"
+            className="rounded-md border border-white/30 bg-white px-5 py-2 font-maison text-[13px] font-bold text-[#06182C] transition-opacity hover:opacity-90 sm:text-[14px]"
           >
             Accept
           </button>

@@ -136,9 +136,9 @@ export function ContactFormPanel({
                         id={field.id}
                         name={field.id}
                         defaultValue=""
-                        className="h-full w-full appearance-none border-none bg-transparent pr-7 font-maison text-[15px] font-normal text-[#C4C8D3] focus:outline-none sm:pr-8 sm:text-[16px] md:text-[18px]"
+                        className="h-full w-full appearance-none border-none bg-transparent pr-7 font-maison text-[15px] font-normal text-[#767676] focus:outline-none focus:text-[#2f3745] sm:pr-8 sm:text-[16px] md:text-[18px]"
                       >
-                        <option value="" disabled className="text-[#C4C8D3]">
+                        <option value="" disabled className="text-[#767676]">
                           {field.placeholder ?? "Select an option"}
                         </option>
                         {field.options.map((option) => (
@@ -151,7 +151,7 @@ export function ContactFormPanel({
                           </option>
                         ))}
                       </select>
-                      <div className="pointer-events-none absolute right-[12px] top-1/2 -translate-y-1/2 text-[#9fa3ab]">
+                      <div className="pointer-events-none absolute right-[12px] top-1/2 -translate-y-1/2 text-[#595959]">
                         <span aria-hidden>⌄</span>
                       </div>
                     </div>
@@ -228,7 +228,7 @@ export function ContactFormPanel({
               </span>
               {status !== "sending" && (
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="white"/>
+                  <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="currentColor"/>
                 </svg>
               )}
             </Button>

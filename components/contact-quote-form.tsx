@@ -247,10 +247,10 @@ export function ContactQuoteForm({
               }
               disabled={!canProceed}
               className={cn(
-                "[font-family:var(--font-maison)] inline-flex h-[48px] min-w-[120px] items-center justify-center gap-2 rounded-[6px] border px-6 text-[14px] font-bold transition-opacity text-[var(--color-brand-white)]",
+                "[font-family:var(--font-maison)] inline-flex h-[48px] min-w-[120px] items-center justify-center gap-2 rounded-[6px] border px-6 text-[14px] font-bold transition-opacity text-[#0b0300]",
                 canProceed
                   ? "border-transparent bg-[var(--color-brand-orange)] hover:opacity-90"
-                  : "cursor-not-allowed border-transparent bg-neutral-400",
+                  : "cursor-not-allowed border-transparent bg-neutral-400 text-white",
               )}
             >
               <span>Next</span>

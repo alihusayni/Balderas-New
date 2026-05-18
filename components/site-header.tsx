@@ -651,8 +651,8 @@ export function SiteHeader() {
             <Link
               href={CONTACT_NAV.href}
               className={cn(
-                "font-maison flex w-full items-center justify-center bg-[var(--color-brand-orange)] px-4 py-3.5 text-[15px] font-bold uppercase tracking-[0.06em] text-white transition-[filter] hover:brightness-110",
-                isActive(CONTACT_NAV.href) && "ring-2 ring-inset ring-white/40",
+                "font-maison flex w-full items-center justify-center bg-[var(--color-brand-orange)] px-4 py-3.5 text-[15px] font-bold uppercase tracking-[0.06em] text-[#0b0300] transition-[filter] hover:brightness-110",
+                isActive(CONTACT_NAV.href) && "ring-2 ring-inset ring-black/20",
               )}
               onClick={() => setMobileOpen(false)}
             >
