@@ -181,11 +181,12 @@ export function ServicesDetailGrid() {
                 alt={row.imageAlt}
                 fill
                 loading="lazy"
-                // Precise sizes: full-width on mobile/tablet, half of the
-                // 1400px max-width grid (~680px) on desktop. Prevents the
-                // browser from fetching the 828px srcset at small sizes
-                // (was causing ~31 KiB/image overage per PageSpeed audit).
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 700px"
+                // sizes: full-width mobile/tablet, capped at 640px on desktop
+                // so the browser picks the w=640 srcset bucket (not w=828)
+                // for the ~380px-wide two-column grid slots.
+                // quality=70: busts the stale Vercel CDN cache (old key was q=75).
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 640px"
+                quality={70}
                 className="object-cover"
               />
             </div>

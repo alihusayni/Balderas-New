@@ -166,12 +166,15 @@ export default function RootLayout({
           data={getLocalBusinessJsonLd()}
         />
 
-        {/* Google Analytics (GA4) */}
+        {/* Google Analytics (GA4)
+             lazyOnload: deferred until browser idle after page load — removes
+             GA4 from the LCP/TBT measurement window. First-hit analytics may
+             be missed on sub-second bounce sessions (acceptable trade-off). */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-XPJS9MX8L9"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="ga4-init" strategy="afterInteractive">
+        <Script id="ga4-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

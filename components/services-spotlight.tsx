@@ -11,8 +11,8 @@ export function ServicesSpotlight() {
         src="/images/homepage/servicesSpotlight.webp"
         alt="Dumpster rental service spotlight"
         fill
-        // q=60: background under 68% dark overlay — saves ~19 KiB (PageSpeed flagged).
-        quality={60}
+        // q=55: background under 68% dark overlay — busts Vercel CDN cache.
+        quality={55}
         sizes="100vw"
         className="object-cover"
       />

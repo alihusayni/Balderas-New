@@ -36,9 +36,9 @@ export function WhyTrustSection() {
         src="/images/homepage/whyUs/bg.webp"
         alt="Why trust Balderas Demolition"
         fill
-        // q=60: decorative background under a 68% overlay — imperceptible quality
-        // loss saves ~62 KiB as flagged by PageSpeed.
-        quality={60}
+        // q=55: decorative background under a 68% overlay — busts Vercel CDN
+        // image cache (cache key includes the q param).
+        quality={55}
         sizes="100vw"
         className="object-cover"
       />
@@ -51,7 +51,7 @@ export function WhyTrustSection() {
           </p>
 
           <div className="mt-12 grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.35fr_0.65fr] lg:gap-12">
-            <HeroHeading className="mt-0 max-w-[1080px] text-[40px] uppercase leading-[0.95] tracking-[-0.02em] text-white sm:text-[54px] md:text-[68px] lg:text-[68px]">
+            <HeroHeading as="h2" className="mt-0 max-w-[1080px] text-[40px] uppercase leading-[0.95] tracking-[-0.02em] text-white sm:text-[54px] md:text-[68px] lg:text-[68px]">
               Why Orange County Trust Balderas Demolition Inc.
             </HeroHeading>
 
