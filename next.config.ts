@@ -1,6 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // Inlines CSS into <style> tags in the HTML response instead of emitting
+    // separate <link rel="stylesheet"> files. This removes the render-blocking
+    // CSS chunk (e.g. 0r_78-cg8y~1r.css) that PageSpeed flags on the critical
+    // path, improving FCP and LCP for first-time visitors.
+    // Ideal for Tailwind-based projects where the CSS output is compact.
+    inlineCss: true,
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 828, 1080, 1200, 1920],
