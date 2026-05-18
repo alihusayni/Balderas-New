@@ -11,6 +11,9 @@ export function ServicesSpotlight() {
         src="/images/homepage/servicesSpotlight.webp"
         alt="Dumpster rental service spotlight"
         fill
+        // q=60: background under 68% dark overlay — saves ~19 KiB (PageSpeed flagged).
+        quality={60}
+        sizes="100vw"
         className="object-cover"
       />
       <div className="absolute inset-0 bg-[#06182C]/68" />

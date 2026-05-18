@@ -36,6 +36,10 @@ export function WhyTrustSection() {
         src="/images/homepage/whyUs/bg.webp"
         alt="Why trust Balderas Demolition"
         fill
+        // q=60: decorative background under a 68% overlay — imperceptible quality
+        // loss saves ~62 KiB as flagged by PageSpeed.
+        quality={60}
+        sizes="100vw"
         className="object-cover"
       />
       <div className="absolute inset-0 bg-[#06182C]/68" />

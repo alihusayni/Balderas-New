@@ -180,7 +180,12 @@ export function ServicesDetailGrid() {
                 src={row.imageSrc}
                 alt={row.imageAlt}
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="lazy"
+                // Precise sizes: full-width on mobile/tablet, half of the
+                // 1400px max-width grid (~680px) on desktop. Prevents the
+                // browser from fetching the 828px srcset at small sizes
+                // (was causing ~31 KiB/image overage per PageSpeed audit).
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 700px"
                 className="object-cover"
               />
             </div>

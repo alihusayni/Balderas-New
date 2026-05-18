@@ -51,6 +51,9 @@ export function HeroParallaxBackground({
         fill
         priority={priority}
         sizes="100vw"
+        // q=60: this image sits under a dark 68% overlay — lower quality is
+        // imperceptible and saves ~62 KiB per PageSpeed audit.
+        quality={60}
         className={cn("object-cover will-change-transform", imageClassName)}
         style={{ transform: `translate3d(0, ${parallaxY}px, 0) scale(${scale})` }}
       />
