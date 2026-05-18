@@ -1,11 +1,12 @@
-"use client";
-
+// Server Component — no "use client".
+// The LCP <h1> is SSR'd immediately; the scroll button is isolated
+// in HeroScrollButton (a "use client" leaf) as on the homepage.
 import Image from "next/image";
 import { BoldText } from "@/components/bold-text";
 import { ContactCtaText } from "@/components/contact-cta-text";
 import { ContactFormPanel, type ContactFormField } from "@/components/contact-form-panel";
 import { GlassFeatureListCard } from "@/components/glass-feature-list-card";
-import { DirectionButton } from "@/components/hero/direction-button";
+import { HeroScrollButton } from "@/components/hero/hero-scroll-button";
 import { HeroCtas } from "@/components/hero/hero-ctas";
 import { HeroHeading } from "@/components/hero/hero-heading";
 import { HeroParallaxBackground } from "@/components/hero/hero-parallax-background";
@@ -25,50 +26,22 @@ import { ServiceIntroSection } from "@/components/service-intro-section";
 import { ServiceStepsSection } from "@/components/service-steps-section";
 import { RentalWarningIcon } from "@/components/icons";
 
-export default function DumpstersRentalPage() {
-  const dumpstersContactFields: ContactFormField[] = [
-    {
-      id: "dumpster-name",
-      label: "Name",
-      type: "text",
-      placeholder: "Your full name",
-      width: "half",
-    },
-    {
-      id: "dumpster-phone",
-      label: "Phone Number",
-      type: "text",
-      inputType: "tel",
-      placeholder: "Enter your phone number",
-      width: "half",
-    },
-    {
-      id: "dumpster-delivery-address",
-      label: "Delivery Address",
-      type: "text",
-      placeholder: "Enter delivery address",
-      width: "full",
-    },
-    {
-      id: "dumpster-start-date",
-      label: "Estimated Start Date",
-      type: "select",
-      placeholder: "Select estimated start date",
-      width: "full",
-      options: [
-        { value: "this-week", label: "This Week" },
-        { value: "next-week", label: "Next Week" },
-        { value: "this-month", label: "This Month" },
-      ],
-    },
-  ];
+const dumpstersContactFields: ContactFormField[] = [
+  { id: "dumpster-name", label: "Name", type: "text", placeholder: "Your full name", width: "half" },
+  { id: "dumpster-phone", label: "Phone Number", type: "text", inputType: "tel", placeholder: "Enter your phone number", width: "half" },
+  { id: "dumpster-delivery-address", label: "Delivery Address", type: "text", placeholder: "Enter delivery address", width: "full" },
+  {
+    id: "dumpster-start-date", label: "Estimated Start Date", type: "select",
+    placeholder: "Select estimated start date", width: "full",
+    options: [
+      { value: "this-week", label: "This Week" },
+      { value: "next-week", label: "Next Week" },
+      { value: "this-month", label: "This Month" },
+    ],
+  },
+];
 
-  const scrollToNextSection = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: "smooth",
-    });
-  };
+export default function DumpstersRentalPage() {
 
   return (
     <main className="flex min-h-screen flex-col bg-[var(--color-brand-dark)]">
@@ -105,11 +78,7 @@ export default function DumpstersRentalPage() {
             />
           </div>
         </div>
-        <DirectionButton
-          onClick={scrollToNextSection}
-          aria-label="Scroll to next section"
-          className="absolute bottom-6 right-5 z-20 hidden lg:flex lg:bottom-24 lg:right-8"
-        />
+        <HeroScrollButton className="absolute bottom-6 right-5 z-20 hidden lg:flex lg:bottom-24 lg:right-8" />
       </section>
 
       <section className="w-full bg-white py-24">
@@ -198,6 +167,7 @@ export default function DumpstersRentalPage() {
             alt="Dumpster truck and bins on residential street"
             fill
             sizes="100vw"
+            quality={60}
             className="object-cover"
           />
         </div>
@@ -308,6 +278,7 @@ export default function DumpstersRentalPage() {
             alt="Dumpster rental contact section background"
             fill
             sizes="100vw"
+            quality={60}
             className="object-cover"
           />
         </div>

@@ -91,6 +91,9 @@ export function CtaBanner({
         alt={backgroundAlt}
         fill
         sizes="100vw"
+        // q=60: always rendered under a configurable dark overlay;
+        // lower quality is imperceptible and reduces transfer size.
+        quality={60}
         aria-hidden={!backgroundAlt}
         className="-z-20 object-cover object-[center_bottom]"
       />

@@ -1,9 +1,10 @@
-"use client";
-
+// Server Component — no "use client".
+// The LCP <h1> is SSR'd immediately; the scroll button is isolated
+// in HeroScrollButton (a "use client" leaf) as on the homepage.
 import Image from "next/image";
 import { ContactCtaText } from "@/components/contact-cta-text";
 import { ContactFormPanel, type ContactFormField } from "@/components/contact-form-panel";
-import { DirectionButton } from "@/components/hero/direction-button";
+import { HeroScrollButton } from "@/components/hero/hero-scroll-button";
 import { HeroCtas } from "@/components/hero/hero-ctas";
 import { HeroHeading } from "@/components/hero/hero-heading";
 import { HeroParallaxBackground } from "@/components/hero/hero-parallax-background";
@@ -20,51 +21,21 @@ import {
   UpfrontVolumePricingIcon,
 } from "@/components/icons";
 
-export default function JunkRemovalPage() {
-  const junkRemovalContactFields: ContactFormField[] = [
-    {
-      id: "junk-name",
-      label: "Name",
-      type: "text",
-      placeholder: "Your full name",
-      width: "half",
-    },
-    {
-      id: "junk-phone",
-      label: "Phone Number",
-      type: "text",
-      inputType: "tel",
-      placeholder: "Enter your phone number",
-      width: "half",
-    },
-    {
-      id: "junk-location",
-      label: "Location",
-      type: "select",
-      placeholder: "Enter location",
-      width: "full",
-      options: [
-        { value: "orange-county", label: "Orange County" },
-        { value: "los-angeles", label: "Los Angeles County" },
-        { value: "riverside", label: "Riverside County" },
-      ],
-    },
-    {
-      id: "junk-description",
-      label: "Brief Description of Items",
-      type: "textarea",
-      placeholder: "",
-      width: "full",
-      rows: 5,
-    },
-  ];
+const junkRemovalContactFields: ContactFormField[] = [
+  { id: "junk-name", label: "Name", type: "text", placeholder: "Your full name", width: "half" },
+  { id: "junk-phone", label: "Phone Number", type: "text", inputType: "tel", placeholder: "Enter your phone number", width: "half" },
+  {
+    id: "junk-location", label: "Location", type: "select", placeholder: "Enter location", width: "full",
+    options: [
+      { value: "orange-county", label: "Orange County" },
+      { value: "los-angeles", label: "Los Angeles County" },
+      { value: "riverside", label: "Riverside County" },
+    ],
+  },
+  { id: "junk-description", label: "Brief Description of Items", type: "textarea", placeholder: "", width: "full", rows: 5 },
+];
 
-  const scrollToNextSection = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: "smooth",
-    });
-  };
+export default function JunkRemovalPage() {
 
   return (
     <main className="flex min-h-screen flex-col bg-[var(--color-brand-dark)]">
@@ -100,11 +71,7 @@ export default function JunkRemovalPage() {
             />
           </div>
         </div>
-        <DirectionButton
-          onClick={scrollToNextSection}
-          aria-label="Scroll to next section"
-          className="absolute bottom-6 right-5 z-20 hidden lg:flex lg:bottom-24 lg:right-8"
-        />
+        <HeroScrollButton className="absolute bottom-6 right-5 z-20 hidden lg:flex lg:bottom-24 lg:right-8" />
       </section>
 
       <section className="w-full bg-white py-24">
@@ -186,6 +153,7 @@ export default function JunkRemovalPage() {
             alt="Junk removal staging background"
             fill
             sizes="100vw"
+            quality={60}
             className="object-cover"
           />
         </div>
@@ -240,6 +208,7 @@ export default function JunkRemovalPage() {
             alt="Junk removal quote section background"
             fill
             sizes="100vw"
+            quality={60}
             className="object-cover"
           />
         </div>

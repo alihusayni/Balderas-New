@@ -66,6 +66,10 @@ export function ContactCtaSection(props: ContactCtaSectionProps) {
         src={backgroundImageSrc}
         alt={backgroundImageAlt}
         fill
+        sizes="100vw"
+        // q=60: always under a dark overlay (default 68%) — imperceptible
+        // quality loss; applied here so every page using this component benefits.
+        quality={60}
         className="object-cover"
       />
       <div className={`absolute inset-0 ${overlayClassName}`} />
