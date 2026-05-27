@@ -160,6 +160,10 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} ${maisonNeue.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preconnect" href="https://balderas-assets.s3.amazonaws.com" />
+        <link rel="dns-prefetch" href="https://balderas-assets.s3.amazonaws.com" />
+      </head>
       <body className="min-h-full flex flex-col">
         <JsonLd
           id="ld-local-business"
