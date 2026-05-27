@@ -20,7 +20,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Meet Abel Balderas, the founder of Balderas Demolition Inc. Learn about our commitment to safe demolition, eco-friendly junk removal, and superior service across Orange County.",
   path: "/about-us",
-  image: "/images/about/2.jpg",
+  image: "https://balderas-assets.s3.amazonaws.com/images/about/2.jpg",
   imageAlt: "Abel Balderas, founder of Balderas Demolition Inc., on a job site",
   keywords: [
     "Abel Balderas",
@@ -74,7 +74,7 @@ export default function AboutPage() {
           <div className="w-full lg:w-[611px] lg:shrink-0">
             <div className="relative h-[420px] w-full overflow-hidden sm:h-[520px] lg:h-[761px]">
               <Image
-                src="/images/about/2.jpg"
+                src="https://balderas-assets.s3.amazonaws.com/images/about/2.jpg"
                 alt="Abel Balderas, founder, on a job site wearing safety gear"
                 fill
                 sizes="(max-width: 1024px) 100vw, 611px"
@@ -124,7 +124,7 @@ export default function AboutPage() {
 
       <section className="relative w-full overflow-hidden">
         <Image
-          src="/images/about/3.png"
+          src="https://balderas-assets.s3.amazonaws.com/images/about/3.png"
           alt=""
           aria-hidden
           fill
@@ -159,7 +159,7 @@ export default function AboutPage() {
             <div className="relative h-[360px] w-[320px] sm:h-[480px] sm:w-[420px] lg:h-[640px] lg:w-[556px]">
               <div className="absolute left-0 top-0 h-[78%] w-[58%]">
                 <Image
-                  src="/images/about/california-top.png"
+                  src="https://balderas-assets.s3.amazonaws.com/images/about/california-top.png"
                   alt=""
                   aria-hidden
                   fill
@@ -169,7 +169,7 @@ export default function AboutPage() {
               </div>
               <div className="absolute bottom-0 right-0 h-[88%] w-[78%]">
                 <Image
-                  src="/images/about/california.png"
+                  src="https://balderas-assets.s3.amazonaws.com/images/about/california.png"
                   alt="Outline of California highlighting Orange County service area"
                   fill
                   sizes="(max-width: 1024px) 330px, 435px"
@@ -203,7 +203,7 @@ export default function AboutPage() {
           <div className="w-full xl:flex-1">
             <div className="relative h-[360px] w-full overflow-hidden sm:h-[520px] xl:h-full xl:min-h-[856px]">
               <Image
-                src="/images/about/3.png"
+                src="https://balderas-assets.s3.amazonaws.com/images/about/3.png"
                 alt="Balderas Demolition crew working safely on a residential demolition"
                 fill
                 sizes="(max-width: 1279px) 100vw, 780px"
@@ -217,7 +217,7 @@ export default function AboutPage() {
       <CtaBanner
         title="Ready to clear the way?"
         description="When you hire Balderas Demolition Inc., you are partnering with a licensed, insured, and dedicated team that cares about the outcome as much as you do. We invite you to experience the difference that professional communication and a “customer-first” attitude can make."
-        backgroundSrc="/images/about/about-footer.webp"
+        backgroundSrc="https://balderas-assets.s3.amazonaws.com/images/about/about-footer.webp"
         backgroundAlt=""
         titleClassName="text-[40px] sm:text-[56px] lg:text-[68px] lg:leading-[70px]"
         ctas={[

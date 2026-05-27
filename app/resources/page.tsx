@@ -99,7 +99,7 @@ export default function ResourcesPage() {
       <section className="relative -mt-[130px] w-full overflow-hidden">
         <div className="relative h-[420px] w-full sm:h-[480px] lg:h-[530px]">
           <HeroParallaxBackground
-            src="/images/resources/top-bg.png"
+            src="https://balderas-assets.s3.amazonaws.com/images/resources/top-bg.png"
             alt="Balderas Demolition Inc. service truck on site"
             priority
             overlayClassName="bg-[#06182C]/60"
@@ -123,7 +123,7 @@ export default function ResourcesPage() {
             <div className="w-full min-w-0 overflow-hidden xl:flex-1 xl:basis-0">
               <div className="relative h-[320px] w-full sm:h-[420px] lg:h-[605px]">
                 <Image
-                  src="/images/resources/first-article.jpg"
+                  src="https://balderas-assets.s3.amazonaws.com/images/resources/first-article.jpg"
                   alt={featuredArticle.imageAlt}
                   fill
                   sizes="(max-width: 1280px) 100vw, 50vw"

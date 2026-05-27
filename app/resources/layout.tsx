@@ -12,7 +12,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Guides, FAQs, and 2026 cost articles on demolition, dumpster rentals, and junk removal in Orange County. Tips and answers from Abel Balderas and the Balderas Demolition Inc. team.",
   path: "/resources",
-  image: "/images/resources/top-bg.png",
+  image: "https://balderas-assets.s3.amazonaws.com/images/resources/top-bg.png",
   imageAlt:
     "Balderas Demolition Inc. resources, guides, and FAQs about demolition in Orange County",
   keywords: [

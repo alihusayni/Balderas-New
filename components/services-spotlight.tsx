@@ -8,7 +8,7 @@ export function ServicesSpotlight() {
   return (
     <section className="relative w-full overflow-hidden">
       <Image
-        src="/images/homepage/servicesSpotlight.webp"
+        src="https://balderas-assets.s3.amazonaws.com/images/homepage/servicesSpotlight.webp"
         alt="Dumpster rental service spotlight"
         fill
         // q=55: background under 68% dark overlay — busts Vercel CDN cache.

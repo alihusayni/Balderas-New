@@ -81,7 +81,7 @@ export function JunkHaulingLanding() {
     <main className="flex min-h-screen flex-col bg-[var(--color-brand-dark)]">
       <section className="relative -mt-[130px] min-h-screen w-full overflow-hidden pt-[230px]">
         <HeroParallaxBackground
-          src="/images/dumpsters_rental/img6.jpg"
+          src="https://balderas-assets.s3.amazonaws.com/images/dumpsters_rental/img6.jpg"
           alt="Junk hauling crew and truck loading debris in Orange County"
           priority
         />
@@ -131,7 +131,7 @@ export function JunkHaulingLanding() {
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="/images/dumpsters_rental/img2.jpg"
+                src="https://balderas-assets.s3.amazonaws.com/images/dumpsters_rental/img2.jpg"
                 alt="Residential junk and debris ready for hauling in Orange County"
                 fill
                 sizes="100vw"
@@ -148,7 +148,7 @@ export function JunkHaulingLanding() {
           />
 
           <ServiceDetailSection
-            imageSrc="/images/dumpsters_rental/img2.jpg"
+            imageSrc="https://balderas-assets.s3.amazonaws.com/images/dumpsters_rental/img2.jpg"
             imageAlt="Residential junk and debris ready for hauling in Orange County"
             imageSide="right"
             hideImageOnSmallScreens
@@ -172,7 +172,7 @@ export function JunkHaulingLanding() {
           />
 
           <ServiceDetailSection
-            imageSrc="/images/dumpsters_rental/img4.jpg"
+            imageSrc="https://balderas-assets.s3.amazonaws.com/images/dumpsters_rental/img4.jpg"
             imageAlt="Yard waste and exterior debris hauling in Orange County"
             imageSide="left"
             title="Yard & Exterior Hauling"
@@ -194,7 +194,7 @@ export function JunkHaulingLanding() {
           />
 
           <ServiceDetailSection
-            imageSrc="/images/dumpsters_rental/img3.jpg"
+            imageSrc="https://balderas-assets.s3.amazonaws.com/images/dumpsters_rental/img3.jpg"
             imageAlt="Construction and commercial debris hauling in Orange County"
             imageSide="right"
             title="Commercial & Construction Hauling"
@@ -220,7 +220,7 @@ export function JunkHaulingLanding() {
       <section className="relative w-full overflow-hidden py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src="/images/dumpsters_rental/img5.jpg"
+            src="https://balderas-assets.s3.amazonaws.com/images/dumpsters_rental/img5.jpg"
             alt="Balderas Demolition hauling truck in Orange County"
             fill
             sizes="100vw"
@@ -276,7 +276,7 @@ export function JunkHaulingLanding() {
       </section>
 
       <ServiceStepsSection
-        imageSrc="/images/dumpsters_rental/img6.jpg"
+        imageSrc="https://balderas-assets.s3.amazonaws.com/images/dumpsters_rental/img6.jpg"
         imageAlt="Balderas Demolition truck loaded for junk hauling in Orange County"
         imageSide="left"
         title="Transparent, Volume-Based Pricing"
@@ -306,7 +306,7 @@ export function JunkHaulingLanding() {
       <section className="relative w-full overflow-hidden py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src="/images/dumpsters_rental/img8.png"
+            src="https://balderas-assets.s3.amazonaws.com/images/dumpsters_rental/img8.png"
             alt="Junk hauling contact section background"
             fill
             sizes="100vw"

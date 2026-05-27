@@ -121,7 +121,7 @@ export function EstateCleanoutLanding() {
     <main className="flex min-h-screen flex-col bg-[var(--color-brand-dark)]">
       <section className="-mt-[130px] relative min-h-screen w-full overflow-hidden pt-[230px]">
         <HeroParallaxBackground
-          src="/images/junk_removal/img3.jpg"
+          src="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img3.jpg"
           alt="Thoughtful estate cleanout and property clearing in Orange County"
           priority
         />
@@ -168,7 +168,7 @@ export function EstateCleanoutLanding() {
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="/images/junk_removal/img2.png"
+                src="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img2.png"
                 alt="Estate cleanout crew clearing a home with care"
                 fill
                 sizes="100vw"
@@ -178,7 +178,7 @@ export function EstateCleanoutLanding() {
           </div>
 
           <ServiceDetailSection
-            imageSrc="/images/junk_removal/img2.png"
+            imageSrc="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img2.png"
             imageAlt="Estate cleanout crew clearing a home with care"
             imageSide="right"
             hideImageOnSmallScreens
@@ -209,7 +209,7 @@ export function EstateCleanoutLanding() {
       <section className="relative w-full overflow-hidden py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src="/images/junk_removal/img4.jpg"
+            src="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img4.jpg"
             alt="Estate cleanout and junk removal staging in Orange County"
             fill
             sizes="100vw"
@@ -300,7 +300,7 @@ export function EstateCleanoutLanding() {
             <div className="w-full xl:w-1/2">
               <div className="relative h-[340px] w-full overflow-hidden sm:h-[400px] md:h-[460px] xl:h-[760px]">
                 <Image
-                  src="/images/junk_removal/img1.png"
+                  src="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img1.png"
                   alt="Estate property walk-through with Balderas Demolition"
                   fill
                   sizes="(max-width: 1279px) 100vw, 50vw"
@@ -332,7 +332,7 @@ export function EstateCleanoutLanding() {
       >
         <div className="absolute inset-0">
           <Image
-            src="/images/junk_removal/img5.jpg"
+            src="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img5.jpg"
             alt=""
             fill
             sizes="100vw"

@@ -33,7 +33,7 @@ export function WhyTrustSection() {
   return (
     <section className="relative overflow-hidden">
       <Image
-        src="/images/homepage/whyUs/bg.webp"
+        src="https://balderas-assets.s3.amazonaws.com/images/homepage/whyUs/bg.webp"
         alt="Why trust Balderas Demolition"
         fill
         // q=55: decorative background under a 68% overlay — busts Vercel CDN

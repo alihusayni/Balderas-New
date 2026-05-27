@@ -70,7 +70,7 @@ export default function HomePage() {
       <section className="relative min-h-[100svh] w-full overflow-hidden pt-[clamp(10.5rem,18vh,12rem)] lg:pt-[clamp(8.75rem,12vh,9rem)]">
         {/* Parallax background — client component, isolated from LCP critical path */}
         <HeroParallaxBackground
-          src="/images/homepage/hero.webp"
+          src="https://balderas-assets.s3.amazonaws.com/images/homepage/hero.webp"
           alt="Demolition service hero"
           priority
           speed={0.25}
@@ -81,7 +81,7 @@ export default function HomePage() {
           <div className="max-w-[760px] text-[var(--color-brand-white)] md:max-w-[680px] lg:max-w-[760px]">
             <div className="flex items-center mb-4 sm:mb-8 gap-2 md:gap-2.5">
               <Image
-                src="/icons/badgeIcon.svg"
+                src="https://balderas-assets.s3.amazonaws.com/icons/badgeIcon.svg"
                 alt="Orange County"
                 width={18}
                 height={18}
@@ -121,7 +121,7 @@ export default function HomePage() {
       <MeetOwnerSection />
       <TestimonialsSection />
       <ContactCtaSection
-        backgroundImageSrc="/images/homepage/contactbg.webp"
+        backgroundImageSrc="https://balderas-assets.s3.amazonaws.com/images/homepage/contactbg.webp"
         backgroundImageAlt="Contact Balderas Demolition"
         title="Start Your Demolition or Junk Removal Project Today"
         description="Ready to clear the deck? Get a fast, friendly estimate from Abel Balderas and the team."

@@ -27,7 +27,7 @@ export function ResidentialDemolitionHero({
   return (
     <section className="-mt-[130px] relative min-h-screen w-full overflow-hidden pt-[230px]">
       <HeroParallaxBackground
-        src="/images/services/img2.png"
+        src="https://balderas-assets.s3.amazonaws.com/images/services/img2.png"
         alt="Residential interior demolition in Orange County"
         priority
       />

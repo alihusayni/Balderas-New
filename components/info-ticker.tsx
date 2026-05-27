@@ -38,7 +38,7 @@ export function InfoTicker({ className }: InfoTickerProps) {
             <span className="[font-family:var(--font-anton)] inline-flex items-center gap-2 text-sm tracking-[0.08em] text-[var(--color-brand-white)] whitespace-nowrap">
               {item === "TOP CHOICE" && (
                 <Image
-                  src="/icons/badgeIcon.svg"
+                  src="https://balderas-assets.s3.amazonaws.com/icons/badgeIcon.svg"
                   alt=""
                   width={14}
                   height={14}

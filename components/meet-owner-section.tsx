@@ -8,7 +8,7 @@ export function MeetOwnerSection() {
       <div className="mx-auto grid w-full max-w-[1400px] grid-cols-1 items-center gap-6 px-4 sm:gap-8 sm:px-6 md:gap-10 md:px-8 lg:grid-cols-2 lg:gap-14 lg:px-10">
         <div className="order-2 relative min-h-[300px] overflow-hidden sm:min-h-[360px] md:min-h-[500px] lg:order-1">
           <Image
-            src="/images/about/2.jpg"
+            src="https://balderas-assets.s3.amazonaws.com/images/about/2.jpg"
             alt="Meet owner portrait placeholder"
             fill
             sizes="(max-width: 1024px) 100vw, 650px"

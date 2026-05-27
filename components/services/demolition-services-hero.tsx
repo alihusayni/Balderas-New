@@ -17,7 +17,7 @@ export function DemolitionServicesHero() {
   return (
     <section className="-mt-[130px] relative min-h-screen w-full overflow-hidden pt-[230px]">
       <HeroParallaxBackground
-        src="/images/services/img1.png"
+        src="https://balderas-assets.s3.amazonaws.com/images/services/img1.png"
         alt="Workers performing interior demolition"
         priority
       />

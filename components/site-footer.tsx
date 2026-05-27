@@ -23,7 +23,7 @@ export function SiteFooter() {
   return (
     <footer className="relative isolate overflow-hidden bg-[#020a14] text-(--color-brand-white)">
       <Image
-        src="/images/footer/bg.webp"
+        src="https://balderas-assets.s3.amazonaws.com/images/footer/bg.webp"
         alt=""
         fill
         priority={false}
