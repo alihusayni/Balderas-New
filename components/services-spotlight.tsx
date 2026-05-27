@@ -11,8 +11,8 @@ export function ServicesSpotlight() {
         src="https://balderas-assets.s3.amazonaws.com/images/homepage/servicesSpotlight.webp"
         alt="Dumpster rental service spotlight"
         fill
-        // q=55: background under 68% dark overlay — busts Vercel CDN cache.
-        quality={55}
+        // q=50: busts Vercel CDN cache — source re-uploaded to S3 at lower compression.
+        quality={50}
         sizes="100vw"
         className="object-cover"
       />
