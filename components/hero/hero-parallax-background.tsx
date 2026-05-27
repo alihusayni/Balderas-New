@@ -17,7 +17,7 @@ type HeroParallaxBackgroundProps = {
 export function HeroParallaxBackground({
   src,
   alt,
-  priority = false,
+  priority = true,
   speed = 0.25,
   scale = 1.08,
   overlayClassName,
