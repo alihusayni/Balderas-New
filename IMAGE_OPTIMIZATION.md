@@ -267,3 +267,49 @@ import Image from '@/atoms/img';
   <div className="relative z-10">...</div>
 </section>
 ```
+
+## 10. Capping `sizes` to Prevent Upscaling (Critical for Mobile)
+
+The most common PageSpeed image failure: `calc(100vw - Xpx)` on mobile causes
+the browser to request a larger image than the source can provide, wasting
+bandwidth on upscaled pixels.
+
+**The formula:** `maxMobileSizeCSS = sourceWidthPx ÷ 2`
+
+If your source image is 724px wide, cap mobile `sizes` at `362px` — at 2×
+DPR the browser requests 724px (exact source width, no upscaling).
+
+```tsx
+// ❌ WRONG — at 640px viewport: calc(640-24)=616px CSS → @2x = 1232px
+//    but source is only 724px → downloads upscaled garbage
+sizes="(min-width: 1280px) 22vw, (min-width: 768px) 46vw, calc(100vw - 1.5rem)"
+
+// ✅ CORRECT — mobile capped at sourceWidth ÷ 2
+sizes="(min-width: 1280px) 22vw, (min-width: 768px) 46vw, 362px"
+//                                                  ↑ 724px source ÷ 2
+```
+
+Common caps by source image width:
+
+| Source width | Mobile cap | Typical use |
+|---|---|---|
+| 768px | `384px` | Mobile-only hero/portrait |
+| 724px | `362px` | Service card images |
+| 384px | `192px` | Small thumbnails / half-width pairs |
+| 1200px+ | `(use vw)` | Large enough — no cap needed |
+
+**For logos / small UI elements**, use a fixed pixel value instead of `vw`:
+
+```tsx
+// ❌ WRONG — no cap, downloads 2x the logo at wider viewports
+sizes="100vw"
+
+// ✅ CORRECT — fixed to actual display size
+sizes="(max-width: 1279px) 140px, 200px"
+```
+
+**Quality for logos and partner marks:**
+- Navigation logos at 140–200px: `quality={55}` is sufficient
+- Ticker/grayscale logos: `quality={55}` — even less visible compression artifacts
+- Do NOT use `quality={75}` or above for logos under 250px
+
