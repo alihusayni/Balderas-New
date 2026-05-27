@@ -7,7 +7,9 @@ import { cn } from "@/lib/utils";
 type HeroParallaxBackgroundProps = {
   src: string;
   alt: string;
-  priority?: boolean;
+  // priority prop removed — use layout.tsx <link rel="preload" imageSrcSet> instead.
+  // next/image priority={true} auto-generates a preload at q=75 (ignores quality prop),
+  // which conflicts with our manual q=45 preload causing a double download.
   speed?: number;
   scale?: number;
   overlayClassName?: string;
@@ -17,7 +19,7 @@ type HeroParallaxBackgroundProps = {
 export function HeroParallaxBackground({
   src,
   alt,
-  priority = true,
+
   speed = 0.25,
   scale = 1.08,
   overlayClassName,
@@ -55,9 +57,12 @@ export function HeroParallaxBackground({
         src={src}
         alt={alt}
         fill
-        priority={priority}
+        // DO NOT use priority={true} — it auto-generates a preload at q=75 (ignores
+        // the quality prop), conflicting with our manual q=45 preload in layout.tsx.
+        // fetchPriority + loading="eager" give the same browser priority signal.
+        fetchPriority="high"
+        loading="eager"
         sizes="100vw"
-        // q=45: busts Vercel CDN cache — source re-uploaded to S3 at q=22 (146KB).
         quality={45}
         className={cn("object-cover will-change-transform", imageClassName)}
       />

@@ -16,23 +16,33 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
   display: "optional",
+  preload: false, // display:optional already non-blocking; preload causes unused-preload warnings
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "optional",
+  preload: false,
 });
 
 const anton = Anton({
   variable: "--font-anton",
   subsets: ["latin"],
   weight: "400",
+  display: "optional", // was defaulting to swap — caused a preload
+  preload: false,
 });
 
 const maisonNeue = localFont({
   variable: "--font-maison",
   display: "optional",
+  // preload: false — suppresses next/font auto-emitting <link rel="preload"> for
+  // all 5 TTF weight files. TTFs are large; next/font preloads every src entry
+  // regardless of which weight is actually used. Since display:"optional" already
+  // makes these non-blocking, preloading them is wasted bandwidth.
+  // TODO: Convert to woff2 and remove this flag (woff2 is ~30% smaller + correct format).
+  preload: false,
   fallback: ["Helvetica Neue", "Arial", "sans-serif"],
   src: [
     {
