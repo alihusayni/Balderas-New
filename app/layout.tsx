@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
+import { Analytics } from "@/components/analytics";
 import localFont from "next/font/local";
 import { Anton, Geist, Geist_Mono } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
@@ -166,28 +166,15 @@ export default function RootLayout({
           data={getLocalBusinessJsonLd()}
         />
 
-        {/* Google Analytics (GA4)
-             lazyOnload: deferred until browser idle after page load — removes
-             GA4 from the LCP/TBT measurement window. First-hit analytics may
-             be missed on sub-second bounce sessions (acceptable trade-off). */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-XPJS9MX8L9"
-          strategy="lazyOnload"
-        />
-        <Script id="ga4-init" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-XPJS9MX8L9');
-          `}
-        </Script>
+        {/* Resource hints for CallRail */}
+        <link rel="preconnect" href="https://js.callrail.com" />
+        <link rel="dns-prefetch" href="https://js.callrail.com" />
 
-        {/* CallRail phone swap */}
-        <Script
-          src="//cdn.callrail.com/companies/556435243/b8b07fe969694226ed37/12/swap.js"
-          strategy="afterInteractive"
-        />
+        {/* Server-side analytics — replaces 171KB gtag.js */}
+        <Analytics />
+
+        {/* CallRail phone swap — proxied for caching */}
+        <script src="/api/callrail-swap" defer />
 
         <NextTopLoader
           color="#dc5a31"
