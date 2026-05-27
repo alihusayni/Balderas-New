@@ -15,11 +15,15 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "optional",
+  display: "optional",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "optional",
+  display: "optional",
 });
 
 const anton = Anton({
@@ -30,7 +34,7 @@ const anton = Anton({
 
 const maisonNeue = localFont({
   variable: "--font-maison",
-  display: "swap",
+  display: "optional",
   fallback: ["Helvetica Neue", "Arial", "sans-serif"],
   src: [
     {
