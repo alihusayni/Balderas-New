@@ -163,9 +163,24 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} ${maisonNeue.variable} h-full antialiased`}
     >
       <head>
-        <link rel="preload" as="image" type="image/webp" href="https://balderas-assets.s3.amazonaws.com/images/homepage/hero.webp" fetchPriority="high" />
-        <link rel="preconnect" href="https://balderas-assets.s3.amazonaws.com" />
-        <link rel="dns-prefetch" href="https://balderas-assets.s3.amazonaws.com" />
+        {/*
+          Preload the hero LCP image via the actual /_next/image URL.
+          The raw S3 preload was wrong — the browser never fetches S3 directly.
+          imagesrcset mirrors next/image's srcset buckets for sizes="100vw".
+          fetchpriority="high" ensures the browser starts this fetch immediately.
+        */}
+        <link
+          rel="preload"
+          as="image"
+          fetchPriority="high"
+          imageSrcSet={[
+            "/_next/image?url=https%3A%2F%2Fbalderas-assets.s3.amazonaws.com%2Fimages%2Fhomepage%2Fhero.webp&w=640&q=45 640w",
+            "/_next/image?url=https%3A%2F%2Fbalderas-assets.s3.amazonaws.com%2Fimages%2Fhomepage%2Fhero.webp&w=1080&q=45 1080w",
+            "/_next/image?url=https%3A%2F%2Fbalderas-assets.s3.amazonaws.com%2Fimages%2Fhomepage%2Fhero.webp&w=1200&q=45 1200w",
+            "/_next/image?url=https%3A%2F%2Fbalderas-assets.s3.amazonaws.com%2Fimages%2Fhomepage%2Fhero.webp&w=1920&q=45 1920w",
+          ].join(", ")}
+          imageSizes="100vw"
+        />
       </head>
       <body className="min-h-full flex flex-col">
         <JsonLd
