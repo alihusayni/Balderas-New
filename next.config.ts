@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
     // Ideal for Tailwind-based projects where the CSS output is compact.
     inlineCss: true,
   },
+  turbopack: {
+    resolveAlias: {
+      'next/dist/build/polyfills/polyfill-module': './lib/empty-polyfill.js',
+    },
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     // Limit srcset buckets to what the site actually uses.

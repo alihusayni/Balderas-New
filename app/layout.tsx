@@ -166,15 +166,10 @@ export default function RootLayout({
           data={getLocalBusinessJsonLd()}
         />
 
-        {/* Resource hints for CallRail */}
-        <link rel="preconnect" href="https://js.callrail.com" />
-        <link rel="dns-prefetch" href="https://js.callrail.com" />
 
-        {/* Server-side analytics — replaces 171KB gtag.js */}
+
+        {/* Server-side analytics */}
         <Analytics />
-
-        {/* CallRail phone swap — proxied for caching */}
-        <script src="/api/callrail-swap" defer />
 
         <NextTopLoader
           color="#dc5a31"
