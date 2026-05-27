@@ -14,6 +14,16 @@ const nextConfig: NextConfig = {
       'next/dist/build/polyfills/polyfill-module': './lib/empty-polyfill.js',
     },
   },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      const path = require("path");
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        "next/dist/build/polyfills/polyfill-module": path.resolve(__dirname, "lib/empty-polyfill.js"),
+      };
+    }
+    return config;
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     // Limit srcset buckets to what the site actually uses.
