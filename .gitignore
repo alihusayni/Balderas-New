@@ -37,8 +37,6 @@ yarn-error.log*
 .vercel
 
 # Assets migrated to S3 (balderas-assets.s3.amazonaws.com)
-/public/images/
-/public/icons/
 
 # typescript
 *.tsbuildinfo
