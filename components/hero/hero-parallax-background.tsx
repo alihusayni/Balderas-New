@@ -51,8 +51,8 @@ export function HeroParallaxBackground({
         fill
         priority={priority}
         sizes="100vw"
-        // q=50: busts Vercel CDN cache — source re-uploaded to S3 at lower compression.
-        quality={50}
+        // q=45: busts Vercel CDN cache — source re-uploaded to S3 at q=22 (146KB).
+        quality={45}
         className={cn("object-cover will-change-transform", imageClassName)}
         style={{ transform: `translate3d(0, ${parallaxY}px, 0) scale(${scale})` }}
       />

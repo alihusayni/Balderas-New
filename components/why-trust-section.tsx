@@ -36,8 +36,8 @@ export function WhyTrustSection() {
         src="https://balderas-assets.s3.amazonaws.com/images/homepage/whyUs/bg.webp"
         alt="Why trust Balderas Demolition"
         fill
-        // q=50: busts Vercel CDN cache — source re-uploaded to S3 at lower compression.
-        quality={50}
+        // q=45: busts Vercel CDN cache — source re-uploaded to S3 at q=22 (80KB).
+        quality={45}
         sizes="100vw"
         className="object-cover"
       />
