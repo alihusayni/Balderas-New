@@ -136,9 +136,9 @@ export function ContactFormPanel({
                         id={field.id}
                         name={field.id}
                         defaultValue=""
-                        className="h-full w-full appearance-none border-none bg-transparent pr-7 font-maison text-[15px] font-normal text-[#767676] focus:outline-none focus:text-[#2f3745] sm:pr-8 sm:text-[16px] md:text-[18px]"
+                        className="h-full w-full appearance-none border-none bg-transparent pr-7 font-maison text-[15px] font-normal text-[#595959] focus:outline-none focus:text-[#2f3745] sm:pr-8 sm:text-[16px] md:text-[18px]"
                       >
-                        <option value="" disabled className="text-[#767676]">
+                        <option value="" disabled className="text-[#595959]">
                           {field.placeholder ?? "Select an option"}
                         </option>
                         {field.options.map((option) => (
@@ -151,7 +151,7 @@ export function ContactFormPanel({
                           </option>
                         ))}
                       </select>
-                      <div className="pointer-events-none absolute right-[12px] top-1/2 -translate-y-1/2 text-[#595959]">
+                      <div className="pointer-events-none absolute right-[12px] top-1/2 -translate-y-1/2 text-[#3d3d3d]">
                         <span aria-hidden>⌄</span>
                       </div>
                     </div>

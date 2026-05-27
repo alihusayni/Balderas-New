@@ -83,7 +83,7 @@ export function WhyTrustSection() {
               <p
                 className={
                   card.highlighted
-                    ? "[font-family:var(--font-anton)] text-[44px] leading-none text-white sm:text-[32px]"
+                    ? "[font-family:var(--font-anton)] text-[44px] leading-none text-[#0b0300] sm:text-[32px]"
                     : "[font-family:var(--font-anton)] text-[44px] leading-none text-[#1e2740] sm:text-[32px]"
                 }
               >
@@ -92,7 +92,7 @@ export function WhyTrustSection() {
               <h3
                 className={
                   card.highlighted
-                    ? "font-maison mt-5 text-[30px] font-bold leading-[1.05] text-white sm:text-[24px]"
+                    ? "font-maison mt-5 text-[30px] font-bold leading-[1.05] text-[#0b0300] sm:text-[24px]"
                     : "font-maison mt-5 text-[30px] font-bold leading-[1.05] text-[#1e2740] sm:text-[24px]"
                 }
               >
@@ -101,7 +101,7 @@ export function WhyTrustSection() {
               <SimpleText
                 className={
                   card.highlighted
-                    ? "mt-4 max-w-[280px] font-medium leading-[1.35] text-white"
+                    ? "mt-4 max-w-[280px] font-medium leading-[1.35] text-[#0b0300]"
                     : "mt-4 max-w-[280px] font-medium leading-[1.35] text-[#2e3a55]"
                 }
               >
