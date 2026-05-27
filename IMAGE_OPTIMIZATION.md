@@ -313,3 +313,95 @@ sizes="(max-width: 1279px) 140px, 200px"
 - Ticker/grayscale logos: `quality={55}` — even less visible compression artifacts
 - Do NOT use `quality={75}` or above for logos under 250px
 
+
+## 11. JavaScript Performance — Defer Third-Party Scripts
+
+Unused and eagerly-loaded JavaScript is one of the top PageSpeed killers.
+Follow these rules for every third-party script.
+
+### Script loading strategies (Next.js `<Script>`)
+
+| Strategy | When it runs | Use for |
+|---|---|---|
+| `beforeInteractive` | Before hydration (blocks) | Consent defaults, critical config only |
+| `afterInteractive` | After Next.js hydration | Nothing — use lazyOnload instead |
+| `lazyOnload` | After page is fully idle ✅ | GA4, GTM, CallRail, Meta Pixel, chat widgets |
+| `worker` | Partytown web worker ✅✅ | High-traffic sites needing full main-thread offload |
+
+**Rule: analytics scripts must NEVER use `afterInteractive`.** It fires during
+hydration and competes directly with INP/TBT. Use `lazyOnload` always.
+
+```tsx
+// ❌ WRONG — blocks hydration measurement window
+<Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXX" strategy="afterInteractive" />
+
+// ✅ CORRECT — fires after page is fully idle
+<Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXX" strategy="lazyOnload" />
+<Script id="ga4-init" strategy="lazyOnload">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXX');
+  `}
+</Script>
+```
+
+### Never use `@next/third-parties/google` GoogleAnalytics component
+
+It hardcodes `afterInteractive`. Always write GA manually with `lazyOnload`:
+
+```tsx
+// ❌ WRONG — hardcodes afterInteractive internally
+import { GoogleAnalytics } from "@next/third-parties/google";
+<GoogleAnalytics gaId="G-XXXX" />
+
+// ✅ CORRECT — full control over strategy
+<Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXX" strategy="lazyOnload" />
+<Script id="ga4-init" strategy="lazyOnload">{`...`}</Script>
+```
+
+### Heavy client-side libraries — use `dynamic()`
+
+Libraries like GSAP, Framer Motion, charts, sliders, and spinners must be
+dynamically imported so they are code-split out of the initial JS bundle:
+
+```tsx
+// ❌ WRONG — adds 100+ KiB to initial bundle even on pages that do not use it
+import { ScrollVelocity } from "@/lib/ScrollVelocity";
+
+// ✅ CORRECT — downloaded only when the component renders
+import dynamic from "next/dynamic";
+const ScrollVelocity = dynamic(() => import("@/lib/ScrollVelocity"), {
+  loading: () => <div className="h-16 animate-pulse bg-gray-100" />,
+});
+```
+
+### Remove unused analytics (Clarity, etc.)
+
+Do not leave analytics/heatmap scripts running if they are not actively being
+used. Each one adds 50–150 KiB of network payload on every page load.
+
+---
+
+## 12. Descriptive Link Text (SEO & Accessibility)
+
+**Rule:** Every `<Link>` or `<a>` must have a unique, descriptive accessible name. Generic text like "Learn More", "Read More", "View More", or "Click Here" tells search engines and screen readers nothing about the destination.
+
+**Why it matters:** Google uses link text as an anchor signal for ranking the destination page. PageSpeed/Lighthouse flags generic links under "Links do not have descriptive text."
+
+### What to fix
+
+| Pattern | Problem | Fix |
+|---|---|---|
+| `<Link>Learn More</Link>` | No context | `<Link aria-label="Learn more about {title}">Learn More</Link>` |
+| `<Link>Read More →</Link>` | Arrow is read aloud | `<Link aria-label="Read: {post.title}">Read More <span aria-hidden>→</span></Link>` |
+| `<div>Read More</div>` inside a linked card | Decorative | Add `aria-hidden="true"` to the div |
+| Whole card is a Link wrapping title + "Read More" | Title provides context but CTA is redundant | Add `aria-label="Read: {title}"` to the Link AND `aria-hidden="true"` to the decorative CTA text |
+
+### Rules
+- **Always** add `aria-label` when visible link text is generic ("Learn More", "Read More", "View More")
+- **Never** read decorative arrows (`→`, `›`, `»`) to screen readers — wrap in `<span aria-hidden="true">→</span>`
+- **Prefer** making the visible text itself descriptive when refactoring: "Explore Vehicle Patrol Services" beats "Learn More" + aria-label
+- For card components with a CTA link separate from the title link, use `aria-label="{ctaLabel}: {title}"` on the CTA
+

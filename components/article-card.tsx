@@ -56,6 +56,7 @@ export function ArticleCard({
 
         <Link
           href={href}
+          aria-label={`${ctaLabel}: ${title}`}
           className="font-maison inline-flex shrink-0 items-center gap-2 text-[14px] font-bold leading-none text-[var(--color-brand-orange)] transition-opacity hover:opacity-80 sm:gap-2.5 sm:text-[15px] md:gap-3 md:text-[16px] lg:text-[17px] xl:text-[20px]"
         >
           <span>{ctaLabel}</span>
