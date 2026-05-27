@@ -10,6 +10,8 @@ type HeroParallaxBackgroundProps = {
   // priority prop removed — use layout.tsx <link rel="preload" imageSrcSet> instead.
   // next/image priority={true} auto-generates a preload at q=75 (ignores quality prop),
   // which conflicts with our manual q=45 preload causing a double download.
+  // Accepted here to avoid breaking existing call sites — it is intentionally ignored.
+  priority?: boolean;
   speed?: number;
   scale?: number;
   overlayClassName?: string;
@@ -19,7 +21,7 @@ type HeroParallaxBackgroundProps = {
 export function HeroParallaxBackground({
   src,
   alt,
-
+  priority: _priority, // accepted for call-site compat; intentionally not forwarded — see type comment
   speed = 0.25,
   scale = 1.08,
   overlayClassName,
