@@ -165,6 +165,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} ${maisonNeue.variable} h-full antialiased`}
     >
       <head>
+        <link rel="preload" as="image" type="image/webp" href="https://balderas-assets.s3.amazonaws.com/images/homepage/hero.webp" fetchPriority="high" />
         <link rel="preconnect" href="https://balderas-assets.s3.amazonaws.com" />
         <link rel="dns-prefetch" href="https://balderas-assets.s3.amazonaws.com" />
       </head>
