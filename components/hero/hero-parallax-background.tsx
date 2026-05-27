@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 type HeroParallaxBackgroundProps = {
@@ -23,7 +23,10 @@ export function HeroParallaxBackground({
   overlayClassName,
   imageClassName,
 }: HeroParallaxBackgroundProps) {
-  const [parallaxY, setParallaxY] = useState(0);
+  // Ref points directly at the <img> DOM node so we can mutate style.transform
+  // without triggering a React re-render (and its forced layout recalculation)
+  // on every scroll frame. Previous useState approach caused ~60 layout passes/s.
+  const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     let ticking = false;
@@ -32,20 +35,23 @@ export function HeroParallaxBackground({
       if (ticking) return;
       ticking = true;
       window.requestAnimationFrame(() => {
-        setParallaxY(window.scrollY * speed);
+        if (imgRef.current) {
+          imgRef.current.style.transform = `translate3d(0, ${window.scrollY * speed}px, 0) scale(${scale})`;
+        }
         ticking = false;
       });
     };
 
+    // Set initial transform
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-
     return () => window.removeEventListener("scroll", onScroll);
-  }, [speed]);
+  }, [speed, scale]);
 
   return (
     <>
       <Image
+        ref={imgRef}
         src={src}
         alt={alt}
         fill
@@ -54,7 +60,6 @@ export function HeroParallaxBackground({
         // q=45: busts Vercel CDN cache — source re-uploaded to S3 at q=22 (146KB).
         quality={45}
         className={cn("object-cover will-change-transform", imageClassName)}
-        style={{ transform: `translate3d(0, ${parallaxY}px, 0) scale(${scale})` }}
       />
       <div className={cn("absolute inset-0 bg-[#06182C]/68", overlayClassName)} />
     </>
