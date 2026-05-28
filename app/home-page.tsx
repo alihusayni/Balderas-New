@@ -4,6 +4,7 @@
 // own "use client" leaf components: HeroParallaxBackground & HeroScrollButton.
 
 import Image from "next/image";
+import { BadgeIcon } from "@/components/icons/badge-icon";
 import { ContactCtaSection } from "@/components/contact-cta-section";
 import { HeroParallaxBackground } from "@/components/hero/hero-parallax-background";
 import { HeroScrollButton } from "@/components/hero/hero-scroll-button";
@@ -85,14 +86,7 @@ export default function HomePage() {
         <div className="relative z-10 mx-auto flex min-h-[calc(100svh-1.5rem)] w-full max-w-[1400px] items-end px-5 pb-[clamp(12.25rem,12vh,9rem)] pt-[env(safe-area-inset-top,0px)] md:px-8 lg:px-10">
           <div className="max-w-[760px] text-[var(--color-brand-white)] md:max-w-[680px] lg:max-w-[760px]">
             <div className="flex items-center mb-4 sm:mb-8 gap-2 md:gap-2.5">
-              <Image
-                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/icons/badgeIcon.svg"
-                alt="Orange County"
-                width={18}
-                height={18}
-                className="h-[18px] w-auto sm:h-[20px] md:h-[24px]"
-                style={{ width: "auto" }}
-              />
+              <BadgeIcon className="h-[18px] w-auto sm:h-[20px] md:h-[24px]" />
               <p className="[font-family:var(--font-anton)] text-sm font-medium tracking-[0.08em] sm:text-base md:text-lg lg:text-xl">
                 ORANGE COUNTY&apos;S TOP CHOICE
               </p>

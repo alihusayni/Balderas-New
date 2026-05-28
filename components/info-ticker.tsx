@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { BadgeIcon } from "@/components/icons/badge-icon";
 
 const TICKER_ITEMS = [
   "DEMOLITION",
@@ -37,14 +37,7 @@ export function InfoTicker({ className }: InfoTickerProps) {
           >
             <span className="[font-family:var(--font-anton)] inline-flex items-center gap-2 text-sm tracking-[0.08em] text-[var(--color-brand-white)] whitespace-nowrap">
               {item === "TOP CHOICE" && (
-                <Image
-                  src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/icons/badgeIcon.svg"
-                  alt=""
-                  width={14}
-                  height={14}
-                  style={{ width: "auto", height: "auto" }}
-                  aria-hidden
-                />
+                <BadgeIcon className="h-3.5 w-auto" />
               )}
               {item}
             </span>
