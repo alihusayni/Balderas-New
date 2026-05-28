@@ -148,6 +148,10 @@ export default function RootLayout({
           fetchPriority="high"
           imageSrcSet={[
             "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=640&q=22 640w",
+            // 750w & 828w added — without these, iPhone 375px@2x picks 750w from the
+            // <img> srcset but the preload had fetched 1080w → cache miss → double download.
+            "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=750&q=22 750w",
+            "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=828&q=22 828w",
             "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=1080&q=22 1080w",
             "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=1200&q=22 1200w",
             "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=1920&q=22 1920w",

@@ -27,6 +27,12 @@ const nextConfig: NextConfig = {
     return config;
   },
   images: {
+    // AVIF is 30–50% smaller than WebP at the same quality — cuts hero load duration.
+    // Order matters: browser picks first format it supports (avif > webp > original).
+    formats: ['image/avif', 'image/webp'],
+    // Cache processed images at CDN for 1 year (default is 60s — causes re-processing
+    // on every Vercel edge node cold start, adding latency for real users).
+    minimumCacheTTL: 31536000,
     // Next.js 15+ defaults to qualities:[75] only — any other value returns
     // INVALID_IMAGE_OPTIMIZE_REQUEST (400). Explicitly allowlist all quality
     // values used across components:
