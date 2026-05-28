@@ -124,7 +124,7 @@ export function ContactQuoteForm({
               fill
               sizes="(max-width: 640px) 240px, (max-width: 1024px) 340px, 420px"
               className="object-contain"
-              priority
+
             />
           </div>
         </div>
