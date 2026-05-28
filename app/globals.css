@@ -1,11 +1,52 @@
 @import "tailwindcss";
 
+/* MaisonNeue — served from Vercel Blob (no local font files in repo)
+   display:optional = non-blocking; browser uses fallback if not fast enough */
+@font-face {
+  font-family: "MaisonNeue";
+  src: url("https://y5judepxfpr0logb.public.blob.vercel-storage.com/balderas/fonts/MaisonNeue-Light-aFBHpQoQCdgv5H7r87pl8aAeFwRWs1.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: optional;
+}
+@font-face {
+  font-family: "MaisonNeue";
+  src: url("https://y5judepxfpr0logb.public.blob.vercel-storage.com/balderas/fonts/MaisonNeue-Book-gfuA6Vo46rvlpNHkUbiuJz2YVALkFy.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: optional;
+}
+@font-face {
+  font-family: "MaisonNeue";
+  src: url("https://y5judepxfpr0logb.public.blob.vercel-storage.com/balderas/fonts/MaisonNeue-Medium-Anw9V4wZxrlRR9GFyh33CpVYUnDQqA.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: optional;
+}
+@font-face {
+  font-family: "MaisonNeue";
+  src: url("https://y5judepxfpr0logb.public.blob.vercel-storage.com/balderas/fonts/MaisonNeue-Demi-6SLU0mKUOtJYi6akqJDmUaPTFM1uKO.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: optional;
+}
+@font-face {
+  font-family: "MaisonNeue";
+  src: url("https://y5judepxfpr0logb.public.blob.vercel-storage.com/balderas/fonts/MaisonNeue-Bold-ouhQeZaYqxSZqh02jJ6Hr8RWBlPzYV.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: optional;
+}
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --brand-dark: #0b0300;
   --brand-orange: #dc5a31;
   --brand-white: #ffffff;
+  /* MaisonNeue loaded via @font-face above; set variable so .font-maison utility works */
+  --font-maison: "MaisonNeue";
 }
 
 @theme inline {

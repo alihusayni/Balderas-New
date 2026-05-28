@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@/components/analytics";
-import localFont from "next/font/local";
+
 import { Anton, Geist, Geist_Mono } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import { JsonLd } from "@/components/json-ld";
@@ -34,41 +34,6 @@ const anton = Anton({
   preload: false,
 });
 
-const maisonNeue = localFont({
-  variable: "--font-maison",
-  display: "optional",
-  // preload:false removed — woff2 is the correct format. Next.js won't emit
-  // redundant format preloads for woff2. Previously used TTF (64KB each);
-  // woff2 is 20KB each (69% smaller) + Brotli-compressed by Vercel to ~12KB.
-  fallback: ["Helvetica Neue", "Arial", "sans-serif"],
-  src: [
-    {
-      path: "../public/fonts/maison/MaisonNeue-Light.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/maison/MaisonNeue-Book.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/maison/MaisonNeue-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/maison/MaisonNeue-Demi.woff2",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/maison/MaisonNeue-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -167,7 +132,8 @@ export default function RootLayout({
       lang="en"
       data-scroll-behavior="smooth"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} ${maisonNeue.variable} h-full antialiased`}
+      // MaisonNeue is loaded via @font-face in globals.css (Vercel Blob) — no localFont variable needed
+      className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} h-full antialiased`}
     >
       <head>
         {/*
