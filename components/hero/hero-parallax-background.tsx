@@ -59,11 +59,13 @@ export function HeroParallaxBackground({
         src={src}
         alt={alt}
         fill
-        // DO NOT use priority={true} — it auto-generates a preload at q=75 (ignores
-        // the quality prop), conflicting with our manual q=45 preload in layout.tsx.
-        // fetchPriority + loading="eager" give the same browser priority signal.
-        fetchPriority="high"
-        loading="eager"
+        // DO NOT use priority={true} — auto-generates a q=75 preload (ignores quality prop),
+        // conflicting with our manual q=22 preload in layout.tsx.
+        // DO NOT use fetchPriority="high" — Next.js 16 Turbopack also auto-generates a
+        // q=75 preload for any Image with fetchPriority="high", same conflict.
+        // The manual <link rel="preload" imageSrcSet q=22> in layout.tsx is the sole
+        // priority signal. The Image here just renders with default loading behavior
+        // and picks up the already-preloaded q=22 resource from browser cache.
         sizes="100vw"
         quality={22}
         // q=22: full-bleed under 68% dark overlay — same as why-trust and spotlight.
