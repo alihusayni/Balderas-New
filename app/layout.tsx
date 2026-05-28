@@ -37,36 +37,33 @@ const anton = Anton({
 const maisonNeue = localFont({
   variable: "--font-maison",
   display: "optional",
-  // preload: false — suppresses next/font auto-emitting <link rel="preload"> for
-  // all 5 TTF weight files. TTFs are large; next/font preloads every src entry
-  // regardless of which weight is actually used. Since display:"optional" already
-  // makes these non-blocking, preloading them is wasted bandwidth.
-  // TODO: Convert to woff2 and remove this flag (woff2 is ~30% smaller + correct format).
-  preload: false,
+  // preload:false removed — woff2 is the correct format. Next.js won't emit
+  // redundant format preloads for woff2. Previously used TTF (64KB each);
+  // woff2 is 20KB each (69% smaller) + Brotli-compressed by Vercel to ~12KB.
   fallback: ["Helvetica Neue", "Arial", "sans-serif"],
   src: [
     {
-      path: "../public/fonts/maison/MaisonNeue-Light.ttf",
+      path: "../public/fonts/maison/MaisonNeue-Light.woff2",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../public/fonts/maison/MaisonNeue-Book.ttf",
+      path: "../public/fonts/maison/MaisonNeue-Book.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/fonts/maison/MaisonNeue-Medium.ttf",
+      path: "../public/fonts/maison/MaisonNeue-Medium.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../public/fonts/maison/MaisonNeue-Demi.ttf",
+      path: "../public/fonts/maison/MaisonNeue-Demi.woff2",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../public/fonts/maison/MaisonNeue-Bold.ttf",
+      path: "../public/fonts/maison/MaisonNeue-Bold.woff2",
       weight: "700",
       style: "normal",
     },
