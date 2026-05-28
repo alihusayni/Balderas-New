@@ -2,12 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   experimental: {
-    // Inlines CSS into <style> tags in the HTML response instead of emitting
-    // separate <link rel="stylesheet"> files. This removes the render-blocking
-    // CSS chunk (e.g. 0r_78-cg8y~1r.css) that PageSpeed flags on the critical
-    // path, improving FCP and LCP for first-time visitors.
-    // Ideal for Tailwind-based projects where the CSS output is compact.
-    inlineCss: true,
+    // inlineCss was disabled — Tailwind generates 83.8 KB of CSS for this project.
+    // At that size, inlining adds 83.8 KB to the HTML that must be fully downloaded
+    // and parsed before any pixel can paint → FCP 2.3s.
+    // External CSS fetches in parallel via HTTP/2 while HTML streams → faster FCP.
+    // inlineCss is only beneficial when CSS output is small (< ~20 KB).
+    // inlineCss: true,
   },
   turbopack: {
     resolveAlias: {
