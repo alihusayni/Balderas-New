@@ -14,7 +14,12 @@ import { InfoTicker } from "@/components/info-ticker";
 import { MeetOwnerSection } from "@/components/meet-owner-section";
 import { ServicesDetailGrid } from "@/components/services-detail-grid";
 import { ServicesSpotlight } from "@/components/services-spotlight";
-import { TestimonialsSection } from "@/components/testimonials-section";
+import dynamic from "next/dynamic";
+// Dynamic import — defers embla-carousel (~75KB) until below-fold section is visible
+const TestimonialsSection = dynamic(
+  () => import("@/components/testimonials-section").then((m) => m.TestimonialsSection),
+  { ssr: true }
+);
 import { WhyTrustSection } from "@/components/why-trust-section";
 import type { ContactFormField } from "@/components/contact-form-panel";
 
@@ -115,19 +120,34 @@ export default function HomePage() {
         <HeroScrollButton className="absolute bottom-6 right-5 z-20 hidden lg:flex lg:bottom-24 lg:right-8" />
       </section>
       <InfoTicker />
-      <ServicesSpotlight />
-      <ServicesDetailGrid />
-      <WhyTrustSection />
-      <MeetOwnerSection />
-      <TestimonialsSection />
-      <ContactCtaSection
-        backgroundImageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/contactbg.webp"
-        backgroundImageAlt="Contact Balderas Demolition"
-        title="Start Your Demolition or Junk Removal Project Today"
-        description="Ready to clear the deck? Get a fast, friendly estimate from Abel Balderas and the team."
-        fields={homeContactFields}
-        submitLabel="Submit"
-      />
+      {/* content-visibility:auto — browser skips Style & Layout for off-screen sections,
+          slashing the 2,843ms Style & Layout cost measured by PageSpeed.
+          contain-intrinsic-size gives the browser a height estimate to avoid scroll jumps. */}
+      <div style={{ contentVisibility: "auto", containIntrinsicSize: "auto 800px" }}>
+        <ServicesSpotlight />
+      </div>
+      <div style={{ contentVisibility: "auto", containIntrinsicSize: "auto 900px" }}>
+        <ServicesDetailGrid />
+      </div>
+      <div style={{ contentVisibility: "auto", containIntrinsicSize: "auto 600px" }}>
+        <WhyTrustSection />
+      </div>
+      <div style={{ contentVisibility: "auto", containIntrinsicSize: "auto 600px" }}>
+        <MeetOwnerSection />
+      </div>
+      <div style={{ contentVisibility: "auto", containIntrinsicSize: "auto 500px" }}>
+        <TestimonialsSection />
+      </div>
+      <div style={{ contentVisibility: "auto", containIntrinsicSize: "auto 700px" }}>
+        <ContactCtaSection
+          backgroundImageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/contactbg.webp"
+          backgroundImageAlt="Contact Balderas Demolition"
+          title="Start Your Demolition or Junk Removal Project Today"
+          description="Ready to clear the deck? Get a fast, friendly estimate from Abel Balderas and the team."
+          fields={homeContactFields}
+          submitLabel="Submit"
+        />
+      </div>
     </main>
   );
 }
