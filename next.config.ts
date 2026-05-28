@@ -19,7 +19,6 @@ const nextConfig: NextConfig = {
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
-      const path = require("path");
       config.resolve.alias = {
         ...config.resolve.alias,
         "next/dist/build/polyfills/polyfill-module": require("path").resolve(__dirname, "lib/empty-polyfill.js"),
@@ -28,6 +27,13 @@ const nextConfig: NextConfig = {
     return config;
   },
   images: {
+    // Next.js 15+ defaults to qualities:[75] only — any other value returns
+    // INVALID_IMAGE_OPTIMIZE_REQUEST (400). Explicitly allowlist all quality
+    // values used across components:
+    //   22 → full-bleed images under heavy dark overlays (hero, why-trust, spotlight)
+    //   55 → grid/card images (services-detail-grid)
+    //   75 → default (auto-preloads, fallback)
+    qualities: [22, 55, 75],
     remotePatterns: [
       {
         protocol: 'https',
