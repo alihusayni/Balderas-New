@@ -2,12 +2,13 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   experimental: {
-    // inlineCss was disabled — Tailwind generates 83.8 KB of CSS for this project.
-    // At that size, inlining adds 83.8 KB to the HTML that must be fully downloaded
-    // and parsed before any pixel can paint → FCP 2.3s.
-    // External CSS fetches in parallel via HTTP/2 while HTML streams → faster FCP.
-    // inlineCss is only beneficial when CSS output is small (< ~20 KB).
-    // inlineCss: true,
+    // inlineCss:true — keeps CSS in the HTML head so hero renders without
+    // waiting for an external CSS file round-trip. Disabling it caused LCP
+    // to regress from 1.1s → 2.6s (external CSS became render-blocking).
+    // The CSS is 83.8 KB but this is still faster than a blocking network fetch
+    // at simulated mobile speed, because the image preload starts immediately
+    // from the same HTML stream rather than waiting for a second request.
+    inlineCss: true,
   },
   turbopack: {
     resolveAlias: {
