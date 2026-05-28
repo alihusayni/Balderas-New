@@ -8,7 +8,7 @@ export function ServicesSpotlight() {
   return (
     <section className="relative w-full overflow-hidden">
       <Image
-        src="https://balderas-assets.s3.amazonaws.com/images/homepage/servicesSpotlight.webp"
+        src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/servicesSpotlight.webp"
         alt="Dumpster rental service spotlight"
         fill
         // q=50: busts Vercel CDN cache — source re-uploaded to S3 at lower compression.

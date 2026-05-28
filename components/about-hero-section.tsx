@@ -16,7 +16,7 @@ export function AboutHeroSection() {
   return (
     <section className="-mt-[130px] relative w-full overflow-hidden">
       <HeroParallaxBackground
-        src="https://balderas-assets.s3.amazonaws.com/images/about/1.png"
+        src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/about/1.png"
         alt="Balderas Demolition crew loading a dumpster on site in Orange County"
         priority
         overlayClassName="bg-[#06182C]/60"

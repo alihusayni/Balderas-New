@@ -47,7 +47,7 @@ const DIFFERENCE_FEATURES = [
 export function DemolitionDifferenceSection() {
   return (
     <FullBleedImageSection
-      imageSrc="https://balderas-assets.s3.amazonaws.com/images/services/img4.png"
+      imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img4.png"
       imageAlt="Balderas worksite background"
       overlayClassName="bg-[#06182C]/72"
       className="py-20 lg:py-24"

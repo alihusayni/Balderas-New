@@ -41,7 +41,7 @@ export default function JunkRemovalPage() {
     <main className="flex min-h-screen flex-col bg-[var(--color-brand-dark)]">
       <section className="-mt-[130px] relative min-h-screen w-full overflow-hidden pt-[230px]">
         <HeroParallaxBackground
-          src="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img1.png"
+          src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img1.png"
           alt="Professional junk removal service in Orange County"
           priority
         />
@@ -79,7 +79,7 @@ export default function JunkRemovalPage() {
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img2.png"
+                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img2.png"
                 alt="Residential junk hauling team loading debris"
                 fill
                 sizes="100vw"
@@ -96,7 +96,7 @@ export default function JunkRemovalPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img2.png"
+            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img2.png"
             imageAlt="Residential junk hauling team loading debris"
             imageSide="right"
             hideImageOnSmallScreens
@@ -123,7 +123,7 @@ export default function JunkRemovalPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img3.jpg"
+            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img3.jpg"
             imageAlt="Construction and commercial debris cleanup site"
             imageSide="left"
             title="Construction & Commercial Debris"
@@ -149,7 +149,7 @@ export default function JunkRemovalPage() {
       <section className="relative w-full overflow-hidden py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img4.jpg"
+            src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img4.jpg"
             alt="Junk removal staging background"
             fill
             sizes="100vw"
@@ -204,7 +204,7 @@ export default function JunkRemovalPage() {
       <section className="relative w-full overflow-hidden py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img5.jpg"
+            src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img5.jpg"
             alt="Junk removal quote section background"
             fill
             sizes="100vw"

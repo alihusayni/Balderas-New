@@ -25,7 +25,7 @@ export function InteriorDemolitionHero({
   return (
     <section className="-mt-[130px] relative min-h-screen w-full overflow-hidden pt-[230px]">
       <HeroParallaxBackground
-        src="https://balderas-assets.s3.amazonaws.com/images/services/img2.png"
+        src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img2.png"
         alt="Interior kitchen and bath demolition prep in Orange County"
         priority
       />

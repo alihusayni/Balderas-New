@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Compassionate and efficient estate cleanout services in Orange County. Abel Balderas and his team handle full-property clearing with respect and care. Get a free consultation.",
   path: "/junk-removal/estate-cleanout",
-  image: "https://balderas-assets.s3.amazonaws.com/images/junk_removal/img3.jpg",
+  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img3.jpg",
   imageAlt:
     "Compassionate estate cleanout and property clearing in Orange County by Balderas Demolition Inc.",
   keywords: [
@@ -30,7 +30,7 @@ const estateServiceJsonLd = getServiceJsonLd({
     "Compassionate whole-home and property estate cleanouts in Orange County for families, executors, and realtors: sorting, donation-first disposition, valuables protocol, insured crews, and broom-clean handoff.",
   path: "/junk-removal/estate-cleanout",
   serviceType: "Estate Cleanout",
-  image: "https://balderas-assets.s3.amazonaws.com/images/junk_removal/img3.jpg",
+  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img3.jpg",
 });
 
 const estateBreadcrumbJsonLd = getBreadcrumbJsonLd([

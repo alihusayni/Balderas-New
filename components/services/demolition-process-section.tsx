@@ -49,7 +49,7 @@ export function DemolitionProcessSection() {
           <div className="w-full xl:w-1/2">
             <div className="relative h-[460px] w-full overflow-hidden xl:h-[777px]">
               <Image
-                src="https://balderas-assets.s3.amazonaws.com/images/services/img5.jpg"
+                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img5.jpg"
                 alt="Balderas team planning a demolition process"
                 fill
                 sizes="(max-width: 1279px) 100vw, 50vw"

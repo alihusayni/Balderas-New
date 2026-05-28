@@ -14,7 +14,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Looking for professional demolition or junk removal in Orange County? Balderas Demolition Inc. team provides safe, fast, and friendly debris solutions. Get a free quote today!",
   path: "/",
-  image: "https://balderas-assets.s3.amazonaws.com/images/homepage/hero.webp",
+  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/hero.webp",
   imageAlt:
     "Balderas Demolition Inc. demolition crew on an Orange County job site",
   keywords: [

@@ -119,7 +119,7 @@ export function SameDayJunkRemovalLanding() {
     <main className="flex min-h-screen flex-col bg-[var(--color-brand-dark)]">
       <section className="-mt-[130px] relative min-h-screen w-full overflow-hidden pt-[230px]">
         <HeroParallaxBackground
-          src="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img5.jpg"
+          src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img5.jpg"
           alt="Same day junk removal truck and crew in Orange County"
           priority
         />
@@ -166,7 +166,7 @@ export function SameDayJunkRemovalLanding() {
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img2.png"
+                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img2.png"
                 alt="Same day hauling and debris removal in Orange County"
                 fill
                 sizes="100vw"
@@ -176,7 +176,7 @@ export function SameDayJunkRemovalLanding() {
           </div>
 
           <ServiceDetailSection
-            imageSrc="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img2.png"
+            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img2.png"
             imageAlt="Urgent junk removal and property cleanouts in Orange County"
             imageSide="right"
             hideImageOnSmallScreens
@@ -209,7 +209,7 @@ export function SameDayJunkRemovalLanding() {
       <section className="relative w-full overflow-hidden py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img4.jpg"
+            src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img4.jpg"
             alt=""
             fill
             sizes="100vw"
@@ -265,7 +265,7 @@ export function SameDayJunkRemovalLanding() {
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img1.png"
+                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img1.png"
                 alt="Junk removal truck serving Orange County neighborhoods"
                 fill
                 sizes="100vw"
@@ -282,7 +282,7 @@ export function SameDayJunkRemovalLanding() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img1.png"
+            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img1.png"
             imageAlt="Junk removal truck serving Orange County neighborhoods"
             imageSide="right"
             hideImageOnSmallScreens
@@ -335,7 +335,7 @@ export function SameDayJunkRemovalLanding() {
             <div className="w-full xl:w-1/2">
               <div className="relative h-[340px] w-full overflow-hidden sm:h-[400px] md:h-[460px] xl:h-[620px]">
                 <Image
-                  src="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img3.jpg"
+                  src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img3.jpg"
                   alt="Same day junk hauling crew clearing a property quickly"
                   fill
                   sizes="(max-width: 1279px) 100vw, 50vw"
@@ -364,7 +364,7 @@ export function SameDayJunkRemovalLanding() {
       <section className="relative w-full overflow-hidden py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src="https://balderas-assets.s3.amazonaws.com/images/junk_removal/img1.png"
+            src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img1.png"
             alt=""
             fill
             sizes="100vw"

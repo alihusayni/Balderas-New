@@ -85,7 +85,7 @@ export function WasteDisposalLanding() {
     <main className="flex min-h-screen flex-col bg-[var(--color-brand-dark)]">
       <section className="relative -mt-[130px] min-h-screen w-full overflow-hidden pt-[230px]">
         <HeroParallaxBackground
-          src="https://balderas-assets.s3.amazonaws.com/images/dumpsters_rental/img1.png"
+          src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img1.png"
           alt="Dumpster and waste hauling for construction and household debris in Orange County"
           priority
         />
@@ -126,7 +126,7 @@ export function WasteDisposalLanding() {
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="https://balderas-assets.s3.amazonaws.com/images/dumpsters_rental/img2.jpg"
+                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img2.jpg"
                 alt="Waste disposal and debris removal in Orange County"
                 fill
                 sizes="100vw"
@@ -143,7 +143,7 @@ export function WasteDisposalLanding() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://balderas-assets.s3.amazonaws.com/images/dumpsters_rental/img3.jpg"
+            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img3.jpg"
             imageAlt="Construction and demolition waste disposal"
             imageSide="right"
             hideImageOnSmallScreens
@@ -167,7 +167,7 @@ export function WasteDisposalLanding() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://balderas-assets.s3.amazonaws.com/images/dumpsters_rental/img4.jpg"
+            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img4.jpg"
             imageAlt="Bulk household waste and appliance disposal"
             imageSide="left"
             title="Bulk Household Waste"
@@ -193,7 +193,7 @@ export function WasteDisposalLanding() {
       <section className="relative w-full overflow-hidden py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src="https://balderas-assets.s3.amazonaws.com/images/dumpsters_rental/img5.jpg"
+            src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img5.jpg"
             alt="Waste disposal truck and service in Orange County"
             fill
             sizes="100vw"
@@ -249,7 +249,7 @@ export function WasteDisposalLanding() {
       </section>
 
       <ServiceStepsSection
-        imageSrc="https://balderas-assets.s3.amazonaws.com/images/dumpsters_rental/img6.jpg"
+        imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img6.jpg"
         imageAlt="Waste management truck and crew loading debris in Orange County"
         imageSide="left"
         title="How We Manage Your Waste"
@@ -284,7 +284,7 @@ export function WasteDisposalLanding() {
       <section className="relative w-full overflow-hidden py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src="https://balderas-assets.s3.amazonaws.com/images/dumpsters_rental/img8.png"
+            src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img8.png"
             alt="Waste disposal contact section background"
             fill
             sizes="100vw"

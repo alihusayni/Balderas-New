@@ -63,7 +63,7 @@ export const ARTICLES: Article[] = [
       "The Ultimate Guide to House Demolition in Orange County: Process, Regulations, and 2026 Cost Expectations",
     description:
       "Planning a residential teardown? Learn the step-by-step house demolition process in Orange County, including 2026 cost factors, permits, and asbestos rules with Abel Balderas.",
-    imageSrc: "https://balderas-assets.s3.amazonaws.com/images/resources/6.jpg",
+    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/6.jpg",
     imageAlt:
       "Excavator carefully demolishing a residential structure in Orange County",
     categories: ["industry", "services"],
@@ -272,7 +272,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "image",
-        src: "https://balderas-assets.s3.amazonaws.com/images/article/2.jpg",
+        src: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/2.jpg",
         alt: "Heavy equipment demolishing a building with water spray for dust control and crew on site in Orange County",
       },
       {
@@ -327,7 +327,7 @@ export const ARTICLES: Article[] = [
         "Free on-site consultation for residential demolition across Orange County\u2014permits, labor, hauling, and final sweep, explained upfront.",
       label: "Contact Balderas Demolition Inc.",
       href: "/#contact",
-      backgroundSrc: "https://balderas-assets.s3.amazonaws.com/images/article/3.jpg",
+      backgroundSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/3.jpg",
     },
   },
   {
@@ -339,7 +339,7 @@ export const ARTICLES: Article[] = [
       "Hut Top & Structure Removal in Orange County: 2026 Cost and Process Guide",
     description:
       "What does it cost to remove a backyard hut or top-down structure in OC? See our 2026 pricing guide for deconstruction and hauling with Abel Balderas.",
-    imageSrc: "https://balderas-assets.s3.amazonaws.com/images/services/img2.png",
+    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img2.png",
     imageAlt:
       "Careful residential structure removal and demolition in Orange County",
     categories: ["services", "industry"],
@@ -428,7 +428,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "image",
-        src: "https://balderas-assets.s3.amazonaws.com/images/article/2.jpg",
+        src: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/2.jpg",
         alt: "Controlled structure demolition with equipment and crew on a residential lot in Orange County",
       },
       {
@@ -510,7 +510,7 @@ export const ARTICLES: Article[] = [
         "Tell us about your backyard hut, gazebo, or accessory structure\u2014we\u2019ll walk you through scope, permits, and a clear, upfront price.",
       label: "Request a Free Hut Removal Quote",
       href: "/#contact",
-      backgroundSrc: "https://balderas-assets.s3.amazonaws.com/images/article/3.jpg",
+      backgroundSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/3.jpg",
     },
   },
   {
@@ -520,7 +520,7 @@ export const ARTICLES: Article[] = [
       "The High Cost of \u201CCheap\u201D: Why a Licensed Demolition Contractor is Non-Negotiable in Orange County",
     description:
       "Why hiring an unlicensed contractor for demolition in Orange County can cost you 10x what you saved\u2014and how a licensed C-21 team protects your property, your wallet, and your family.",
-    imageSrc: "https://balderas-assets.s3.amazonaws.com/images/article/1.jpg",
+    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/1.jpg",
     imageAlt: "Yellow excavator demolishing a residential structure",
     categories: ["industry", "services"],
     author: { name: "Abel Balderas" },
@@ -643,7 +643,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "image",
-        src: "https://balderas-assets.s3.amazonaws.com/images/article/2.jpg",
+        src: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/2.jpg",
         alt: "Worker spraying water for dust suppression at a demolition site",
       },
       {
@@ -684,7 +684,7 @@ export const ARTICLES: Article[] = [
         "The \u201Csavings\u201D from hiring an unlicensed contractor are an illusion. One accident, one missed permit, or one asbestos exposure will cost you 10x what you saved.",
       label: "Verify Our License & Get a Quote",
       href: "/#contact",
-      backgroundSrc: "https://balderas-assets.s3.amazonaws.com/images/article/3.jpg",
+      backgroundSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/3.jpg",
     },
   },
   {
@@ -694,7 +694,7 @@ export const ARTICLES: Article[] = [
       "Affordable Dumpster Rental and Demolition Services in Orange County: Get a Free Quote Today",
     description:
       "Discover how to save time and money with our affordable dumpster rental and demolition services available throughout Orange County...",
-    imageSrc: "https://balderas-assets.s3.amazonaws.com/images/resources/1.png",
+    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/1.png",
     imageAlt:
       "Balderas Demolition Inc. dumpster trailer with phone number 714-340-8108",
     categories: ["sales", "services"],
@@ -715,7 +715,7 @@ export const ARTICLES: Article[] = [
     title: "Top Reasons to Hire a Professional Junk Removal Service",
     description:
       "When you\u2019re dealing with unwanted clutter in your home or business, hiring a professional junk removal company can save you time, effort, and stress...",
-    imageSrc: "https://balderas-assets.s3.amazonaws.com/images/resources/2.png",
+    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/2.png",
     imageAlt: "Construction debris being loaded into a truck for junk removal",
     categories: ["services", "industry"],
     author: { name: "Marcus Hale" },
@@ -735,7 +735,7 @@ export const ARTICLES: Article[] = [
     title: "Systematic Project Control",
     description:
       "Every step is planned and executed with precision to keep your project on track and stress-free.",
-    imageSrc: "https://balderas-assets.s3.amazonaws.com/images/resources/3.jpg",
+    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/3.jpg",
     imageAlt: "Two crew members in safety vests reviewing demolition plans",
     categories: ["company", "services"],
     author: { name: "Marcus Hale" },
@@ -755,7 +755,7 @@ export const ARTICLES: Article[] = [
     title: "Fast & Hassle-Free Junk Removal",
     description:
       "From old furniture to construction debris, we handle all the heavy lifting so you don\u2019t have to. See more",
-    imageSrc: "https://balderas-assets.s3.amazonaws.com/images/resources/4.jpg",
+    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/4.jpg",
     imageAlt: "Workers loading household junk into a removal truck",
     categories: ["services"],
     author: { name: "Marcus Hale" },
@@ -775,7 +775,7 @@ export const ARTICLES: Article[] = [
     title: "Choose the Right Dumpster for Your Project",
     description:
       "Learn how selecting the right dumpster size can save you money and keep your cleanup running smoothly. See more",
-    imageSrc: "https://balderas-assets.s3.amazonaws.com/images/resources/5.jpg",
+    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/5.jpg",
     imageAlt: "Green dumpster placed in front of a residential garage",
     categories: ["sales", "industry"],
     author: { name: "Marcus Hale" },
@@ -795,7 +795,7 @@ export const ARTICLES: Article[] = [
     title: "Safe, Controlled Demolition Process",
     description:
       "Our systematic approach ensures every project is handled with precision, safety, and minimal disruption.",
-    imageSrc: "https://balderas-assets.s3.amazonaws.com/images/resources/6.jpg",
+    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/6.jpg",
     imageAlt: "Excavator carefully demolishing a residential structure",
     categories: ["services", "environmental", "industry"],
     author: { name: "Marcus Hale" },
