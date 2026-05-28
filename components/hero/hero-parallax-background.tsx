@@ -65,7 +65,9 @@ export function HeroParallaxBackground({
         fetchPriority="high"
         loading="eager"
         sizes="100vw"
-        quality={45}
+        quality={22}
+        // q=22: full-bleed under 68% dark overlay — same as why-trust and spotlight.
+        // IMPORTANT: keep in sync with the imageSrcSet q= value in layout.tsx preload.
         className={cn("object-cover will-change-transform", imageClassName)}
       />
       <div className={cn("absolute inset-0 bg-[#06182C]/68", overlayClassName)} />

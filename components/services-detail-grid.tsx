@@ -181,12 +181,12 @@ export function ServicesDetailGrid() {
                 alt={row.imageAlt}
                 fill
                 loading="lazy"
-                // sizes: full-width mobile/tablet, capped at 640px on desktop
-                // so the browser picks the w=640 srcset bucket (not w=828)
-                // for the ~380px-wide two-column grid slots.
-                // quality=70: busts the stale Vercel CDN cache (old key was q=75).
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 640px"
-                quality={70}
+                // sizes: images render at ~380px wide in the 2-col desktop grid.
+                // Cap at 480px (not 640px) so next/image picks the 480w bucket
+                // instead of 750w — was downloading 37KB instead of ~12KB.
+                // quality=55: PageSpeed flagged q=70 as over-sized (-26 KiB each).
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 480px"
+                quality={55}
                 className="object-cover"
               />
             </div>

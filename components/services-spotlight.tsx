@@ -11,8 +11,8 @@ export function ServicesSpotlight() {
         src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/servicesSpotlight.webp"
         alt="Dumpster rental service spotlight"
         fill
-        // q=50: busts Vercel CDN cache — source re-uploaded to S3 at lower compression.
-        quality={50}
+        quality={22}
+        // q=22: full-bleed under bg-[#06182C]/68 dark overlay — matches hero quality level.
         sizes="100vw"
         className="object-cover"
       />

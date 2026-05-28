@@ -36,8 +36,8 @@ export function WhyTrustSection() {
         src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/whyUs/bg.webp"
         alt="Why trust Balderas Demolition"
         fill
-        // q=45: busts Vercel CDN cache — source re-uploaded to S3 at q=22 (80KB).
-        quality={45}
+        quality={22}
+        // q=22: full-bleed under bg-[#06182C]/68 dark overlay — matches hero quality level.
         sizes="100vw"
         className="object-cover"
       />

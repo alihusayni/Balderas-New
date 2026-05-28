@@ -147,10 +147,10 @@ export default function RootLayout({
           as="image"
           fetchPriority="high"
           imageSrcSet={[
-            "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=640&q=45 640w",
-            "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=1080&q=45 1080w",
-            "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=1200&q=45 1200w",
-            "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=1920&q=45 1920w",
+            "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=640&q=22 640w",
+            "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=1080&q=22 1080w",
+            "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=1200&q=22 1200w",
+            "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=1920&q=22 1920w",
           ].join(", ")}
           imageSizes="100vw"
         />
