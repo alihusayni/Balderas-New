@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import path from "path";
 
 const nextConfig: NextConfig = {
   experimental: {
@@ -14,7 +13,7 @@ const nextConfig: NextConfig = {
     resolveAlias: {
       // Relative path ('./lib/empty-polyfill.js') is silently ignored by Turbopack.
       // Must use absolute path so Turbopack's module resolver can find the file.
-      'next/dist/build/polyfills/polyfill-module': path.resolve(__dirname, 'lib/empty-polyfill.js'),
+      'next/dist/build/polyfills/polyfill-module': require('path').resolve(__dirname, 'lib/empty-polyfill.js'),
     },
   },
   webpack: (config, { isServer }) => {
@@ -22,7 +21,7 @@ const nextConfig: NextConfig = {
       const path = require("path");
       config.resolve.alias = {
         ...config.resolve.alias,
-        "next/dist/build/polyfills/polyfill-module": path.resolve(__dirname, "lib/empty-polyfill.js"),
+        "next/dist/build/polyfills/polyfill-module": require("path").resolve(__dirname, "lib/empty-polyfill.js"),
       };
     }
     return config;
