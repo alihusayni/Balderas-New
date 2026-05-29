@@ -2,20 +2,12 @@ import type { Metadata, Viewport } from "next";
 import { Analytics } from "@/components/analytics";
 
 import { Anton, Geist, Geist_Mono } from "next/font/google";
-import dynamic from "next/dynamic";
+import { DeferredClientShell } from "@/components/deferred-client-shell";
 import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteShell } from "@/components/site-shell";
 import { SiteHeader } from "@/components/site-header";
 import { SmoothScroll } from "@/components/smooth-scroll";
-// Deferred — not needed at first paint:
-// CookieConsent checks localStorage (naturally post-FCP UX anyway)
-// NextTopLoader only shows during navigation, never on initial load
-const NextTopLoader = dynamic(() => import("nextjs-toploader"), { ssr: false });
-const CookieConsent = dynamic(
-  () => import("@/components/cookie-consent").then((m) => m.CookieConsent),
-  { ssr: false }
-);
 import { SITE, getLocalBusinessJsonLd } from "@/lib/seo";
 import "./globals.css";
 
@@ -177,15 +169,7 @@ export default function RootLayout({
         {/* Server-side analytics */}
         <Analytics />
 
-        <NextTopLoader
-          color="#dc5a31"
-          height={3}
-          crawlSpeed={280}
-          showSpinner={false}
-          shadow={false}
-          speed={380}
-          zIndex={2000}
-        />
+        <DeferredClientShell />
         <SmoothScroll />
         <SiteShell>
           <SiteHeader />
@@ -194,7 +178,6 @@ export default function RootLayout({
         <SiteShell>
           <SiteFooter />
         </SiteShell>
-        <CookieConsent />
       </body>
     </html>
   );
