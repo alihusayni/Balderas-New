@@ -128,3 +128,22 @@ body {
     opacity: 1;
   }
 }
+
+/* ─── Hero parallax — CSS scroll-driven animation ──────────────────────────
+   Replaces the vanilla JS useEffect scroll listener (was "use client").
+   Runs on the compositor thread — zero main-thread cost.
+   Browser support: Chrome 115+, Safari 18+, Firefox 128+ (~92% global, 2025).
+   Fallback (unsupported): image stays at scale(1.08), no movement — acceptable.
+   ─────────────────────────────────────────────────────────────────────────── */
+@keyframes hero-parallax-move {
+  from { transform: scale(1.08) translateY(-10%); }
+  to   { transform: scale(1.08) translateY(15%);  }
+}
+
+.hero-parallax-img {
+  will-change: transform;
+  animation: hero-parallax-move linear both;
+  animation-timeline: scroll(root block);
+  /* Animate during the first viewport-height of scroll (while hero is visible) */
+  animation-range: 0px 100svh;
+}

@@ -1,18 +1,34 @@
-"use client";
-
 import Image from "next/image";
-import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
+
+/**
+ * Hero parallax background — Server Component (no "use client").
+ *
+ * Parallax is handled by CSS scroll-driven animations (zero JS, compositor thread):
+ *   animation-timeline: scroll(root) — tracks the root scrollbar
+ *   @keyframes hero-parallax-move in globals.css applies translateY as user scrolls
+ *
+ * Browser support: Chrome 115+, Safari 18+, Firefox 128+ (~92% globally, 2025).
+ * Fallback for unsupported browsers: image stays at scale(1.08) translateY(0) — fine.
+ *
+ * Preload strategy:
+ *   DO NOT add priority={true} — auto-generates a q=75 preload (ignores quality prop)
+ *   DO NOT add fetchPriority="high" — Next.js 16 Turbopack also generates q=75 preload
+ *   Both conflict with our manual q=22 preload in layout.tsx (imageSrcSet).
+ *   loading="eager" is required — without it next/image defaults to lazy loading → LCP 4s.
+ *   The <link rel="preload" imageSrcSet q=22 fetchPriority="high"> in layout.tsx is the
+ *   sole priority signal. loading="eager" ensures the image isn't lazily deferred.
+ *   IMPORTANT: keep quality in sync with q= in layout.tsx preload imageSrcSet.
+ */
 
 type HeroParallaxBackgroundProps = {
   src: string;
   alt: string;
-  // priority prop removed — use layout.tsx <link rel="preload" imageSrcSet> instead.
-  // next/image priority={true} auto-generates a preload at q=75 (ignores quality prop),
-  // which conflicts with our manual q=45 preload causing a double download.
-  // Accepted here to avoid breaking existing call sites — it is intentionally ignored.
+  /** Accepted for call-site compat — intentionally ignored (CSS handles the effect). */
   priority?: boolean;
+  /** Accepted for call-site compat — intentionally ignored (CSS handles the speed). */
   speed?: number;
+  /** Accepted for call-site compat — intentionally ignored (CSS handles the scale). */
   scale?: number;
   overlayClassName?: string;
   imageClassName?: string;
@@ -21,58 +37,22 @@ type HeroParallaxBackgroundProps = {
 export function HeroParallaxBackground({
   src,
   alt,
-  priority: _priority, // accepted for call-site compat; intentionally not forwarded — see type comment
-  speed = 0.25,
-  scale = 1.08,
+  priority: _priority,
+  speed: _speed,
+  scale: _scale,
   overlayClassName,
   imageClassName,
 }: HeroParallaxBackgroundProps) {
-  // Ref points directly at the <img> DOM node so we can mutate style.transform
-  // without triggering a React re-render (and its forced layout recalculation)
-  // on every scroll frame. Previous useState approach caused ~60 layout passes/s.
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    let ticking = false;
-
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      window.requestAnimationFrame(() => {
-        if (imgRef.current) {
-          imgRef.current.style.transform = `translate3d(0, ${window.scrollY * speed}px, 0) scale(${scale})`;
-        }
-        ticking = false;
-      });
-    };
-
-    // Set initial transform
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [speed, scale]);
-
   return (
     <>
       <Image
-        ref={imgRef}
         src={src}
         alt={alt}
         fill
-        // DO NOT use priority={true} — auto-generates a q=75 preload (ignores quality prop),
-        // conflicting with our manual q=22 preload in layout.tsx.
-        // DO NOT use fetchPriority="high" — Next.js 16 Turbopack also auto-generates a
-        // q=75 preload for any Image with fetchPriority="high", same conflict.
-        // loading="eager" is required — without it Image defaults to lazy loading,
-        // deprioritizing the hero even though the manual preload fires → LCP 4s.
-        // The manual <link rel="preload" imageSrcSet q=22> in layout.tsx is the sole
-        // priority signal. loading="eager" ensures the image isn't lazily deferred.
         loading="eager"
         sizes="100vw"
         quality={22}
-        // q=22: full-bleed under 68% dark overlay — same as why-trust and spotlight.
-        // IMPORTANT: keep in sync with the imageSrcSet q= value in layout.tsx preload.
-        className={cn("object-cover will-change-transform", imageClassName)}
+        className={cn("object-cover hero-parallax-img", imageClassName)}
       />
       <div className={cn("absolute inset-0 bg-[#06182C]/68", overlayClassName)} />
     </>
