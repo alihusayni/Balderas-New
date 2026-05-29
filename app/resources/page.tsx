@@ -106,7 +106,7 @@ export default function ResourcesPage() {
           />
 
           <div className="absolute inset-x-0 bottom-0 z-10">
-            <div className="mx-auto flex w-full max-w-[1400px] items-end px-6 pb-12 lg:px-10 lg:pb-14">
+            <div className="mx-auto flex w-full max-w-container items-end px-6 pb-12 lg:px-10 lg:pb-14">
               <div className="max-w-[760px] text-[var(--color-brand-white)] sm:max-w-[680px] md:max-w-[1100px]">
                 <HeroHeading>Latest Articles, Guides &amp; FAQs</HeroHeading>
               </div>
@@ -118,7 +118,7 @@ export default function ResourcesPage() {
       </section>
 
       <section className="w-full bg-[#F7F7F7] py-20 lg:py-[120px]">
-        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-20 px-6 lg:gap-[80px] lg:px-10">
+        <div className="mx-auto flex w-full max-w-container flex-col gap-20 px-6 lg:gap-[80px] lg:px-10">
           <div className="flex w-full min-w-0 flex-col gap-10 xl:flex-row xl:items-stretch xl:gap-[39px]">
             <div className="w-full min-w-0 overflow-hidden xl:flex-1 xl:basis-0">
               <div className="relative h-[320px] w-full sm:h-[420px] lg:h-[605px]">
@@ -148,12 +148,12 @@ export default function ResourcesPage() {
                       className="h-[23px] w-[23px] shrink-0"
                       aria-hidden
                     />
-                    <span className="font-maison text-[16px] font-bold leading-[22px] tracking-[-0.02em] text-[#4F5B79] lg:text-[18px]">
+                    <span className="font-maison text-lg font-bold leading-lg tracking-[-0.02em] text-[#4F5B79] lg:text-2xl">
                       {featuredArticle.author.name}
                     </span>
                   </div>
 
-                  <SimpleText className="font-medium leading-[22px] text-[#4F5B79] lg:text-[18px] lg:leading-[22px]">
+                  <SimpleText className="font-medium leading-lg text-[#4F5B79] lg:text-2xl lg:leading-lg">
                     {featuredArticle.publishedDate} | {featuredArticle.readTime}
                   </SimpleText>
                 </div>
@@ -168,7 +168,7 @@ export default function ResourcesPage() {
                 >
                   <Link
                     href={getArticleHref(featuredArticle)}
-                    className="font-maison flex items-center gap-3 text-[16px] font-bold tracking-[-0.02em] sm:gap-4 sm:text-[18px] md:text-[20px] lg:gap-5 lg:text-[22px] xl:text-[24px]"
+                    className="font-maison flex items-center gap-3 text-lg font-bold tracking-[-0.02em] sm:gap-4 sm:text-2xl md:text-4xl lg:gap-5 lg:text-5xl xl:text-6xl"
                   >
                     <span>Read Article</span>
                     <span aria-hidden>→</span>
@@ -215,7 +215,7 @@ export default function ResourcesPage() {
       </section>
 
       <section className="w-full bg-white py-20 lg:py-[120px]">
-        <div className="mx-auto flex w-full max-w-[1400px] flex-col items-center gap-12 px-6 lg:gap-16 lg:px-10">
+        <div className="mx-auto flex w-full max-w-container flex-col items-center gap-12 px-6 lg:gap-16 lg:px-10">
           <div className="flex w-full flex-col items-center gap-4 text-center">
             <MainHeading className="text-[#0b0300]">
               Frequently Asked Questions
@@ -242,7 +242,7 @@ export default function ResourcesPage() {
             >
               <Link
                 href="/#contact"
-                className="font-maison text-[16px] font-bold tracking-[-0.02em] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px]"
+                className="font-maison text-lg font-bold tracking-[-0.02em] sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl"
               >
                 Contact Us
               </Link>
@@ -255,7 +255,7 @@ export default function ResourcesPage() {
             >
               <Link
                 href="/resources"
-                className="font-maison flex items-center gap-3 text-[16px] font-bold tracking-[-0.02em] sm:gap-4 sm:text-[18px] md:text-[20px] lg:gap-5 lg:text-[22px] xl:text-[24px]"
+                className="font-maison flex items-center gap-3 text-lg font-bold tracking-[-0.02em] sm:gap-4 sm:text-2xl md:text-4xl lg:gap-5 lg:text-5xl xl:text-6xl"
               >
                 <span>Find More FAQs</span>
                 <span aria-hidden>→</span>

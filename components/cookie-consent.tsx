@@ -41,8 +41,8 @@ export function CookieConsent() {
       aria-label="Cookie consent"
       className="fixed bottom-0 left-0 z-[9999] w-full animate-[slideUp_0.4s_ease-out] bg-[#06182C]/95 backdrop-blur-md"
     >
-      <div className="mx-auto flex w-full max-w-[1400px] flex-col items-start gap-4 px-5 py-4 sm:flex-row sm:items-center sm:gap-6 sm:px-8 sm:py-5">
-        <p className="flex-1 font-maison text-[13px] leading-[1.5] text-white/80 sm:text-[14px]">
+      <div className="mx-auto flex w-full max-w-container flex-col items-start gap-4 px-5 py-4 sm:flex-row sm:items-center sm:gap-6 sm:px-8 sm:py-5">
+        <p className="flex-1 font-maison text-xs leading-[1.5] text-white/80 sm:text-sm">
           We use cookies (Google Analytics &amp; CallRail) to understand how
           visitors use our site and to improve your experience. By clicking
           &ldquo;Accept&rdquo; you consent to the use of these cookies. See our{" "}
@@ -59,14 +59,14 @@ export function CookieConsent() {
           <button
             type="button"
             onClick={() => respond("declined")}
-            className="font-maison text-[13px] font-medium text-white/90 underline underline-offset-2 transition-colors hover:text-white sm:text-[14px]"
+            className="font-maison text-xs font-medium text-white/90 underline underline-offset-2 transition-colors hover:text-white sm:text-sm"
           >
             Decline
           </button>
           <button
             type="button"
             onClick={() => respond("accepted")}
-            className="rounded-md border border-white/30 bg-white px-5 py-2 font-maison text-[13px] font-bold text-[#06182C] transition-opacity hover:opacity-90 sm:text-[14px]"
+            className="rounded-md border border-white/30 bg-white px-5 py-2 font-maison text-xs font-bold text-[#06182C] transition-opacity hover:opacity-90 sm:text-sm"
           >
             Accept
           </button>

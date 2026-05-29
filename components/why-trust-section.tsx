@@ -43,14 +43,14 @@ export function WhyTrustSection() {
       />
       <div className="absolute inset-0 bg-[#06182C]/68" />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1400px] px-4 pb-8 pt-10 sm:px-6 sm:pb-10 sm:pt-12 md:px-8 md:pb-12 md:pt-16 lg:px-10 lg:pb-14 lg:pt-16">
+      <div className="relative z-10 mx-auto w-full max-w-container px-4 pb-8 pt-10 sm:px-6 sm:pb-10 sm:pt-12 md:px-8 md:pb-12 md:pt-16 lg:px-10 lg:pb-14 lg:pt-16">
         <div>
           <p className="font-maison text-lg font-semibold text-white sm:text-xl">
             Why Us?
           </p>
 
           <div className="mt-12 grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.35fr_0.65fr] lg:gap-12">
-            <HeroHeading as="h2" className="mt-0 max-w-[1080px] text-[40px] uppercase leading-[0.95] tracking-[-0.02em] text-white sm:text-[54px] md:text-[68px] lg:text-[68px]">
+            <HeroHeading as="h2" className="mt-0 max-w-[1080px] text-11xl uppercase leading-[0.95] tracking-[-0.02em] text-white sm:text-14xl md:text-16xl lg:text-16xl">
               Why Orange County Trust Balderas Demolition Inc.
             </HeroHeading>
 
@@ -83,8 +83,8 @@ export function WhyTrustSection() {
               <p
                 className={
                   card.highlighted
-                    ? "[font-family:var(--font-anton)] text-[44px] leading-none text-[#0b0300] sm:text-[32px]"
-                    : "[font-family:var(--font-anton)] text-[44px] leading-none text-[#1e2740] sm:text-[32px]"
+                    ? "[font-family:var(--font-anton)] text-12xl leading-none text-[#0b0300] sm:text-10xl"
+                    : "[font-family:var(--font-anton)] text-12xl leading-none text-[#1e2740] sm:text-10xl"
                 }
               >
                 {card.stat}
@@ -92,8 +92,8 @@ export function WhyTrustSection() {
               <h3
                 className={
                   card.highlighted
-                    ? "font-maison mt-5 text-[30px] font-bold leading-[1.05] text-[#0b0300] sm:text-[24px]"
-                    : "font-maison mt-5 text-[30px] font-bold leading-[1.05] text-[#1e2740] sm:text-[24px]"
+                    ? "font-maison mt-5 text-9xl font-bold leading-[1.05] text-[#0b0300] sm:text-6xl"
+                    : "font-maison mt-5 text-9xl font-bold leading-[1.05] text-[#1e2740] sm:text-6xl"
                 }
               >
                 {card.title}

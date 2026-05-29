@@ -167,7 +167,7 @@ export default function InteriorDemolitionPage() {
       <InteriorDemolitionHero quoteHref="/contact" callHref={callHref} />
 
       <section className="w-full bg-white py-24">
-        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-20 px-6 lg:px-10 xl:gap-[120px]">
+        <div className="mx-auto flex w-full max-w-container flex-col gap-20 px-6 lg:px-10 xl:gap-[120px]">
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
@@ -188,7 +188,7 @@ export default function InteriorDemolitionPage() {
             titleClassName="text-[#0b0300]"
             descriptionClassName="text-[#0b0300]"
             mobileDescription="We leave you a contractor-ready blank canvas\u2014strip-outs, gutting, and flooring removal so the next trade can start the moment we\u2019re done."
-            mobileDescriptionClassName="font-maison text-[16px] font-semibold leading-[1.25] tracking-[0%] sm:text-[17px] sm:leading-[1.2] md:text-[19px]"
+            mobileDescriptionClassName="font-maison text-lg font-semibold leading-[1.25] tracking-[0%] sm:text-xl sm:leading-[1.2] md:text-3xl"
           />
 
           <ServiceDetailSection
@@ -265,7 +265,7 @@ export default function InteriorDemolitionPage() {
         imageAlt="Balderas Demolition team at a residential interior project"
         overlayClassName="bg-[#06182C]/72"
         className="py-20 lg:py-24"
-        contentClassName="mx-auto flex w-full max-w-[1400px] flex-col gap-16 px-6 lg:px-10"
+        contentClassName="mx-auto flex w-full max-w-container flex-col gap-16 px-6 lg:px-10"
       >
         <SplitHeroText
           title='The "White Glove" Approach to Interior Demolition'
@@ -289,7 +289,7 @@ export default function InteriorDemolitionPage() {
       </FullBleedImageSection>
 
       <section className="w-full bg-[#efefef] py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20">
-        <div className="mx-auto grid w-full max-w-[1400px] grid-cols-1 items-center gap-8 px-4 sm:gap-10 sm:px-6 md:gap-12 md:px-8 lg:grid-cols-2 lg:gap-14 lg:px-10">
+        <div className="mx-auto grid w-full max-w-container grid-cols-1 items-center gap-8 px-4 sm:gap-10 sm:px-6 md:gap-12 md:px-8 lg:grid-cols-2 lg:gap-14 lg:px-10">
           <div className="relative order-2 min-h-[300px] overflow-hidden sm:min-h-[360px] md:min-h-[500px] lg:order-1">
             <Image
               src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/about/2.jpg"
@@ -317,7 +317,7 @@ export default function InteriorDemolitionPage() {
               your home deserves.
             </SimpleText>
 
-            <blockquote className="mt-8 border-l-4 border-[var(--color-brand-orange)] pl-6 font-maison text-[17px] font-semibold italic leading-relaxed text-[#0b0300] sm:text-[19px] md:text-[21px]">
+            <blockquote className="mt-8 border-l-4 border-[var(--color-brand-orange)] pl-6 font-maison text-xl font-semibold italic leading-relaxed text-[#0b0300] sm:text-3xl md:text-4xl">
               &ldquo;We treat your kitchen like it&apos;s ours. Our goal is to
               make the demolition the easiest part of your entire
               remodel.&rdquo;{" "}

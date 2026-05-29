@@ -170,7 +170,7 @@ export default function CommercialDemolitionPage() {
       <CommercialDemolitionHero quoteHref="/contact" callHref={callHref} />
 
       <section className="w-full bg-white py-24">
-        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-20 px-6 lg:px-10 xl:gap-[120px]">
+        <div className="mx-auto flex w-full max-w-container flex-col gap-20 px-6 lg:px-10 xl:gap-[120px]">
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
@@ -191,7 +191,7 @@ export default function CommercialDemolitionPage() {
             titleClassName="text-[#0b0300]"
             descriptionClassName="text-[#0b0300]"
             mobileDescription="Retail, office, and industrial demolition with tight schedules and clean handoffs—built for OC property teams."
-            mobileDescriptionClassName="font-maison text-[16px] font-semibold leading-[1.25] tracking-[0%] sm:text-[17px] sm:leading-[1.2] md:text-[19px]"
+            mobileDescriptionClassName="font-maison text-lg font-semibold leading-[1.25] tracking-[0%] sm:text-xl sm:leading-[1.2] md:text-3xl"
           />
 
           <ServiceDetailSection
@@ -269,7 +269,7 @@ export default function CommercialDemolitionPage() {
         imageAlt="Commercial demolition project coordination"
         overlayClassName="bg-[#06182C]/72"
         className="py-20 lg:py-40"
-        contentClassName="mx-auto flex w-full max-w-[1400px] flex-col gap-16 px-6 lg:px-10"
+        contentClassName="mx-auto flex w-full max-w-container flex-col gap-16 px-6 lg:px-10"
       >
         <SplitHeroText
           className="lg:mb-8 xl:mb-12 2xl:mb-12"
@@ -294,7 +294,7 @@ export default function CommercialDemolitionPage() {
       </FullBleedImageSection>
 
       <section className="w-full bg-[#efefef] py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20">
-        <div className="mx-auto grid w-full max-w-[1400px] grid-cols-1 items-center gap-8 px-4 sm:gap-10 sm:px-6 md:gap-12 md:px-8 lg:grid-cols-2 lg:gap-14 lg:px-10">
+        <div className="mx-auto grid w-full max-w-container grid-cols-1 items-center gap-8 px-4 sm:gap-10 sm:px-6 md:gap-12 md:px-8 lg:grid-cols-2 lg:gap-14 lg:px-10">
           <div className="relative order-2 min-h-[300px] overflow-hidden sm:min-h-[360px] md:min-h-[500px] lg:order-1">
             <Image
               src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/about/2.jpg"
@@ -306,7 +306,7 @@ export default function CommercialDemolitionPage() {
           </div>
 
           <div className="order-1 text-[#0b0b0b] lg:order-2">
-            <SectionHeading className="uppercase leading-[0.92] sm:text-[56px] md:text-[70px] lg:text-[78px]">
+            <SectionHeading className="uppercase leading-[0.92] sm:text-15xl md:text-16xl lg:text-18xl">
               Meet the owner
               <span className="block normal-case tracking-[-0.03em] text-[var(--color-brand-orange)]">
                 Abel Balderas
@@ -314,7 +314,7 @@ export default function CommercialDemolitionPage() {
             </SectionHeading>
             <div className="hidden sm:block sm:mt-12" aria-hidden />
 
-            <SectionSubheading className="mt-8 text-[#1f1f1f] sm:mt-12 sm:text-base md:text-[19px] md:leading-[1.5]">
+            <SectionSubheading className="mt-8 text-[#1f1f1f] sm:mt-12 sm:text-base md:text-3xl md:leading-[1.5]">
               When you partner with Balderas Demolition Inc., you get a dedicated
               project manager. Abel Balderas personally ensures that every
               commercial site is clean, safe, and organized. We pride ourselves
@@ -322,7 +322,7 @@ export default function CommercialDemolitionPage() {
               immediate solutions to on-site challenges.
             </SectionSubheading>
 
-            <blockquote className="mt-8 border-l-4 border-[var(--color-brand-orange)] pl-6 font-maison text-[17px] font-semibold italic leading-relaxed text-[#0b0300] sm:text-[19px] md:text-[21px]">
+            <blockquote className="mt-8 border-l-4 border-[var(--color-brand-orange)] pl-6 font-maison text-xl font-semibold italic leading-relaxed text-[#0b0300] sm:text-3xl md:text-4xl">
               &ldquo;We treat every commercial job site like our own business
               depends on it—because it does. Your project&apos;s success is our
               highest priority.&rdquo;{" "}

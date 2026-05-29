@@ -46,7 +46,7 @@ export default function JunkRemovalPage() {
           priority
         />
 
-        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1400px] items-end px-6 pb-[180px] lg:px-10">
+        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-container items-end px-6 pb-[180px] lg:px-10">
           <div className="max-w-[860px] text-[var(--color-brand-white)]">
             <HeroHeading className="max-w-[860px]">
               Professional Junk Removal Orange County: Reclaim Your Space Today
@@ -75,7 +75,7 @@ export default function JunkRemovalPage() {
       </section>
 
       <section className="w-full bg-white py-24">
-        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-20 px-6 lg:px-10 xl:gap-[120px]">
+        <div className="mx-auto flex w-full max-w-container flex-col gap-20 px-6 lg:px-10 xl:gap-[120px]">
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
@@ -159,8 +159,8 @@ export default function JunkRemovalPage() {
         </div>
         <div className="absolute inset-0 bg-[#06182C]/72" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 lg:px-10">
-          <p className="font-maison text-[26px] font-semibold text-white">Why Us?</p>
+        <div className="relative z-10 mx-auto w-full max-w-container px-6 lg:px-10">
+          <p className="font-maison text-7xl font-semibold text-white">Why Us?</p>
 
           <div className="mt-8">
             <SplitHeroText
@@ -214,7 +214,7 @@ export default function JunkRemovalPage() {
         </div>
         <div className="absolute inset-0 bg-[#06182C]/58" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 lg:px-10">
+        <div className="relative z-10 mx-auto w-full max-w-container px-6 lg:px-10">
           <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start">
             <ContactCtaText
               className="w-full lg:max-w-[420px] xl:max-w-[444px]"

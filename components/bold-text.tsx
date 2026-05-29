@@ -16,7 +16,7 @@ export function BoldText({
   return (
     <p
       className={cn(
-        "[font-family:var(--font-anton)] text-[16px] font-normal leading-[24px] tracking-[0em] sm:text-[17px] sm:leading-[25px] md:text-[18px] md:leading-[26px] lg:text-[22px] lg:leading-[30px]",
+        "[font-family:var(--font-anton)] text-lg font-normal leading-2xl tracking-[0em] sm:text-xl sm:leading-3xl md:text-2xl md:leading-4xl lg:text-5xl lg:leading-8xl",
         className,
       )}
     >

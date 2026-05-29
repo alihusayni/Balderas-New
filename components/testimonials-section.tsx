@@ -47,13 +47,13 @@ export function TestimonialsSection() {
 
   return (
     <section className="bg-white py-10 sm:py-12 md:py-14 lg:py-16">
-      <div className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 md:px-8 lg:px-10">
+      <div className="mx-auto w-full max-w-container px-4 sm:px-6 md:px-8 lg:px-10">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="space-y-2">
             <p className="font-maison text-base font-bold text-[#0b0b0b] sm:text-lg">
               Testimonial
             </p>
-            <h2 className="[font-family:var(--font-anton)] text-[30px] font-normal leading-[0.95] tracking-[-0.02em] text-black sm:text-[38px] md:text-[48px] lg:text-[56px] xl:text-[72px]">
+            <h2 className="[font-family:var(--font-anton)] text-9xl font-normal leading-[0.95] tracking-[-0.02em] text-black sm:text-11xl md:text-13xl lg:text-15xl xl:text-17xl">
               What Our Clients Are Saying
             </h2>
           </div>
@@ -101,13 +101,13 @@ export function TestimonialsSection() {
                 </div>
 
                 {/* Text Content */}
-                <SimpleText className="text-[14px] leading-[1.6] text-[#333333]">
+                <SimpleText className="text-sm leading-[1.6] text-[#333333]">
                   {item.text}
                 </SimpleText>
 
                 {/* Footer Info - Added mt-auto below */}
                 <div className="mt-auto flex items-center gap-1.5 pt-2">
-                  <span className="font-maison text-[15px] font-bold text-[#111111]">
+                  <span className="font-maison text-base font-bold text-[#111111]">
                     {item.name}
                   </span>
                   {/* Verified Checkmark Icon */}
@@ -115,7 +115,7 @@ export function TestimonialsSection() {
                     <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#595959"/>
                     <path d="M16.5 8.5L10.5 14.5L7.5 11.5" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                  <span className="font-maison text-[13px] text-[#595959]">
+                  <span className="font-maison text-xs text-[#595959]">
                     {item.date}
                   </span>
                 </div>

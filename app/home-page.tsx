@@ -83,7 +83,7 @@ export default function HomePage() {
           scale={1.08}
         />
 
-        <div className="relative z-10 mx-auto flex min-h-[calc(100svh-1.5rem)] w-full max-w-[1400px] items-end px-5 pb-[clamp(12.25rem,12vh,9rem)] pt-[env(safe-area-inset-top,0px)] md:px-8 lg:px-10">
+        <div className="relative z-10 mx-auto flex min-h-[calc(100svh-1.5rem)] w-full max-w-container items-end px-5 pb-[clamp(12.25rem,12vh,9rem)] pt-[env(safe-area-inset-top,0px)] md:px-8 lg:px-10">
           <div className="max-w-[760px] text-[var(--color-brand-white)] md:max-w-[680px] lg:max-w-[760px]">
             <div className="flex items-center mb-4 sm:mb-8 gap-2 md:gap-2.5">
               <BadgeIcon className="h-[18px] w-auto sm:h-[20px] md:h-[24px]" />

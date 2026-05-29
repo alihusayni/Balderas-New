@@ -96,7 +96,7 @@ export function ContactFormPanel({
           <h3 className="font-anton text-xl uppercase tracking-wide text-[var(--color-brand-navy)] sm:text-2xl">
             Message Sent!
           </h3>
-          <p className="text-center font-maison text-[15px] text-gray-600 sm:text-base">
+          <p className="text-center font-maison text-base text-gray-600 sm:text-base">
             Thank you for reaching out. Abel will get back to you shortly.
           </p>
           <button
@@ -124,7 +124,7 @@ export function ContactFormPanel({
                 <div className="w-full">
                   <label
                     htmlFor={field.id}
-                    className="font-maison text-[15px] font-normal leading-[22px] tracking-[-0.02em] text-[#2f3745] sm:text-[16px] sm:leading-[24px] md:text-[18px] md:leading-[26px] lg:text-[20px] lg:leading-[29px]"
+                    className="font-maison text-base font-normal leading-lg tracking-[-0.02em] text-[#2f3745] sm:text-lg sm:leading-2xl md:text-2xl md:leading-4xl lg:text-4xl lg:leading-7xl"
                   >
                     {field.label}
                   </label>
@@ -136,7 +136,7 @@ export function ContactFormPanel({
                         id={field.id}
                         name={field.id}
                         defaultValue=""
-                        className="h-full w-full appearance-none border-none bg-transparent pr-7 font-maison text-[15px] font-normal text-[#595959] focus:outline-none focus:text-[#2f3745] sm:pr-8 sm:text-[16px] md:text-[18px]"
+                        className="h-full w-full appearance-none border-none bg-transparent pr-7 font-maison text-base font-normal text-[#595959] focus:outline-none focus:text-[#2f3745] sm:pr-8 sm:text-lg md:text-2xl"
                       >
                         <option value="" disabled className="text-[#595959]">
                           {field.placeholder ?? "Select an option"}
@@ -161,7 +161,7 @@ export function ContactFormPanel({
                       name={field.id}
                       rows={field.rows ?? 4}
                       placeholder={field.placeholder}
-                      className="h-[100px] w-full resize-none border-none bg-[#F2F2F2] px-3 py-2 font-maison text-[15px] font-normal text-[#2f3745] placeholder:text-[#C4C8D3] focus:outline-none sm:h-[110px] sm:px-[12px] sm:py-[9px] sm:text-[16px] md:h-[120px] md:text-[18px]"
+                      className="h-[100px] w-full resize-none border-none bg-[#F2F2F2] px-3 py-2 font-maison text-base font-normal text-[#2f3745] placeholder:text-[#C4C8D3] focus:outline-none sm:h-[110px] sm:px-[12px] sm:py-[9px] sm:text-lg md:h-[120px] md:text-2xl"
                     />
                   ) : (
                     <input
@@ -170,7 +170,7 @@ export function ContactFormPanel({
                       type={field.inputType ?? "text"}
                       placeholder={field.placeholder}
                       required={field.id === "name" || field.id === "phone"}
-                      className="h-[52px] w-full border-none bg-[#F2F2F2] px-3 py-2 font-maison text-[15px] font-normal text-[#2f3745] placeholder:text-[#C4C8D3] focus:outline-none sm:h-[56px] sm:px-[12px] sm:py-[9px] sm:text-[16px] md:h-[60px] md:text-[18px]"
+                      className="h-[52px] w-full border-none bg-[#F2F2F2] px-3 py-2 font-maison text-base font-normal text-[#2f3745] placeholder:text-[#C4C8D3] focus:outline-none sm:h-[56px] sm:px-[12px] sm:py-[9px] sm:text-lg md:h-[60px] md:text-2xl"
                     />
                   )}
                 </div>
@@ -187,7 +187,7 @@ export function ContactFormPanel({
           <div className="w-full">
             <label
               htmlFor="captcha"
-              className="font-maison text-[15px] font-normal leading-[22px] tracking-[-0.02em] text-[#2f3745] sm:text-[16px] sm:leading-[24px] md:text-[18px] md:leading-[26px] lg:text-[20px] lg:leading-[29px]"
+              className="font-maison text-base font-normal leading-lg tracking-[-0.02em] text-[#2f3745] sm:text-lg sm:leading-2xl md:text-2xl md:leading-4xl lg:text-4xl lg:leading-7xl"
             >
               What is {captcha ? `${captcha.a} + ${captcha.b}` : "…"}?
             </label>
@@ -203,7 +203,7 @@ export function ContactFormPanel({
                 }}
                 placeholder="Your answer"
                 required
-                className={`h-[52px] w-full max-w-[200px] border-2 bg-[#F2F2F2] px-3 py-2 font-maison text-[15px] font-normal text-[#2f3745] placeholder:text-[#C4C8D3] focus:outline-none sm:h-[56px] sm:px-[12px] sm:py-[9px] sm:text-[16px] md:h-[60px] md:text-[18px] ${
+                className={`h-[52px] w-full max-w-[200px] border-2 bg-[#F2F2F2] px-3 py-2 font-maison text-base font-normal text-[#2f3745] placeholder:text-[#C4C8D3] focus:outline-none sm:h-[56px] sm:px-[12px] sm:py-[9px] sm:text-lg md:h-[60px] md:text-2xl ${
                   captchaError ? "border-red-400" : "border-transparent"
                 }`}
               />
@@ -223,7 +223,7 @@ export function ContactFormPanel({
               disabled={status === "sending"}
               className="w-full min-w-0 gap-2 sm:w-auto sm:min-w-[200px] sm:gap-3 md:min-w-[220px] disabled:opacity-60"
             >
-              <span className="inline-flex min-h-[20px] items-center justify-center font-maison text-[16px] font-bold leading-[1] tracking-[-0.02em] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px]">
+              <span className="inline-flex min-h-[20px] items-center justify-center font-maison text-lg font-bold leading-[1] tracking-[-0.02em] sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl">
                 {status === "sending" ? "Sending..." : submitLabel}
               </span>
               {status !== "sending" && (

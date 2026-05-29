@@ -74,7 +74,7 @@ export function ContactCtaSection(props: ContactCtaSectionProps) {
       />
       <div className={`absolute inset-0 ${overlayClassName}`} />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1400px] px-4 sm:px-6 md:px-8 lg:px-10">
+      <div className="relative z-10 mx-auto w-full max-w-container px-4 sm:px-6 md:px-8 lg:px-10">
         <div className="grid grid-cols-1 items-center gap-6 md:gap-8 lg:grid-cols-[1fr_560px] lg:gap-10 xl:grid-cols-[1fr_620px]">
           <ContactCtaText
             className="w-full max-w-[680px]"

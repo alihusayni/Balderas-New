@@ -51,7 +51,7 @@ export function DemolitionDifferenceSection() {
       imageAlt="Balderas worksite background"
       overlayClassName="bg-[#06182C]/72"
       className="py-20 lg:py-24"
-      contentClassName="mx-auto flex w-full max-w-[1400px] flex-col gap-16 px-6 lg:px-10"
+      contentClassName="mx-auto flex w-full max-w-container flex-col gap-16 px-6 lg:px-10"
     >
       <SplitHeroText
         title="The Balderas Demolition Inc. Difference: Safety First, Every Time"

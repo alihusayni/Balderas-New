@@ -44,7 +44,7 @@ const PROCESS_STEPS = [
 export function DemolitionProcessSection() {
   return (
     <section className="w-full bg-white py-20 xl:py-24">
-      <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-14 px-6 lg:px-10">
+      <div className="mx-auto flex w-full max-w-container flex-col gap-14 px-6 lg:px-10">
         <div className="flex flex-col gap-12 xl:flex-row xl:items-start xl:h-[777px]">
           <div className="w-full xl:w-1/2">
             <div className="relative h-[460px] w-full overflow-hidden xl:h-[777px]">

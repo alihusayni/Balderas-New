@@ -22,7 +22,7 @@ export function AboutHeroSection() {
         overlayClassName="bg-[#06182C]/60"
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[760px] w-full max-w-[1400px] items-end px-6 pt-[200px] pb-[80px] lg:min-h-[1040px] lg:px-10 lg:pt-[230px] lg:pb-[100px]">
+      <div className="relative z-10 mx-auto flex min-h-[760px] w-full max-w-container items-end px-6 pt-[200px] pb-[80px] lg:min-h-[1040px] lg:px-10 lg:pt-[230px] lg:pb-[100px]">
         <div className="max-w-[760px] text-[var(--color-brand-white)] sm:max-w-[680px] md:max-w-[1100px]">
           <HeroHeading>
             Behind the Hammer: The Story of Balderas Demolition Inc.

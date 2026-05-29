@@ -106,7 +106,7 @@ export default function DemolitionPage() {
       <DemolitionServicesHero />
 
       <section className="w-full bg-white py-24">
-        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-20 px-6 lg:px-10 xl:gap-[120px]">
+        <div className="mx-auto flex w-full max-w-container flex-col gap-20 px-6 lg:px-10 xl:gap-[120px]">
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
@@ -125,7 +125,7 @@ export default function DemolitionPage() {
             titleClassName="text-[#0b0300]"
             descriptionClassName="text-[#0b0300]"
             mobileDescription="If it’s taking up space, we’ll take it away. Our junk removal process is fast, transparent, and eco-friendly. We handle the sorting, loading, and disposal so you don't have to."
-            mobileDescriptionClassName="font-maison text-[16px] font-semibold leading-[1.25] tracking-[0%] sm:text-[17px] sm:leading-[1.2] md:text-[19px]"
+            mobileDescriptionClassName="font-maison text-lg font-semibold leading-[1.25] tracking-[0%] sm:text-xl sm:leading-[1.2] md:text-3xl"
           />
 
           <ServiceDetailSection

@@ -148,10 +148,10 @@ function FeatureList({ items }: { items: Feature[] }) {
             {item.icon ?? "•"}
           </span>
           <div>
-            <p className="font-maison text-[15px] font-[700] xs:font-bold leading-[1.2] text-[#0b0b0b] sm:text-[17px] md:text-[20px]">
+            <p className="font-maison text-base font-[700] xs:font-bold leading-[1.2] text-[#0b0b0b] sm:text-xl md:text-4xl">
               {item.title}
             </p>
-            <SimpleText className="mt-1 text-[15px] leading-[1.35] text-[#1f1f1f] sm:text-[13px] md:text-[14px]">
+            <SimpleText className="mt-1 text-base leading-[1.35] text-[#1f1f1f] sm:text-xs md:text-sm">
               {item.description}
             </SimpleText>
           </div>
@@ -164,7 +164,7 @@ function FeatureList({ items }: { items: Feature[] }) {
 export function ServicesDetailGrid() {
   return (
     <section className="bg-[#efefef] py-8 sm:py-10 md:py-12 lg:py-14">
-      <div className="mx-auto w-full max-w-[1400px] space-y-8 px-4 sm:space-y-9 sm:px-6 md:space-y-10 md:px-8 lg:space-y-12 lg:px-10">
+      <div className="mx-auto w-full max-w-container space-y-8 px-4 sm:space-y-9 sm:px-6 md:space-y-10 md:px-8 lg:space-y-12 lg:px-10">
         {ROWS.map((row) => (
           <article
             key={row.heading}

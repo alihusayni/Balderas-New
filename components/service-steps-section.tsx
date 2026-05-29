@@ -75,7 +75,7 @@ export function ServiceStepsSection({
 
   return (
     <section className="w-full bg-white py-20 xl:py-24">
-      <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-12 px-6 lg:px-10 xl:flex-row xl:items-stretch">
+      <div className="mx-auto flex w-full max-w-container flex-col gap-12 px-6 lg:px-10 xl:flex-row xl:items-stretch">
         {imageSide === "left" ? (
           <>
             {imageBlock}

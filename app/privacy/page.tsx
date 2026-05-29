@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         Last updated: May 1, 2026
       </p>
 
-      <div className="mt-10 space-y-8 font-maison text-[15px] leading-relaxed text-gray-700 sm:text-base">
+      <div className="mt-10 space-y-8 font-maison text-base leading-relaxed text-gray-700 sm:text-base">
         {/* ───── PRIVACY POLICY ───── */}
         <h2 className="!mt-0 font-anton text-2xl uppercase tracking-wide text-[var(--color-brand-navy)] sm:text-3xl">
           Privacy Policy

@@ -10,7 +10,7 @@ export function SectionHeading({ children, className, as: Tag = "h2" }: SectionH
   return (
     <Tag
       className={cn(
-        "[font-family:var(--font-anton)] text-[26px] font-normal leading-[1.05] tracking-[-0.02em] text-black sm:text-[32px] md:text-[40px] md:leading-[1.05] lg:text-[54px]",
+        "[font-family:var(--font-anton)] text-7xl font-normal leading-[1.05] tracking-[-0.02em] text-black sm:text-10xl md:text-11xl md:leading-[1.05] lg:text-14xl",
         className,
       )}
     >

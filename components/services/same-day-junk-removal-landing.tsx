@@ -124,7 +124,7 @@ export function SameDayJunkRemovalLanding() {
           priority
         />
 
-        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1400px] items-end px-6 pb-[180px] lg:px-10">
+        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-container items-end px-6 pb-[180px] lg:px-10">
           <div className="max-w-[920px] text-[var(--color-brand-white)]">
             <HeroHeading className="max-w-[920px]">
               Same Day Junk Removal Orange County: Your Clutter Gone Today
@@ -162,7 +162,7 @@ export function SameDayJunkRemovalLanding() {
       </section>
 
       <section className="w-full bg-white py-24">
-        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-20 px-6 lg:px-10 xl:gap-[120px]">
+        <div className="mx-auto flex w-full max-w-container flex-col gap-20 px-6 lg:px-10 xl:gap-[120px]">
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
@@ -218,8 +218,8 @@ export function SameDayJunkRemovalLanding() {
         </div>
         <div className="absolute inset-0 bg-[#06182C]/72" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 lg:px-10">
-          <p className="font-maison text-[26px] font-semibold text-white">
+        <div className="relative z-10 mx-auto w-full max-w-container px-6 lg:px-10">
+          <p className="font-maison text-7xl font-semibold text-white">
             Urgent Service
           </p>
 
@@ -261,7 +261,7 @@ export function SameDayJunkRemovalLanding() {
       </section>
 
       <section className="w-full bg-white py-24">
-        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-20 px-6 lg:px-10 xl:gap-[120px]">
+        <div className="mx-auto flex w-full max-w-container flex-col gap-20 px-6 lg:px-10 xl:gap-[120px]">
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
@@ -313,7 +313,7 @@ export function SameDayJunkRemovalLanding() {
             <SubHeading className="max-w-[900px] text-[#0b0300]">
               Don&apos;t see your neighborhood listed?
             </SubHeading>
-            <BodyText className="mt-4 max-w-[820px] text-[17px] leading-[1.65] text-[#0b0300] md:mt-5 md:text-[18px] md:leading-[1.6]">
+            <BodyText className="mt-4 max-w-[820px] text-xl leading-[1.65] text-[#0b0300] md:mt-5 md:text-2xl md:leading-[1.6]">
               Still call{" "}
               <a
                 href={telHref}
@@ -330,7 +330,7 @@ export function SameDayJunkRemovalLanding() {
       </section>
 
       <section className="w-full bg-white pb-20 xl:pb-28">
-        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-14 px-6 lg:px-10">
+        <div className="mx-auto flex w-full max-w-container flex-col gap-14 px-6 lg:px-10">
           <div className="flex flex-col gap-12 xl:flex-row xl:items-start xl:h-[620px]">
             <div className="w-full xl:w-1/2">
               <div className="relative h-[340px] w-full overflow-hidden sm:h-[400px] md:h-[460px] xl:h-[620px]">
@@ -373,7 +373,7 @@ export function SameDayJunkRemovalLanding() {
         </div>
         <div className="absolute inset-0 bg-[#06182C]/58" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 lg:px-10">
+        <div className="relative z-10 mx-auto w-full max-w-container px-6 lg:px-10">
           <div className="flex flex-col gap-14 lg:flex-row lg:items-start">
             <ContactCtaText
               className="w-full lg:max-w-[420px] xl:max-w-[444px]"

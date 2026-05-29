@@ -33,7 +33,7 @@ function ArticleBodyBlock({ block }: { block: ArticleBlock }) {
     }
     case "heading": {
       return (
-        <h2 className="[font-family:var(--font-anton)] text-[22px] font-normal leading-[1.15] tracking-[-0.02em] text-[#0b0300] sm:text-[28px] md:text-[32px] lg:text-[40px] lg:leading-[50px]">
+        <h2 className="[font-family:var(--font-anton)] text-5xl font-normal leading-[1.15] tracking-[-0.02em] text-[#0b0300] sm:text-8xl md:text-10xl lg:text-11xl lg:leading-11xl">
           {block.text}
           {block.accent ? (
             <>
@@ -144,7 +144,7 @@ export function ArticleDetailView({
         data={articleBreadcrumbJsonLd}
       />
       <section className="w-full bg-[#F7F7F7] py-16 lg:py-[120px]">
-        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-10 px-6 lg:gap-[70px] lg:px-10">
+        <div className="mx-auto flex w-full max-w-container flex-col gap-10 px-6 lg:gap-[70px] lg:px-10">
           <div className="relative h-[260px] w-full overflow-hidden sm:h-[360px] lg:h-[505px]">
             <Image
               src={article.imageSrc}
