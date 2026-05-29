@@ -2,13 +2,20 @@ import type { Metadata, Viewport } from "next";
 import { Analytics } from "@/components/analytics";
 
 import { Anton, Geist, Geist_Mono } from "next/font/google";
-import NextTopLoader from "nextjs-toploader";
+import dynamic from "next/dynamic";
 import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteShell } from "@/components/site-shell";
 import { SiteHeader } from "@/components/site-header";
 import { SmoothScroll } from "@/components/smooth-scroll";
-import { CookieConsent } from "@/components/cookie-consent";
+// Deferred — not needed at first paint:
+// CookieConsent checks localStorage (naturally post-FCP UX anyway)
+// NextTopLoader only shows during navigation, never on initial load
+const NextTopLoader = dynamic(() => import("nextjs-toploader"), { ssr: false });
+const CookieConsent = dynamic(
+  () => import("@/components/cookie-consent").then((m) => m.CookieConsent),
+  { ssr: false }
+);
 import { SITE, getLocalBusinessJsonLd } from "@/lib/seo";
 import "./globals.css";
 
