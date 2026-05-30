@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@/components/analytics";
+import CallRailLoader from "@/components/callrail-loader";
 
 import { Anton, Geist, Geist_Mono } from "next/font/google";
 import { DeferredClientShell } from "@/components/deferred-client-shell";
@@ -154,6 +155,7 @@ export default function RootLayout({
 
         {/* Server-side analytics */}
         <Analytics />
+        <CallRailLoader />
 
         <DeferredClientShell />
         <SmoothScroll />
