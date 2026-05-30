@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, type FormEvent } from "react";
+import { useState, useEffect, useRef, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { useFormSubmit } from "@/hooks/use-form-submit";
 
@@ -46,6 +46,9 @@ export function ContactFormPanel({
   const { status, submit, reset } = useFormSubmit();
   const [captchaAnswer, setCaptchaAnswer] = useState("");
   const [captchaError, setCaptchaError] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  const submittedRef = useRef(false);
+  const abandonedSentRef = useRef(false);
 
   const [captcha, setCaptcha] = useState<{ a: number; b: number; sum: number } | null>(null);
 
@@ -54,6 +57,51 @@ export function ContactFormPanel({
     const b = Math.floor(Math.random() * 9) + 1;
     setCaptcha({ a, b, sum: a + b });
   }, []);
+
+  // Abandoned form detection
+  useEffect(() => {
+    const sendAbandonment = () => {
+      if (submittedRef.current || abandonedSentRef.current) return;
+      const form = formRef.current;
+      if (!form) return;
+
+      const data: Record<string, string> = {};
+      for (const field of fields) {
+        const el = form.elements.namedItem(field.id) as
+          | HTMLInputElement
+          | HTMLTextAreaElement
+          | HTMLSelectElement
+          | null;
+        if (el && el.value) data[field.id] = el.value;
+      }
+
+      const hasData = Object.values(data).some((v) => v.trim() !== "");
+      if (!hasData) return;
+
+      abandonedSentRef.current = true;
+      const payload = JSON.stringify({
+        ...data,
+        abandoned: true,
+        pageUrl: window.location.href,
+      });
+      navigator.sendBeacon(
+        "/api/contact",
+        new Blob([payload], { type: "application/json" }),
+      );
+    };
+
+    const onBeforeUnload = () => sendAbandonment();
+    const onVisibilityChange = () => {
+      if (document.visibilityState === "hidden") sendAbandonment();
+    };
+
+    window.addEventListener("beforeunload", onBeforeUnload);
+    document.addEventListener("visibilitychange", onVisibilityChange);
+    return () => {
+      window.removeEventListener("beforeunload", onBeforeUnload);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+    };
+  }, [fields]);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -81,7 +129,10 @@ export function ContactFormPanel({
     }
 
     const ok = await submit(data);
-    if (ok) form.reset();
+    if (ok) {
+      submittedRef.current = true;
+      form.reset();
+    }
   }
 
   if (status === "sent") {
@@ -115,6 +166,7 @@ export function ContactFormPanel({
     <div className={className}>
       <div className="w-full bg-white p-5 sm:p-6 md:p-[30px]">
         <form
+          ref={formRef}
           onSubmit={handleSubmit}
           className="flex w-full flex-col gap-8 sm:gap-10 md:gap-[52px]"
         >

@@ -21,7 +21,7 @@ export function useFormSubmit() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, pageUrl: window.location.href }),
       });
 
       if (res.ok) {
