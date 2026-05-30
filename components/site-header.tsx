@@ -276,7 +276,7 @@ export function SiteHeader() {
             <button
               type="button"
               onClick={handleGoBack}
-              className="font-maison inline-flex h-9 max-w-[min(100%,10rem)] shrink items-center justify-center bg-white px-2.5 text-xs font-bold leading-none tracking-[-0.02em] text-[#0b0300] transition-colors hover:bg-[var(--color-brand-orange)] hover:text-white sm:max-w-none sm:h-[48px] sm:min-w-[120px] sm:px-5 sm:text-xl md:min-w-[160px] md:text-3xl lg:h-[56px] lg:min-w-[200px] lg:px-6 lg:text-4xl xl:h-[64px] xl:min-w-[220px] xl:text-5xl"
+              className="font-maison inline-flex h-9 max-w-[min(100%,10rem)] shrink items-center justify-center bg-white px-2.5 text-[13px] font-bold leading-none tracking-[-0.02em] text-[#0b0300] transition-colors hover:bg-[var(--color-brand-orange)] hover:text-white sm:max-w-none sm:h-[48px] sm:min-w-[120px] sm:px-5 sm:text-[17px] md:min-w-[160px] md:text-[19px] lg:h-[56px] lg:min-w-[200px] lg:px-6 lg:text-[21px] xl:h-[64px] xl:min-w-[220px] xl:text-[22px]"
             >
               Go Back
             </button>
@@ -314,7 +314,7 @@ export function SiteHeader() {
         ) : (
           <>
             <nav
-              className="hidden flex-1 items-center justify-end gap-6 text-base font-normal tracking-wide text-[var(--color-brand-white)] lg:gap-8 xl:flex"
+              className="hidden flex-1 items-center justify-end gap-6 text-[15px] font-normal tracking-wide text-[var(--color-brand-white)] lg:gap-8 xl:flex"
               aria-label="Main"
             >
               {MAIN_NAV.map((item) => {
@@ -409,7 +409,7 @@ export function SiteHeader() {
                                       <Link
                                         href={sub.href}
                                         className={cn(
-                                          "relative flex items-center rounded-md py-2 pl-5 pr-3 font-maison text-sm font-semibold leading-snug transition-colors duration-150",
+                                          "relative flex items-center rounded-md py-2 pl-5 pr-3 font-maison text-[14px] font-semibold leading-snug transition-colors duration-150",
                                           subActive
                                             ? accent
                                             : "text-white/90 hover:bg-white/5 hover:text-[var(--color-brand-orange)]",
@@ -550,7 +550,7 @@ export function SiteHeader() {
                       <Link
                         href={item.href}
                         className={cn(
-                          "flex-1 py-3.5 pl-6 pr-4 text-base tracking-wide transition-colors",
+                          "flex-1 py-3.5 pl-6 pr-4 text-[15px] tracking-wide transition-colors",
                           active
                             ? accent
                             : "text-[var(--color-brand-white)] hover:text-[var(--color-brand-orange)]",
@@ -579,7 +579,7 @@ export function SiteHeader() {
                       <Link
                         href={item.href}
                         className={cn(
-                          "flex-1 py-3.5 pl-6 pr-2 text-base tracking-wide transition-colors",
+                          "flex-1 py-3.5 pl-6 pr-2 text-[15px] tracking-wide transition-colors",
                           isHighlighted
                             ? accent
                             : "text-[var(--color-brand-white)] hover:text-[var(--color-brand-orange)]",
@@ -625,7 +625,7 @@ export function SiteHeader() {
                                 key={sub.href}
                                 href={sub.href}
                                 className={cn(
-                                  "relative flex items-center rounded-md px-3 py-2.5 font-maison text-sm transition-all duration-150",
+                                  "relative flex items-center rounded-md px-3 py-2.5 font-maison text-[14px] transition-all duration-150",
                                   subActive
                                     ? cn("font-bold", accent)
                                     : "text-white/85 hover:text-[var(--color-brand-orange)]",
@@ -651,7 +651,7 @@ export function SiteHeader() {
             <Link
               href={CONTACT_NAV.href}
               className={cn(
-                "font-maison flex w-full items-center justify-center bg-[var(--color-brand-orange)] px-4 py-3.5 text-base font-bold uppercase tracking-[0.06em] text-[#0b0300] transition-[filter] hover:brightness-110",
+                "font-maison flex w-full items-center justify-center bg-[var(--color-brand-orange)] px-4 py-3.5 text-[15px] font-bold uppercase tracking-[0.06em] text-[#0b0300] transition-[filter] hover:brightness-110",
                 isActive(CONTACT_NAV.href) && "ring-2 ring-inset ring-black/20",
               )}
               onClick={() => setMobileOpen(false)}

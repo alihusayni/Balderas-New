@@ -188,7 +188,7 @@ export default function InteriorDemolitionPage() {
             titleClassName="text-[#0b0300]"
             descriptionClassName="text-[#0b0300]"
             mobileDescription="We leave you a contractor-ready blank canvas\u2014strip-outs, gutting, and flooring removal so the next trade can start the moment we\u2019re done."
-            mobileDescriptionClassName="font-maison text-lg font-semibold leading-[1.25] tracking-[0%] sm:text-xl sm:leading-[1.2] md:text-3xl"
+            mobileDescriptionClassName="font-maison text-[16px] font-semibold leading-[1.25] tracking-[0%] sm:text-[17px] sm:leading-[1.2] md:text-[19px]"
           />
 
           <ServiceDetailSection
@@ -317,7 +317,7 @@ export default function InteriorDemolitionPage() {
               your home deserves.
             </SimpleText>
 
-            <blockquote className="mt-8 border-l-4 border-[var(--color-brand-orange)] pl-6 font-maison text-xl font-semibold italic leading-relaxed text-[#0b0300] sm:text-3xl md:text-4xl">
+            <blockquote className="mt-8 border-l-4 border-[var(--color-brand-orange)] pl-6 font-maison text-[17px] font-semibold italic leading-relaxed text-[#0b0300] sm:text-[19px] md:text-[21px]">
               &ldquo;We treat your kitchen like it&apos;s ours. Our goal is to
               make the demolition the easiest part of your entire
               remodel.&rdquo;{" "}

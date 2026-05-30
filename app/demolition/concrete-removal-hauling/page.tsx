@@ -161,7 +161,7 @@ export default function ConcreteRemovalHaulingPage() {
             titleClassName="text-[#0b0300]"
             descriptionClassName="text-[#0b0300]"
             mobileDescription="From driveways to garage slabs—we break it, load it, and haul it. No residential concrete job is too heavy for our crew."
-            mobileDescriptionClassName="font-maison text-lg font-semibold leading-[1.25] tracking-[0%] sm:text-xl sm:leading-[1.2] md:text-3xl"
+            mobileDescriptionClassName="font-maison text-[16px] font-semibold leading-[1.25] tracking-[0%] sm:text-[17px] sm:leading-[1.2] md:text-[19px]"
           />
 
           <ServiceDetailSection
@@ -292,7 +292,7 @@ export default function ConcreteRemovalHaulingPage() {
               </div>
             </div>
 
-            <blockquote className="mt-10 border-l-4 border-[var(--color-brand-orange)] pl-6 font-maison text-xl font-semibold italic leading-relaxed text-[#0b0300] sm:mt-12 sm:text-3xl md:text-4xl">
+            <blockquote className="mt-10 border-l-4 border-[var(--color-brand-orange)] pl-6 font-maison text-[17px] font-semibold italic leading-relaxed text-[#0b0300] sm:mt-12 sm:text-[19px] md:text-[21px]">
               &ldquo;Concrete work is about power and precision. We have the tools
               to do it fast, and the respect to do it right.&rdquo;{" "}
               <span className="mt-2 block font-bold not-italic">

@@ -138,7 +138,7 @@ export default function AboutPage() {
 
         <div className="relative mx-auto flex w-full max-w-[1610px] flex-col gap-16 px-6 py-20 lg:flex-row lg:items-center lg:gap-12 lg:px-12 lg:py-[120px]">
           <div className="flex w-full flex-col gap-8 lg:flex-1 lg:gap-10">
-            <p className="font-maison text-4xl font-bold leading-none tracking-[-0.02em] text-white/60 sm:text-6xl">
+            <p className="font-maison text-[20px] font-bold leading-none tracking-[-0.02em] text-white/60 sm:text-[24px]">
               Why Us?
             </p>
 
@@ -146,7 +146,7 @@ export default function AboutPage() {
               Proudly Serving Our Orange County Neighbors
             </MainHeading>
 
-            <SimpleText className="max-w-[971px] text-4xl leading-6xl text-white/80 sm:text-6xl sm:leading-9xl lg:text-8xl lg:leading-10xl">
+            <SimpleText className="max-w-[971px] text-[20px] leading-[28px] text-white/80 sm:text-[24px] sm:leading-[32px] lg:text-[28px] lg:leading-[37px]">
               Based in Tustin, we are proud to serve the diverse communities
               that make up Orange County. From the historic homes of Santa Ana
               and Orange to the modern developments of Irvine and the coastal
@@ -219,7 +219,7 @@ export default function AboutPage() {
         description="When you hire Balderas Demolition Inc., you are partnering with a licensed, insured, and dedicated team that cares about the outcome as much as you do. We invite you to experience the difference that professional communication and a “customer-first” attitude can make."
         backgroundSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/about/about-footer.webp"
         backgroundAlt=""
-        titleClassName="text-11xl sm:text-15xl lg:text-16xl lg:leading-12xl"
+        titleClassName="text-[40px] sm:text-[56px] lg:text-[68px] lg:leading-[70px]"
         ctas={[
           {
             label: "Get a Quote from Abel",

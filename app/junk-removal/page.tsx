@@ -160,7 +160,7 @@ export default function JunkRemovalPage() {
         <div className="absolute inset-0 bg-[#06182C]/72" />
 
         <div className="relative z-10 mx-auto w-full max-w-container px-6 lg:px-10">
-          <p className="font-maison text-7xl font-semibold text-white">Why Us?</p>
+          <p className="font-maison text-[26px] font-semibold text-white">Why Us?</p>
 
           <div className="mt-8">
             <SplitHeroText

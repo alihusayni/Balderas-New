@@ -219,7 +219,7 @@ export function SameDayJunkRemovalLanding() {
         <div className="absolute inset-0 bg-[#06182C]/72" />
 
         <div className="relative z-10 mx-auto w-full max-w-container px-6 lg:px-10">
-          <p className="font-maison text-7xl font-semibold text-white">
+          <p className="font-maison text-[26px] font-semibold text-white">
             Urgent Service
           </p>
 
@@ -313,7 +313,7 @@ export function SameDayJunkRemovalLanding() {
             <SubHeading className="max-w-[900px] text-[#0b0300]">
               Don&apos;t see your neighborhood listed?
             </SubHeading>
-            <BodyText className="mt-4 max-w-[820px] text-xl leading-[1.65] text-[#0b0300] md:mt-5 md:text-2xl md:leading-[1.6]">
+            <BodyText className="mt-4 max-w-[820px] text-[17px] leading-[1.65] text-[#0b0300] md:mt-5 md:text-[18px] md:leading-[1.6]">
               Still call{" "}
               <a
                 href={telHref}

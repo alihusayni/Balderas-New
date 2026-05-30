@@ -45,7 +45,7 @@ export function ArticlesToolbar({
               key={category.id}
               onClick={() => onCategoryChange(category.id)}
               className={cn(
-                "[font-family:var(--font-anton)] cursor-pointer text-base font-normal leading-2xl tracking-[-0.02em] transition-colors hover:text-[var(--color-brand-orange)] sm:text-lg sm:leading-4xl md:text-xl md:leading-5xl lg:text-2xl lg:leading-6xl",
+                "[font-family:var(--font-anton)] cursor-pointer text-[15px] font-normal leading-[24px] tracking-[-0.02em] transition-colors hover:text-[var(--color-brand-orange)] sm:text-[16px] sm:leading-[26px] md:text-[17px] md:leading-[27px] lg:text-[18px] lg:leading-[28px]",
                 isActive ? "text-[#0b0300]" : "text-[#4F5B79]",
               )}
             >
@@ -62,7 +62,7 @@ export function ArticlesToolbar({
           value={searchValue}
           onChange={(event) => onSearchChange(event.target.value)}
           placeholder={searchPlaceholder}
-          className="font-maison h-full flex-1 border-none bg-transparent text-base font-normal leading-base tracking-[-0.02em] text-[#0b0300] placeholder:text-[#4F5B79] focus:outline-none sm:text-lg sm:leading-lg md:text-2xl"
+          className="font-maison h-full flex-1 border-none bg-transparent text-[15px] font-normal leading-[21px] tracking-[-0.02em] text-[#0b0300] placeholder:text-[#4F5B79] focus:outline-none sm:text-[16px] sm:leading-[22px] md:text-[18px]"
         />
 
         <svg

@@ -19,7 +19,7 @@ export default function TermsPage() {
         Last updated: May 1, 2026
       </p>
 
-      <div className="mt-10 space-y-8 font-maison text-base leading-relaxed text-gray-700 sm:text-base">
+      <div className="mt-10 space-y-8 font-maison text-[15px] leading-relaxed text-gray-700 sm:text-base">
         <section>
           <h2 className="mb-3 text-lg font-bold text-[var(--color-brand-navy)] sm:text-xl">
             1. Acceptance of Terms

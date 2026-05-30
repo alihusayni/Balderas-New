@@ -11,7 +11,7 @@ type ArticleLeadTextProps = {
 
 /** Shared scale for article body copy under headings (blog). */
 export const articleLeadTextBaseClassName =
-  "[font-family:var(--font-maison)] text-10xl leading-[1] tracking-[-0.02em] text-[#0b0300] break-words";
+  "[font-family:var(--font-maison)] text-[32px] leading-[1] tracking-[-0.02em] text-[#0b0300] break-words";
 
 /** Paragraph-style wrapper; use `articleLeadTextBaseClassName` for `li` / custom nodes. */
 export function ArticleLeadText({

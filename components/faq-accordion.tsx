@@ -45,7 +45,7 @@ export function FaqAccordion({
               }
               className="group flex w-full items-center justify-between gap-4 py-6 text-left transition-colors sm:gap-6 sm:py-7 lg:gap-24 lg:py-8"
             >
-              <span className="[font-family:var(--font-anton)] flex-1 text-xl font-normal leading-2xl tracking-[-0.01em] text-[#0b0300] sm:text-2xl sm:leading-4xl md:text-3xl md:leading-5xl lg:text-5xl lg:leading-8xl">
+              <span className="[font-family:var(--font-anton)] flex-1 text-[17px] font-normal leading-[24px] tracking-[-0.01em] text-[#0b0300] sm:text-[18px] sm:leading-[26px] md:text-[19px] md:leading-[27px] lg:text-[22px] lg:leading-[30px]">
                 {item.question}
               </span>
 

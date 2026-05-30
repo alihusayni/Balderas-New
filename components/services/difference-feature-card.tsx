@@ -80,7 +80,7 @@ export function DifferenceFeatureCard({
         <div className="flex min-w-0 flex-1 flex-col text-left">
           <h3
             className={cn(
-              "font-maison text-4xl font-bold leading-[1.08] sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl",
+              "font-maison text-[20px] font-bold leading-[1.08] sm:text-[22px] md:text-[24px] lg:text-[28px] xl:text-[30px]",
               v.title,
             )}
           >

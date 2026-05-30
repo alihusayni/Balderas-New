@@ -17,14 +17,14 @@ export function MeetOwnerSection() {
         </div>
 
         <div className="order-1 text-[#0b0b0b] lg:order-2">
-          <SectionHeading className="uppercase leading-[0.92] sm:text-15xl md:text-16xl lg:text-18xl">
+          <SectionHeading className="uppercase leading-[0.92] sm:text-[56px] md:text-[70px] lg:text-[78px]">
             Meet the owner
             <span className="block text-[var(--color-brand-orange)]">
               Abel Balderas
             </span>
           </SectionHeading>
         <div className="sm:mt-12"/>
-          <SectionSubheading className="mt-8 text-sm font-medium sm:mt-12 sm:text-base md:text-3xl md:leading-[1.5]">
+          <SectionSubheading className="mt-8 text-sm font-medium sm:mt-12 sm:text-base md:text-[19px] md:leading-[1.5]">
             When you hire Balderas Demolition Inc., you&apos;re partnering with
             Abel Balderas. Known in Orange County for his responsive
             communication and genuine helpfulness, Abel personally ensures every
