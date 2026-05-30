@@ -4,31 +4,36 @@ import { cn } from "@/lib/utils";
 /**
  * Hero parallax background — Server Component (no "use client").
  *
- * Parallax is handled by CSS scroll-driven animations (zero JS, compositor thread):
- *   animation-timeline: scroll(root) — tracks the root scrollbar
- *   @keyframes hero-parallax-move in globals.css applies translateY as user scrolls
+ * Image loading strategy — follow tuanlelaw pattern:
+ *   priority={true} + fetchPriority="high" → Next.js auto-generates a SINGLE
+ *   <link rel="preload" fetchPriority="high" imageSrcSet="...q=22..."> covering
+ *   ALL deviceSizes. No manual preload in layout.tsx needed or desired.
  *
- * Browser support: Chrome 115+, Safari 18+, Firefox 128+ (~92% globally, 2025).
- * Fallback for unsupported browsers: image stays at scale(1.08) translateY(0) — fine.
+ *   DO NOT add a separate manual <link rel="preload"> in layout.tsx:
+ *   loading="eager" (without priority) already generates a preload WITHOUT
+ *   fetchPriority. A manual preload WITH fetchPriority then creates TWO
+ *   competing preloads for the same resource → browser may double-download
+ *   or fight over priorities → LCP 2.6s instead of ~1.1s.
  *
- * Preload strategy:
- *   DO NOT add priority={true} — auto-generates a q=75 preload (ignores quality prop)
- *   DO NOT add fetchPriority="high" — Next.js 16 Turbopack also generates q=75 preload
- *   Both conflict with our manual q=22 preload in layout.tsx (imageSrcSet).
- *   loading="eager" is required — without it next/image defaults to lazy loading → LCP 4s.
- *   The <link rel="preload" imageSrcSet q=22 fetchPriority="high"> in layout.tsx is the
- *   sole priority signal. loading="eager" ensures the image isn't lazily deferred.
- *   IMPORTANT: keep quality in sync with q= in layout.tsx preload imageSrcSet.
+ *   IMPORTANT: quality={22} is allowed by next.config.ts qualities:[22,55,75].
+ *   priority generates the preload URL using the Image's quality prop,
+ *   so the auto-preload is at q=22 (not q=75). qualities allowlist ensures
+ *   these q=22 URLs don't return 400 INVALID_IMAGE_OPTIMIZE_REQUEST.
+ *
+ * Parallax strategy:
+ *   CSS scroll-driven animation (hero-parallax-img class in globals.css)
+ *   replaces the previous vanilla JS useEffect + requestAnimationFrame listener.
+ *   Runs on compositor thread — zero JS, zero main-thread cost.
+ *   Browser support: Chrome 115+, Safari 18+, Firefox 128+ (~92% global, 2025).
+ *   Fallback: image stays at scale(1.08) translateY(-10%) — static, no parallax.
  */
 
 type HeroParallaxBackgroundProps = {
   src: string;
   alt: string;
-  /** Accepted for call-site compat — intentionally ignored (CSS handles the effect). */
-  priority?: boolean;
-  /** Accepted for call-site compat — intentionally ignored (CSS handles the speed). */
+  /** Accepted for call-site compat — intentionally not forwarded (CSS handles speed). */
   speed?: number;
-  /** Accepted for call-site compat — intentionally ignored (CSS handles the scale). */
+  /** Accepted for call-site compat — intentionally not forwarded (CSS handles scale). */
   scale?: number;
   overlayClassName?: string;
   imageClassName?: string;
@@ -37,7 +42,6 @@ type HeroParallaxBackgroundProps = {
 export function HeroParallaxBackground({
   src,
   alt,
-  priority: _priority,
   speed: _speed,
   scale: _scale,
   overlayClassName,
@@ -49,9 +53,15 @@ export function HeroParallaxBackground({
         src={src}
         alt={alt}
         fill
-        loading="eager"
+        // priority + fetchPriority="high": generates ONE preload with fetchPriority="high"
+        // at q=22 (uses the Image's quality prop). Remove loading="eager" — priority
+        // already implies eager. No manual <link rel="preload"> in layout.tsx.
+        priority
+        fetchPriority="high"
         sizes="100vw"
         quality={22}
+        // q=22: full-bleed under 68% dark overlay. Allowed by next.config.ts qualities:[22,55,75].
+        // AVIF at q=22 ≈ 30–50% smaller than WebP at same quality.
         className={cn("object-cover hero-parallax-img", imageClassName)}
       />
       <div className={cn("absolute inset-0 bg-[#06182C]/68", overlayClassName)} />

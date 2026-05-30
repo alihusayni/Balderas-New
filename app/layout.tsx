@@ -136,27 +136,13 @@ export default function RootLayout({
     >
       <head>
         {/*
-          Preload the hero LCP image via the actual /_next/image URL.
-          The raw S3 preload was wrong — the browser never fetches S3 directly.
-          imagesrcset mirrors next/image's srcset buckets for sizes="100vw".
-          fetchpriority="high" ensures the browser starts this fetch immediately.
+          No manual <link rel="preload"> needed here.
+          <Image priority fetchPriority="high"> in HeroParallaxBackground
+          auto-generates a single complete preload covering all deviceSizes at q=22.
+          A manual preload would create a SECOND competing preload → browser
+          may double-download or deprioritize → LCP regression (was 2.6s).
+          This is the same pattern as tuanlelaw.com (consistently 98+/100).
         */}
-        <link
-          rel="preload"
-          as="image"
-          fetchPriority="high"
-          imageSrcSet={[
-            "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=640&q=22 640w",
-            // 750w & 828w added — without these, iPhone 375px@2x picks 750w from the
-            // <img> srcset but the preload had fetched 1080w → cache miss → double download.
-            "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=750&q=22 750w",
-            "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=828&q=22 828w",
-            "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=1080&q=22 1080w",
-            "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=1200&q=22 1200w",
-            "/_next/image?url=https%3A%2F%2Fqxwyml8xuwxdgws0.public.blob.vercel-storage.com%2Fbalderas-assets%2Fimages%2Fhomepage%2Fhero.webp&w=1920&q=22 1920w",
-          ].join(", ")}
-          imageSizes="100vw"
-        />
       </head>
       <body className="min-h-full flex flex-col">
         <JsonLd
