@@ -61,6 +61,11 @@ export function HeroParallaxBackground({
         // already implies eager. No manual <link rel="preload"> in layout.tsx.
         priority
         fetchPriority="high"
+        // decoding="auto": let browser choose sync decode for this small (18 KB) file.
+        // Next.js sets decoding="async" for all priority images by default —
+        // async decode means image may not appear until after FCP even if bytes are ready.
+        // "auto" → browser decodes synchronously for small images → LCP ≈ FCP.
+        decoding="auto"
         sizes="100vw"
         quality={22}
         // q=22: full-bleed under 68% dark overlay. Allowed by next.config.ts qualities:[22,55,75].

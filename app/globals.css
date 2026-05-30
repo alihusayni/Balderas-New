@@ -201,14 +201,21 @@ body {
    Fallback (unsupported): image stays at scale(1.08), no movement — acceptable.
    ─────────────────────────────────────────────────────────────────────────── */
 @keyframes hero-parallax-move {
-  from { transform: scale(1.08) translateY(-10%); }
-  to   { transform: scale(1.08) translateY(15%);  }
+  /* Start centered (translateY 0) so image is fully visible at page load —
+     the translateY(-10%) start was partially hiding the image above the viewport,
+     potentially reducing its LCP area. Moves down 20% as user scrolls the hero. */
+  from { transform: scale(1.08) translateY(0%);  }
+  to   { transform: scale(1.08) translateY(20%); }
 }
 
 .hero-parallax-img {
-  will-change: transform;
+  /* NO will-change: transform here.
+     will-change forces immediate compositor layer promotion → image renders
+     on compositor thread AFTER text renders on main thread → 0.3s LCP gap.
+     Without it, image renders with text at FCP → LCP ≈ FCP.
+     The scroll-driven animation still works; browser promotes to compositor
+     layer on first scroll event (one frame, unnoticeable). */
   animation: hero-parallax-move linear both;
   animation-timeline: scroll(root block);
-  /* Animate during the first viewport-height of scroll (while hero is visible) */
   animation-range: 0px 100svh;
 }
