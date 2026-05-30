@@ -31,6 +31,8 @@ import { cn } from "@/lib/utils";
 type HeroParallaxBackgroundProps = {
   src: string;
   alt: string;
+  /** Accepted for call-site compat — component always uses priority={true} internally. */
+  priority?: boolean;
   /** Accepted for call-site compat — intentionally not forwarded (CSS handles speed). */
   speed?: number;
   /** Accepted for call-site compat — intentionally not forwarded (CSS handles scale). */
@@ -42,6 +44,7 @@ type HeroParallaxBackgroundProps = {
 export function HeroParallaxBackground({
   src,
   alt,
+  priority: _priority,
   speed: _speed,
   scale: _scale,
   overlayClassName,
