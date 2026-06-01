@@ -17,7 +17,7 @@ const buttonVariants = cva(
           "bg-white text-[#0b0300] hover:bg-white/90 hover:text-[#0b0300]",
       },
       size: {
-        hero: "h-[46px] px-5 text-[14px] sm:h-[50px] sm:px-6 sm:text-[15px] md:h-[54px] md:px-7 md:text-[16px] lg:h-[58px] lg:px-8 lg:text-[17px] xl:h-[60px] xl:px-10 xl:text-[20px]",
+        hero: "h-[46px] px-5 text-sm sm:h-[50px] sm:px-6 sm:text-base md:h-[54px] md:px-7 md:text-lg lg:h-[58px] lg:px-8 lg:text-xl xl:h-[60px] xl:px-10 xl:text-4xl",
       },
     },
     defaultVariants: {

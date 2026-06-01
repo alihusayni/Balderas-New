@@ -148,12 +148,12 @@ export default function ResourcesPage() {
                       className="h-[23px] w-[23px] shrink-0"
                       aria-hidden
                     />
-                    <span className="font-maison text-[16px] font-bold leading-[22px] tracking-[-0.02em] text-[#4F5B79] lg:text-[18px]">
+                    <span className="font-maison text-lg font-bold leading-lg tracking-[-0.02em] text-[#4F5B79] lg:text-2xl">
                       {featuredArticle.author.name}
                     </span>
                   </div>
 
-                  <SimpleText className="font-medium leading-[22px] text-[#4F5B79] lg:text-[18px] lg:leading-[22px]">
+                  <SimpleText className="font-medium leading-lg text-[#4F5B79] lg:text-2xl lg:leading-lg">
                     {featuredArticle.publishedDate} | {featuredArticle.readTime}
                   </SimpleText>
                 </div>
@@ -168,7 +168,7 @@ export default function ResourcesPage() {
                 >
                   <Link
                     href={getArticleHref(featuredArticle)}
-                    className="font-maison flex items-center gap-3 text-[16px] font-bold tracking-[-0.02em] sm:gap-4 sm:text-[18px] md:text-[20px] lg:gap-5 lg:text-[22px] xl:text-[24px]"
+                    className="font-maison flex items-center gap-3 text-lg font-bold tracking-[-0.02em] sm:gap-4 sm:text-2xl md:text-4xl lg:gap-5 lg:text-5xl xl:text-6xl"
                   >
                     <span>Read Article</span>
                     <span aria-hidden>→</span>
@@ -242,7 +242,7 @@ export default function ResourcesPage() {
             >
               <Link
                 href="/#contact"
-                className="font-maison text-[16px] font-bold tracking-[-0.02em] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px]"
+                className="font-maison text-lg font-bold tracking-[-0.02em] sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl"
               >
                 Contact Us
               </Link>
@@ -255,7 +255,7 @@ export default function ResourcesPage() {
             >
               <Link
                 href="/resources"
-                className="font-maison flex items-center gap-3 text-[16px] font-bold tracking-[-0.02em] sm:gap-4 sm:text-[18px] md:text-[20px] lg:gap-5 lg:text-[22px] xl:text-[24px]"
+                className="font-maison flex items-center gap-3 text-lg font-bold tracking-[-0.02em] sm:gap-4 sm:text-2xl md:text-4xl lg:gap-5 lg:text-5xl xl:text-6xl"
               >
                 <span>Find More FAQs</span>
                 <span aria-hidden>→</span>

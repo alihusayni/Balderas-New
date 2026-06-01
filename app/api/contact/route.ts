@@ -46,6 +46,26 @@ export async function POST(request: Request) {
       body["dumpster-phone"] || "";
     const email = body.email || "";
     const pageUrl: string = body.pageUrl || "";
+    const website = body.website || "";
+    const timeElapsed = body.timeElapsed !== undefined ? Number(body.timeElapsed) : undefined;
+
+    // Bot detection
+    const isBot = website || (timeElapsed !== undefined && timeElapsed < 3000);
+    if (isBot) {
+      console.warn(`[Bot Detected] siteName: Balderas, website: ${website}, timeElapsed: ${timeElapsed}`);
+      return NextResponse.json({ ok: true, success: true });
+    }
+
+    // Spam check
+    const message =
+      body.message || body["home-contact-message"] || body["quote-message"] ||
+      body["res-message"] || body["int-message"] || body["com-message"] ||
+      body["con-message"] || body["junk-message"] || body["dumpster-message"] || "";
+
+    if (isSuspiciousSpam(name, email, undefined, message)) {
+      console.warn(`[Spam Detected] siteName: Balderas, name: "${name}", email: "${email}", message: "${message}"`);
+      return NextResponse.json({ ok: true, success: true });
+    }
 
     // ── Abandoned form handler ─────────────────────────────────
     if (body.abandoned) {
@@ -56,7 +76,7 @@ export async function POST(request: Request) {
       }
 
       const abandonedRows = Object.entries(body as Record<string, string>)
-        .filter(([k]) => k !== "abandoned" && k !== "pageUrl")
+        .filter(([k]) => k !== "abandoned" && k !== "pageUrl" && k !== "timeElapsed" && k !== "website")
         .filter(([, v]) => v && String(v).trim() !== "")
         .map(
           ([key, value]) => `
@@ -78,28 +98,47 @@ export async function POST(request: Request) {
            </tr>`
         : "";
 
-      await getResend().emails.send({
-        from: SENDER,
-        to: [RECIPIENT],
-        subject: `⚠️ Abandoned Form: ${identifier}`,
-        replyTo: email || undefined,
-        html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <div style="background: #d97706; padding: 24px; text-align: center; border-bottom: 4px solid #f59e0b;">
-              <h1 style="color: #ffffff; margin: 0; font-size: 22px;">⚠️ Abandoned Form Submission</h1>
+      try {
+        await getResend().emails.send({
+          from: SENDER,
+          to: [RECIPIENT],
+          subject: `⚠️ Abandoned Form: ${identifier}`,
+          replyTo: email || undefined,
+          html: `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+              <div style="background: #d97706; padding: 24px; text-align: center; border-bottom: 4px solid #f59e0b;">
+                <h1 style="color: #ffffff; margin: 0; font-size: 22px;">⚠️ Abandoned Form Submission</h1>
+              </div>
+              <div style="padding: 24px; background: #fffbeb;">
+                <table style="width: 100%; border-collapse: collapse;">
+                  ${abandonedRows}
+                  ${pageRow}
+                </table>
+              </div>
+              <div style="padding: 16px 24px; background: #78350f; text-align: center;">
+                <p style="color: #fde68a; margin: 0; font-size: 12px;">This visitor started filling out the contact form but left without submitting.</p>
+              </div>
             </div>
-            <div style="padding: 24px; background: #fffbeb;">
-              <table style="width: 100%; border-collapse: collapse;">
-                ${abandonedRows}
-                ${pageRow}
-              </table>
-            </div>
-            <div style="padding: 16px 24px; background: #78350f; text-align: center;">
-              <p style="color: #fde68a; margin: 0; font-size: 12px;">This visitor started filling out the contact form but left without submitting.</p>
-            </div>
-          </div>
-        `,
-      });
+          `,
+        });
+      } catch (err: any) {
+        console.error("Failed to send abandoned email via Resend:", err);
+        try {
+          await fetch("https://www.despora.ai/api/alerts/form-failure", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              siteName: "Balderas",
+              pageUrl: pageUrl || "",
+              errorDetails: `Abandoned form Resend error: ${err.message || "Failed to dispatch email via Resend"}`,
+              clientEmail: RECIPIENT,
+              leadData: { ...body, abandoned: true },
+            }),
+          });
+        } catch (backupErr) {
+          console.error("Backup outage alert report failed:", backupErr);
+        }
+      }
 
       return NextResponse.json({ ok: true });
     }
@@ -113,7 +152,7 @@ export async function POST(request: Request) {
 
     // Build rows for ALL submitted fields (exclude internal-only keys)
     const rows = Object.entries(body as Record<string, string>)
-      .filter(([k]) => k !== "pageUrl")
+      .filter(([k]) => k !== "pageUrl" && k !== "timeElapsed" && k !== "website")
       .filter(([, v]) => v && v.trim() !== "")
       .map(
         ([key, value]) => `
@@ -135,42 +174,62 @@ export async function POST(request: Request) {
          </tr>`
       : "";
 
-    const { data, error } = await getResend().emails.send({
-      from: SENDER,
-      to: [RECIPIENT],
-      subject: `New Lead from demolitionoc.com — ${name}`,
-      replyTo: email || undefined,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <div style="background: #06182C; padding: 24px; text-align: center;">
-            <h1 style="color: #dc5a31; margin: 0; font-size: 22px;">New Contact Form Submission</h1>
+    try {
+      const { data, error } = await getResend().emails.send({
+        from: SENDER,
+        to: [RECIPIENT],
+        subject: `New Lead from demolitionoc.com — ${name}`,
+        replyTo: email || undefined,
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+            <div style="background: #06182C; padding: 24px; text-align: center;">
+              <h1 style="color: #dc5a31; margin: 0; font-size: 22px;">New Contact Form Submission</h1>
+            </div>
+            <div style="padding: 24px; background: #f9f9f9;">
+              <table style="width: 100%; border-collapse: collapse;">
+                ${rows}
+                ${pageRow}
+              </table>
+            </div>
+            <div style="padding: 16px 24px; background: #06182C; text-align: center;">
+              <p style="color: #999; margin: 0; font-size: 12px;">Sent from demolitionoc.com contact form</p>
+            </div>
           </div>
-          <div style="padding: 24px; background: #f9f9f9;">
-            <table style="width: 100%; border-collapse: collapse;">
-              ${rows}
-              ${pageRow}
-            </table>
-          </div>
-          <div style="padding: 16px 24px; background: #06182C; text-align: center;">
-            <p style="color: #999; margin: 0; font-size: 12px;">Sent from demolitionoc.com contact form</p>
-          </div>
-        </div>
-      `,
-    });
+        `,
+      });
 
-    if (error) {
-      console.error("Resend error:", error);
+      if (error) {
+        console.error("Resend error:", error);
+        throw new Error(error.message || "Resend error occurred");
+      }
+
+      return NextResponse.json({ success: true, id: data?.id });
+    } catch (err: any) {
+      console.error("Contact form error:", err);
+      try {
+        await fetch("https://www.despora.ai/api/alerts/form-failure", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            siteName: "Balderas",
+            pageUrl: pageUrl || "",
+            errorDetails: err.message || "Failed to send email via Resend",
+            clientEmail: RECIPIENT,
+            leadData: body,
+          }),
+        });
+      } catch (backupErr) {
+        console.error("Backup outage alert report failed:", backupErr);
+      }
       return NextResponse.json(
         { error: "Failed to send message. Please try again." },
         { status: 500 },
       );
     }
-
-    return NextResponse.json({ success: true, id: data?.id });
   } catch (err) {
-    console.error("Contact form error:", err);
+    console.error("Unhandled contact route error:", err);
     return NextResponse.json(
-      { error: "Something went wrong. Please try again." },
+      { error: "An unexpected error occurred." },
       { status: 500 },
     );
   }
@@ -184,3 +243,33 @@ function escapeHtml(str: string): string {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
 }
+
+function isGibberish(val: any): boolean {
+  if (typeof val !== 'string') return false;
+  const trimmed = val.trim();
+  if (!/^[a-zA-Z]{8,30}$/.test(trimmed)) return false;
+  const hasUpper = /[A-Z]/.test(trimmed);
+  const hasLower = /[a-z]/.test(trimmed);
+  if (!hasUpper || !hasLower) return false;
+  // Must contain at least one uppercase letter after the first character
+  return /[A-Z]/.test(trimmed.slice(1));
+}
+
+function hasExcessiveDots(emailVal: any): boolean {
+  if (typeof emailVal !== 'string') return false;
+  const cleanEmail = emailVal.trim().toLowerCase();
+  if (!cleanEmail.endsWith('@gmail.com') && !cleanEmail.endsWith('@googlemail.com')) return false;
+  const username = cleanEmail.split('@')[0];
+  const dotCount = (username.match(/\./g) || []).length;
+  return dotCount >= 4;
+}
+
+function isSuspiciousSpam(name: any, email: any, addressOrLocation: any, message: any): boolean {
+  let score = 0;
+  if (isGibberish(name)) score++;
+  if (isGibberish(addressOrLocation)) score++;
+  if (isGibberish(message)) score++;
+  if (hasExcessiveDots(email)) score++;
+  return score >= 2;
+}
+

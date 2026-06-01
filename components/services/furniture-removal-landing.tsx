@@ -226,7 +226,7 @@ export function FurnitureRemovalLanding() {
         <div className="absolute inset-0 bg-[#06182C]/72" />
 
         <div className="relative z-10 mx-auto w-full max-w-container px-6 lg:px-10">
-          <p className="font-maison text-[26px] font-semibold text-white">
+          <p className="font-maison text-7xl font-semibold text-white">
             Advantage
           </p>
 

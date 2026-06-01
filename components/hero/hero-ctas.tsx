@@ -32,7 +32,7 @@ export function HeroCtas({
   secondaryButtonClassName,
 }: HeroCtasProps) {
   const sharedTextClasses = cn(
-    "font-maison font-bold text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px]",
+    "font-maison font-bold text-sm sm:text-base md:text-lg lg:text-xl",
     textClassName,
   );
 
@@ -55,7 +55,7 @@ export function HeroCtas({
         <Link
           href={primaryHref}
           className={cn(
-            "text-[19px] sm:text-[17px] md:text-[18px]",
+            "text-3xl sm:text-xl md:text-2xl",
             sharedTextClasses,
             primaryTextClassName,
           )}

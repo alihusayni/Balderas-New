@@ -50,7 +50,7 @@ export function SiteFooter() {
 
           <nav
             aria-label="Footer"
-            className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3 font-maison text-[18px] font-medium leading-[22px] tracking-[-0.02em] text-white"
+            className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3 font-maison text-2xl font-medium leading-lg tracking-[-0.02em] text-white"
           >
             {FOOTER_NAV.map((item) => (
               <Link
@@ -65,7 +65,7 @@ export function SiteFooter() {
 
         </div>
 
-        <div className="flex flex-col items-center gap-4 text-center font-maison text-[15px] font-medium leading-[22px] tracking-[-0.02em] text-white/70 sm:flex-row sm:justify-center sm:gap-8 sm:text-left">
+        <div className="flex flex-col items-center gap-4 text-center font-maison text-base font-medium leading-lg tracking-[-0.02em] text-white/70 sm:flex-row sm:justify-center sm:gap-8 sm:text-left">
           <div className="flex items-center gap-2">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 text-[var(--color-brand-orange)]"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <span>11431 Westminster Ave, Garden Grove, CA 92843</span>
@@ -82,7 +82,7 @@ export function SiteFooter() {
 
         <div className="h-px w-full bg-white/10" />
 
-        <div className="flex flex-col items-center justify-between gap-3 font-maison text-[18px] font-medium leading-[22px] tracking-[-0.02em] text-white sm:flex-row">
+        <div className="flex flex-col items-center justify-between gap-3 font-maison text-2xl font-medium leading-lg tracking-[-0.02em] text-white sm:flex-row">
           <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
             <Link
               href="/terms"
@@ -97,7 +97,7 @@ export function SiteFooter() {
               Privacy &amp; Environmental Policy
             </Link>
           </div>
-          <SimpleText className="text-[14px] font-medium leading-[22px] tracking-[-0.02em] text-white/80 sm:text-[16px]">
+          <SimpleText className="text-sm font-medium leading-lg tracking-[-0.02em] text-white/80 sm:text-lg">
             Copyright &copy; {year} Balderas Demolition Inc. All Rights
             Reserved. Powered by{" "}
             <a
