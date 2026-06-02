@@ -60,47 +60,14 @@
   /* ── Layout ──────────────────────────────────────────────────── */
   --max-w-container: 87.5rem; /* 1400px */
 
-  /* ── Typography scale (adapted to project px values) ─────────── */
-  --font-size-xs: 0.8125rem;   /* 13px */
-  --font-size-sm: 0.875rem;    /* 14px */
-  --font-size-base: 0.9375rem; /* 15px */
-  --font-size-lg: 1rem;        /* 16px */
-  --font-size-xl: 1.0625rem;   /* 17px */
-  --font-size-2xl: 1.125rem;   /* 18px */
-  --font-size-3xl: 1.1875rem;  /* 19px */
-  --font-size-4xl: 1.25rem;    /* 20px */
-  --font-size-5xl: 1.375rem;   /* 22px */
-  --font-size-6xl: 1.5rem;     /* 24px */
-  --font-size-7xl: 1.625rem;   /* 26px */
-  --font-size-8xl: 1.75rem;    /* 28px */
-  --font-size-9xl: 1.875rem;   /* 30px */
-  --font-size-10xl: 2rem;      /* 32px */
-  --font-size-11xl: 2.5rem;    /* 40px */
-  --font-size-12xl: 2.75rem;   /* 44px */
-  --font-size-13xl: 3rem;      /* 48px */
-  --font-size-14xl: 3.375rem;  /* 54px */
-  --font-size-15xl: 3.5rem;    /* 56px */
-  --font-size-16xl: 4.25rem;   /* 68px */
-  --font-size-17xl: 4.5rem;    /* 72px */
-  --font-size-18xl: 4.875rem;  /* 78px */
-
-  --leading-xs: 1.125rem;      /* 18px */
-  --leading-sm: 1.25rem;       /* 20px */
-  --leading-base: 1.3125rem;   /* 21px */
-  --leading-lg: 1.375rem;      /* 22px */
-  --leading-xl: 1.4375rem;     /* 23px */
-  --leading-2xl: 1.5rem;       /* 24px */
-  --leading-3xl: 1.5625rem;    /* 25px */
-  --leading-4xl: 1.625rem;     /* 26px */
-  --leading-5xl: 1.6875rem;    /* 27px */
-  --leading-6xl: 1.75rem;      /* 28px */
-  --leading-7xl: 1.8125rem;    /* 29px */
-  --leading-8xl: 1.875rem;     /* 30px */
-  --leading-9xl: 2rem;         /* 32px */
-  --leading-10xl: 2.3125rem;   /* 37px */
-  --leading-11xl: 3.125rem;    /* 50px */
-  --leading-12xl: 4.375rem;    /* 70px */
-  --leading-13xl: 8rem;        /* 128px */
+  /* ── Typography ───────────────────────────────────────────────
+     IMPORTANT: These --font-size-* and --leading-* variables are
+     CSS custom properties ONLY. In Tailwind v4 the utility classes
+     (text-sm, text-3xl, etc.) are driven by the --text-* namespace,
+     NOT --font-size-*. Writing text-14xl, text-17xl, etc. will NOT
+     work — those class names don't exist in Tailwind's scale.
+     ALWAYS use explicit arbitrary values: text-[54px], text-[72px].
+     ─────────────────────────────────────────────────────────── */
 
   /* ── Strip unused color families (saves ~12 kB CSS) ──────────── */
   --color-zinc-*: initial;

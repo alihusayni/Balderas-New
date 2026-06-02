@@ -4,6 +4,23 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
+<!-- BEGIN:tailwind-font-size-rules -->
+# Tailwind v4 Font Sizes — NEVER use named scale utilities for custom sizes
+
+This project uses Tailwind v4. The named text utilities (`text-sm`, `text-base`, `text-lg`, `text-xl`, `text-2xl`, `text-3xl`, `text-4xl`, etc.) map to Tailwind's **built-in** scale, which is completely different from any `--font-size-*` variables defined in `@theme inline`.
+
+**The built-in Tailwind v4 scale (do not assume these match project sizes):**
+- `text-sm` = 14px, `text-base` = 16px, `text-lg` = 18px
+- `text-xl` = 20px, `text-2xl` = 24px, `text-3xl` = 30px
+- `text-4xl` = 36px, `text-5xl` = 48px
+
+**Rules (non-negotiable):**
+- **NEVER** replace an explicit `text-[Npx]` value with a named Tailwind token like `text-3xl` unless you have verified the pixel value matches exactly.
+- **ALWAYS** use arbitrary values for custom sizes: `text-[13px]`, `text-[52px]`, `text-[72px]`, etc.
+- **NEVER** invent utility class names like `text-14xl`, `text-17xl` — these do not exist in Tailwind v4's built-in scale and will silently produce uncontrolled/inherited font sizes.
+- The `@theme inline` block in `globals.css` defines CSS variables only. They do NOT auto-generate utility classes unless the variable name matches Tailwind's `--text-*` namespace exactly.
+<!-- END:tailwind-font-size-rules -->
+
 <!-- BEGIN:image-optimization-rules -->
 # Image & Video Assets
 
