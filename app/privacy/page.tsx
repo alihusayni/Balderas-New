@@ -15,11 +15,11 @@ export default function PrivacyPage() {
       <h1 className="font-anton text-3xl uppercase tracking-wide text-[var(--color-brand-navy)] sm:text-4xl md:text-5xl">
         Privacy &amp; Environmental Policy
       </h1>
-      <p className="mt-4 font-maison text-sm text-gray-500">
+      <p className="mt-4 font-maison text-sm text-[#6b7280]">
         Last updated: May 1, 2026
       </p>
 
-      <div className="mt-10 space-y-8 font-maison text-base leading-relaxed text-gray-700 sm:text-base">
+      <div className="mt-10 space-y-8 font-maison text-base leading-relaxed text-[#374151] sm:text-base">
         {/* ───── PRIVACY POLICY ───── */}
         <h2 className="!mt-0 font-anton text-2xl uppercase tracking-wide text-[var(--color-brand-navy)] sm:text-3xl">
           Privacy Policy
@@ -126,7 +126,7 @@ export default function PrivacyPage() {
         </section>
 
         {/* ───── ENVIRONMENTAL POLICY ───── */}
-        <div className="!mt-16 h-px w-full bg-gray-200" />
+        <div className="!mt-16 h-px w-full bg-[#e5e7eb]" />
 
         <h2 className="font-anton text-2xl uppercase tracking-wide text-[var(--color-brand-navy)] sm:text-3xl">
           Environmental Policy

@@ -49,6 +49,7 @@ export function ContactFormPanel({
   const formRef = useRef<HTMLFormElement>(null);
   const submittedRef = useRef(false);
   const abandonedSentRef = useRef(false);
+  const formStartTimeRef = useRef(Date.now());
 
   const [captcha, setCaptcha] = useState<{ a: number; b: number; sum: number } | null>(null);
 
@@ -64,6 +65,12 @@ export function ContactFormPanel({
       if (submittedRef.current || abandonedSentRef.current) return;
       const form = formRef.current;
       if (!form) return;
+
+      const hp = form.elements.namedItem("website") as HTMLInputElement | null;
+      if (hp && hp.value) return; // Suppress beacon if bot honeypot filled
+
+      const timeElapsed = Date.now() - formStartTimeRef.current;
+      if (timeElapsed < 4000) return; // Suppress beacon if filled too quickly (bot)
 
       const data: Record<string, string> = {};
       for (const field of fields) {
@@ -83,6 +90,8 @@ export function ContactFormPanel({
         ...data,
         abandoned: true,
         pageUrl: window.location.href,
+        website: hp ? hp.value : "",
+        timeElapsed: timeElapsed,
       });
       navigator.sendBeacon(
         "/api/contact",
@@ -109,7 +118,11 @@ export function ContactFormPanel({
     // Honeypot check
     const form = e.currentTarget;
     const hp = form.elements.namedItem("website") as HTMLInputElement | null;
-    if (hp && hp.value) return;
+    if (hp && hp.value) {
+      submittedRef.current = true;
+      form.reset();
+      return;
+    }
 
     // Captcha check
     if (!captcha || parseInt(captchaAnswer, 10) !== captcha.sum) {
@@ -118,7 +131,11 @@ export function ContactFormPanel({
     }
     setCaptchaError(false);
 
-    const data: Record<string, string> = {};
+    const timeElapsed = Date.now() - formStartTimeRef.current;
+    const data: Record<string, string> = {
+      website: hp ? hp.value : "",
+      timeElapsed: String(timeElapsed),
+    };
     for (const field of fields) {
       const el = form.elements.namedItem(field.id) as
         | HTMLInputElement
@@ -139,15 +156,15 @@ export function ContactFormPanel({
     return (
       <div className={className}>
         <div className="flex w-full flex-col items-center justify-center gap-4 bg-white p-8 sm:p-10 md:p-[30px] md:min-h-[300px]">
-          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
-            <svg className="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#dcfce7]">
+            <svg className="h-8 w-8 text-[#16a34a]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </div>
           <h3 className="font-anton text-xl uppercase tracking-wide text-[var(--color-brand-navy)] sm:text-2xl">
             Message Sent!
           </h3>
-          <p className="text-center font-maison text-base text-gray-600 sm:text-base">
+          <p className="text-center font-maison text-base text-[#4b5563] sm:text-base">
             Thank you for reaching out. Abel will get back to you shortly.
           </p>
           <button
@@ -256,11 +273,11 @@ export function ContactFormPanel({
                 placeholder="Your answer"
                 required
                 className={`h-[52px] w-full max-w-[200px] border-2 bg-[#F2F2F2] px-3 py-2 font-maison text-base font-normal text-[#2f3745] placeholder:text-[#C4C8D3] focus:outline-none sm:h-[56px] sm:px-[12px] sm:py-[9px] sm:text-lg md:h-[60px] md:text-2xl ${
-                  captchaError ? "border-red-400" : "border-transparent"
+                  captchaError ? "border-[#f87171]" : "border-transparent"
                 }`}
               />
               {captchaError && (
-                <p className="mt-1 font-maison text-sm text-red-500">
+                <p className="mt-1 font-maison text-sm text-[#ef4444]">
                   Incorrect answer. Please try again.
                 </p>
               )}
@@ -285,7 +302,7 @@ export function ContactFormPanel({
               )}
             </Button>
             {status === "error" && (
-              <p className="font-maison text-sm text-red-500">
+              <p className="font-maison text-sm text-[#ef4444]">
                 Something went wrong. Please try again or call us directly.
               </p>
             )}

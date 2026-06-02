@@ -15,11 +15,11 @@ export default function TermsPage() {
       <h1 className="font-anton text-3xl uppercase tracking-wide text-[var(--color-brand-navy)] sm:text-4xl md:text-5xl">
         Terms of Use
       </h1>
-      <p className="mt-4 font-maison text-sm text-gray-500">
+      <p className="mt-4 font-maison text-sm text-[#6b7280]">
         Last updated: May 1, 2026
       </p>
 
-      <div className="mt-10 space-y-8 font-maison text-base leading-relaxed text-gray-700 sm:text-base">
+      <div className="mt-10 space-y-8 font-maison text-base leading-relaxed text-[#374151] sm:text-base">
         <section>
           <h2 className="mb-3 text-lg font-bold text-[var(--color-brand-navy)] sm:text-xl">
             1. Acceptance of Terms

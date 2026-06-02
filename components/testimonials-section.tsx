@@ -90,7 +90,7 @@ export function TestimonialsSection() {
               {/* Added h-full below */}
               <div className="flex h-full flex-col space-y-4">
                 {/* Image Container */}
-                <div className="relative aspect-square w-full flex-none overflow-hidden bg-gray-100">
+                <div className="relative aspect-square w-full flex-none overflow-hidden bg-[#f3f4f6]">
                   <Image
                     src={item.image}
                     alt={item.name}

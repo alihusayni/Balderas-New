@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Analytics } from "@/components/analytics";
 import CallRailLoader from "@/components/callrail-loader";
 
-import { Anton, Geist, Geist_Mono } from "next/font/google";
+import { Anton, Geist } from "next/font/google";
 import { DeferredClientShell } from "@/components/deferred-client-shell";
 import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
@@ -19,12 +19,7 @@ const geistSans = Geist({
   preload: false, // display:optional already non-blocking; preload causes unused-preload warnings
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "optional",
-  preload: false,
-});
+
 
 const anton = Anton({
   variable: "--font-anton",
@@ -133,7 +128,7 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       suppressHydrationWarning
       // MaisonNeue is loaded via @font-face in globals.css (Vercel Blob) — no localFont variable needed
-      className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${anton.variable} h-full antialiased`}
     >
       <head>
         {/*

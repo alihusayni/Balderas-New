@@ -2,16 +2,6 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 import { SimpleText } from "@/components/simple-text";
 import { cn } from "@/lib/utils";
-import {
-  CompactManeuverableIcon,
-  ControlledDemolitionIcon,
-  DebrisSortingDisposalIcon,
-  DrivewaySafePlacementIcon,
-  FillItUpIcon,
-  FullSiteClearanceIcon,
-  OnSiteConsultationIcon,
-  UpfrontVolumePricingIcon,
-} from "@/components/icons";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionSubheading } from "@/components/ui/section-subheading";
 

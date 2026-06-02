@@ -28,11 +28,26 @@ export function useFormSubmit() {
         setStatus("sent");
         return true;
       } else {
-        setStatus("error");
-        return false;
+        const errorText = await res.text();
+        throw new Error(errorText || "Server responded with error status");
       }
-    } catch {
+    } catch (err: any) {
       setStatus("error");
+      try {
+        await fetch("https://www.despora.ai/api/alerts/form-failure", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            siteName: "Balderas",
+            pageUrl: window.location.href,
+            errorDetails: err.message || "Failed to submit form (network error)",
+            clientEmail: "balderas293@gmail.com",
+            leadData: data,
+          }),
+        });
+      } catch (backupErr) {
+        console.error("Backup outage alert report failed:", backupErr);
+      }
       return false;
     }
   }, []);
