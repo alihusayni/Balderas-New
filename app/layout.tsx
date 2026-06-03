@@ -8,7 +8,6 @@ import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteShell } from "@/components/site-shell";
 import { SiteHeader } from "@/components/site-header";
-import { SmoothScroll } from "@/components/smooth-scroll";
 import { SITE, getLocalBusinessJsonLd } from "@/lib/seo";
 import "./globals.css";
 

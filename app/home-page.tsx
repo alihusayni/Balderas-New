@@ -114,19 +114,21 @@ export default function HomePage() {
         <HeroScrollButton className="absolute bottom-6 right-5 z-20 hidden lg:flex lg:bottom-24 lg:right-8" />
       </section>
       <InfoTicker />
-      <ServicesSpotlight />
-      <ServicesDetailGrid />
-      <WhyTrustSection />
-      <MeetOwnerSection />
-      <TestimonialsSection />
-      <ContactCtaSection
-        backgroundImageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/contactbg.webp"
-        backgroundImageAlt="Contact Balderas Demolition"
-        title="Start Your Demolition or Junk Removal Project Today"
-        description="Ready to clear the deck? Get a fast, friendly estimate from Abel Balderas and the team."
-        fields={homeContactFields}
-        submitLabel="Submit"
-      />
+      <div className="section-lazy"><ServicesSpotlight /></div>
+      <div className="section-lazy"><ServicesDetailGrid /></div>
+      <div className="section-lazy"><WhyTrustSection /></div>
+      <div className="section-lazy"><MeetOwnerSection /></div>
+      <div className="section-lazy"><TestimonialsSection /></div>
+      <div className="section-lazy">
+        <ContactCtaSection
+          backgroundImageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/contactbg.webp"
+          backgroundImageAlt="Contact Balderas Demolition"
+          title="Start Your Demolition or Junk Removal Project Today"
+          description="Ready to clear the deck? Get a fast, friendly estimate from Abel Balderas and the team."
+          fields={homeContactFields}
+          submitLabel="Submit"
+        />
+      </div>
     </main>
   );
 }

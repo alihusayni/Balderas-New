@@ -177,3 +177,18 @@ body {
   animation-timeline: scroll(root block);
   animation-range: 0px 100svh;
 }
+
+/* ─── Below-fold rendering optimisation ────────────────────────────────────
+   content-visibility:auto tells the browser to skip layout, paint, and
+   compositing for sections that are off-screen. Applied to every section
+   below the hero. The browser still SSR's the HTML (SEO unaffected) but
+   skips the expensive rendering work until the section nears the viewport.
+   contain-intrinsic-size:auto prevents scrollbar jumping on first visit;
+   "auto" prefix caches the actual rendered size for subsequent visits.
+   NOT applied to the hero section or InfoTicker (near-fold) — those must
+   paint at FCP.
+   ─────────────────────────────────────────────────────────────────────────── */
+.section-lazy {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
