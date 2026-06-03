@@ -2,13 +2,7 @@
 
 /* MaisonNeue — served from Vercel Blob (no local font files in repo)
    display:optional = non-blocking; browser uses fallback if not fast enough */
-@font-face {
-  font-family: "MaisonNeue";
-  src: url("https://y5judepxfpr0logb.public.blob.vercel-storage.com/balderas/fonts/MaisonNeue-Light-aFBHpQoQCdgv5H7r87pl8aAeFwRWs1.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: optional;
-}
+
 @font-face {
   font-family: "MaisonNeue";
   src: url("https://y5judepxfpr0logb.public.blob.vercel-storage.com/balderas/fonts/MaisonNeue-Book-gfuA6Vo46rvlpNHkUbiuJz2YVALkFy.woff2") format("woff2");

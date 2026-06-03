@@ -132,7 +132,31 @@ export default function RootLayout({
     >
       <head>
         {/*
-          No manual <link rel="preload"> needed here.
+          Preconnect: establish TCP+TLS to font CDNs during HTML parse — before
+          CSS is even parsed. Without this, both origins incur a cold handshake
+          at ~1079ms (when CSS discovers the fonts). On slow 4G (150ms RTT)
+          that handshake costs 300ms+. These hints shave that off the critical path.
+        */}
+        {/* Anton → served from fonts.gstatic.com */}
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* MaisonNeue → served from Vercel Blob */}
+        <link rel="preconnect" href="https://y5judepxfpr0logb.public.blob.vercel-storage.com" crossOrigin="anonymous" />
+
+        {/*
+          Preload MaisonNeue-Book (400) — the default body weight used everywhere.
+          Ensures it's available at first paint so body text renders in brand font.
+          Only preloading Book (not Bold/Medium/Demi) to avoid competing preloads.
+        */}
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href="https://y5judepxfpr0logb.public.blob.vercel-storage.com/balderas/fonts/MaisonNeue-Book-gfuA6Vo46rvlpNHkUbiuJz2YVALkFy.woff2"
+          crossOrigin="anonymous"
+        />
+
+        {/*
+          No manual <link rel="preload"> for hero image needed here.
           <Image priority fetchPriority="high"> in HeroParallaxBackground
           auto-generates a single complete preload covering all deviceSizes at q=22.
           A manual preload would create a SECOND competing preload → browser
@@ -140,6 +164,7 @@ export default function RootLayout({
           This is the same pattern as tuanlelaw.com (consistently 98+/100).
         */}
       </head>
+
       <body className="min-h-full flex flex-col">
         <JsonLd
           id="ld-local-business"
