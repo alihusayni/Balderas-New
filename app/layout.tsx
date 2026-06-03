@@ -177,7 +177,7 @@ export default function RootLayout({
         <CallRailLoader />
 
         <DeferredClientShell />
-        <SmoothScroll />
+
         <SiteShell>
           <SiteHeader />
         </SiteShell>
