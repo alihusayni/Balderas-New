@@ -14,10 +14,32 @@ env:
   MIN_SCORE: 98
 
 jobs:
+  # ── Job 1: Check if API key is configured ────────────────────────────────
+  check-secret:
+    name: Check API key
+    runs-on: ubuntu-latest
+    outputs:
+      has_key: ${{ steps.check.outputs.has_key }}
+    steps:
+      - id: check
+        run: |
+          if [ -n "${{ secrets.PAGESPEED_API_KEY }}" ]; then
+            echo "has_key=true" >> $GITHUB_OUTPUT
+            echo "✅ PAGESPEED_API_KEY is configured."
+          else
+            echo "has_key=false" >> $GITHUB_OUTPUT
+            echo "⚠️  PAGESPEED_API_KEY is not set — PSI check will be skipped."
+            echo "To enable: GitHub repo → Settings → Secrets → Actions → New secret"
+            echo "Name: PAGESPEED_API_KEY, Value: your Google API key"
+          fi
+
+  # ── Job 2: Run PageSpeed (only if key is configured) ─────────────────────
   pagespeed:
     name: PageSpeed Insights (mobile + desktop)
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    needs: check-secret
+    if: needs.check-secret.outputs.has_key == 'true'
 
     steps:
       # ── 1. Wait for Vercel deployment ──────────────────────────────────────
@@ -55,7 +77,6 @@ jobs:
             "${PSI_URL}?url=$(python3 -c 'import urllib.parse,sys; print(urllib.parse.quote(sys.argv[1]))' "$SITE_URL")&strategy=mobile&key=${{ secrets.PAGESPEED_API_KEY }}" \
             --max-time 90)
 
-          # Parse scores
           PERF=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(round(d['lighthouseResult']['categories']['performance']['score']*100))")
           FCP=$(echo  "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['lighthouseResult']['audits']['first-contentful-paint']['displayValue'])")
           LCP=$(echo  "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['lighthouseResult']['audits']['largest-contentful-paint']['displayValue'])")
@@ -108,7 +129,6 @@ jobs:
 
       # ── 5. Evaluate & report ───────────────────────────────────────────────
       - name: Evaluate scores
-        id: evaluate
         run: |
           MOBILE="${{ steps.psi_mobile.outputs.score }}"
           DESKTOP="${{ steps.psi_desktop.outputs.score }}"
