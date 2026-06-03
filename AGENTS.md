@@ -1,3 +1,18 @@
+<!-- BEGIN:pnpm-rules -->
+# This project uses pnpm — NEVER use npm to install or remove packages
+
+Vercel builds this project with **pnpm** (`packageManager: pnpm@11.1.2` in `package.json`, `pnpm-lock.yaml` present).
+Running `npm install` or `npm uninstall` only updates `package-lock.json` — it leaves `pnpm-lock.yaml` stale.
+Vercel then fails with `ERR_PNPM_OUTDATED_LOCKFILE` on every deploy.
+
+**Rules (non-negotiable):**
+- **ALWAYS** use `pnpm add <pkg>` to install packages (never `npm install <pkg>`)
+- **ALWAYS** use `pnpm remove <pkg>` to uninstall packages (never `npm uninstall <pkg>`)
+- **ALWAYS** use `pnpm install` to sync the lockfile after manual `package.json` edits
+- `npm run build` / `pnpm run build` are both fine for local builds (npm delegates to the script)
+- The pre-push git hook runs `pnpm run build` before every push — if it fails locally it won't push
+<!-- END:pnpm-rules -->
+
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
