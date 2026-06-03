@@ -1,0 +1,162 @@
+name: PageSpeed Insights Check
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # allow manual trigger
+
+concurrency:
+  group: pagespeed-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  SITE_URL: https://www.demolitionoc.com
+  MIN_SCORE: 98
+
+jobs:
+  pagespeed:
+    name: PageSpeed Insights (mobile + desktop)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      # ── 1. Wait for Vercel deployment ──────────────────────────────────────
+      - name: Wait for Vercel deployment to go live
+        run: |
+          echo "⏳ Waiting up to 5 minutes for Vercel to deploy..."
+          MAX_ATTEMPTS=30
+          SLEEP=10
+          for i in $(seq 1 $MAX_ATTEMPTS); do
+            HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+              -A "Mozilla/5.0 (compatible; CI-check)" \
+              --max-time 10 "$SITE_URL")
+            echo "Attempt $i/$MAX_ATTEMPTS — HTTP $HTTP_CODE"
+            if [ "$HTTP_CODE" = "200" ]; then
+              echo "✅ Site is live"
+              break
+            fi
+            if [ "$i" = "$MAX_ATTEMPTS" ]; then
+              echo "❌ Timed out waiting for site to respond with 200"
+              exit 1
+            fi
+            sleep $SLEEP
+          done
+
+      # ── 2. Extra buffer — let CDN propagate ────────────────────────────────
+      - name: Buffer (30s CDN propagation)
+        run: sleep 30
+
+      # ── 3. Run PageSpeed — Mobile ──────────────────────────────────────────
+      - name: Run PageSpeed Insights — Mobile
+        id: psi_mobile
+        run: |
+          PSI_URL="https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
+          RESPONSE=$(curl -sf \
+            "${PSI_URL}?url=$(python3 -c 'import urllib.parse,sys; print(urllib.parse.quote(sys.argv[1]))' "$SITE_URL")&strategy=mobile&key=${{ secrets.PAGESPEED_API_KEY }}" \
+            --max-time 90)
+
+          # Parse scores
+          PERF=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(round(d['lighthouseResult']['categories']['performance']['score']*100))")
+          FCP=$(echo  "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['lighthouseResult']['audits']['first-contentful-paint']['displayValue'])")
+          LCP=$(echo  "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['lighthouseResult']['audits']['largest-contentful-paint']['displayValue'])")
+          TBT=$(echo  "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['lighthouseResult']['audits']['total-blocking-time']['displayValue'])")
+          CLS=$(echo  "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['lighthouseResult']['audits']['cumulative-layout-shift']['displayValue'])")
+          INP=$(echo  "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['lighthouseResult']['audits'].get('interaction-to-next-paint',{}).get('displayValue','N/A'))")
+
+          echo "score=$PERF"  >> $GITHUB_OUTPUT
+          echo "fcp=$FCP"     >> $GITHUB_OUTPUT
+          echo "lcp=$LCP"     >> $GITHUB_OUTPUT
+          echo "tbt=$TBT"     >> $GITHUB_OUTPUT
+          echo "cls=$CLS"     >> $GITHUB_OUTPUT
+          echo "inp=$INP"     >> $GITHUB_OUTPUT
+
+          echo ""
+          echo "📱 Mobile PageSpeed Results"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "  Performance : $PERF / 100"
+          echo "  FCP         : $FCP"
+          echo "  LCP         : $LCP"
+          echo "  TBT         : $TBT"
+          echo "  CLS         : $CLS"
+          echo "  INP         : $INP"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+      # ── 4. Run PageSpeed — Desktop ─────────────────────────────────────────
+      - name: Run PageSpeed Insights — Desktop
+        id: psi_desktop
+        run: |
+          PSI_URL="https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
+          RESPONSE=$(curl -sf \
+            "${PSI_URL}?url=$(python3 -c 'import urllib.parse,sys; print(urllib.parse.quote(sys.argv[1]))' "$SITE_URL")&strategy=desktop&key=${{ secrets.PAGESPEED_API_KEY }}" \
+            --max-time 90)
+
+          PERF=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(round(d['lighthouseResult']['categories']['performance']['score']*100))")
+          FCP=$(echo  "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['lighthouseResult']['audits']['first-contentful-paint']['displayValue'])")
+          LCP=$(echo  "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['lighthouseResult']['audits']['largest-contentful-paint']['displayValue'])")
+
+          echo "score=$PERF"  >> $GITHUB_OUTPUT
+          echo "fcp=$FCP"     >> $GITHUB_OUTPUT
+          echo "lcp=$LCP"     >> $GITHUB_OUTPUT
+
+          echo ""
+          echo "🖥️  Desktop PageSpeed Results"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "  Performance : $PERF / 100"
+          echo "  FCP         : $FCP"
+          echo "  LCP         : $LCP"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+      # ── 5. Evaluate & report ───────────────────────────────────────────────
+      - name: Evaluate scores
+        id: evaluate
+        run: |
+          MOBILE="${{ steps.psi_mobile.outputs.score }}"
+          DESKTOP="${{ steps.psi_desktop.outputs.score }}"
+          THRESHOLD=$MIN_SCORE
+          PASS=true
+
+          echo ""
+          echo "════════════════════════════════════════"
+          echo "  PAGESPEED SUMMARY — threshold: $THRESHOLD"
+          echo "════════════════════════════════════════"
+          echo ""
+
+          if [ "$MOBILE" -ge "$THRESHOLD" ]; then
+            echo "  📱 Mobile  : ✅ $MOBILE / 100"
+          else
+            echo "  📱 Mobile  : ❌ $MOBILE / 100  (below $THRESHOLD)"
+            echo "     FCP: ${{ steps.psi_mobile.outputs.fcp }}"
+            echo "     LCP: ${{ steps.psi_mobile.outputs.lcp }}"
+            echo "     TBT: ${{ steps.psi_mobile.outputs.tbt }}"
+            echo "     CLS: ${{ steps.psi_mobile.outputs.cls }}"
+            echo "     INP: ${{ steps.psi_mobile.outputs.inp }}"
+            PASS=false
+          fi
+
+          if [ "$DESKTOP" -ge "$THRESHOLD" ]; then
+            echo "  🖥️  Desktop : ✅ $DESKTOP / 100"
+          else
+            echo "  🖥️  Desktop : ❌ $DESKTOP / 100  (below $THRESHOLD)"
+            echo "     FCP: ${{ steps.psi_desktop.outputs.fcp }}"
+            echo "     LCP: ${{ steps.psi_desktop.outputs.lcp }}"
+            PASS=false
+          fi
+
+          echo ""
+          echo "  Commit  : ${{ github.sha }}"
+          echo "  Author  : ${{ github.actor }}"
+          echo "  Branch  : ${{ github.ref_name }}"
+          echo ""
+
+          if [ "$PASS" = "false" ]; then
+            echo "════════════════════════════════════════"
+            echo "  ⚠️  PERFORMANCE BELOW THRESHOLD — fix before next deploy"
+            echo "  Run the optimization playbook at:"
+            echo "  /Users/alihusayni/.gemini/config/optimization-playbook.md"
+            echo "════════════════════════════════════════"
+            exit 1
+          fi
+
+          echo "════════════════════════════════════════"
+          echo "  ✅ All scores at or above $THRESHOLD — good to go"
+          echo "════════════════════════════════════════"
