@@ -2,11 +2,32 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const GA4_MEASUREMENT_ID = 'G-XPJS9MX8L9';
 const GA4_API_SECRET = process.env.GA4_API_SECRET || '';
-
 const GA4_ENDPOINT = `https://www.google-analytics.com/mp/collect?measurement_id=${GA4_MEASUREMENT_ID}&api_secret=${GA4_API_SECRET}`;
+
+// IPs to exclude from analytics (agency, developer, client office).
+// Set ANALYTICS_BLOCKED_IPS in Vercel env vars as a comma-separated list.
+// e.g. ANALYTICS_BLOCKED_IPS=203.0.113.42,198.51.100.7
+const BLOCKED_IPS = (process.env.ANALYTICS_BLOCKED_IPS || '')
+    .split(',')
+    .map(ip => ip.trim())
+    .filter(Boolean);
+
+function getClientIp(request: NextRequest): string {
+    // Vercel sets x-forwarded-for to the real visitor IP (first entry in chain)
+    const forwarded = request.headers.get('x-forwarded-for');
+    if (forwarded) return forwarded.split(',')[0].trim();
+    return '';
+}
 
 export async function POST(request: NextRequest) {
     try {
+        // Block internal/developer IPs before forwarding to Google.
+        // Returns 204 silently so the browser doesn't trigger error handling.
+        const clientIp = getClientIp(request);
+        if (clientIp && BLOCKED_IPS.includes(clientIp)) {
+            return new NextResponse(null, { status: 204 });
+        }
+
         const text = await request.text();
         const body = JSON.parse(text);
 
