@@ -2,6 +2,7 @@
 // The LCP <h1> is SSR'd immediately; the scroll button is isolated
 // in HeroScrollButton (a "use client" leaf) as on the homepage.
 import Image from "next/image";
+import type { Metadata } from "next";
 import { ContactCtaText } from "@/components/contact-cta-text";
 import { ContactFormPanel, type ContactFormField } from "@/components/contact-form-panel";
 import { HeroScrollButton } from "@/components/hero/hero-scroll-button";
@@ -20,6 +21,13 @@ import {
   EcoFriendlyDisposalIcon,
   UpfrontVolumePricingIcon,
 } from "@/components/icons";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Professional Junk Removal Orange County | Balderas Demolition",
+  description: "Orange County junk removal by Balderas Demolition Inc. We handle furniture, appliances, yard waste, and more. Fast, affordable, eco-friendly disposal.",
+  path: "/junk-removal",
+});
 
 const junkRemovalContactFields: ContactFormField[] = [
   { id: "junk-name", label: "Name", type: "text", placeholder: "Your full name", width: "half" },

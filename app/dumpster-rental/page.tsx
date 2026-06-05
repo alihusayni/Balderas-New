@@ -2,6 +2,7 @@
 // The LCP <h1> is SSR'd immediately; the scroll button is isolated
 // in HeroScrollButton (a "use client" leaf) as on the homepage.
 import Image from "next/image";
+import type { Metadata } from "next";
 import { BoldText } from "@/components/bold-text";
 import { ContactCtaText } from "@/components/contact-cta-text";
 import { ContactFormPanel, type ContactFormField } from "@/components/contact-form-panel";
@@ -25,6 +26,13 @@ import { ServiceDetailSection } from "@/components/service-detail-section";
 import { ServiceIntroSection } from "@/components/service-intro-section";
 import { ServiceStepsSection } from "@/components/service-steps-section";
 import { RentalWarningIcon } from "@/components/icons";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Affordable Dumpster Rental Orange County | Balderas Demolition",
+  description: "Rent a dumpster in Orange County from Balderas Demolition Inc. Easy drop-off, flat-rate pricing, same-week delivery available. You load it, we haul it.",
+  path: "/dumpster-rental",
+});
 
 const dumpstersContactFields: ContactFormField[] = [
   { id: "dumpster-name", label: "Name", type: "text", placeholder: "Your full name", width: "half" },
