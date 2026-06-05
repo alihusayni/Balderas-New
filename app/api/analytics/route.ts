@@ -39,14 +39,26 @@ export async function POST(request: NextRequest) {
             body.events = body.events.slice(0, 25);
         }
 
-        const ga4Payload = {
+        // Forward real visitor IP so GA4 geographic data is accurate
+        // Without this, GA4 sees Vercel's server IP (Washington DC) for all users
+        const userAgent = request.headers.get('user-agent') || '';
+
+        const ga4Payload: Record<string, unknown> = {
             client_id: body.client_id,
             events: body.events,
+            // Pass real visitor IP so GA4 geographic data is accurate
+            ...(clientIp ? { user_ip_override: clientIp } : {}),
+            // Pass user agent for device/browser detection
+            ...(userAgent ? { user_agent: userAgent } : {}),
         };
 
         fetch(GA4_ENDPOINT, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json',
+                // GA4 also reads IP from x-forwarded-for on the MP endpoint
+                ...(clientIp ? { 'x-forwarded-for': clientIp } : {}),
+            },
             body: JSON.stringify(ga4Payload),
         }).catch(() => {});
 
