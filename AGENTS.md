@@ -74,3 +74,17 @@ When the user mentions "optimization file", "optimization playbook", "performanc
 
 This contains the proven workflow for achieving 99/100 PageSpeed scores across all projects.
 <!-- END:optimization-playbook -->
+
+<!-- BEGIN:analytics-playbook -->
+# Google Analytics & GSC Audit Playbook
+
+When the user mentions "analytics", "GA4", "Google Analytics", "Search Console", "GSC", "no traffic", "tracking", or asks to set up / audit / debug analytics on any project, read and follow the playbook at:
+
+`/Users/alihusayni/.gemini/config/analytics-playbook.md`
+
+This contains:
+- Full GA4 setup steps for new projects (Parts 1–2)
+- A 10-point deploy audit checklist to run after every production deploy (Part 2)
+- Debug scripts to run in browser DevTools (Part 4)
+- Common failure patterns and their fixes (Part 3)
+<!-- END:analytics-playbook -->

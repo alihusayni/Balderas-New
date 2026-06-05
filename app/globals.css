@@ -54,54 +54,14 @@
   /* ── Layout ──────────────────────────────────────────────────── */
   --max-w-container: 87.5rem; /* 1400px */
 
-  /* ── Custom font-size scale ───────────────────────────────────
-     These --text-* variables generate text-6xl … text-18xl utility
-     classes in Tailwind v4 (the --text-* namespace is the one that
-     produces utilities — NOT --font-size-*).
-
-     text-6xl through text-9xl intentionally OVERRIDE Tailwind's
-     built-in values (60/72/96/128px) because the entire codebase
-     was authored against this custom scale. Without these overrides
-     the built-in values produce incorrectly enormous text.
-
-     ALWAYS use arbitrary values (text-[Npx]) for one-off sizes
-     that don't appear in this scale.
+  /* ── Typography ───────────────────────────────────────────────
+     IMPORTANT: These --font-size-* and --leading-* variables are
+     CSS custom properties ONLY. In Tailwind v4 the utility classes
+     (text-sm, text-3xl, etc.) are driven by the --text-* namespace,
+     NOT --font-size-*. Writing text-14xl, text-17xl, etc. will NOT
+     work — those class names don't exist in Tailwind's scale.
+     ALWAYS use explicit arbitrary values: text-[54px], text-[72px].
      ─────────────────────────────────────────────────────────── */
-  --text-6xl: 24px;   /* card titles, section eyebrows */
-  --text-7xl: 28px;   /* SectionHeading base (mobile) */
-  --text-8xl: 34px;   /* SectionHeading sm */
-  --text-9xl: 40px;   /* SectionHeading md, stat numbers sm */
-  --text-10xl: 46px;  /* SectionHeading md/lg */
-  --text-11xl: 54px;  /* SectionHeading lg, article h2 lg */
-  --text-12xl: 60px;  /* stat numbers desktop, CTA heading base */
-  --text-13xl: 64px;  /* testimonials heading md */
-  --text-14xl: 68px;  /* SectionHeading xl, why-trust heading sm */
-  --text-15xl: 80px;  /* meet-owner sm, testimonials lg */
-  --text-16xl: 92px;  /* why-trust heading md/lg */
-  --text-17xl: 100px; /* testimonials xl */
-  --text-18xl: 120px; /* commercial demo xl */
-
-  /* ── Custom line-height scale ─────────────────────────────────
-     Ratio-based (unitless multipliers). These generate
-     leading-sm … leading-12xl and leading-lg / leading-base
-     utilities. None of these exist in Tailwind v4's built-in
-     leading scale so they all silently produced no CSS.
-     ─────────────────────────────────────────────────────────── */
-  --leading-sm: 1.25;
-  --leading-base: 1.5;
-  --leading-lg: 1.6;
-  --leading-xl: 1.75;
-  --leading-2xl: 1.85;
-  --leading-3xl: 2;
-  --leading-4xl: 2.25;
-  --leading-5xl: 2.5;
-  --leading-6xl: 2.75;
-  --leading-7xl: 3;
-  --leading-8xl: 3.5;
-  --leading-9xl: 4;
-  --leading-10xl: 4.5;
-  --leading-11xl: 5;
-  --leading-12xl: 5.5;
 
   /* ── Strip unused color families (saves ~12 kB CSS) ──────────── */
   --color-zinc-*: initial;

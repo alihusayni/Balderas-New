@@ -50,7 +50,7 @@ export function WhyTrustSection() {
           </p>
 
           <div className="mt-12 grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.35fr_0.65fr] lg:gap-12">
-            <HeroHeading as="h2" className="mt-0 max-w-[1080px] text-11xl uppercase leading-[0.95] tracking-[-0.02em] text-white sm:text-14xl md:text-16xl lg:text-16xl">
+            <HeroHeading as="h2" className="mt-0 max-w-[1080px] text-[40px] uppercase leading-[0.95] tracking-[-0.02em] text-white sm:text-[54px] md:text-[68px] lg:text-[68px]">
               Why Orange County Trust Balderas Demolition Inc.
             </HeroHeading>
 
@@ -83,8 +83,8 @@ export function WhyTrustSection() {
               <p
                 className={
                   card.highlighted
-                    ? "[font-family:var(--font-anton)] text-12xl leading-none text-[#0b0300] sm:text-10xl"
-                    : "[font-family:var(--font-anton)] text-12xl leading-none text-[#1e2740] sm:text-10xl"
+                    ? "[font-family:var(--font-anton)] text-[44px] leading-none text-[#0b0300] sm:text-[32px]"
+                    : "[font-family:var(--font-anton)] text-[44px] leading-none text-[#1e2740] sm:text-[32px]"
                 }
               >
                 {card.stat}
@@ -92,8 +92,8 @@ export function WhyTrustSection() {
               <h3
                 className={
                   card.highlighted
-                    ? "font-maison mt-5 text-9xl font-bold leading-[1.05] text-[#0b0300] sm:text-6xl"
-                    : "font-maison mt-5 text-9xl font-bold leading-[1.05] text-[#1e2740] sm:text-6xl"
+                    ? "font-maison mt-5 text-[30px] font-bold leading-[1.05] text-[#0b0300] sm:text-[24px]"
+                    : "font-maison mt-5 text-[30px] font-bold leading-[1.05] text-[#1e2740] sm:text-[24px]"
                 }
               >
                 {card.title}

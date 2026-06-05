@@ -35,7 +35,7 @@ function ButtonContent({
   showArrow?: boolean;
 }) {
   return (
-    <span className="font-maison flex items-center justify-center gap-3 text-lg font-bold tracking-[-0.02em] sm:gap-4 sm:text-2xl md:text-4xl lg:gap-5 lg:text-6xl">
+    <span className="font-maison flex items-center justify-center gap-3 text-lg font-bold tracking-[-0.02em] sm:gap-4 sm:text-2xl md:text-4xl lg:gap-5 lg:text-[24px]">
       <span>{label}</span>
       {showArrow ? (
         <span aria-hidden className="inline-flex shrink-0 text-current">
@@ -115,7 +115,7 @@ export function CtaBanner({
         <div className="flex w-full max-w-[820px] flex-col gap-5 text-left sm:gap-6 lg:max-w-[920px] lg:gap-8">
           <h2
             className={cn(
-              "[font-family:var(--font-anton)] text-7xl font-normal leading-[1.05] tracking-[-0.02em] text-white sm:text-10xl md:text-12xl lg:text-14xl xl:text-[clamp(52px,5vw,68px)] lg:leading-[1.03]",
+              "[font-family:var(--font-anton)] text-[26px] font-normal leading-[1.05] tracking-[-0.02em] text-white sm:text-[32px] md:text-[44px] lg:text-[54px] xl:text-[clamp(52px,5vw,68px)] lg:leading-[1.03]",
               titleClassName,
             )}
           >

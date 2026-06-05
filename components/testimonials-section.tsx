@@ -53,7 +53,7 @@ export function TestimonialsSection() {
             <p className="font-maison text-base font-bold text-[#0b0b0b] sm:text-lg">
               Testimonial
             </p>
-            <h2 className="[font-family:var(--font-anton)] text-9xl font-normal leading-[0.95] tracking-[-0.02em] text-black sm:text-11xl md:text-13xl lg:text-15xl xl:text-17xl">
+            <h2 className="[font-family:var(--font-anton)] text-[30px] font-normal leading-[0.95] tracking-[-0.02em] text-black sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[72px]">
               What Our Clients Are Saying
             </h2>
           </div>

@@ -125,7 +125,7 @@ export default function DemolitionPage() {
             titleClassName="text-[#0b0300]"
             descriptionClassName="text-[#0b0300]"
             mobileDescription="If it’s taking up space, we’ll take it away. Our junk removal process is fast, transparent, and eco-friendly. We handle the sorting, loading, and disposal so you don't have to."
-            mobileDescriptionClassName="font-maison text-lg font-semibold leading-[1.25] tracking-[0%] sm:text-xl sm:leading-[1.2] md:text-3xl"
+            mobileDescriptionClassName="font-maison text-[16px] font-semibold leading-[1.25] tracking-[0%] sm:text-[17px] sm:leading-[1.2] md:text-[19px]"
           />
 
           <ServiceDetailSection

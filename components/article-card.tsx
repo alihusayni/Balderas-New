@@ -44,7 +44,7 @@ export function ArticleCard({
       <div className="flex min-h-0 w-full flex-1 flex-col gap-[28px]">
         <div className="flex min-h-0 flex-1 flex-col gap-3">
           <Link href={href} className="block min-h-0">
-            <h3 className="[font-family:var(--font-anton)] line-clamp-2 min-h-[52px] text-2xl font-normal leading-4xl tracking-[-0.01em] text-[#0b0300] transition-colors group-hover/card:text-[var(--color-brand-orange)] sm:min-h-[56px] sm:text-4xl sm:leading-6xl md:text-4xl md:leading-7xl lg:min-h-[60px] lg:text-5xl lg:leading-8xl">
+            <h3 className="[font-family:var(--font-anton)] line-clamp-2 min-h-[52px] text-[18px] font-normal leading-[26px] tracking-[-0.01em] text-[#0b0300] transition-colors group-hover/card:text-[var(--color-brand-orange)] sm:min-h-[56px] sm:text-[20px] sm:leading-[28px] md:text-[21px] md:leading-[29px] lg:min-h-[60px] lg:text-[22px] lg:leading-[30px]">
               {title}
             </h3>
           </Link>
@@ -57,12 +57,12 @@ export function ArticleCard({
         <Link
           href={href}
           aria-label={`${ctaLabel}: ${title}`}
-          className="font-maison inline-flex shrink-0 items-center gap-2 text-sm font-bold leading-none text-[var(--color-brand-orange)] transition-opacity hover:opacity-80 sm:gap-2.5 sm:text-base md:gap-3 md:text-lg lg:text-xl xl:text-4xl"
+          className="font-maison inline-flex shrink-0 items-center gap-2 text-[14px] font-bold leading-none text-[var(--color-brand-orange)] transition-opacity hover:opacity-80 sm:gap-2.5 sm:text-[15px] md:gap-3 md:text-[16px] lg:text-[17px] xl:text-[20px]"
         >
           <span>{ctaLabel}</span>
           <span
             aria-hidden
-            className="text-sm leading-none sm:text-base md:text-lg lg:text-xl xl:text-4xl"
+            className="text-[14px] leading-none sm:text-[15px] md:text-[16px] lg:text-[17px] xl:text-[20px]"
           >
             →
           </span>

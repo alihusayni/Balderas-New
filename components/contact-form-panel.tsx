@@ -193,7 +193,7 @@ export function ContactFormPanel({
                 <div className="w-full">
                   <label
                     htmlFor={field.id}
-                    className="font-maison text-base font-normal leading-lg tracking-[-0.02em] text-[#2f3745] sm:text-lg sm:leading-2xl md:text-2xl md:leading-4xl lg:text-4xl lg:leading-7xl"
+                    className="font-maison text-[15px] font-normal leading-[22px] tracking-[-0.02em] text-[#2f3745] sm:text-[16px] sm:leading-[24px] md:text-[18px] md:leading-[26px] lg:text-[20px] lg:leading-[29px]"
                   >
                     {field.label}
                   </label>
@@ -256,7 +256,7 @@ export function ContactFormPanel({
           <div className="w-full">
             <label
               htmlFor="captcha"
-              className="font-maison text-base font-normal leading-lg tracking-[-0.02em] text-[#2f3745] sm:text-lg sm:leading-2xl md:text-2xl md:leading-4xl lg:text-4xl lg:leading-7xl"
+              className="font-maison text-[15px] font-normal leading-[22px] tracking-[-0.02em] text-[#2f3745] sm:text-[16px] sm:leading-[24px] md:text-[18px] md:leading-[26px] lg:text-[20px] lg:leading-[29px]"
             >
               What is {captcha ? `${captcha.a} + ${captcha.b}` : "…"}?
             </label>
@@ -292,7 +292,7 @@ export function ContactFormPanel({
               disabled={status === "sending"}
               className="w-full min-w-0 gap-2 sm:w-auto sm:min-w-[200px] sm:gap-3 md:min-w-[220px] disabled:opacity-60"
             >
-              <span className="inline-flex min-h-[20px] items-center justify-center font-maison text-lg font-bold leading-[1] tracking-[-0.02em] sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl">
+              <span className="inline-flex min-h-[20px] items-center justify-center font-maison text-lg font-bold leading-[1] tracking-[-0.02em] sm:text-2xl md:text-4xl lg:text-5xl xl:text-[24px]">
                 {status === "sending" ? "Sending..." : submitLabel}
               </span>
               {status !== "sending" && (

@@ -292,7 +292,7 @@ export default function ConcreteRemovalHaulingPage() {
               </div>
             </div>
 
-            <blockquote className="mt-10 border-l-4 border-[var(--color-brand-orange)] pl-6 font-maison text-xl font-semibold italic leading-relaxed text-[#0b0300] sm:mt-12 sm:text-3xl md:text-4xl">
+            <blockquote className="mt-10 border-l-4 border-[var(--color-brand-orange)] pl-6 font-maison text-[17px] font-semibold italic leading-relaxed text-[#0b0300] sm:mt-12 sm:text-[19px] md:text-[21px]">
               &ldquo;Concrete work is about power and precision. We have the tools
               to do it fast, and the respect to do it right.&rdquo;{" "}
               <span className="mt-2 block font-bold not-italic">

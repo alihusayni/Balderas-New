@@ -33,7 +33,7 @@ function ArticleBodyBlock({ block }: { block: ArticleBlock }) {
     }
     case "heading": {
       return (
-        <h2 className="[font-family:var(--font-anton)] text-5xl font-normal leading-[1.15] tracking-[-0.02em] text-[#0b0300] sm:text-8xl md:text-10xl lg:text-11xl lg:leading-11xl">
+        <h2 className="[font-family:var(--font-anton)] text-5xl font-normal leading-[1.15] tracking-[-0.02em] text-[#0b0300] sm:text-[28px] md:text-[32px] lg:text-[40px] lg:leading-[50px]">
           {block.text}
           {block.accent ? (
             <>

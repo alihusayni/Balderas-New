@@ -306,7 +306,7 @@ export default function CommercialDemolitionPage() {
           </div>
 
           <div className="order-1 text-[#0b0b0b] lg:order-2">
-            <SectionHeading className="uppercase leading-[0.92] sm:text-15xl md:text-16xl lg:text-18xl">
+            <SectionHeading className="uppercase leading-[0.92] sm:text-[56px] md:text-[68px] lg:text-[78px]">
               Meet the owner
               <span className="block normal-case tracking-[-0.03em] text-[var(--color-brand-orange)]">
                 Abel Balderas
