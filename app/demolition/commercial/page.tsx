@@ -191,7 +191,7 @@ export default function CommercialDemolitionPage() {
             titleClassName="text-[#0b0300]"
             descriptionClassName="text-[#0b0300]"
             mobileDescription="Retail, office, and industrial demolition with tight schedules and clean handoffs—built for OC property teams."
-            mobileDescriptionClassName="font-maison text-lg font-semibold leading-[1.25] tracking-[0%] sm:text-xl sm:leading-[1.2] md:text-3xl"
+            mobileDescriptionClassName="font-maison text-[16px] font-semibold leading-[1.25] tracking-[0%] sm:text-[17px] sm:leading-[1.2] md:text-[19px]"
           />
 
           <ServiceDetailSection
@@ -314,7 +314,7 @@ export default function CommercialDemolitionPage() {
             </SectionHeading>
             <div className="hidden sm:block sm:mt-12" aria-hidden />
 
-            <SectionSubheading className="mt-8 text-[#1f1f1f] sm:mt-12 sm:text-base md:text-3xl md:leading-[1.5]">
+            <SectionSubheading className="mt-8 text-[#1f1f1f] sm:mt-12 sm:text-base md:text-[19px] md:leading-[1.5]">
               When you partner with Balderas Demolition Inc., you get a dedicated
               project manager. Abel Balderas personally ensures that every
               commercial site is clean, safe, and organized. We pride ourselves
@@ -322,7 +322,7 @@ export default function CommercialDemolitionPage() {
               immediate solutions to on-site challenges.
             </SectionSubheading>
 
-            <blockquote className="mt-8 border-l-4 border-[var(--color-brand-orange)] pl-6 font-maison text-xl font-semibold italic leading-relaxed text-[#0b0300] sm:text-3xl md:text-4xl">
+            <blockquote className="mt-8 border-l-4 border-[var(--color-brand-orange)] pl-6 font-maison text-[17px] font-semibold italic leading-relaxed text-[#0b0300] sm:text-[19px] md:text-[21px]">
               &ldquo;We treat every commercial job site like our own business
               depends on it—because it does. Your project&apos;s success is our
               highest priority.&rdquo;{" "}

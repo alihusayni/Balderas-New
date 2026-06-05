@@ -205,7 +205,7 @@ export function ContactFormPanel({
                         id={field.id}
                         name={field.id}
                         defaultValue=""
-                        className="h-full w-full appearance-none border-none bg-transparent pr-7 font-maison text-base font-normal text-[#595959] focus:outline-none focus:text-[#2f3745] sm:pr-8 sm:text-lg md:text-2xl"
+                        className="h-full w-full appearance-none border-none bg-transparent pr-7 font-maison text-[15px] font-normal text-[#595959] focus:outline-none focus:text-[#2f3745] sm:pr-8 sm:text-[16px] md:text-[18px]"
                       >
                         <option value="" disabled className="text-[#595959]">
                           {field.placeholder ?? "Select an option"}
@@ -292,7 +292,7 @@ export function ContactFormPanel({
               disabled={status === "sending"}
               className="w-full min-w-0 gap-2 sm:w-auto sm:min-w-[200px] sm:gap-3 md:min-w-[220px] disabled:opacity-60"
             >
-              <span className="inline-flex min-h-[20px] items-center justify-center font-maison text-lg font-bold leading-[1] tracking-[-0.02em] sm:text-2xl md:text-4xl lg:text-5xl xl:text-[24px]">
+              <span className="inline-flex min-h-[20px] items-center justify-center font-maison text-[16px] font-bold leading-[1] tracking-[-0.02em] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px]">
                 {status === "sending" ? "Sending..." : submitLabel}
               </span>
               {status !== "sending" && (

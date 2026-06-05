@@ -24,7 +24,7 @@ export function MeetOwnerSection() {
             </span>
           </SectionHeading>
         <div className="sm:mt-12"/>
-          <SectionSubheading className="mt-8 text-sm font-medium sm:mt-12 sm:text-base md:text-3xl md:leading-[1.5]">
+          <SectionSubheading className="mt-8 text-sm font-medium sm:mt-12 sm:text-base md:text-[19px] md:leading-[1.5]">
             When you hire Balderas Demolition Inc., you&apos;re partnering with
             Abel Balderas. Known in Orange County for his responsive
             communication and genuine helpfulness, Abel personally ensures every
