@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Suspense } from 'react';
 import { Analytics } from "@/components/analytics";
 import CallRailLoader from "@/components/callrail-loader";
 
@@ -173,7 +174,10 @@ export default function RootLayout({
 
 
         {/* Server-side analytics */}
-        <Analytics />
+        {/* Suspense required for usePathname() in Next.js 15 App Router */}
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
         <CallRailLoader />
 
         <DeferredClientShell />
