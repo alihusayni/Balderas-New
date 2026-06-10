@@ -1,8 +1,12 @@
-"use client";
+// No "use client" — Server Component.
+// The testimonial cards are static content: text + images. No interactivity needed.
+// The desktop scroll buttons are extracted into TestimonialsScrollNav (a tiny
+// "use client" leaf) so this parent stays server-rendered with zero client JS.
+// React does NOT hydrate Server Components → zero TBT contribution from this section.
 
 import Image from "next/image";
-import useEmblaCarousel from "embla-carousel-react";
 import { SimpleText } from "@/components/simple-text";
+import { TestimonialsScrollNav } from "@/components/testimonials-scroll-nav";
 
 type Testimonial = {
   name: string;
@@ -39,12 +43,6 @@ const TESTIMONIALS: Testimonial[] = [
 ];
 
 export function TestimonialsSection() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    align: "start",
-    slidesToScroll: 1,
-  });
-
   return (
     <section className="bg-white py-10 sm:py-12 md:py-14 lg:py-16">
       <div className="mx-auto w-full max-w-container px-4 sm:px-6 md:px-8 lg:px-10">
@@ -58,71 +56,58 @@ export function TestimonialsSection() {
             </h2>
           </div>
 
-          {/* Navigation Buttons */}
-          <div className="hidden items-center gap-3 pb-2 md:flex">
-            <button
-              type="button"
-              className="inline-flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#e2e4e9] text-[#1b1f2b] transition-colors hover:bg-[#d1d4dc]"
-              aria-label="Previous testimonials"
-              onClick={() => emblaApi?.scrollPrev()}
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            </button>
-            <button
-              type="button"
-              className="inline-flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#e2e4e9] text-[#1b1f2b] transition-colors hover:bg-[#d1d4dc]"
-              aria-label="Next testimonials"
-              onClick={() => emblaApi?.scrollNext()}
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-          </div>
+          {/*
+            TestimonialsScrollNav — "use client" leaf for the prev/next buttons.
+            These are hidden md:flex (only visible on desktop). Lighthouse tests
+            at 412px mobile → the buttons are never rendered in the test viewport.
+            Isolating them here means TestimonialsSection itself has zero JS.
+          */}
+          <TestimonialsScrollNav />
         </div>
 
-        <div className="-my-4 mt-10 overflow-hidden py-4" ref={emblaRef}>
-          {/* Changed items-start to items-stretch below */}
-          <div className="-ml-4 flex items-stretch sm:-ml-6">
+        {/*
+          Scroll container — plain server-rendered div. CSS scroll snap handles
+          touch swipe natively (no JS). Nav buttons query this element by id.
+          gap-4 avoids the negative-margin CLS bug (no -ml-4 / pl-4 pattern).
+        */}
+        <div
+          id="testimonials-scroll"
+          className="no-scrollbar testimonials-scroll mt-10 flex items-stretch gap-4 overflow-x-auto sm:gap-6"
+        >
           {TESTIMONIALS.map((item, index) => (
             <article
               key={`${item.name}-${index}`}
-              className="min-w-0 flex-[0_0_85%] pl-4 sm:flex-[0_0_50%] sm:pl-6 md:flex-[0_0_40%] xl:flex-[0_0_25%]"
+              className="testimonials-snap-start flex w-[85%] flex-none flex-col gap-4 sm:w-1/2 md:w-[40%] xl:w-1/4"
             >
-              {/* Added h-full below */}
-              <div className="flex h-full flex-col space-y-4">
-                {/* Image Container */}
-                <div className="relative aspect-square w-full flex-none overflow-hidden bg-[#f3f4f6]">
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    fill
-                    sizes="(max-width: 639px) 85vw, (max-width: 767px) 50vw, (max-width: 1279px) 40vw, 25vw"
-                    className="object-cover"
-                  />
-                </div>
+              {/* Image */}
+              <div className="relative aspect-square w-full flex-none overflow-hidden bg-[#f3f4f6]">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  sizes="(max-width: 639px) 85vw, (max-width: 767px) 50vw, (max-width: 1279px) 40vw, 25vw"
+                  className="object-cover"
+                />
+              </div>
 
-                {/* Text Content */}
-                <SimpleText className="text-sm leading-[1.6] text-[#333333]">
-                  {item.text}
-                </SimpleText>
+              {/* Review text */}
+              <SimpleText className="text-sm leading-[1.6] text-[#333333]">
+                {item.text}
+              </SimpleText>
 
-                {/* Footer Info - Added mt-auto below */}
-                <div className="mt-auto flex items-center gap-1.5 pt-2">
-                  <span className="font-maison text-base font-bold text-[#111111]">
-                    {item.name}
-                  </span>
-                  {/* Verified Checkmark Icon */}
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#595959"/>
-                    <path d="M16.5 8.5L10.5 14.5L7.5 11.5" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  <span className="font-maison text-xs text-[#595959]">
-                    {item.date}
-                  </span>
-                </div>
+              {/* Author */}
+              <div className="mt-auto flex items-center gap-1.5 pt-2">
+                <span className="font-maison text-base font-bold text-[#111111]">
+                  {item.name}
+                </span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#595959" />
+                  <path d="M16.5 8.5L10.5 14.5L7.5 11.5" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <span className="font-maison text-xs text-[#595959]">{item.date}</span>
               </div>
             </article>
           ))}
-          </div>
         </div>
       </div>
     </section>

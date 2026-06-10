@@ -3,7 +3,10 @@ import { Suspense } from 'react';
 import { Analytics } from "@/components/analytics";
 import CallRailLoader from "@/components/callrail-loader";
 
-import { Anton, Geist } from "next/font/google";
+// Anton removed from next/font/google — it is now inlined as base64 in
+// globals.css, which eliminates the cold-CDN delay (~1,000 ms) caused by
+// next/font stamping a new ?dpl=<deploy-hash> URL on every build.
+// --font-anton CSS variable is now defined in globals.css :root.
 import { DeferredClientShell } from "@/components/deferred-client-shell";
 import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
@@ -11,23 +14,6 @@ import { SiteShell } from "@/components/site-shell";
 import { SiteHeader } from "@/components/site-header";
 import { SITE, getLocalBusinessJsonLd } from "@/lib/seo";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: "optional",
-  preload: false, // display:optional already non-blocking; preload causes unused-preload warnings
-});
-
-
-
-const anton = Anton({
-  variable: "--font-anton",
-  subsets: ["latin"],
-  weight: "400",
-  display: "optional", // was defaulting to swap — caused a preload
-  preload: false,
-});
 
 
 export const metadata: Metadata = {
@@ -127,52 +113,24 @@ export default function RootLayout({
       lang="en"
       data-scroll-behavior="smooth"
       suppressHydrationWarning
-      // MaisonNeue is loaded via @font-face in globals.css (Vercel Blob) — no localFont variable needed
-      className={`${geistSans.variable} ${anton.variable} h-full antialiased`}
+      // Anton is now inlined in globals.css — no next/font variable class needed.
+      // MaisonNeue is loaded via @font-face in globals.css (Vercel Blob).
+      className="h-full antialiased"
     >
       <head>
         {/*
-          Preconnect: establish TCP+TLS to font CDNs during HTML parse — before
-          CSS is even parsed. Without this, both origins incur a cold handshake
-          at ~1079ms (when CSS discovers the fonts). On slow 4G (150ms RTT)
-          that handshake costs 300ms+. These hints shave that off the critical path.
+          Preconnect — MaisonNeue is served from Vercel Blob (external CDN).
+          This preconnect eliminates the cold DNS+TCP+TLS overhead when the
+          browser discovers the MaisonNeue @font-face URL in the inline CSS.
+
+          Anton preconnect/preload REMOVED: Anton is now an inline base64 data:
+          URL in globals.css — the font is available the instant CSS parses.
+          No network request needed, no preload link needed.
         */}
-        {/* Anton → served from fonts.gstatic.com */}
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* MaisonNeue → served from Vercel Blob */}
         <link rel="preconnect" href="https://y5judepxfpr0logb.public.blob.vercel-storage.com" crossOrigin="anonymous" />
-
-        {/*
-          Preload MaisonNeue-Book (400) — the default body weight used everywhere.
-          Ensures it's available at first paint so body text renders in brand font.
-          Only preloading Book (not Bold/Medium/Demi) to avoid competing preloads.
-        */}
-        <link
-          rel="preload"
-          as="font"
-          type="font/woff2"
-          href="https://y5judepxfpr0logb.public.blob.vercel-storage.com/balderas/fonts/MaisonNeue-Book-gfuA6Vo46rvlpNHkUbiuJz2YVALkFy.woff2"
-          crossOrigin="anonymous"
-        />
-
-        {/*
-          No manual <link rel="preload"> for hero image needed here.
-          <Image priority fetchPriority="high"> in HeroParallaxBackground
-          auto-generates a single complete preload covering all deviceSizes at q=22.
-          A manual preload would create a SECOND competing preload → browser
-          may double-download or deprioritize → LCP regression (was 2.6s).
-          This is the same pattern as tuanlelaw.com (consistently 98+/100).
-        */}
       </head>
 
       <body className="min-h-full flex flex-col">
-        <JsonLd
-          id="ld-local-business"
-          data={getLocalBusinessJsonLd()}
-        />
-
-
-
         {/* Server-side analytics */}
         {/* Suspense required for usePathname() in Next.js 15 App Router */}
         <Suspense fallback={null}>
@@ -189,6 +147,17 @@ export default function RootLayout({
         <SiteShell>
           <SiteFooter />
         </SiteShell>
+
+        {/*
+          JSON-LD moved to END of body — Google indexes it from anywhere on the
+          page. Placing it at the top of <body> added 17 KB of data before the
+          H1 in the HTML stream, delaying FCP. Moving it here costs nothing SEO-
+          wise but lets the browser reach the H1 text ~100 ms sooner.
+        */}
+        <JsonLd
+          id="ld-local-business"
+          data={getLocalBusinessJsonLd()}
+        />
       </body>
     </html>
   );

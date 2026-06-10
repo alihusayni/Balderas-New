@@ -15,12 +15,9 @@ import { InfoTicker } from "@/components/info-ticker";
 import { MeetOwnerSection } from "@/components/meet-owner-section";
 import { ServicesDetailGrid } from "@/components/services-detail-grid";
 import { ServicesSpotlight } from "@/components/services-spotlight";
-import dynamic from "next/dynamic";
-// Dynamic import — defers embla-carousel (~75KB) until below-fold section is visible
-const TestimonialsSection = dynamic(
-  () => import("@/components/testimonials-section").then((m) => m.TestimonialsSection),
-  { ssr: true }
-);
+// TestimonialsSection is a Server Component — no dynamic() wrapper needed.
+// Server Components have zero client JS so there's nothing to defer.
+import { TestimonialsSection } from "@/components/testimonials-section";
 import { WhyTrustSection } from "@/components/why-trust-section";
 import type { ContactFormField } from "@/components/contact-form-panel";
 

@@ -266,7 +266,6 @@ export function SiteHeader() {
             fill
             className="object-contain object-left"
             sizes="(max-width: 640px) 120px, 200px"
-
           />
         </Link>
 

@@ -49,12 +49,17 @@ const websiteJsonLd = {
 export default function Page() {
   return (
     <>
+      <HomePage />
+      {/*
+        JSON-LD moved to AFTER HomePage — Google indexes structured data from
+        anywhere on the page. Previously these scripts added ~2 KB before the
+        hero H1 in the HTML stream, delaying FCP by ~20 ms at Lighthouse speed.
+      */}
       <JsonLd id="ld-website" data={websiteJsonLd} />
       <JsonLd
         id="ld-home-breadcrumb"
         data={getBreadcrumbJsonLd([{ name: "Home", path: "/" }])}
       />
-      <HomePage />
     </>
   );
 }

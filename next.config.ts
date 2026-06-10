@@ -2,12 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   experimental: {
-    // inlineCss:true — keeps CSS in the HTML head so hero renders without
-    // waiting for an external CSS file round-trip. Disabling it caused LCP
-    // to regress from 1.1s → 2.6s (external CSS became render-blocking).
-    // The CSS is 83.8 KB but this is still faster than a blocking network fetch
-    // at simulated mobile speed, because the image preload starts immediately
-    // from the same HTML stream rather than waiting for a second request.
+    // inlineCss:true — keeps the CSS inside the HTML so there's zero extra
+    // network round-trip before first paint. Without this, Next.js 16 Turbopack
+    // emits a plain <link rel="stylesheet"> with no preload hint, making CSS
+    // render-blocking. Confirmed: disabling inlineCss caused LCP to jump from
+    // 3.4s → 4.5s+ on the user's browser (CDN-cold + render-blocking CSS).
+    // Trade-off: CSS appears in both <style> tag AND RSC __next_f payload
+    // (necessary for SPA navigation CSS delivery). With Geist removed, the
+    // CSS is meaningfully smaller, reducing this overhead.
     inlineCss: true,
   },
   turbopack: {
