@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Suspense } from 'react';
-import { Analytics } from "@/components/analytics";
+import Script from 'next/script';
 import CallRailLoader from "@/components/callrail-loader";
 
 // Anton removed from next/font/google — it is now inlined as base64 in
@@ -131,12 +131,12 @@ export default function RootLayout({
       </head>
 
       <body className="min-h-full flex flex-col">
-        {/* Server-side analytics */}
-        {/* Suspense required for usePathname() in Next.js 15 App Router */}
-        <Suspense fallback={null}>
-          <Analytics />
-        </Suspense>
         <CallRailLoader />
+        <Script
+          src="https://www.despora.ai/despora-pixel.js"
+          data-project="demolitionoc"
+          strategy="afterInteractive"
+        />
 
         <DeferredClientShell />
 
