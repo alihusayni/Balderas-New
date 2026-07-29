@@ -135,6 +135,7 @@ export default function RootLayout({
         <Script
           src="https://www.despora.ai/despora-pixel.js"
           data-project="demolitionoc"
+          data-endpoint="/api/dp-collect"
           strategy="afterInteractive"
         />
 

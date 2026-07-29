@@ -51,6 +51,14 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/dp-collect',
+        destination: 'https://ingest.despora.ai/collect',
+      },
+    ];
+  },
   async redirects() {
     return [
       { source: "/contact", destination: "/#contact", permanent: true },
