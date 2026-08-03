@@ -359,6 +359,57 @@ export function SameDayJunkRemovalLanding() {
         </div>
       </section>
 
+      <section className="w-full bg-white py-16 lg:py-20">
+        <div className="mx-auto w-full max-w-container px-6 lg:px-10">
+          <div className="mx-auto max-w-[860px]">
+            <h2 className="[font-family:var(--font-anton)] text-[28px] font-normal leading-[1.2] tracking-[-0.02em] text-[#0b0300] lg:text-[40px]">
+              Same-Day Junk Removal in Orange County: What to Expect
+            </h2>
+            <div className="mt-8 flex flex-col gap-6 text-[17px] leading-[1.7] text-[#3a3a3a]">
+              <p>
+                When you need junk gone today, every hour the clutter sits there
+                costs you time and peace of mind. Balderas Demolition Inc. offers
+                genuine same-day junk removal across Orange County — not a
+                scheduling promise that pushes you to the next available window,
+                but actual same-day service for jobs booked before noon. We
+                maintain flexible crew availability specifically to accommodate
+                urgent requests, whether you&apos;re preparing for a showing, clearing
+                after a tenant moves out, or simply ready to reclaim your space.
+              </p>
+              <p>
+                The process starts with a quick call to (714) 340-8108. We ask
+                about what you&apos;re removing, where it&apos;s located on the property,
+                and whether there are any access constraints — a narrow gate, a
+                second-floor location, or a tight driveway. Based on that
+                conversation, we give you an estimated price range before we
+                arrive. When the crew pulls up, they walk through with you, confirm
+                the final price, and nothing gets loaded until you&apos;ve approved it.
+                No surprise charges on the invoice.
+              </p>
+              <p>
+                Our same-day service handles everything from single-item pickups
+                — a broken refrigerator, an old sectional, a mattress — to
+                multi-room cleanouts involving mixed loads of furniture, appliances,
+                electronics, and miscellaneous debris. We sort on the way out,
+                separating items for donation, recycling, and landfill disposal.
+                California law requires that mattresses, electronics, and certain
+                appliances go to specific facilities, and we handle all of that
+                compliance automatically.
+              </p>
+              <p>
+                Same-day junk removal from Balderas Demolition Inc. is available
+                throughout Orange County, including Anaheim, Irvine, Santa Ana,
+                Costa Mesa, Huntington Beach, Fullerton, Newport Beach, Garden
+                Grove, Tustin, and all surrounding cities. Call before noon for
+                same-day service, or book ahead for a specific morning or afternoon
+                arrival window. Either way, you&apos;ll have a broom-clean space by
+                the end of the day.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <InfoTicker className="border-y-0 bg-[var(--color-brand-orange)]" />
 
       <section className="relative w-full overflow-hidden py-20 lg:py-24">

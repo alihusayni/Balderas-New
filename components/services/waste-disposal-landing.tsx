@@ -281,6 +281,59 @@ export function WasteDisposalLanding() {
         ]}
       />
 
+      <section className="w-full bg-white py-16 lg:py-20">
+        <div className="mx-auto w-full max-w-container px-6 lg:px-10">
+          <div className="mx-auto max-w-[860px]">
+            <h2 className="[font-family:var(--font-anton)] text-[28px] font-normal leading-[1.2] tracking-[-0.02em] text-[#0b0300] lg:text-[40px]">
+              Waste Disposal in Orange County: What Licensed Hauling Actually Means
+            </h2>
+            <div className="mt-8 flex flex-col gap-6 text-[17px] leading-[1.7] text-[#3a3a3a]">
+              <p>
+                Waste disposal in California isn&apos;t a simple matter of loading a
+                truck and driving to the dump. The state&apos;s CALGreen building
+                standards require that at least 65% of construction and demolition
+                debris be diverted from landfills through recycling or reuse.
+                OC cities have their own waste management ordinances layered on
+                top of state requirements. And certain material types — e-waste,
+                mattresses, appliances with refrigerants, and hazardous materials —
+                require disposal at specific licensed facilities. Balderas Demolition
+                Inc. manages all of that compliance so you don&apos;t have to.
+              </p>
+              <p>
+                We handle waste disposal for three main project categories in
+                Orange County. Construction and demolition waste — concrete, brick,
+                drywall, lumber, roofing, and mixed renovation debris — goes to
+                certified C&amp;D recycling facilities that sort and process materials
+                properly. Bulk household waste — appliances, furniture, mattresses,
+                and large items — is processed through a combination of donation
+                centers, certified recyclers, and licensed transfer stations
+                depending on condition and material type. Yard waste and green
+                material — soil, sod, tree limbs, and organic debris — goes to
+                composting and green-waste facilities where it&apos;s diverted from
+                the landfill entirely.
+              </p>
+              <p>
+                Every load we haul generates documentation. We can provide weight
+                tickets and facility receipts for any job that requires disposal
+                records — whether for permit closeout, HOA compliance, or your
+                own project records. For jobs that require a Waste Management Plan
+                (as some OC cities mandate for larger projects), we can help you
+                understand what&apos;s needed and document that your debris was handled
+                in compliance.
+              </p>
+              <p>
+                Waste disposal services from Balderas Demolition Inc. are available
+                throughout Orange County, including Anaheim, Irvine, Santa Ana,
+                Huntington Beach, Costa Mesa, Fullerton, Newport Beach, Tustin,
+                Garden Grove, and all surrounding areas. Contact us at (714) 340-8108
+                for a free on-site estimate, or submit a request below and we&apos;ll
+                respond the same business day.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="relative w-full overflow-hidden py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image

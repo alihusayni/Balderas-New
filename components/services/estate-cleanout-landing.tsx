@@ -324,6 +324,56 @@ export function EstateCleanoutLanding() {
         </div>
       </section>
 
+      <section className="w-full bg-white py-16 lg:py-20">
+        <div className="mx-auto w-full max-w-container px-6 lg:px-10">
+          <div className="mx-auto max-w-[860px]">
+            <h2 className="[font-family:var(--font-anton)] text-[28px] font-normal leading-[1.2] tracking-[-0.02em] text-[#0b0300] lg:text-[40px]">
+              What Orange County Families Need to Know About Estate Cleanouts
+            </h2>
+            <div className="mt-8 flex flex-col gap-6 text-[17px] leading-[1.7] text-[#3a3a3a]">
+              <p>
+                An estate cleanout is one of the most emotionally demanding tasks
+                a family can face. Whether you&apos;re settling a loved one&apos;s affairs,
+                preparing a property for sale, or clearing a home after a major
+                life transition, the sheer volume of belongings — accumulated over
+                decades — can feel completely overwhelming. Balderas Demolition
+                Inc. provides professional estate cleanout services across all of
+                Orange County, handling the physical work so your family can
+                focus on what matters most.
+              </p>
+              <p>
+                Our estate cleanout process is designed to be thorough, respectful,
+                and efficient. Abel Balderas personally leads the initial walk-through
+                to understand exactly what needs to stay and what needs to go. We
+                work with your timeline — whether that&apos;s a single-day clearance
+                or a phased cleanout spread over a week — and we treat every item
+                in the property with care. Valuable or sentimental items are set
+                aside for your review before anything leaves the property.
+              </p>
+              <p>
+                One of the most important aspects of our service is responsible
+                disposal. We don&apos;t simply fill a truck and drive to the nearest
+                landfill. Usable furniture, appliances, and household goods are
+                donated to Orange County charities when they&apos;re in acceptable
+                condition. Clothing, kitchenware, and decor go to local donation
+                centers. Metals and electronics are recycled at certified OC
+                facilities. We document what went where, so if you need disposal
+                records for estate purposes, we can provide them.
+              </p>
+              <p>
+                We serve the entire Orange County area for estate cleanouts,
+                including Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
+                Huntington Beach, Newport Beach, Tustin, Garden Grove, and
+                surrounding cities. Most estate cleanouts are completed in
+                one to two days, and we can typically schedule within 48 hours
+                of your initial call. Contact us at (714) 340-8108 for a
+                free on-site assessment and compassionate, transparent pricing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <InfoTicker className="border-y-0 bg-[var(--color-brand-orange)]" />
 
       <section
