@@ -47,19 +47,19 @@ const CORE_VALUES = [
     icon: <EcoFriendlyDisposalIcon className="h-full w-full" />,
     title: "Eco-Conscious Disposal",
     description:
-      "We love Orange County, and we want to keep it beautiful. We are committed to high diversion rates—sorting debris on-site to ensure that concrete, wood, metal, and green waste go to recycling centers rather than landfills.",
+      "We love Orange County, and we want to keep it beautiful. We are committed to high diversion rates — sorting debris on-site so that concrete, wood, metal, and green waste go to recycling centers rather than landfills.",
   },
   {
     icon: <SurgicalPrecisionIcon className="h-full w-full" />,
     title: "Surgical Precision",
     description:
-      "We don't believe in \"senseless smashing.\" Whether it's an interior strip-out or a \"Hut Top\" removal, we use a surgical approach to remove exactly what you want while protecting the structures that remain.",
+      'We don\'t believe in \"senseless smashing.\" Whether it\'s an interior strip-out or a \"Hut Top\" removal, we use a surgical approach to remove exactly what you want while carefully protecting every structure that remains.',
   },
   {
     icon: <BroomCleanStandardIcon className="h-full w-full" />,
-    title: "\"Broom-Clean\" Guarantee",
+    title: '"Broom-Clean" Guarantee',
     description:
-      "The job isn't done until the last nail is swept up. We take pride in our \"final walk-through,\" ensuring the site is pristine and ready for the next trade or for you to enjoy your reclaimed space.",
+      'The job isn\'t done until the last nail is swept up. We pride ourselves on our final walk-through — ensuring the site is pristine and ready for the next trade, or for you to enjoy your reclaimed space.',
   },
 ];
 
@@ -96,15 +96,15 @@ export default function AboutPage() {
                 In an industry where many owners sit behind a desk, Abel
                 Balderas is a familiar face on every job site. With years of
                 experience in the specialized trades of demolition and
-                hauling, Abel recognized a gap in the Orange County market for
-                a contractor who combined high-level technical expertise with
+                hauling, Abel recognized a gap in the Orange County market: a
+                contractor who combined high-level technical expertise with
                 the &ldquo;white-glove&rdquo; service of a boutique business.
               </SimpleText>
 
               <SimpleText className="text-[#0b0300]">
                 Abel&rsquo;s philosophy is rooted in responsiveness and
                 reliability. When you call Balderas Demolition Inc., you
-                aren&rsquo;t talking to a national dispatch center;
+                aren&rsquo;t talking to a national dispatch center &mdash;
                 you&rsquo;re talking to a local professional who knows your
                 neighborhood, understands the local permits, and takes
                 personal pride in the satisfaction of every client.
@@ -147,11 +147,12 @@ export default function AboutPage() {
             </MainHeading>
 
             <SimpleText className="max-w-[971px] text-[20px] leading-[28px] text-white/80 sm:text-[24px] sm:leading-[32px] lg:text-[28px] lg:leading-[37px]">
-              Based in Tustin, we are proud to serve the diverse communities
-              that make up Orange County. From the historic homes of Santa Ana
-              and Orange to the modern developments of Irvine and the coastal
-              properties of Newport Beach, we understand the unique
-              architectural and regulatory landscape of our county.
+              Based in Tustin, we proudly serve the diverse communities that
+              make up Orange County — from the historic homes of Santa Ana and
+              Orange to the modern developments of Irvine and the coastal
+              properties of Newport Beach. We understand the unique
+              architectural and regulatory landscape of our county, and we
+              bring that local expertise to every project.
             </SimpleText>
           </div>
 
@@ -216,7 +217,7 @@ export default function AboutPage() {
 
       <CtaBanner
         title="Ready to clear the way?"
-        description="When you hire Balderas Demolition Inc., you are partnering with a licensed, insured, and dedicated team that cares about the outcome as much as you do. We invite you to experience the difference that professional communication and a “customer-first” attitude can make."
+        description="When you hire Balderas Demolition Inc., you are partnering with a licensed, insured, and dedicated team that cares about the outcome as much as you do. Experience the difference that professional communication and a customer-first attitude can make."
         backgroundSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/about/about-footer.webp"
         backgroundAlt=""
         titleClassName="text-[40px] sm:text-[56px] lg:text-[68px] lg:leading-[70px]"
@@ -228,7 +229,7 @@ export default function AboutPage() {
             showArrow: false,
           },
           {
-            label: "View Our Recent Projects",
+            label: "View Our Services",
             href: "/demolition",
             variant: "secondary",
             showArrow: true,

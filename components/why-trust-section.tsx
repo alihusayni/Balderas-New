@@ -13,19 +13,18 @@ const TRUST_CARDS: TrustCard[] = [
   {
     stat: "100%",
     title: "Eco-Friendly",
-    description: "We recycle as much debris as possible to keep OC green.",
+    description: "We sort and recycle debris on-site — concrete, wood, and metal stay out of OC landfills.",
     highlighted: true,
   },
   {
-    stat: "0",
+    stat: "$0",
     title: "Hidden Fees",
-    description: "Transparent pricing you can understand with zero surprises.",
+    description: "Transparent, flat-rate pricing you can understand. No surprises on the final bill.",
   },
   {
     stat: "100%",
     title: "Full Service",
-    description:
-      "We even offer dumpster rentals for those who prefer to DIY their cleanup!",
+    description: "We haul, we sweep, we clear. And for DIYers, we offer dumpster rentals too.",
   },
 ];
 
@@ -51,19 +50,19 @@ export function WhyTrustSection() {
 
           <div className="mt-12 grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.35fr_0.65fr] lg:gap-12">
             <HeroHeading as="h2" className="mt-0 max-w-[1080px] text-[40px] uppercase leading-[0.95] tracking-[-0.02em] text-white sm:text-[54px] md:text-[68px] lg:text-[68px]">
-              Why Orange County Trust Balderas Demolition Inc.
+              Why Orange County Trusts Balderas Demolition Inc.
             </HeroHeading>
 
             <p className="font-maison max-w-[520px] justify-self-start pt-1 text-base font-black leading-[1.05] text-white sm:text-lg md:text-xl lg:justify-self-end">
               We offer systematic planning, safe work practices, and a 100%
-              commitment to your satisfaction across Orange County — including
-              Anaheim, Santa Ana, Irvine, Huntington Beach, Garden Grove,
-              Orange, Fullerton, Costa Mesa, Mission Viejo, Westminster,
-              Newport Beach, Buena Park, Lake Forest, Tustin, Yorba Linda,
-              San Clemente, Laguna Niguel, La Habra, Fountain Valley,
-              Placentia, Laguna Beach, Brea, Stanton, Cypress, Dana Point,
-              Aliso Viejo, Laguna Hills, Rancho Santa Margarita, San Juan
-              Capistrano, and surrounding communities.
+              commitment to your satisfaction — proudly serving Anaheim, Santa
+              Ana, Irvine, Huntington Beach, Garden Grove, Orange, Fullerton,
+              Costa Mesa, Mission Viejo, Westminster, Newport Beach, Buena Park,
+              Lake Forest, Tustin, Yorba Linda, San Clemente, Laguna Niguel,
+              La Habra, Fountain Valley, Placentia, Laguna Beach, Brea,
+              Stanton, Cypress, Dana Point, Aliso Viejo, Laguna Hills,
+              Rancho Santa Margarita, San Juan Capistrano, and surrounding
+              communities.
             </p>
           </div>
         </div>

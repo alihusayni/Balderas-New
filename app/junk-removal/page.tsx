@@ -61,11 +61,12 @@ export default function JunkRemovalPage() {
             </HeroHeading>
 
             <HeroSubheading className="max-w-[920px]">
-              Clutter takes up space in your home-and in your mind. Instead of
-              spending your weekend hauling heavy boxes to the dump, let
-              Balderas Demolition Inc. handle it for you. Abel Balderas and his
-              team take care of the heavy lifting, loading, and responsible
-              disposal, so you&apos;re left with a clean, stress-free space.
+              Clutter doesn&apos;t just take up space in your home &mdash; it
+              takes up space in your mind. Instead of spending your weekend
+              hauling heavy boxes to the dump, let Balderas Demolition Inc.
+              handle it. Abel Balderas and his team take care of the heavy
+              lifting, loading, and responsible disposal, leaving you with a
+              clean, stress-free environment.
             </HeroSubheading>
 
             <HeroCtas
@@ -97,8 +98,8 @@ export default function JunkRemovalPage() {
           </div>
 
           <ServiceIntroSection
-            title="Full-Service Junk Removal"
-            description="We don't just pick up bags on the curb. We go wherever the junk is-attics, basements, backyards, or office buildings."
+            title="Full-Service Junk Removal for Every Situation"
+            description="We don&apos;t just pick up bags on the curb. We go wherever the junk is — attics, basements, backyards, or office buildings. Our team handles the sorting, loading, and responsible disposal."
             titleClassName="text-[#0b0300]"
             descriptionClassName="text-[#0b0300]"
           />
@@ -109,11 +110,11 @@ export default function JunkRemovalPage() {
             imageSide="right"
             hideImageOnSmallScreens
             title="Residential Junk Hauling"
-            intro="We help you clear out years of &quot;stuff&quot; so you can finally park your car inside again."
+            intro="We don&apos;t just pick up bags on the curb. We go wherever the junk is — attics, basements, garages, or your backyard."
             items={[
               {
                 heading: "Garage & Attic Cleanouts",
-                text: "We help you clear out years of &quot;stuff&quot; so you can finally park your car inside again.",
+                text: "We help you clear out years of accumulated items so you can finally park your car inside again.",
               },
               {
                 heading: "Furniture & Appliance Removal:",
@@ -135,7 +136,7 @@ export default function JunkRemovalPage() {
             imageAlt="Construction and commercial debris cleanup site"
             imageSide="left"
             title="Construction & Commercial Debris"
-            intro="From backyard upgrades to clearing a lot, we have the equipment to handle the heavy stuff."
+            intro="From renovation leftovers to full office cleanouts, we handle the debris that holds your business back."
             items={[
               {
                 heading: "Renovation Debris:",
@@ -147,7 +148,7 @@ export default function JunkRemovalPage() {
               },
               {
                 heading: "Property Manager Services:",
-                text: "Quick turnarounds on apartment or rental unit \"trash-outs.\"",
+                text: 'Quick turnarounds on apartment or rental unit \"trash-outs\" to get you back on schedule.',
               },
             ]}
           />

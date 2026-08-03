@@ -121,10 +121,10 @@ export default function DemolitionPage() {
 
           <ServiceIntroSection
             title="Comprehensive Demolition Services for Every Need"
-            description="Whether you are a homeowner tackling a DIY remodel or a professional contractor needing a reliable partner, we provide a full suite of services tailored to your project's specific requirements."
+            description="Whether you are a homeowner tackling a DIY remodel or a professional contractor needing a reliable partner, we provide a full suite of demolition services tailored to your project's specific requirements."
             titleClassName="text-[#0b0300]"
             descriptionClassName="text-[#0b0300]"
-            mobileDescription="If it’s taking up space, we’ll take it away. Our junk removal process is fast, transparent, and eco-friendly. We handle the sorting, loading, and disposal so you don't have to."
+            mobileDescription="Whether you're a homeowner or a contractor, we handle the demolition so you can focus on what comes next. Safe, systematic, and broom-clean every time."
             mobileDescriptionClassName="font-maison text-[16px] font-semibold leading-[1.25] tracking-[0%] sm:text-[17px] sm:leading-[1.2] md:text-[19px]"
           />
 
@@ -134,11 +134,11 @@ export default function DemolitionPage() {
             imageSide="right"
             hideImageOnSmallScreens
             title="Interior Residential Demolition"
-            intro='Prepping for a dream renovation? We handle the "dirty work" so you can focus on the design.'
+            intro="Prepping for a dream renovation? We handle the dirty work so you can focus on the design."
             items={[
               {
                 heading: "Kitchen & Bathroom Gutting:",
-                text: "Careful removal of cabinets, flooring, and fixtures without damaging the structure.",
+                text: "Careful removal of cabinets, flooring, and fixtures without damaging plumbing or the structure.",
               },
               {
                 heading: "Wall Removal:",
@@ -146,7 +146,7 @@ export default function DemolitionPage() {
               },
               {
                 heading: "Flooring Removal:",
-                text: "Hardwood, tile, and carpet stripping.",
+                text: "Hardwood, tile, and carpet stripping down to the subfloor.",
               },
             ]}
           />
@@ -156,19 +156,19 @@ export default function DemolitionPage() {
             imageAlt="Exterior and structural demolition with heavy equipment"
             imageSide="left"
             title="Exterior & Structural Demolition"
-            intro="From backyard upgrades to clearing a lot, we have the equipment to handle the heavy stuff."
+            intro="From backyard upgrades to lot-clearing, we bring the equipment and expertise to handle the heavy work safely."
             items={[
               {
                 heading: "Concrete & Asphalt Removal:",
-                text: "Driveways, patios, and walkways.",
+                text: "Driveways, patios, walkways, and pool decks.",
               },
               {
                 heading: "Shed & Accessory Structure Removal:",
-                text: "Clearing out old outbuildings and detached garages.",
+                text: "Clearing out old outbuildings, detached garages, and backyard structures.",
               },
               {
                 heading: "Pool In-fills & Deck Removal:",
-                text: "Safely reclaiming your outdoor space.",
+                text: "Safely reclaiming your outdoor space with minimal disruption.",
               },
             ]}
           />

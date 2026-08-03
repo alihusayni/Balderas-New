@@ -4,10 +4,14 @@ import { BadgeIcon } from "@/components/icons/badge-icon";
 const TICKER_ITEMS = [
   "DEMOLITION",
   "JUNK REMOVAL",
-  "DUMPSTERS RENTAL",
+  "DUMPSTER RENTAL",
   "TOP CHOICE",
   "BALDERAS DEMOLITION INC.",
+  "LICENSED & INSURED",
   "STRUCTURAL DEMOLITION",
+  "ORANGE COUNTY",
+  "BROOM-CLEAN GUARANTEE",
+  "ECO-FRIENDLY DISPOSAL",
 ];
 
 type InfoTickerProps = {

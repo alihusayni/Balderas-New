@@ -90,16 +90,17 @@ export default function HomePage() {
             </div>
             {/* LCP element — SSR'd immediately, no hydration wait */}
             <HeroHeading>
-              Demolishing, Dumpster Rentals &amp; Junk Removal in Orange County
+              Demolition, Junk Removal &amp; Dumpster Rentals in Orange County
             </HeroHeading>
             <HeroSubheading>
               From tearing down a kitchen to hauling away years of garage
-              clutter, we clear the way for your next big project. Safe,
-              systematic, and committed to your satisfaction.
+              clutter, Balderas Demolition Inc. clears the way for your next
+              big project. Safe, systematic, and 100% committed to your
+              satisfaction.
             </HeroSubheading>
             <HeroCtas
               primaryHref="#contact"
-              primaryLabel="Get Free Quote"
+              primaryLabel="Get Your Free Quote"
               secondaryHref="tel:+17143408108"
               secondaryLabel="(714) 340-8108"
               showSecondaryArrow={false}
@@ -121,9 +122,9 @@ export default function HomePage() {
           backgroundImageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/contactbg.webp"
           backgroundImageAlt="Contact Balderas Demolition"
           title="Start Your Demolition or Junk Removal Project Today"
-          description="Ready to clear the deck? Get a fast, friendly estimate from Abel Balderas and the team."
+          description="Ready to clear the way? Get a fast, friendly estimate from Abel Balderas and the team. We respond same day."
           fields={homeContactFields}
-          submitLabel="Submit"
+          submitLabel="Get My Free Quote"
         />
       </div>
     </main>

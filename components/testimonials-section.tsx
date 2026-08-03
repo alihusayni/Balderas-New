@@ -49,10 +49,10 @@ export function TestimonialsSection() {
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="space-y-2">
             <p className="font-maison text-base font-bold text-[#0b0b0b] sm:text-lg">
-              Testimonial
+              Client Reviews
             </p>
             <h2 className="[font-family:var(--font-anton)] text-[30px] font-normal leading-[0.95] tracking-[-0.02em] text-black sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[72px]">
-              What Our Clients Are Saying
+              What OC Homeowners Are Saying About Us
             </h2>
           </div>
 

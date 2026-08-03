@@ -25,13 +25,15 @@ export function MeetOwnerSection() {
           </SectionHeading>
         <div className="sm:mt-12"/>
           <SectionSubheading className="mt-8 text-sm font-medium sm:mt-12 sm:text-base md:text-[19px] md:leading-[1.5]">
-            When you hire Balderas Demolition Inc., you&apos;re partnering with
-            Abel Balderas. Known in Orange County for his responsive
-            communication and genuine helpfulness, Abel personally ensures every
-            client feels confident about the job. His philosophy is simple:
-            provide solutions where others see problems. From creative fixes in
-            tight spaces to power-washing driveways after the job, Abel always
-            goes the extra mile.
+            When you hire Balderas Demolition Inc., you&apos;re not just hiring
+            a crew &mdash; you&apos;re partnering with Abel Balderas. Known
+            throughout Orange County for his responsive communication and
+            &ldquo;out-of-the-way&rdquo; helpfulness, Abel personally ensures
+            every client feels completely confident in the job being done. His
+            philosophy is simple: provide solutions when others see only
+            problems. Whether it&apos;s finding a creative fix for a tight
+            access point or power-washing a driveway after a haul, Abel&apos;s
+            focus on the extra mile is what keeps OC residents coming back.
           </SectionSubheading>
         </div>
       </div>

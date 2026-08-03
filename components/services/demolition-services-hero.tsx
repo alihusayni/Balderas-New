@@ -26,15 +26,16 @@ export function DemolitionServicesHero() {
         <div className="max-w-[760px] text-[var(--color-brand-white)] sm:max-w-[680px] md:max-w-[1100px]">
           <div className="h-[50px]" aria-hidden />
           <HeroHeading>
-            Expert Demolition Services in <br /> Orange County: We Clear the
-            Way for Your Vision
+            Expert Demolition Services in Orange County:{" "}
+            <br className="hidden xl:block" aria-hidden />
+            We Clear the Way for Your Vision
           </HeroHeading>
           <HeroSubheading>
-            Demolition is about more than just tearing things down-it&apos;s
-            about setting the stage for what&apos;s next. At Balderas
-            Demolition Inc., we provide systematic, safe, and efficient
-            demolition services that leave your site clean and ready for
-            construction.
+            Demolition isn&apos;t just about tearing things down &mdash;
+            it&apos;s about setting the stage for what comes next. At Balderas
+            Demolition Inc., Abel Balderas oversees a systematic, safe, and
+            efficient process that leaves your site broom-clean and ready for
+            the next phase.
           </HeroSubheading>
           <HeroCtas
             primaryHref="/contact"

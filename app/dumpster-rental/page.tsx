@@ -105,7 +105,7 @@ export default function DumpstersRentalPage() {
 
           <ServiceIntroSection
             title="The Right Dumpster for Every Orange County Project"
-            description="We offer versatile dumpster sizes that fit perfectly in residential driveways without blocking your entire street or damaging your concrete."
+            description="We offer compact, driveway-safe roll-off containers in sizes that fit Orange County properties without damaging your concrete, blocking your street, or your neighbors' view."
             titleClassName="text-[#0b0300]"
             descriptionClassName="text-[#0b0300]"
           />
@@ -188,9 +188,10 @@ export default function DumpstersRentalPage() {
             </MainHeading>
             <div className="mt-6 w-full lg:max-w-[500px]">
               <BoldText className="text-white">
-                Most big-box dumpster companies drop off rusty, oversized bins
-                and hit you with hidden &quot;tonnage&quot; fees. Abel Balderas
-                does things the local way:
+                Big-box dumpster companies drop off rusty, oversized bins and
+                hit you with hidden &quot;tonnage&quot; fees. Abel Balderas does
+                things the local way &mdash; smaller footprint, better service,
+                upfront price:
               </BoldText>
             </div>
           </div>
@@ -299,7 +300,7 @@ export default function DumpstersRentalPage() {
               titleWrapClassName="w-full lg:max-w-[420px] xl:max-w-[444px]"
               descriptionWrapClassName="mt-5 w-full lg:max-w-[420px] xl:w-[444px]"
               title="Ready to Tackle Your Project?"
-              description="Don't let the trash pile up. Rent a clean, professional dumpster from Abel Balderas today and get the job done on your own schedule."
+              description="Don&apos;t let debris slow you down. Rent a clean, reliable dumpster from Abel Balderas and work on your own schedule &mdash; we deliver same week."
             />
 
             <ContactFormPanel

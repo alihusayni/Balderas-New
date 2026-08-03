@@ -10,9 +10,9 @@ import {
 
 export const metadata: Metadata = pageMetadata({
   title:
-    "Demolition and Junk Removal Orange County | Balderas Demolition Inc.",
+    "Demolition, Junk Removal & Dumpster Rental Orange County | Balderas Demolition Inc.",
   description:
-    "Looking for professional demolition or junk removal in Orange County? Balderas Demolition Inc. team provides safe, fast, and friendly debris solutions. Get a free quote today!",
+    "Balderas Demolition Inc. — Orange County's trusted source for licensed demolition, junk removal, and dumpster rentals. Abel Balderas leads every project personally. Get a free same-day quote!",
   path: "/",
   image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/hero.webp",
   imageAlt:
@@ -24,6 +24,10 @@ export const metadata: Metadata = pageMetadata({
     "Balderas Demolition Inc.",
     "Abel Balderas",
     "Tustin demolition contractor",
+    "residential demolition OC",
+    "same day junk removal Orange County",
+    "concrete removal Orange County",
+    "licensed demolition contractor",
   ],
 });
 

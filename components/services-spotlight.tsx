@@ -40,8 +40,8 @@ space-y-[12px] sm:space-y-[10px] md:space-y-[6px] lg:-space-y-6">
 
 </div>
           <p className="font-maison mt-6 max-w-[420px] text-[5vw] font-bold leading-[1.15] sm:mt-8 sm:text-[28px] md:mt-10 md:max-w-[520px] md:text-[28px] md:font-medium  xl:text-[1.5vw] xl:max-w-[450px] xl:font-medium">
-            Reliable dumpster rental solutions to manage waste easily throughout
-            your project.
+            Driveway-safe containers delivered when you need them. You fill it,
+            we haul it &mdash; it&apos;s that simple.
           </p>
 
           <Button
@@ -61,8 +61,8 @@ space-y-[12px] sm:space-y-[10px] md:space-y-[6px] lg:-space-y-6">
 
         <div className="mb-0 w-full justify-self-start rounded-2xl border border-white/20 bg-white/20 p-4 backdrop-blur-md sm:p-5 md:p-6 lg:mb-0 lg:w-auto lg:min-w-[360px] lg:justify-self-end">
           <ul className="font-maison space-y-1 text-[4.5vw] font-bold text-white sm:space-y-0 sm:text-2xl md:text-4xl md:font-medium lg:text-[24px] xl:text-[1.2vw] xl:font-medium">
-            <li>• Various sizes</li>
-            <li>• Flexible terms</li>
+            <li>• Various roll-off sizes</li>
+            <li>• Flexible rental terms</li>
             <li>• Fast delivery &amp; pickup</li>
           </ul>
         </div>
