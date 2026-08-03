@@ -21,13 +21,67 @@ import {
   EcoFriendlyDisposalIcon,
   UpfrontVolumePricingIcon,
 } from "@/components/icons";
-import { pageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
+import { getBreadcrumbJsonLd, getServiceJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title: "Professional Junk Removal Orange County | Balderas Demolition",
   description: "Orange County junk removal by Balderas Demolition Inc. We handle furniture, appliances, yard waste, and more. Fast, affordable, eco-friendly disposal.",
   path: "/junk-removal",
 });
+
+const junkRemovalServiceJsonLd = getServiceJsonLd({
+  name: "Junk Removal Services in Orange County",
+  description:
+    "Fast, affordable, eco-friendly junk removal throughout Orange County. We handle furniture, appliances, yard waste, construction debris, and full estate cleanouts.",
+  path: "/junk-removal",
+  serviceType: "Junk Removal",
+  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img1.png",
+});
+
+const junkRemovalBreadcrumbJsonLd = getBreadcrumbJsonLd([
+  { name: "Home", path: "/" },
+  { name: "Junk Removal", path: "/junk-removal" },
+]);
+
+const junkRemovalFaqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How does same-day junk removal work in Orange County?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Call or text us before noon and we can typically be at your property the same day. We show up, load everything on the spot, and leave your space broom-clean. No dump fees or surprise charges \u2014 your quote is all-in.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What items do you take for junk removal?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We remove almost everything: furniture, appliances, mattresses, yard waste, construction debris, e-waste, and general household clutter. We do not accept hazardous materials like paint, chemicals, or asbestos.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does junk removal cost in Orange County?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our pricing is based on how much space your junk takes in the truck. Most single-item pickups start around $75\u2013$150. Full-truck loads for estate cleanouts or hoarding situations run $400\u2013$700. We give you a firm price before any work begins.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you donate or recycle items you pick up?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We prioritize eco-friendly disposal. Usable furniture and household items are donated to local OC charities when possible. Metals, electronics, and cardboard are recycled. We aim to divert at least 60% of every haul from the landfill.",
+      },
+    },
+  ],
+};
 
 const junkRemovalContactFields: ContactFormField[] = [
   { id: "junk-name", label: "Name", type: "text", placeholder: "Your full name", width: "half" },
@@ -47,6 +101,9 @@ export default function JunkRemovalPage() {
 
   return (
     <main className="flex min-h-screen flex-col bg-[var(--color-brand-dark)]">
+      <JsonLd id="ld-junk-removal-service" data={junkRemovalServiceJsonLd} />
+      <JsonLd id="ld-junk-removal-breadcrumb" data={junkRemovalBreadcrumbJsonLd} />
+      <JsonLd id="ld-junk-removal-faq" data={junkRemovalFaqJsonLd} />
       <section className="-mt-[130px] relative min-h-screen w-full overflow-hidden pt-[230px]">
         <HeroParallaxBackground
           src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img1.png"

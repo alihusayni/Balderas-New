@@ -26,13 +26,67 @@ import { ServiceDetailSection } from "@/components/service-detail-section";
 import { ServiceIntroSection } from "@/components/service-intro-section";
 import { ServiceStepsSection } from "@/components/service-steps-section";
 import { RentalWarningIcon } from "@/components/icons";
-import { pageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
+import { getBreadcrumbJsonLd, getServiceJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title: "Affordable Dumpster Rental Orange County | Balderas Demolition",
   description: "Rent a dumpster in Orange County from Balderas Demolition Inc. Easy drop-off, flat-rate pricing, same-week delivery available. You load it, we haul it.",
   path: "/dumpster-rental",
 });
+
+const dumpsterRentalServiceJsonLd = getServiceJsonLd({
+  name: "Dumpster Rental Services in Orange County",
+  description:
+    "Affordable roll-off dumpster rental throughout Orange County. Flat-rate pricing, same-week delivery, driveway-safe containers for residential and commercial projects.",
+  path: "/dumpster-rental",
+  serviceType: "Dumpster Rental",
+  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img1.png",
+});
+
+const dumpsterRentalBreadcrumbJsonLd = getBreadcrumbJsonLd([
+  { name: "Home", path: "/" },
+  { name: "Dumpster Rental", path: "/dumpster-rental" },
+]);
+
+const dumpsterRentalFaqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What dumpster sizes do you offer for Orange County projects?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We offer a range of roll-off dumpster sizes to fit any project \u2014 from small kitchen remodels to full estate cleanouts. Our containers are driveway-safe and designed to avoid damage to your concrete or pavers. Contact us to find the right size for your job.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long can I keep the dumpster?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Standard rental periods are flexible \u2014 most customers keep their dumpster 3\u20137 days. We work with your timeline and schedule pickup when you\u2019re ready. Extended rentals are available at a daily rate.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are there items I cannot put in the dumpster?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You cannot place hazardous materials (paint, chemicals, asbestos, batteries, tires, or medical waste) in our dumpsters. All other general construction and household debris is acceptable.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I need a permit to place a dumpster in my driveway in Orange County?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "If the dumpster stays on your private driveway, no permit is typically required. If it needs to be placed on a public street or sidewalk, a city encroachment permit may be needed. We can advise you on the requirements for your specific city.",
+      },
+    },
+  ],
+};
 
 const dumpstersContactFields: ContactFormField[] = [
   { id: "dumpster-name", label: "Name", type: "text", placeholder: "Your full name", width: "half" },
@@ -53,6 +107,9 @@ export default function DumpstersRentalPage() {
 
   return (
     <main className="flex min-h-screen flex-col bg-[var(--color-brand-dark)]">
+      <JsonLd id="ld-dumpster-rental-service" data={dumpsterRentalServiceJsonLd} />
+      <JsonLd id="ld-dumpster-rental-breadcrumb" data={dumpsterRentalBreadcrumbJsonLd} />
+      <JsonLd id="ld-dumpster-rental-faq" data={dumpsterRentalFaqJsonLd} />
       <section className="-mt-[130px] relative min-h-screen w-full overflow-hidden pt-[230px]">
         <HeroParallaxBackground
           src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img1.png"

@@ -49,6 +49,53 @@ const demolitionBreadcrumbJsonLd = getBreadcrumbJsonLd([
   { name: "Demolition", path: "/demolition" },
 ]);
 
+const demolitionFaqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How much does demolition cost in Orange County?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most residential demolition projects in Orange County range from $8,000 to $35,000 depending on home size, construction type, and whether hazardous materials like asbestos are present. A 1,500\u20132,000 sq ft wood-frame home typically runs $12,000\u2013$22,000. Balderas Demolition Inc. provides free on-site quotes with all-in pricing \u2014 no surprise change orders.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I need a permit for demolition in Orange County?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. All demolition projects in Orange County require a permit from your city\u2019s building department. Projects also require AQMD (Air Quality Management District) notification at least 10 business days before work begins. Balderas Demolition Inc. handles all permit filings and AQMD notifications as part of every project.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does residential demolition take in Orange County?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A standard residential demolition in OC takes 1\u20133 days for the actual teardown once permits are in place. The permitting and utility disconnect process can take 2\u20136 weeks depending on your city. We recommend starting that process as early as possible.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is Balderas Demolition Inc. licensed and insured in California?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Balderas Demolition Inc. holds a C-21 Building Moving/Demolition License issued by the California Contractors State License Board (CSLB), carries full general liability insurance, and is bonded. You can verify our license at the CSLB website.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you handle asbestos removal before demolition?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We work with certified asbestos inspectors to test your property before any work begins. If asbestos is found, we coordinate with licensed abatement contractors to safely remove it \u2014 as required by California law \u2014 before our demolition crew starts.",
+      },
+    },
+  ],
+};
+
 const DEMOLITION_CONTACT_FIELDS: ContactFormField[] = [
   {
     id: "name",
@@ -103,6 +150,7 @@ export default function DemolitionPage() {
         id="ld-demolition-breadcrumb"
         data={demolitionBreadcrumbJsonLd}
       />
+      <JsonLd id="ld-demolition-faq" data={demolitionFaqJsonLd} />
       <DemolitionServicesHero />
 
       <section className="w-full bg-white py-24">
