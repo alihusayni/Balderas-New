@@ -338,6 +338,37 @@ export default function InteriorDemolitionPage() {
         submitLabel="Submit"
         overlayClassName="bg-[#06182C]/72"
       />
+
+      <section className="w-full bg-white py-16 lg:py-20">
+        <div className="mx-auto w-full max-w-container px-6 lg:px-10">
+          <div className="mx-auto max-w-[860px]">
+            <h2 className="[font-family:var(--font-anton)] text-[28px] font-normal leading-[1.2] tracking-[-0.02em] text-[#0b0300] lg:text-[40px]">
+              Interior Demolition in Orange County — Licensed, Safe, and Contained
+            </h2>
+            <div className="mt-8 flex flex-col gap-6 text-[17px] leading-[1.7] text-[#3a3a3a]">
+              <p>
+                Balderas Demolition Inc. provides interior demolition services across Orange County.
+                C-21 CSLB licensed and CalOSHA compliant, we remove walls, flooring, ceilings,
+                and fixtures while keeping the exterior structure fully intact.
+              </p>
+              <p><strong>Common questions answered:</strong></p>
+              <ul className="ml-6 list-disc flex flex-col gap-2">
+                <li><strong>Cost:</strong> Interior demolition in OC typically runs $3,000–$15,000 depending on scope and square footage. Free on-site quote before any commitment.</li>
+                <li><strong>Licensing:</strong> C-21 CSLB licensed, fully bonded and insured in California. We handle all city permits and asbestos/lead testing requirements.</li>
+                <li><strong>Timeline:</strong> Most interior demolition projects complete in 2–5 days. We can typically start within one week of permit approval.</li>
+                <li><strong>Disruption:</strong> Work areas are sealed with containment barriers. Dust is controlled throughout. No damage to adjacent rooms, plumbing, or electrical panels.</li>
+              </ul>
+              <p>
+                <strong>Trust signals:</strong> 5-star rated on Google, 500+ projects completed,
+                C-21 CSLB certified, fully insured, and CalOSHA compliant.
+                We serve Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
+                Huntington Beach, Newport Beach, Tustin, Garden Grove, and Orange.
+                Call <strong>(714) 340-8108</strong> for a free estimate.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

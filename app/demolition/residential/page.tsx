@@ -337,6 +337,37 @@ export default function ResidentialDemolitionPage() {
         overlayClassName="bg-[#06182C]/72"
         
       />
+
+      <section className="w-full bg-white py-16 lg:py-20">
+        <div className="mx-auto w-full max-w-container px-6 lg:px-10">
+          <div className="mx-auto max-w-[860px]">
+            <h2 className="[font-family:var(--font-anton)] text-[28px] font-normal leading-[1.2] tracking-[-0.02em] text-[#0b0300] lg:text-[40px]">
+              Residential Demolition in Orange County — What to Expect
+            </h2>
+            <div className="mt-8 flex flex-col gap-6 text-[17px] leading-[1.7] text-[#3a3a3a]">
+              <p>
+                Balderas Demolition Inc. is a C-21 CSLB licensed residential demolition contractor.
+                Abel Balderas leads every project personally across Orange County.
+                We handle full teardowns, partial demolitions, and everything in between.
+              </p>
+              <p><strong>Common questions answered:</strong></p>
+              <ul className="ml-6 list-disc flex flex-col gap-2">
+                <li><strong>Cost:</strong> Residential demolition in OC typically runs $12,000–$35,000. Partial teardowns and detached structures start lower. Free on-site quote before any commitment.</li>
+                <li><strong>Licensing:</strong> C-21 CSLB licensed, fully bonded and insured. We pull all required city permits and handle all filing — you don&apos;t deal with the city.</li>
+                <li><strong>Timeline:</strong> Permit approval takes 2–6 weeks. Physical teardown is 1–5 days. We coordinate all utility disconnects with local providers before work begins.</li>
+                <li><strong>Disruption:</strong> Neighboring structures and landscaping are protected. Dust and debris are contained. Site is left graded, cleared, and ready for new construction.</li>
+              </ul>
+              <p>
+                <strong>Trust signals:</strong> 5-star rated on Google, 500+ projects completed,
+                C-21 CSLB certified, fully insured, and CalOSHA compliant.
+                We serve Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
+                Huntington Beach, Newport Beach, Tustin, Garden Grove, and Orange.
+                Call <strong>(714) 340-8108</strong> for a free estimate.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

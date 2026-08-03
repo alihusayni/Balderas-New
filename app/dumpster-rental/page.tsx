@@ -368,6 +368,37 @@ export default function DumpstersRentalPage() {
           </div>
         </div>
       </section>
+
+      <section className="w-full bg-white py-16 lg:py-20">
+        <div className="mx-auto w-full max-w-container px-6 lg:px-10">
+          <div className="mx-auto max-w-[860px]">
+            <h2 className="[font-family:var(--font-anton)] text-[28px] font-normal leading-[1.2] tracking-[-0.02em] text-[#0b0300] lg:text-[40px]">
+              Dumpster Rental in Orange County — Honest Pricing, Same-Day Available
+            </h2>
+            <div className="mt-8 flex flex-col gap-6 text-[17px] leading-[1.7] text-[#3a3a3a]">
+              <p>
+                Balderas Demolition Inc. offers roll-off dumpster rental across Orange County.
+                We&apos;re a C-21 CSLB licensed demolition contractor — not a third-party broker.
+                You get transparent pricing, on-time delivery, and a crew that knows construction.
+              </p>
+              <p><strong>Common questions answered:</strong></p>
+              <ul className="ml-6 list-disc flex flex-col gap-2">
+                <li><strong>Cost:</strong> Dumpster rentals in OC start at $350/week for a 10-yard container. Larger sizes (20, 30, 40 yard) are available. All-in pricing — no surprise overage fees.</li>
+                <li><strong>Licensing:</strong> C-21 CSLB licensed, fully bonded and insured. We handle all required permits for dumpster placement on public streets or in HOA communities.</li>
+                <li><strong>Timeline:</strong> Same-day and next-day delivery available throughout Orange County. Pick-up scheduled when you&apos;re ready.</li>
+                <li><strong>Disruption:</strong> We use driveway-safe placement boards to protect surfaces. No scraping, no spills, no mess left at placement or pickup.</li>
+              </ul>
+              <p>
+                <strong>Trust signals:</strong> 5-star rated on Google, 500+ projects completed,
+                C-21 CSLB certified, and fully insured.
+                We serve Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
+                Huntington Beach, Newport Beach, Tustin, Garden Grove, and Orange.
+                Call <strong>(714) 340-8108</strong> to book your dumpster today.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
