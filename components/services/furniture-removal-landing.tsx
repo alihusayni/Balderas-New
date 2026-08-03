@@ -301,46 +301,38 @@ export function FurnitureRemovalLanding() {
         <div className="mx-auto w-full max-w-container px-6 lg:px-10">
           <div className="mx-auto max-w-[860px]">
             <h2 className="[font-family:var(--font-anton)] text-[28px] font-normal leading-[1.2] tracking-[-0.02em] text-[#0b0300] lg:text-[40px]">
-              Furniture Removal in Orange County: How the Process Works
+              Furniture Removal in Orange County — Fast, Licensed, and All-Inclusive
             </h2>
             <div className="mt-8 flex flex-col gap-6 text-[17px] leading-[1.7] text-[#3a3a3a]">
               <p>
-                Getting rid of large furniture in Orange County is harder than it
-                sounds. Most curbside trash services won&apos;t pick up oversized items
-                without a scheduled bulky-item appointment — which can take weeks.
-                Renting a truck yourself requires loading, driving, unloading, and
-                paying disposal fees at the transfer station. And donation centers
-                often turn away furniture that doesn&apos;t meet their condition
-                standards. Balderas Demolition Inc. removes all of that friction.
-                We show up, we load it, and we make sure it ends up in the right
-                place.
+                Getting rid of large furniture in Orange County is harder than it sounds.
+                Curbside pickup won&apos;t touch oversized items without a weeks-long appointment.
+                Renting a truck yourself means loading, driving, and paying dump fees.
+                Balderas Demolition Inc. removes that friction entirely.
               </p>
+              <p><strong>We remove all furniture types in a single trip:</strong></p>
+              <ul className="ml-6 list-disc flex flex-col gap-2">
+                <li>Sofas, sectionals, and recliners</li>
+                <li>Beds, bed frames, and dressers</li>
+                <li>Dining sets, desks, and bookshelves</li>
+                <li>Exercise equipment and outdoor patio sets</li>
+                <li>Old fixtures and cabinetry from renovations</li>
+              </ul>
               <p>
-                Our furniture removal service covers everything: sofas, sectionals,
-                beds and bed frames, dressers, armoires, dining sets, office
-                desks, bookshelves, entertainment centers, and outdoor patio
-                furniture. We also remove exercise equipment, bulky cabinets, and
-                large décor items. If you&apos;re clearing out after a renovation, we
-                handle the old fixtures and cabinetry alongside the furniture in
-                a single trip. You don&apos;t need to sort or organize anything —
-                just point us to what needs to go.
+                You don&apos;t need to sort, break down, or move anything to the curb.
+                Just point us to what needs to go.
               </p>
+              <p><strong>Common questions answered:</strong></p>
+              <ul className="ml-6 list-disc flex flex-col gap-2">
+                <li><strong>Cost:</strong> Single-room pickups start around $150–$300. Multi-room and whole-house clearances typically run $400–$700. We quote by volume — you only pay for what we take.</li>
+                <li><strong>Timeline:</strong> Most single-room jobs are done in under 2 hours. Multi-room same-day clearances are available.</li>
+                <li><strong>Licensing:</strong> Balderas Demolition Inc. holds a C-21 CSLB license and is fully bonded and insured in California.</li>
+                <li><strong>Eco-disposal:</strong> Usable pieces go to OC donation centers. Metals and electronics are recycled — not landfilled.</li>
+              </ul>
               <p>
-                Pricing is straightforward. We quote based on volume — how much
-                space your furniture occupies in our truck — which means you only
-                pay for what we actually take. We give you the price on-site before
-                any loading begins, and that number doesn&apos;t change. For most
-                single-room furniture removals in OC, the job is done in under two
-                hours. Multi-room removals and whole-house clearances are typically
-                completed the same day.
-              </p>
-              <p>
-                We serve all of Orange County for furniture removal, including
-                Anaheim, Santa Ana, Irvine, Huntington Beach, Costa Mesa, Fullerton,
-                Newport Beach, Garden Grove, Tustin, and surrounding areas. We
-                offer same-day and next-day scheduling for most locations. Call us
-                at (714) 340-8108 or submit a request below to get a no-obligation
-                quote from Abel Balderas and the team.
+                <strong>Service areas:</strong> Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
+                Huntington Beach, Newport Beach, Tustin, Garden Grove, Orange, and all surrounding OC cities.
+                Call <strong>(714) 340-8108</strong> for same-day or next-day scheduling.
               </p>
             </div>
           </div>

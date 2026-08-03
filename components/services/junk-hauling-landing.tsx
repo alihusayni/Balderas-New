@@ -307,45 +307,37 @@ export function JunkHaulingLanding() {
         <div className="mx-auto w-full max-w-container px-6 lg:px-10">
           <div className="mx-auto max-w-[860px]">
             <h2 className="[font-family:var(--font-anton)] text-[28px] font-normal leading-[1.2] tracking-[-0.02em] text-[#0b0300] lg:text-[40px]">
-              Junk Hauling in Orange County: Residential, Commercial, and Everything In Between
+              Junk Hauling in Orange County — Licensed, All-Inclusive, Same-Day Available
             </h2>
             <div className="mt-8 flex flex-col gap-6 text-[17px] leading-[1.7] text-[#3a3a3a]">
               <p>
-                Junk hauling in Orange County isn&apos;t just about having a big truck.
-                It requires knowledge of California&apos;s disposal regulations, access
-                to licensed transfer stations, and the muscle and equipment to
-                handle heavy, awkward, and mixed loads. Balderas Demolition Inc.
-                provides professional junk hauling services for homeowners,
-                landlords, contractors, and property managers throughout OC —
-                with pricing that&apos;s based on volume and disclosed upfront, before
-                we touch a single item.
+                Balderas Demolition Inc. provides professional junk hauling for homeowners,
+                landlords, contractors, and property managers across Orange County.
+                Pricing is based on volume and disclosed upfront — before we touch a single item.
               </p>
+              <p><strong>We haul what regular trash service won&apos;t touch:</strong></p>
+              <ul className="ml-6 list-disc flex flex-col gap-2">
+                <li>Old appliances, furniture, and mattresses</li>
+                <li>Construction debris: concrete, tile, drywall, lumber</li>
+                <li>Yard waste: sod, soil, tree limbs, green waste</li>
+                <li>Mixed renovation loads left behind by contractors</li>
+                <li>Electronics, e-waste, and bulk household clutter</li>
+              </ul>
               <p>
-                We haul everything that your regular trash service won&apos;t touch:
-                old appliances, broken furniture, construction debris, yard waste,
-                concrete, tile, drywall, and mixed loads from renovation projects.
-                Unlike standard junk removal companies, we&apos;re also licensed for
-                construction and demolition debris hauling — which means we can
-                legally transport loads that require specialized permits and
-                disposal documentation. If your contractor left a pile of debris
-                on your property after a remodel, we handle it properly.
+                Unlike standard junk companies, we&apos;re licensed for C&amp;D debris hauling.
+                We can legally transport loads that require disposal documentation.
               </p>
+              <p><strong>Common questions answered:</strong></p>
+              <ul className="ml-6 list-disc flex flex-col gap-2">
+                <li><strong>Cost:</strong> Most junk hauling jobs in OC run $150–$700 depending on volume. We quote on-site before loading begins.</li>
+                <li><strong>Timeline:</strong> Same-day and next-day hauling available throughout Orange County.</li>
+                <li><strong>Licensing:</strong> Balderas Demolition Inc. holds a C-21 CSLB license, is fully bonded and insured, and certified for C&amp;D debris transport.</li>
+                <li><strong>Documentation:</strong> We provide weight tickets and facility receipts for any job requiring disposal records.</li>
+              </ul>
               <p>
-                Our hauling process is simple. We arrive, assess the load, quote
-                the volume price on-site, and get your approval before loading
-                begins. Our crew handles all the heavy lifting — you don&apos;t need
-                to move items to the curb or break anything down. We sort mixed
-                loads during the haul, separating recyclables from landfill-bound
-                material, and we can provide weight tickets or disposal
-                documentation for jobs that require it.
-              </p>
-              <p>
-                Junk hauling services from Balderas Demolition Inc. are available
-                across all of Orange County, including Anaheim, Irvine, Santa Ana,
-                Huntington Beach, Costa Mesa, Fullerton, Newport Beach, Tustin,
-                Garden Grove, and surrounding communities. Same-day and next-day
-                hauling is available. Call (714) 340-8108 for a free quote or
-                submit a request below.
+                <strong>Service areas:</strong> Anaheim, Irvine, Santa Ana, Huntington Beach, Costa Mesa,
+                Fullerton, Newport Beach, Tustin, Garden Grove, Orange, and all surrounding OC communities.
+                Call <strong>(714) 340-8108</strong> for a free quote.
               </p>
             </div>
           </div>
