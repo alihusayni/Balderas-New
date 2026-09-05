@@ -90,7 +90,7 @@ const ROWS: Row[] = [
         ,
       },
     ],
-    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/serviceSpotlight/2.webp",
+    imageSrc: "/images/homepage/serviceSpotlight/2.webp",
     imageAlt: "Junk removal preview",
   },
   {
@@ -123,7 +123,7 @@ const ROWS: Row[] = [
         ,
       },
     ],
-    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/serviceSpotlight/3.webp",
+    imageSrc: "/images/homepage/serviceSpotlight/3.webp",
     imageAlt: "Dumpster rental preview",
     imageLeft: true,
   },

@@ -32,11 +32,10 @@ export function WhyTrustSection() {
   return (
     <section className="relative overflow-hidden">
       <Image
-        src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/whyUs/bg.webp"
+        src="/images/homepage/whyUs/bg.webp"
         alt="Why trust Demolition OC"
         fill
-        quality={22}
-        // q=22: full-bleed under bg-[#06182C]/68 dark overlay — matches hero quality level.
+        quality={100}
         sizes="100vw"
         className="object-cover"
       />

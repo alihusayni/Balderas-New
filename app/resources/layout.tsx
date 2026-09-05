@@ -12,7 +12,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Guides, FAQs, and 2026 cost articles on demolition, dumpster rentals, and junk removal in Orange County. Tips and answers from Demolition OC.",
   path: "/resources",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/top-bg.png",
+  image: "/images/resources/top-bg.webp",
   imageAlt:
     "Demolition OC resources, guides, and FAQs about demolition in Orange County",
   keywords: [

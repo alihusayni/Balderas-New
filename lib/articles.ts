@@ -696,7 +696,7 @@ export const ARTICLES: Article[] = [
       "Flat-rate dumpster rentals and demolition services across Orange County. Driveway-safe containers, same-week delivery, zero hidden fees. Free quote from Demolition OC",
     imageSrc: "/images/resources/1.png",
     imageAlt:
-      "Demolition OC dumpster trailer with phone number 714-333-0178",
+      "Demolition OC driveway-safe dumpster trailer rental in Orange County",
     categories: ["sales", "services"],
     author: { name: "Marcus Hale" },
     publishedDate: "April 12, 2026",

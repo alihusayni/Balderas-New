@@ -99,7 +99,7 @@ export default function ResourcesPage() {
       <section className="relative -mt-[130px] w-full overflow-hidden">
         <div className="relative h-[420px] w-full sm:h-[480px] lg:h-[530px]">
           <HeroParallaxBackground
-            src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/top-bg.png"
+            src="/images/resources/top-bg.webp"
             alt="Demolition OC service truck on site"
             priority
             overlayClassName="bg-[#06182C]/60"
