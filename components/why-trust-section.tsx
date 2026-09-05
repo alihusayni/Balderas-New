@@ -33,7 +33,7 @@ export function WhyTrustSection() {
     <section className="relative overflow-hidden">
       <Image
         src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/whyUs/bg.webp"
-        alt="Why trust Balderas Demolition"
+        alt="Why trust Demolition OC"
         fill
         quality={22}
         // q=22: full-bleed under bg-[#06182C]/68 dark overlay — matches hero quality level.
@@ -50,7 +50,7 @@ export function WhyTrustSection() {
 
           <div className="mt-12 grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.35fr_0.65fr] lg:gap-12">
             <HeroHeading as="h2" className="mt-0 max-w-[1080px] text-[40px] uppercase leading-[0.95] tracking-[-0.02em] text-white sm:text-[54px] md:text-[68px] lg:text-[68px]">
-              Why Orange County Trusts Balderas Demolition Inc.
+              Why Orange County Trusts Demolition OC
             </HeroHeading>
 
             <p className="font-maison max-w-[520px] justify-self-start pt-1 text-base font-black leading-[1.05] text-white sm:text-lg md:text-xl lg:justify-self-end">

@@ -9,19 +9,19 @@ import {
 export const metadata: Metadata = pageMetadata({
   title: "Furniture Removal Services Orange County | Safe & Fast Hauling",
   description:
-    "Need to get rid of an old sofa, mattress, or dining set? Abel Balderas and Balderas Demolition Inc. provide professional furniture removal in Orange County. We do all the heavy lifting!",
+    "Need to get rid of an old sofa, mattress, or dining set? Demolition OC provides professional furniture removal in Orange County. We do all the heavy lifting!",
   path: "/junk-removal/furniture-removal",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img1.png",
+  image: "/images/junk_removal/img1.png",
   imageAlt:
-    "Balderas Demolition Inc. hauling furniture safely in Orange County",
+    "Demolition OC hauling furniture safely in Orange County",
   keywords: [
     "furniture removal Orange County",
     "sofa removal",
     "mattress disposal Orange County",
     "large furniture hauling",
     "junk furniture pickup",
-    "Balderas Demolition",
-    "Abel Balderas",
+    "Demolition OC",
+    "OC furniture removal",
   ],
 });
 
@@ -31,7 +31,7 @@ const furnitureServiceJsonLd = getServiceJsonLd({
     "Professional residential and office furniture removal in Orange County: sectionals and mattresses, disassembly included, donation-first disposition when possible, and responsible recycling with wall and floor protection.",
   path: "/junk-removal/furniture-removal",
   serviceType: "Furniture Removal",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img1.png",
+  image: "/images/junk_removal/img1.png",
 });
 
 const furnitureBreadcrumbJsonLd = getBreadcrumbJsonLd([

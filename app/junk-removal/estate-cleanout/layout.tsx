@@ -7,20 +7,20 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Professional Estate Cleanout Services Orange County | Balderas Demolition Inc.",
+  title: "Professional Estate Cleanout Services Orange County | Demolition OC",
   description:
-    "Compassionate and efficient estate cleanout services in Orange County. Abel Balderas and his team handle full-property clearing with respect and care. Get a free consultation.",
+    "Compassionate and efficient estate cleanout services in Orange County. Demolition OC handles full-property clearing with respect and care. Get a free consultation.",
   path: "/junk-removal/estate-cleanout",
   image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img3.jpg",
   imageAlt:
-    "Compassionate estate cleanout and property clearing in Orange County by Balderas Demolition Inc.",
+    "Compassionate estate cleanout and property clearing in Orange County by Demolition OC",
   keywords: [
     "estate cleanout Orange County",
     "estate clearance",
     "property cleanout after death",
     "executor cleanout",
-    "Balderas Demolition",
-    "Abel Balderas",
+    "Demolition OC",
+    "OC estate cleanout",
   ],
 });
 

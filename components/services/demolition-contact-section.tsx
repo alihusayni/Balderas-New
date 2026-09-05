@@ -21,7 +21,7 @@ export function DemolitionContactSection({
   fields,
   submitLabel = "Submit",
   title = "Ready to Start Your Orange County Demolition Project?",
-  description = "Don\u2019t let a messy site slow your project down. Get a same-day response from Abel Balderas \u2014 licensed, insured, and committed to leaving your site broom-clean.",
+  description = "Don\u2019t let a messy site slow your project down. Get a same-day response from Demolition OC \u2014 licensed, insured, and committed to leaving your site broom-clean.",
   extraContent,
   overlayClassName = "bg-[#06182C]/58",
 }: DemolitionContactSectionProps) {

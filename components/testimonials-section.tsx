@@ -19,7 +19,7 @@ const TESTIMONIALS: Testimonial[] = [
   {
     name: "Cindy Young-West",
     date: "April 2026",
-    text: "Great experience! Ordered a trailer for whole-house trash out. Abel was on time and courteous. Highly recommend!",
+    text: "Great experience! Ordered a trailer for whole-house trash out. The crew was on time and courteous. Highly recommend!",
     image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/testimonial/cindy.jpg",
   },
   {
@@ -31,7 +31,7 @@ const TESTIMONIALS: Testimonial[] = [
   {
     name: "Nancy Thompson",
     date: "January 2026",
-    text: "I had a great experience with Balderas! They got the job done quickly and efficiently and I look forward to working with them again when I need to!",
+    text: "I had a great experience with Demolition OC! They got the job done quickly and efficiently and I look forward to working with them again when I need to!",
     image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/testimonial/nancy.jpg",
   },
   {

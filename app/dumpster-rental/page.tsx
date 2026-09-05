@@ -30,8 +30,8 @@ import { JsonLd } from "@/components/json-ld";
 import { getBreadcrumbJsonLd, getServiceJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Affordable Dumpster Rental Orange County | Balderas Demolition",
-  description: "Rent a dumpster in Orange County from Balderas Demolition Inc. Easy drop-off, flat-rate pricing, same-week delivery available. You load it, we haul it.",
+  title: "Affordable Dumpster Rental Orange County | Demolition OC",
+  description: "Rent a dumpster in Orange County from Demolition OC. Easy drop-off, flat-rate pricing, same-week delivery available. You load it, we haul it.",
   path: "/dumpster-rental",
 });
 
@@ -41,7 +41,7 @@ const dumpsterRentalServiceJsonLd = getServiceJsonLd({
     "Affordable roll-off dumpster rental throughout Orange County. Flat-rate pricing, same-week delivery, driveway-safe containers for residential and commercial projects.",
   path: "/dumpster-rental",
   serviceType: "Dumpster Rental",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img1.png",
+  image: "/images/dumpsters_rental/img1.png",
 });
 
 const dumpsterRentalBreadcrumbJsonLd = getBreadcrumbJsonLd([
@@ -112,7 +112,7 @@ export default function DumpstersRentalPage() {
       <JsonLd id="ld-dumpster-rental-faq" data={dumpsterRentalFaqJsonLd} />
       <section className="-mt-[130px] relative min-h-screen w-full overflow-hidden pt-[230px]">
         <HeroParallaxBackground
-          src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img1.png"
+          src="/images/dumpsters_rental/img1.png"
           alt="Dumpster rental truck in Orange County"
           priority
         />
@@ -126,10 +126,9 @@ export default function DumpstersRentalPage() {
             <HeroSubheading className="max-w-[980px]">
               Sometimes you don't need a full crew - just the right equipment.
               Whether it&apos;s a garage cleanout, landscaping project, or small
-              renovation, Balderas Demolition Inc. makes disposal simple. Abel
-              Balderas and his team deliver the dumpster, you fill it, and we
-              haul it away - conveniently, transparently, and with respect for
-              your property.
+              renovation, Demolition OC makes disposal simple. Our professional
+              team delivers the dumpster, you fill it, and we haul it away -
+              conveniently, transparently, and with respect for your property.
             </HeroSubheading>
 
             <HeroCtas
@@ -137,8 +136,8 @@ export default function DumpstersRentalPage() {
               primaryHref="/contact"
               primaryLabel="Dumpster Sizes & Pricing"
               primaryButtonClassName="lg:w-[250px] xl:w-[270px]"
-              secondaryHref="tel:+17143408108"
-              secondaryLabel="(714) 340-8108"
+              secondaryHref="tel:+17143330178"
+              secondaryLabel="(714) 333-0178"
               showSecondaryArrow={false}
             />
           </div>
@@ -241,12 +240,12 @@ export default function DumpstersRentalPage() {
         <div className="relative z-10 mx-auto flex w-full max-w-container flex-col gap-10 px-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12 lg:px-10">
           <div className="w-full lg:max-w-[560px]">
             <MainHeading className="text-white">
-              Why Rent from Balderas Demolition Inc.?
+              Why Rent from Demolition OC?
             </MainHeading>
             <div className="mt-6 w-full lg:max-w-[500px]">
               <BoldText className="text-white">
                 Big-box dumpster companies drop off rusty, oversized bins and
-                hit you with hidden &quot;tonnage&quot; fees. Abel Balderas does
+                hit you with hidden &quot;tonnage&quot; fees. Demolition OC does
                 things the local way &mdash; smaller footprint, better service,
                 upfront price:
               </BoldText>
@@ -278,7 +277,7 @@ export default function DumpstersRentalPage() {
                 icon: <ReliableSchedulingIcon className="h-full w-full" />,
                 title: "Reliable Scheduling:",
                 description:
-                  "When Abel says the dumpster will be there at 8:00 AM, it will be there. No more waiting around all day for a delivery.",
+                  "When our team says the dumpster will be there at 8:00 AM, it will be there. No more waiting around all day for a delivery.",
               },
             ]}
           />
@@ -294,7 +293,7 @@ export default function DumpstersRentalPage() {
           {
             icon: <PickYourSizeIcon className="h-[25px] w-[31px]" />,
             title: "Pick Your Size:",
-            description: "Tell Abel about your project, and he'll recommend the best bin for your needs.",
+            description: "Tell our team about your project, and we'll recommend the best bin for your needs.",
           },
           {
             icon: <FastDeliveryIcon className="h-[29px] w-[31px]" />,
@@ -357,7 +356,7 @@ export default function DumpstersRentalPage() {
               titleWrapClassName="w-full lg:max-w-[420px] xl:max-w-[444px]"
               descriptionWrapClassName="mt-5 w-full lg:max-w-[420px] xl:w-[444px]"
               title="Ready to Tackle Your Project?"
-              description="Don&apos;t let debris slow you down. Rent a clean, reliable dumpster from Abel Balderas and work on your own schedule &mdash; we deliver same week."
+              description="Don&apos;t let debris slow you down. Rent a clean, reliable dumpster from Demolition OC and work on your own schedule &mdash; we deliver same week."
             />
 
             <ContactFormPanel
@@ -377,7 +376,7 @@ export default function DumpstersRentalPage() {
             </h2>
             <div className="mt-8 flex flex-col gap-6 text-[17px] leading-[1.7] text-[#3a3a3a]">
               <p>
-                Balderas Demolition Inc. offers roll-off dumpster rental across Orange County.
+                Demolition OC offers roll-off dumpster rental across Orange County.
                 We&apos;re a C-21 CSLB licensed demolition contractor — not a third-party broker.
                 You get transparent pricing, on-time delivery, and a crew that knows construction.
               </p>
@@ -393,7 +392,7 @@ export default function DumpstersRentalPage() {
                 C-21 CSLB certified, and fully insured.
                 We serve Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
                 Huntington Beach, Newport Beach, Tustin, Garden Grove, and Orange.
-                Call <strong>(714) 340-8108</strong> to book your dumpster today.
+                Call <strong>(714) 333-0178</strong> to book your dumpster today.
               </p>
             </div>
           </div>

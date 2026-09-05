@@ -7,9 +7,9 @@ import {
 import { JsonLd } from "@/components/json-ld";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Dumpster Rental Orange County | Roll-Off Containers | Balderas Demolition",
+  title: "Dumpster Rental Orange County | Roll-Off Containers | Demolition OC",
   description:
-    "Affordable dumpster rental in Orange County, CA. 10–40 yard roll-off containers for demolition debris, construction waste, and cleanouts. Fast delivery, no hidden fees. Call (714) 340-8108.",
+    "Affordable dumpster rental in Orange County, CA. 10–40 yard roll-off containers for demolition debris, construction waste, and cleanouts. Fast delivery, no hidden fees. Call (714) 333-0178.",
   path: "/dumpster-rental",
   keywords: [
     "dumpster rental Orange County",
@@ -17,7 +17,7 @@ export const metadata: Metadata = pageMetadata({
     "construction dumpster rental",
     "waste disposal Orange County",
     "junk hauling Orange County",
-    "Balderas Demolition dumpster",
+    "Demolition OC dumpster",
   ],
 });
 

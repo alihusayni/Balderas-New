@@ -44,16 +44,16 @@ export function ConcreteRemovalHero({
             a
             major hurdle for your next landscaping or construction project.
             Breaking up and hauling away concrete is one of the most physically
-            demanding tasks a property owner can face. At Balderas Demolition
-            Inc., we take the burden off your shoulders. Led by Abel Balderas, our
+            demanding tasks a property owner can face. At Demolition
+            OC, we take the burden off your shoulders. Our
             team provides the muscle and the machinery to break, load, and haul
             your concrete away in record time.
           </HeroSubheading>
           <HeroCtas
             primaryHref={quoteHref}
             primaryLabel="Get a Concrete Removal Quote"
-            secondaryHref="tel:+17143408108"
-            secondaryLabel="(714) 340-8108"
+            secondaryHref="tel:+17143330178"
+            secondaryLabel="(714) 333-0178"
             showSecondaryArrow={false}
             primaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[280px]"
             secondaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[220px]"

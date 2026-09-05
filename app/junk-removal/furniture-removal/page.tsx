@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Furniture Removal Orange County | Balderas Demolition",
-  description: "Fast, professional furniture removal across Orange County. Balderas Demolition Inc. hauls away sofas, beds, desks, and all furniture — no heavy lifting for you.",
+  title: "Furniture Removal Orange County | Demolition OC",
+  description: "Fast, professional furniture removal across Orange County. Demolition OC hauls away sofas, beds, desks, and all furniture — no heavy lifting for you.",
   path: "/junk-removal/furniture-removal",
 });
 
@@ -23,7 +23,7 @@ export default function FurnitureRemovalPage() {
                 Getting rid of large furniture in Orange County is harder than it sounds.
                 Curbside pickup won&apos;t touch oversized items without a weeks-long appointment.
                 Renting a truck yourself means loading, driving, and paying dump fees.
-                Balderas Demolition Inc. removes that friction entirely.
+                Demolition OC removes that friction entirely.
               </p>
               <p><strong>We remove all furniture types in a single trip:</strong></p>
               <ul className="ml-6 list-disc flex flex-col gap-2">
@@ -41,13 +41,13 @@ export default function FurnitureRemovalPage() {
               <ul className="ml-6 list-disc flex flex-col gap-2">
                 <li><strong>Cost:</strong> Single-room pickups start around $150–$300. Multi-room and whole-house clearances typically run $400–$700. We quote by volume — you only pay for what we take.</li>
                 <li><strong>Timeline:</strong> Most single-room jobs are done in under 2 hours. Multi-room same-day clearances are available.</li>
-                <li><strong>Licensing:</strong> Balderas Demolition Inc. holds a C-21 CSLB license and is fully bonded and insured in California.</li>
+                <li><strong>Licensing:</strong> Demolition OC holds a C-21 CSLB license and is fully bonded and insured in California.</li>
                 <li><strong>Eco-disposal:</strong> Usable pieces go to OC donation centers. Metals and electronics are recycled — not landfilled.</li>
               </ul>
               <p>
                 <strong>Service areas:</strong> Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
                 Huntington Beach, Newport Beach, Tustin, Garden Grove, Orange, and all surrounding OC cities.
-                Call <strong>(714) 340-8108</strong> for same-day or next-day scheduling.
+                Call <strong>(714) 333-0178</strong> for same-day or next-day scheduling.
               </p>
             </div>
           </div>

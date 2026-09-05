@@ -62,12 +62,12 @@ export const ARTICLES: Article[] = [
     title:
       "The Ultimate Guide to House Demolition in Orange County: Process, Regulations, and 2026 Cost Expectations",
     description:
-      "Planning a residential teardown? Learn the step-by-step house demolition process in Orange County, including 2026 cost factors, permits, and asbestos rules with Abel Balderas.",
+      "Planning a residential teardown? Learn the step-by-step house demolition process in Orange County, including 2026 cost factors, permits, and asbestos rules with Demolition OC.",
     imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/6.jpg",
     imageAlt:
       "Excavator carefully demolishing a residential structure in Orange County",
     categories: ["industry", "services"],
-    author: { name: "Abel Balderas" },
+    author: { name: "Demolition OC Team" },
     publishedDate: "May 2, 2026",
     readTime: "14 min read",
     body: [
@@ -79,7 +79,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "In this guide, Abel Balderas and the team at Balderas Demolition Inc. break down exactly what happens when a house comes down, the hurdles you\u2019ll face in Orange County, and what you should expect to invest in the process.",
+          "In this guide, the team at Demolition OC break down exactly what happens when a house comes down, the hurdles you\u2019ll face in Orange County, and what you should expect to invest in the process.",
       },
       { type: "heading", text: "Part 1: The Step-By-Step Demolition Process" },
       {
@@ -235,7 +235,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "Orange County residents value their peace and quiet. Most cities (like Irvine or Newport Beach) have strict \u201Cnoise ordinances.\u201D Typically, demolition can only occur between 7:00 AM and 5:00 PM on weekdays. At Balderas Demolition Inc., we prioritize being good neighbors, ensuring we don\u2019t start the loud machinery a minute before we\u2019re allowed.",
+          "Orange County residents value their peace and quiet. Most cities (like Irvine or Newport Beach) have strict \u201Cnoise ordinances.\u201D Typically, demolition can only occur between 7:00 AM and 5:00 PM on weekdays. At Demolition OC, we prioritize being good neighbors, ensuring we don\u2019t start the loud machinery a minute before we\u2019re allowed.",
       },
       { type: "heading", text: "Permit Timelines" },
       {
@@ -245,7 +245,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "heading",
-        text: "Part 4: Why Hire Abel Balderas and Balderas Demolition Inc.?",
+        text: "Part 4: Why Hire Demolition OC?",
       },
       {
         type: "paragraph",
@@ -258,7 +258,7 @@ export const ARTICLES: Article[] = [
         items: [
           {
             heading: "Personal Accountability:",
-            text: "Abel Balderas doesn\u2019t just run the office; he oversees the site. You have a direct line to the owner, ensuring that your concerns are addressed immediately.",
+            text: "Demolition OC supervisors don\u2019t just run the office; they oversee the site. You have direct communication with our job managers, ensuring that your concerns are addressed immediately.",
           },
           {
             heading: "Surgical Precision:",
@@ -302,7 +302,7 @@ export const ARTICLES: Article[] = [
           },
           {
             heading: "Contract:",
-            text: "Hire a licensed, insured professional like Balderas Demolition Inc.",
+            text: "Hire a licensed, insured professional like Demolition OC",
           },
         ],
       },
@@ -313,19 +313,19 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "Demolition is the end of one story and the beginning of another. Let Abel Balderas make sure it starts on the right foot.",
+          "Demolition is the end of one story and the beginning of another. Let Demolition OC make sure it starts on the right foot.",
       },
       {
         type: "paragraph",
         text:
-          "Contact Balderas Demolition Inc. today for a free on-site consultation and a transparent quote on your residential demolition project.",
+          "Contact Demolition OC today for a free on-site consultation and a transparent quote on your residential demolition project.",
       },
     ],
     cta: {
       title: "Get your transparent demolition quote",
       description:
         "Free on-site consultation for residential demolition across Orange County\u2014permits, labor, hauling, and final sweep, explained upfront.",
-      label: "Contact Balderas Demolition Inc.",
+      label: "Contact Demolition OC",
       href: "/#contact",
       backgroundSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/3.jpg",
     },
@@ -334,16 +334,16 @@ export const ARTICLES: Article[] = [
     slug: "hut-top-structure-removal",
     canonicalPath: "/demolition/hut-top-structure-removal",
     seoTitle:
-      "Hut Top & Structure Removal Costs Orange County | Balderas Demolition Inc.",
+      "Hut Top & Structure Removal Costs Orange County | Demolition OC",
     title:
       "Hut Top & Structure Removal in Orange County: 2026 Cost and Process Guide",
     description:
-      "What does it cost to remove a backyard hut or top-down structure in OC? See our 2026 pricing guide for deconstruction and hauling with Abel Balderas.",
-    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img2.png",
+      "What does it cost to remove a backyard hut or top-down structure in OC? See our 2026 pricing guide for deconstruction and hauling with Demolition OC.",
+    imageSrc: "/images/services/img2.png",
     imageAlt:
       "Careful residential structure removal and demolition in Orange County",
     categories: ["services", "industry"],
-    author: { name: "Abel Balderas" },
+    author: { name: "Demolition OC Team" },
     publishedDate: "May 3, 2026",
     readTime: "8 min read",
     body: [
@@ -355,7 +355,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "In a region where property lines are tight and safety regulations are strict, Abel Balderas and Balderas Demolition Inc. provide the precision needed to clear these structures without damaging your main home or your neighbor\u2019s yard.",
+          "In a region where property lines are tight and safety regulations are strict, Demolition OC provides the precision needed to clear these structures without damaging your main home or your neighbor\u2019s yard.",
       },
       { type: "heading", text: "What is \u201CHut Top\u201D Removal?" },
       {
@@ -394,7 +394,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "Orange County is known for beautiful homes on narrow lots. If Abel\u2019s crew can\u2019t get a Bobcat or a large truck into your backyard, the \u201CHut Top\u201D must be dismantled by hand and carried out piece-by-piece. This manual labor increases the time and cost but ensures your landscaping and fences stay intact.",
+          "Orange County is known for beautiful homes on narrow lots. If our crew can\u2019t get a Bobcat or a large truck into your backyard, the \u201CHut Top\u201D must be dismantled by hand and carried out piece-by-piece. This manual labor increases the time and cost but ensures your landscaping and fences stay intact.",
       },
       { type: "heading", text: "2. Utility Disconnects" },
       {
@@ -433,12 +433,12 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "heading",
-        text: "The Balderas Demolition Inc. Process: Systematic \u201CHut\u201D Removal",
+        text: "The Demolition OC Process: Systematic \u201CHut\u201D Removal",
       },
       {
         type: "paragraph",
         text:
-          "When Abel Balderas takes on a removal project, he follows a strict protocol to ensure safety:",
+          "When Demolition OC takes on a removal project, we follow a strict protocol to ensure safety:",
       },
       {
         type: "list",
@@ -464,12 +464,12 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "heading",
-        text: "Why Choose Abel Balderas for Your Removal?",
+        text: "Why Choose Demolition OC for Your Removal?",
       },
       {
         type: "paragraph",
         text:
-          "Many \u201Cjunk haulers\u201D will offer to tear down a hut, but they often lack the demolition insurance and structural knowledge to do it safely. Balderas Demolition Inc. provides:",
+          "Many \u201Cjunk haulers\u201D will offer to tear down a hut, but they often lack the demolition insurance and structural knowledge to do it safely. Demolition OC provides:",
       },
       {
         type: "list",
@@ -481,7 +481,7 @@ export const ARTICLES: Article[] = [
           },
           {
             heading: "Responsive Communication:",
-            text: "Abel personally answers your questions and provides a clear, no-hidden-fee quote.",
+            text: "Our team answers your questions and provides a clear, no-hidden-fee quote.",
           },
           {
             heading: "Local Reliability:",
@@ -501,7 +501,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "Balderas Demolition Inc. serves all of Orange County, CA. Call Abel today: (714) 340-8108.",
+          "Demolition OC serves all of Orange County, CA. Call Demolition OC today: (714) 333-0178.",
       },
     ],
     cta: {
@@ -523,7 +523,7 @@ export const ARTICLES: Article[] = [
     imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/1.jpg",
     imageAlt: "Yellow excavator demolishing a residential structure",
     categories: ["industry", "services"],
-    author: { name: "Abel Balderas" },
+    author: { name: "Demolition OC Team" },
     publishedDate: "April 16, 2026",
     readTime: "9 min read",
     body: [
@@ -535,7 +535,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "Demolition isn\u2019t just about swinging a sledgehammer\u2014it\u2019s a regulated trade that requires a C-21 Building Moving/Demolition License in the State of California. Here is why hiring a licensed professional like the Balderas Demolition Inc. team is the only way to protect your biggest investment.",
+          "Demolition isn\u2019t just about swinging a sledgehammer\u2014it\u2019s a regulated trade that requires a C-21 Building Moving/Demolition License in the State of California. Here is why hiring a licensed professional like the Demolition OC team is the only way to protect your biggest investment.",
       },
       { type: "heading", text: "1. Legal Compliance and Permitting Mastery" },
       {
@@ -648,14 +648,14 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "heading",
-        text: "The Abel Balderas Difference:",
+        text: "The Demolition OC Difference:",
         accent: "Accountability",
       },
       {
         type: "paragraph",
         variant: "bold",
         text:
-          "When you hire Balderas Demolition Inc., you aren\u2019t just getting a crew; you\u2019re getting the peace of mind that comes with a state-verified license.",
+          "When you hire Demolition OC, you aren\u2019t just getting a crew; you\u2019re getting the peace of mind that comes with a state-verified license.",
       },
       {
         type: "list",
@@ -675,7 +675,7 @@ export const ARTICLES: Article[] = [
         type: "quote",
         text:
           "My license isn\u2019t just a piece of paper; it\u2019s my promise to the Orange County community that the job will be done safely, legally, and right the first time.",
-        author: "Abel Balderas",
+        author: "Demolition OC Team",
       },
     ],
     cta: {
@@ -693,10 +693,10 @@ export const ARTICLES: Article[] = [
     title:
       "Affordable Dumpster Rental and Demolition Services in Orange County: Get a Free Quote Today",
     description:
-      "Flat-rate dumpster rentals and demolition services across Orange County. Driveway-safe containers, same-week delivery, zero hidden fees. Free quote from Balderas Demolition Inc.",
-    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/1.png",
+      "Flat-rate dumpster rentals and demolition services across Orange County. Driveway-safe containers, same-week delivery, zero hidden fees. Free quote from Demolition OC",
+    imageSrc: "/images/resources/1.png",
     imageAlt:
-      "Balderas Demolition Inc. dumpster trailer with phone number 714-340-8108",
+      "Demolition OC dumpster trailer with phone number 714-333-0178",
     categories: ["sales", "services"],
     author: { name: "Marcus Hale" },
     publishedDate: "April 12, 2026",
@@ -705,7 +705,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "Whether you\u2019re tackling a kitchen remodel, clearing out a rental property after a tenant moves out, or managing debris from a full residential teardown, two questions come up fast: \u201CWhere does all this stuff go?\u201D and \u201CHow much is this going to cost me?\u201D At Balderas Demolition Inc., we\u2019ve spent years answering both \u2014 with flat-rate dumpster rentals and full-service demolition that serves all of Orange County.",
+          "Whether you\u2019re tackling a kitchen remodel, clearing out a rental property after a tenant moves out, or managing debris from a full residential teardown, two questions come up fast: \u201CWhere does all this stuff go?\u201D and \u201CHow much is this going to cost me?\u201D At Demolition OC, we\u2019ve spent years answering both \u2014 with flat-rate dumpster rentals and full-service demolition that serves all of Orange County.",
       },
       {
         type: "paragraph",
@@ -764,7 +764,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "When you call Balderas Demolition Inc. for a dumpster rental quote, we ask about your project type, the estimated debris volume, and any access constraints at your property. Based on that conversation, we give you an all-in price \u2014 container size, delivery, pickup, and disposal \u2014 before we arrive. If we under-estimate and a second haul is needed, we\u2019ll discuss that with you first, not after the fact.",
+          "When you call Demolition OC for a dumpster rental quote, we ask about your project type, the estimated debris volume, and any access constraints at your property. Based on that conversation, we give you an all-in price \u2014 container size, delivery, pickup, and disposal \u2014 before we arrive. If we under-estimate and a second haul is needed, we\u2019ll discuss that with you first, not after the fact.",
       },
       { type: "heading", text: "Dumpster + Demo: The Combination That Saves the Most Time" },
       {
@@ -792,7 +792,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "If you\u2019re ready to stop guessing about where your debris goes and start your project with a clear plan, call us at (714) 340-8108 or use the contact form below. We\u2019ll walk you through sizing, scheduling, and pricing in a single conversation.",
+          "If you\u2019re ready to stop guessing about where your debris goes and start your project with a clear plan, call us at (714) 333-0178 or use the contact form below. We\u2019ll walk you through sizing, scheduling, and pricing in a single conversation.",
       },
     ],
     cta: {
@@ -880,7 +880,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "At Balderas Demolition Inc., we price junk removal by volume \u2014 how much space your items take in our truck. We give you a firm quote on-site before we start, so there are no surprises on the invoice. For single items like a couch or a refrigerator, jobs typically start around $75\u2013$150. Full-truck loads for large cleanouts run $400\u2013$700 depending on distance and disposal requirements.",
+          "At Demolition OC, we price junk removal by volume \u2014 how much space your items take in our truck. We give you a firm quote on-site before we start, so there are no surprises on the invoice. For single items like a couch or a refrigerator, jobs typically start around $75\u2013$150. Full-truck loads for large cleanouts run $400\u2013$700 depending on distance and disposal requirements.",
       },
       { type: "heading", text: "6. We Handle Construction and Demo Debris, Too" },
       {
@@ -891,13 +891,13 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "This is a significant advantage if you\u2019re managing a renovation in OC. Instead of coordinating two separate companies \u2014 one for the remodel debris and one for the household junk \u2014 you can call Balderas and have both handled in a single trip.",
+          "This is a significant advantage if you\u2019re managing a renovation in OC. Instead of coordinating two separate companies \u2014 one for the remodel debris and one for the household junk \u2014 you can call Demolition OC and have both handled in a single trip.",
       },
       { type: "heading", text: "Ready to Reclaim Your Space?" },
       {
         type: "paragraph",
         text:
-          "If the clutter has been piling up and you\u2019re finally ready to deal with it, we make the process as easy as a single phone call. We serve all of Orange County \u2014 from Anaheim to San Clemente \u2014 with same-day and next-day availability. Call (714) 340-8108 or use the contact form to get a no-obligation quote.",
+          "If the clutter has been piling up and you\u2019re finally ready to deal with it, we make the process as easy as a single phone call. We serve all of Orange County \u2014 from Anaheim to San Clemente \u2014 with same-day and next-day availability. Call (714) 333-0178 or use the contact form to get a no-obligation quote.",
       },
     ],
     cta: {
@@ -912,10 +912,10 @@ export const ARTICLES: Article[] = [
   {
     slug: "systematic-project-control",
     canonicalPath: "/demolition/systematic-project-control",
-    title: "How Balderas Demolition Keeps Every Project On Time and On Budget in Orange County",
-    seoTitle: "Systematic Demolition Project Control | Balderas Demolition Orange County",
+    title: "How Demolition OC Keeps Every Project On Time and On Budget in Orange County",
+    seoTitle: "Systematic Demolition Project Control | Demolition OC Orange County",
     description:
-      "How Balderas Demolition Inc. manages permits, scheduling, and site coordination to keep every OC demolition project on time, on budget, and stress-free for homeowners.",
+      "How Demolition OC manages permits, scheduling, and site coordination to keep every OC demolition project on time, on budget, and stress-free for homeowners.",
     imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/3.jpg",
     imageAlt: "Two crew members in safety vests reviewing demolition plans",
     categories: ["company", "services"],
@@ -931,13 +931,13 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "Demolition is particularly vulnerable to poor sequencing because it sits at the beginning of every project. If the demo runs long or the site isn\u2019t properly cleared, everything downstream shifts. This is why systematic project control isn\u2019t a buzzword at Balderas Demolition Inc. \u2014 it\u2019s the framework that every job runs on.",
+          "Demolition is particularly vulnerable to poor sequencing because it sits at the beginning of every project. If the demo runs long or the site isn\u2019t properly cleared, everything downstream shifts. This is why systematic project control isn\u2019t a buzzword at Demolition OC \u2014 it\u2019s the framework that every job runs on.",
       },
       { type: "heading", text: "Phase 1: Pre-Demo Planning and Permit Coordination" },
       {
         type: "paragraph",
         text:
-          "Every project starts with a site visit, not a phone estimate. Abel Balderas personally walks the property to assess access constraints, neighboring structures, utility locations, and any site-specific risks. From that walk-through, we build a project sequence \u2014 a clear order of operations that determines what happens when, who\u2019s responsible for each step, and what dependencies exist between tasks.",
+          "Every project starts with a site visit, not a phone estimate. Our experienced project supervisors personally walk the property to assess access constraints, neighboring structures, utility locations, and any site-specific risks. From that walk-through, we build a project sequence \u2014 a clear order of operations that determines what happens when, who\u2019s responsible for each step, and what dependencies exist between tasks.",
       },
       {
         type: "paragraph",
@@ -977,18 +977,18 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "In practical terms, it means you always know where your project stands. We provide a written project schedule before work begins and update you when key milestones are hit \u2014 permit approved, utilities off, crew mobilized, debris cleared. You\u2019re never in the dark, and you\u2019re never chasing us for a status update. Abel is reachable directly, and he\u2019s on-site for every significant phase of every project.",
+          "In practical terms, it means you always know where your project stands. We provide a written project schedule before work begins and update you when key milestones are hit \u2014 permit approved, utilities off, crew mobilized, debris cleared. You\u2019re never in the dark, and you\u2019re never chasing us for a status update. Our project supervisors are reachable directly and on-site for every significant phase of every project.",
       },
       {
         type: "paragraph",
         text:
-          "If you\u2019re planning a demolition project in Orange County and want a team that treats your timeline with the same urgency you do, call Balderas Demolition Inc. at (714) 340-8108 for a free on-site assessment and quote.",
+          "If you\u2019re planning a demolition project in Orange County and want a team that treats your timeline with the same urgency you do, call Demolition OC at (714) 333-0178 for a free on-site assessment and quote.",
       },
     ],
     cta: {
       title: "Get a project timeline with your quote",
       description:
-        "Every Balderas Demolition quote includes a written project sequence. No surprises, no delays, no \u201Cwe\u2019ll figure it out when we get there.\u201D Call for a free on-site assessment.",
+        "Every Demolition OC quote includes a written project sequence. No surprises, no delays, no \u201Cwe\u2019ll figure it out when we get there.\u201D Call for a free on-site assessment.",
       label: "Request a Free Assessment",
       href: "/#contact",
       backgroundSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/3.jpg",
@@ -998,9 +998,9 @@ export const ARTICLES: Article[] = [
     slug: "fast-and-hassle-free-junk-removal",
     canonicalPath: "/junk-removal/fast-and-hassle-free-junk-removal",
     title: "Fast & Hassle-Free Junk Removal in Orange County: What to Expect",
-    seoTitle: "Fast Junk Removal Orange County | Same-Day Service | Balderas",
+    seoTitle: "Fast Junk Removal Orange County | Same-Day Service | Demolition OC",
     description:
-      "What does same-day junk removal actually look like in Orange County? Here’s what to expect when you book Balderas Demolition Inc. — from call to broom-clean.",
+      "What does same-day junk removal actually look like in Orange County? Here’s what to expect when you book Demolition OC — from call to broom-clean.",
     imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/4.jpg",
     imageAlt: "Workers loading household junk into a removal truck",
     categories: ["services"],
@@ -1011,13 +1011,13 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "“Fast and hassle-free” is how every junk removal company describes themselves. But what does it actually mean when the truck shows up at your driveway? This guide breaks down exactly what happens when you book a junk removal job with Balderas Demolition Inc. — from the initial call to the moment your space is clear — so you know what to expect before you commit.",
+          "“Fast and hassle-free” is how every junk removal company describes themselves. But what does it actually mean when the truck shows up at your driveway? This guide breaks down exactly what happens when you book a junk removal job with Demolition OC — from the initial call to the moment your space is clear — so you know what to expect before you commit.",
       },
       { type: "heading", text: "Step 1: The Call (5 Minutes)" },
       {
         type: "paragraph",
         text:
-          "When you call (714) 340-8108, you’re talking to a real person — not a call center or an automated booking system. We ask you a few quick questions: What are you removing? Where is it located in the property? Are there any access constraints (narrow gate, second floor, no elevator)? Based on your answers, we give you an estimated price range on the phone and confirm availability.",
+          "When you call (714) 333-0178, you’re talking to a real person — not a call center or an automated booking system. We ask you a few quick questions: What are you removing? Where is it located in the property? Are there any access constraints (narrow gate, second floor, no elevator)? Based on your answers, we give you an estimated price range on the phone and confirm availability.",
       },
       {
         type: "paragraph",
@@ -1033,7 +1033,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "This is different from some services that charge by “item” or add fuel surcharges after the fact. With Balderas, the number you agree to on-site is the number on your invoice. No surprises.",
+          "This is different from some services that charge by “item” or add fuel surcharges after the fact. With Demolition OC, the number you agree to on-site is the number on your invoice. No surprises.",
       },
       { type: "heading", text: "Step 3: The Loading (You Don’t Lift a Finger)" },
       {
@@ -1082,7 +1082,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "If you’re ready to clear the space, call (714) 340-8108 or submit a contact request below. We’ll have a crew at your door as soon as today.",
+          "If you’re ready to clear the space, call (714) 333-0178 or submit a contact request below. We’ll have a crew at your door as soon as today.",
       },
     ],
     cta: {
@@ -1098,7 +1098,7 @@ export const ARTICLES: Article[] = [
     slug: "choose-the-right-dumpster-for-your-project",
     canonicalPath: "/dumpster-rental/choose-the-right-dumpster-for-your-project",
     title: "How to Choose the Right Dumpster Size for Your Orange County Project",
-    seoTitle: "Choose the Right Dumpster Size Orange County | Balderas Demolition",
+    seoTitle: "Choose the Right Dumpster Size Orange County | Demolition OC",
     description:
       "Picking the wrong dumpster size wastes money. This guide helps OC homeowners match the right roll-off container to their project before delivery day.",
     imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/5.jpg",
@@ -1173,7 +1173,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "When you call Balderas, we ask about the material types specifically so we can flag weight concerns before delivery. Avoiding an overage charge starts with an honest conversation about what you\u2019re throwing away.",
+          "When you call Demolition OC, we ask about the material types specifically so we can flag weight concerns before delivery. Avoiding an overage charge starts with an honest conversation about what you\u2019re throwing away.",
       },
       { type: "heading", text: "Driveway Constraints in Orange County" },
       {
@@ -1195,7 +1195,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "If you\u2019re unsure what size you need, call us at (714) 340-8108. We\u2019ll ask a few questions about your project and give you a recommendation before your delivery day. Getting the size right the first time is always cheaper than finding out you need more capacity after the container is already at your curb.",
+          "If you\u2019re unsure what size you need, call us at (714) 333-0178. We\u2019ll ask a few questions about your project and give you a recommendation before your delivery day. Getting the size right the first time is always cheaper than finding out you need more capacity after the container is already at your curb.",
       },
     ],
     cta: {
@@ -1210,10 +1210,10 @@ export const ARTICLES: Article[] = [
   {
     slug: "safe-controlled-demolition-process",
     canonicalPath: "/demolition/safe-controlled-demolition-process",
-    title: "What Makes Demolition Safe? A Look at Balderas Demolition\u2019s Controlled Process",
-    seoTitle: "Safe Controlled Demolition Process Orange County | Balderas Demolition",
+    title: "What Makes Demolition Safe? A Look at Demolition OC\u2019s Controlled Process",
+    seoTitle: "Safe Controlled Demolition Process Orange County | Demolition OC",
     description:
-      "What actually makes demolition safe in Orange County? Abel Balderas explains the controlled process his team uses to protect property, neighbors, and crew on every job.",
+      "What actually makes demolition safe in Orange County? Demolition OC explains the controlled process our team uses to protect property, neighbors, and crew on every job.",
     imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/6.jpg",
     imageAlt: "Excavator carefully demolishing a residential structure",
     categories: ["services", "environmental", "industry"],
@@ -1229,13 +1229,13 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "At Balderas Demolition Inc., every project \u2014 from a backyard structure removal in Tustin to a full residential teardown in Newport Beach \u2014 follows the same controlled sequence. Here\u2019s what that actually looks like in practice.",
+          "At Demolition OC, every project \u2014 from a backyard structure removal in Tustin to a full residential teardown in Newport Beach \u2014 follows the same controlled sequence. Here\u2019s what that actually looks like in practice.",
       },
       { type: "heading", text: "Pre-Demolition Safety Assessment" },
       {
         type: "paragraph",
         text:
-          "Before any work begins, Abel Balderas personally walks the site. The assessment focuses on four areas: structural condition, hazardous materials, access constraints, and neighboring exposure. A structurally compromised wall or an unexpected load-bearing element can turn a planned interior demo into a dangerous collapse if it\u2019s not identified first. We map the structure before we touch it.",
+          "Before any work begins, our lead project supervisor personally walks the site. The assessment focuses on four areas: structural condition, hazardous materials, access constraints, and neighboring exposure. A structurally compromised wall or an unexpected load-bearing element can turn a planned interior demo into a dangerous collapse if it\u2019s not identified first. We map the structure before we touch it.",
       },
       {
         type: "paragraph",
@@ -1285,7 +1285,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "If you\u2019re planning a demolition project in Orange County and want to work with a team that treats safety as the foundation of every decision \u2014 not an afterthought \u2014 call Abel Balderas at (714) 340-8108 for a free on-site consultation.",
+          "If you\u2019re planning a demolition project in Orange County and want to work with a team that treats safety as the foundation of every decision \u2014 not an afterthought \u2014 call Demolition OC at (714) 333-0178 for a free on-site consultation.",
       },
     ],
     cta: {

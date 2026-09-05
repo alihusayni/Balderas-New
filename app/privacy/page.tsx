@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Privacy & Environmental Policy | Balderas Demolition Inc.",
+  title: "Privacy & Environmental Policy | Demolition OC",
   description:
-    "Learn how Balderas Demolition Inc. protects your personal information and our commitment to environmentally responsible demolition and disposal in Orange County.",
+    "Learn how Demolition OC protects your personal information and our commitment to environmentally responsible demolition and disposal in Orange County.",
   path: "/privacy",
   noIndex: true,
 });
@@ -57,14 +57,14 @@ export default function PrivacyPage() {
             3. Information Sharing
           </h3>
           <p>
-            Balderas Demolition Inc. does <strong>not</strong> sell, trade, or
+            Demolition OC does <strong>not</strong> sell, trade, or
             rent your personal information to third parties. We may share
             information only in the following circumstances:
           </p>
           <ul className="mt-3 list-disc space-y-2 pl-6">
             <li><strong>Service Providers:</strong> With trusted partners who assist in operating our website or conducting our business (e.g., analytics providers), under strict confidentiality agreements.</li>
             <li><strong>Legal Requirements:</strong> When required by law, court order, or governmental regulation.</li>
-            <li><strong>Safety:</strong> To protect the rights, property, or safety of Balderas Demolition Inc., our clients, or the public.</li>
+            <li><strong>Safety:</strong> To protect the rights, property, or safety of Demolition OC, our clients, or the public.</li>
           </ul>
         </section>
 
@@ -74,7 +74,7 @@ export default function PrivacyPage() {
           </h3>
           <p>
             Our website uses cookies and similar technologies (such as Google
-            Analytics and CallRail) to understand how visitors use our site. You
+            Analytics) to understand how visitors use our site. You
             can control cookie preferences through your browser settings. Disabling
             cookies may affect certain features of the website.
           </p>
@@ -96,7 +96,7 @@ export default function PrivacyPage() {
           </ul>
           <p className="mt-3">
             To exercise any of these rights, please contact us at
-            <strong> (714) 340-8108</strong>.
+            <strong> (714) 333-0178</strong>.
           </p>
         </section>
 
@@ -137,7 +137,7 @@ export default function PrivacyPage() {
             Our Commitment to Orange County
           </h3>
           <p>
-            At Balderas Demolition Inc., we believe that demolition and
+            At Demolition OC, we believe that demolition and
             environmental responsibility go hand in hand. As an Orange County
             business, we are committed to protecting the communities, landscapes,
             and ecosystems that make this region special.
@@ -205,8 +205,8 @@ export default function PrivacyPage() {
             We&apos;re happy to discuss them with you.
           </p>
           <ul className="mt-3 space-y-1 pl-6">
-            <li><strong>Balderas Demolition Inc.</strong></li>
-            <li>Phone: (714) 340-8108</li>
+            <li><strong>Demolition OC</strong></li>
+            <li>Phone: (714) 333-0178</li>
             <li>Website: demolitionoc.com</li>
             <li>Serving all of Orange County, CA</li>
           </ul>

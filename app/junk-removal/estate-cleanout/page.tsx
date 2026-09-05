@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Estate Cleanout Services Orange County | Balderas Demolition",
-  description: "Compassionate estate cleanout services in Orange County. Balderas Demolition Inc. clears homes quickly, donating and recycling where possible.",
+  title: "Estate Cleanout Services Orange County | Demolition OC",
+  description: "Compassionate estate cleanout services in Orange County. Demolition OC clears homes quickly, donating and recycling where possible.",
   path: "/junk-removal/estate-cleanout",
 });
 
@@ -20,12 +20,12 @@ export default function EstateCleanoutPage() {
             </h2>
             <div className="mt-8 flex flex-col gap-6 text-[17px] leading-[1.7] text-[#3a3a3a]">
               <p>
-                Balderas Demolition Inc. provides full estate cleanout services across Orange County.
+                Demolition OC provides full estate cleanout services across Orange County.
                 Whether you&apos;re settling a loved one&apos;s affairs or preparing a property for sale,
                 we handle the physical work so your family can focus on what matters.
               </p>
               <p>
-                Abel Balderas personally leads every walk-through. We identify what stays and what goes,
+                Our experienced project supervisors personally lead every walk-through. We identify what stays and what goes,
                 set aside valuables for your review, and work on your timeline — single-day or phased over a week.
               </p>
               <p><strong>What we remove in a single trip:</strong></p>
@@ -44,12 +44,12 @@ export default function EstateCleanoutPage() {
               <ul className="ml-6 list-disc flex flex-col gap-2">
                 <li><strong>Cost:</strong> Most OC estate cleanouts run $400–$1,500 depending on home size and volume. We quote on-site before any work begins.</li>
                 <li><strong>Timeline:</strong> Most cleanouts complete in 1–2 days. We can typically schedule within 48 hours of your call.</li>
-                <li><strong>Licensing:</strong> Balderas Demolition Inc. holds a C-21 CSLB license and is fully bonded and insured in California.</li>
+                <li><strong>Licensing:</strong> Demolition OC holds a C-21 CSLB license and is fully bonded and insured in California.</li>
               </ul>
               <p>
                 <strong>We serve all of Orange County</strong>, including Anaheim, Irvine, Santa Ana,
                 Fullerton, Costa Mesa, Huntington Beach, Newport Beach, Tustin, Garden Grove, and Orange.
-                Call <strong>(714) 340-8108</strong> for a free on-site assessment.
+                Call <strong>(714) 333-0178</strong> for a free on-site assessment.
               </p>
             </div>
           </div>

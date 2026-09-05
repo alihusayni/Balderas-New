@@ -165,7 +165,7 @@ export function ContactFormPanel({
             Message Sent!
           </h3>
           <p className="text-center font-maison text-base text-[#4b5563] sm:text-base">
-            Thank you for reaching out. Abel will get back to you shortly.
+            Thank you for reaching out. Our team will get back to you shortly.
           </p>
           <button
             type="button"

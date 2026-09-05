@@ -9,18 +9,18 @@ import {
 export const metadata: Metadata = pageMetadata({
   title: "Same Day Junk Removal Orange County | Fast Hauling Today",
   description:
-    "Need junk gone today? Balderas Demolition Inc. offers same day junk removal in Orange County. Call or text Abel Balderas now for a fast, free estimate and immediate service!",
+    "Need junk gone today? Demolition OC offers same day junk removal in Orange County. Call or text our team now for a fast, free estimate and immediate service!",
   path: "/junk-removal/same-day",
   image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img5.jpg",
   imageAlt:
-    "Balderas Demolition Inc. same day junk removal and hauling in Orange County",
+    "Demolition OC same day junk removal and hauling in Orange County",
   keywords: [
     "same day junk removal Orange County",
     "express junk hauling",
     "emergency haul away OC",
     "fast junk pickup Orange County",
-    "Balderas Demolition",
-    "Abel Balderas",
+    "Demolition OC",
+    "same day hauling OC",
   ],
 });
 

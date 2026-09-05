@@ -16,7 +16,7 @@ import { ServiceDetailSection } from "@/components/service-detail-section";
 import { ServiceIntroSection } from "@/components/service-intro-section";
 import { SplitHeroText } from "@/components/split-hero-text";
 import {
-  AbelsPersonalGuaranteeIcon,
+  PersonalGuaranteeIcon,
   BroomCleanStandardIcon,
   EcoFriendlyDisposalIcon,
   UpfrontVolumePricingIcon,
@@ -25,8 +25,8 @@ import { JsonLd } from "@/components/json-ld";
 import { getBreadcrumbJsonLd, getServiceJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Professional Junk Removal Orange County | Balderas Demolition",
-  description: "Orange County junk removal by Balderas Demolition Inc. We handle furniture, appliances, yard waste, and more. Fast, affordable, eco-friendly disposal.",
+  title: "Professional Junk Removal Orange County | Demolition OC",
+  description: "Orange County junk removal by Demolition OC. We handle furniture, appliances, yard waste, and more. Fast, affordable, eco-friendly disposal.",
   path: "/junk-removal",
 });
 
@@ -36,7 +36,7 @@ const junkRemovalServiceJsonLd = getServiceJsonLd({
     "Fast, affordable, eco-friendly junk removal throughout Orange County. We handle furniture, appliances, yard waste, construction debris, and full estate cleanouts.",
   path: "/junk-removal",
   serviceType: "Junk Removal",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img1.png",
+  image: "/images/junk_removal/img1.png",
 });
 
 const junkRemovalBreadcrumbJsonLd = getBreadcrumbJsonLd([
@@ -106,7 +106,7 @@ export default function JunkRemovalPage() {
       <JsonLd id="ld-junk-removal-faq" data={junkRemovalFaqJsonLd} />
       <section className="-mt-[130px] relative min-h-screen w-full overflow-hidden pt-[230px]">
         <HeroParallaxBackground
-          src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img1.png"
+          src="/images/junk_removal/img1.png"
           alt="Professional junk removal service in Orange County"
           priority
         />
@@ -120,8 +120,8 @@ export default function JunkRemovalPage() {
             <HeroSubheading className="max-w-[920px]">
               Clutter doesn&apos;t just take up space in your home &mdash; it
               takes up space in your mind. Instead of spending your weekend
-              hauling heavy boxes to the dump, let Balderas Demolition Inc.
-              handle it. Abel Balderas and his team take care of the heavy
+              hauling heavy boxes to the dump, let Demolition OC
+              handle it. Our experienced team takes care of the heavy
               lifting, loading, and responsible disposal, leaving you with a
               clean, stress-free environment.
             </HeroSubheading>
@@ -131,8 +131,8 @@ export default function JunkRemovalPage() {
               primaryHref="/contact"
               primaryLabel="Get a Junk Removal Quote"
               primaryButtonClassName="lg:w-[300px] xl:w-[340px]"
-              secondaryHref="tel:+17143408108"
-              secondaryLabel="(714) 340-8108"
+              secondaryHref="tel:+17143330178"
+              secondaryLabel="(714) 333-0178"
               showSecondaryArrow={false}
             />
           </div>
@@ -145,7 +145,7 @@ export default function JunkRemovalPage() {
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img2.png"
+                src="/images/junk_removal/img2.png"
                 alt="Residential junk hauling team loading debris"
                 fill
                 sizes="100vw"
@@ -162,7 +162,7 @@ export default function JunkRemovalPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img2.png"
+            imageSrc="/images/junk_removal/img2.png"
             imageAlt="Residential junk hauling team loading debris"
             imageSide="right"
             hideImageOnSmallScreens
@@ -230,8 +230,8 @@ export default function JunkRemovalPage() {
 
           <div className="mt-8">
             <SplitHeroText
-              title="Why Choose Balderas Demolition Inc. for Your Hauling Needs?"
-              description="There are plenty of &quot;guys with trucks&quot; in Orange County, but Abel Balderas brings a professional demolition background to every junk removal job. This means more safety, more efficiency, and better results."
+              title="Why Choose Demolition OC for Your Hauling Needs?"
+              description="There are plenty of &quot;guys with trucks&quot; in Orange County, but Demolition OC brings a professional demolition background to every junk removal job. This means more safety, more efficiency, and better results."
               titleClassName="text-white"
               descriptionClassName="text-white"
               leftWidthClassName="xl:max-w-[790px]"
@@ -257,9 +257,9 @@ export default function JunkRemovalPage() {
               description="We don't leave a mess behind. After we load the junk, we sweep the area clean so you can enjoy your new space immediately."
             />
             <GlassFeatureCard
-              icon={<AbelsPersonalGuaranteeIcon className="h-full w-full" />}
-              title="Abel's Personal Guarantee:"
-              description="As a locally owned business, our reputation is everything. Abel ensures his team is respectful, on time, and careful not to scuff anything during the process."
+              icon={<PersonalGuaranteeIcon className="h-full w-full" />}
+              title="Our Service Guarantee:"
+              description="As a locally owned business, our reputation is everything. Demolition OC ensures our team is respectful, on time, and careful not to scuff anything during the process."
             />
           </div>
         </div>
@@ -287,7 +287,7 @@ export default function JunkRemovalPage() {
               titleWrapClassName="w-full lg:max-w-[420px] xl:max-w-[444px]"
               descriptionWrapClassName="mt-5 w-full lg:max-w-[420px] xl:max-w-[444px]"
               title="Ready to Say Goodbye to the Clutter?"
-              description="Getting a quote is simple. Just point to what you want gone, and Abel will handle the rest. Join the Orange County residents who trust Balderas Demolition Inc. for a fresh start."
+              description="Getting a quote is simple. Just point to what you want gone, and our team will handle the rest. Join the Orange County residents who trust Demolition OC for a fresh start."
             />
 
             <ContactFormPanel

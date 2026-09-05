@@ -7,11 +7,11 @@ function getResend() {
   return new Resend(key);
 }
 
-const RECIPIENT = process.env.CONTACT_EMAIL ?? "balderas293@gmail.com";
+const RECIPIENT = process.env.CONTACT_EMAIL ?? "ali.h@toporganicleads.com";
 
 // Use verified domain sender when available, otherwise Resend default
 const SENDER =
-  process.env.RESEND_FROM_EMAIL ?? "Balderas Demolition <noreply@demolitionoc.com>";
+  process.env.RESEND_FROM_EMAIL ?? "Demolition OC <noreply@demolitionoc.com>";
 
 /** Known field IDs → display labels */
 const LABEL_MAP: Record<string, string> = {
@@ -52,7 +52,7 @@ export async function POST(request: Request) {
     // Bot detection
     const isBot = website || (timeElapsed !== undefined && timeElapsed < 3000);
     if (isBot) {
-      console.warn(`[Bot Detected] siteName: Balderas, website: ${website}, timeElapsed: ${timeElapsed}`);
+      console.warn(`[Bot Detected] siteName: Demolition OC, website: ${website}, timeElapsed: ${timeElapsed}`);
       return NextResponse.json({ ok: true, success: true });
     }
 
@@ -63,7 +63,7 @@ export async function POST(request: Request) {
       body["con-message"] || body["junk-message"] || body["dumpster-message"] || "";
 
     if (isSuspiciousSpam(name, email, undefined, message)) {
-      console.warn(`[Spam Detected] siteName: Balderas, name: "${name}", email: "${email}", message: "${message}"`);
+      console.warn(`[Spam Detected] siteName: Demolition OC, name: "${name}", email: "${email}", message: "${message}"`);
       return NextResponse.json({ ok: true, success: true });
     }
 
@@ -128,7 +128,7 @@ export async function POST(request: Request) {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-              siteName: "Balderas",
+              siteName: "Demolition OC",
               pageUrl: pageUrl || "",
               errorDetails: `Abandoned form Resend error: ${err.message || "Failed to dispatch email via Resend"}`,
               clientEmail: RECIPIENT,
@@ -211,7 +211,7 @@ export async function POST(request: Request) {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            siteName: "Balderas",
+            siteName: "Demolition OC",
             pageUrl: pageUrl || "",
             errorDetails: err.message || "Failed to send email via Resend",
             clientEmail: RECIPIENT,

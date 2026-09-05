@@ -31,7 +31,7 @@ function getTelHref(): string {
   const digits = SITE.telephone.replace(/\D/g, "");
   if (digits.length === 10) return `tel:+1${digits}`;
   if (digits.length >= 11) return `tel:+${digits}`;
-  return "tel:+17143408108";
+  return "tel:+17143330178";
 }
 
 const wasteDisposalContactFields: ContactFormField[] = [
@@ -39,41 +39,47 @@ const wasteDisposalContactFields: ContactFormField[] = [
     id: "waste-disposal-name",
     type: "text",
     label: "Name",
-    placeholder: "Your full name",
-    width: "half",
+    placeholder: "Your Name",
   },
   {
     id: "waste-disposal-phone",
     type: "text",
     inputType: "tel",
     label: "Phone Number",
-    placeholder: "Enter your phone number",
-    width: "half",
+    placeholder: "(714) 000-0000",
   },
   {
-    id: "waste-disposal-location",
+    id: "waste-disposal-city",
     type: "text",
     label: "Location",
-    placeholder: "Enter location or address",
-    width: "full",
+    placeholder: "e.g., Tustin, Irvine, Newport Beach",
   },
   {
     id: "waste-disposal-type",
     type: "select",
     label: "Type of Waste",
-    placeholder: "Select type of waste",
-    width: "full",
+    placeholder: "Select waste type",
     options: [
       { value: "cd", label: "C&D" },
       { value: "household", label: "Household" },
       { value: "green-waste", label: "Green Waste" },
+      { value: "other", label: "Other" },
     ],
+  },
+  {
+    id: "waste-disposal-description",
+    type: "textarea",
+    label: "Description of Waste",
+    placeholder: "Tell us about the debris (materials, approximate volume, etc.)",
+    rows: 4,
   },
 ];
 
-export function WasteDisposalLanding({ children }: { children?: React.ReactNode }) {
-  const telHref = getTelHref();
-
+export function WasteDisposalLanding({
+  children,
+}: {
+  children?: React.ReactNode;
+}) {
   const scrollToNextSection = () => {
     window.scrollTo({
       top: window.innerHeight,
@@ -83,22 +89,23 @@ export function WasteDisposalLanding({ children }: { children?: React.ReactNode 
 
   return (
     <main className="flex min-h-screen flex-col bg-[var(--color-brand-dark)]">
-      <section className="relative -mt-[130px] min-h-screen w-full overflow-hidden pt-[230px]">
+      <section className="-mt-[130px] relative w-full overflow-hidden">
         <HeroParallaxBackground
-          src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img1.png"
-          alt="Dumpster and waste hauling for construction and household debris in Orange County"
+          src="/images/dumpsters_rental/img1.png"
+          alt="Waste disposal container on site in Orange County"
           priority
+          overlayClassName="bg-[#06182C]/65"
         />
 
-        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-container items-end px-6 pb-[180px] lg:px-10">
-          <div className="max-w-[920px] text-[var(--color-brand-white)]">
+        <div className="relative z-10 mx-auto flex min-h-[760px] w-full max-w-container items-end px-6 pt-[200px] pb-[80px] lg:min-h-[1040px] lg:px-10 lg:pt-[230px] lg:pb-[100px]">
+          <div className="max-w-[760px] text-[var(--color-brand-white)] sm:max-w-[680px] md:max-w-[1100px]">
             <HeroHeading className="max-w-[920px]">
               Professional Waste Disposal Services in Orange County
             </HeroHeading>
 
             <HeroSubheading className="max-w-[940px]">
-              Efficient and eco-friendly waste disposal in Orange County. Abel
-              Balderas and his team handle construction debris, household waste,
+              Efficient and eco-friendly waste disposal in Orange County. Demolition
+              OC handles construction debris, household waste,
               and bulk hauling. Get a free quote today!
             </HeroSubheading>
 
@@ -107,8 +114,8 @@ export function WasteDisposalLanding({ children }: { children?: React.ReactNode 
               primaryHref="/contact"
               primaryLabel="Get a Free Quote"
               primaryButtonClassName="lg:w-[260px] xl:w-[280px]"
-              secondaryHref="tel:+17143408108"
-              secondaryLabel="(714) 340-8108"
+              secondaryHref="tel:+17143330178"
+              secondaryLabel="(714) 333-0178"
               showSecondaryArrow={false}
             />
           </div>
@@ -205,12 +212,12 @@ export function WasteDisposalLanding({ children }: { children?: React.ReactNode 
         <div className="relative z-10 mx-auto flex w-full max-w-container flex-col gap-10 px-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12 lg:px-10">
           <div className="w-full lg:max-w-[560px]">
             <MainHeading className="text-white">
-              The Balderas Demolition Inc. Standard: Eco-Friendly & Compliant
+              The Demolition OC Standard: Eco-Friendly & Compliant
             </MainHeading>
             <div className="mt-6 w-full lg:max-w-[500px]">
               <BoldText className="text-white">
-                Waste disposal in 2026 requires more than just a trip to the
-                landfill. Abel Balderas is committed to sustainable practices
+                Waste disposal requires more than just a trip to the
+                landfill. Demolition OC is committed to sustainable practices
                 that protect the Orange County environment.
               </BoldText>
             </div>
@@ -258,7 +265,7 @@ export function WasteDisposalLanding({ children }: { children?: React.ReactNode 
             icon: <OnSiteConsultationIcon className="h-[25px] w-[31px]" />,
             title: "Site Evaluation:",
             description:
-              "Abel provides a clear estimate based on the type and volume of waste you need to be removed.",
+              "Our team provides a clear estimate based on the type and volume of waste you need to be removed.",
           },
           {
             icon: <FullSiteClearanceIcon className="h-[29px] w-[31px]" />,
@@ -302,7 +309,7 @@ export function WasteDisposalLanding({ children }: { children?: React.ReactNode 
               titleWrapClassName="w-full lg:max-w-[420px] xl:max-w-[444px]"
               descriptionWrapClassName="mt-5 w-full lg:max-w-[420px] xl:w-[444px]"
               title="Ready to Clear Your Property?"
-              description="Don't let waste pile up and become a safety hazard or an eyesore. Trust the Balderas Demolition Inc. team to handle your disposal needs quickly and professionally."
+              description="Don't let waste pile up and become a safety hazard or an eyesore. Trust Demolition OC to handle your disposal needs quickly and professionally."
             />
 
             <ContactFormPanel

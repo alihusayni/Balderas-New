@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Suspense } from 'react';
 import Script from 'next/script';
-import CallRailLoader from "@/components/callrail-loader";
-
 // Anton removed from next/font/google — it is now inlined as base64 in
 // globals.css, which eliminates the cold-CDN delay (~1,000 ms) caused by
 // next/font stamping a new ?dpl=<deploy-hash> URL on every build.
@@ -20,8 +18,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
     default:
-      "Demolition and Junk Removal Orange County | Balderas Demolition Inc.",
-    template: "%s | Balderas Demolition Inc.",
+      "Demolition and Junk Removal Orange County | Demolition OC",
+    template: "%s | Demolition OC",
   },
   description: SITE.description,
   applicationName: SITE.name,
@@ -46,7 +44,7 @@ export const metadata: Metadata = {
     url: SITE.url,
     siteName: SITE.name,
     title:
-      "Demolition and Junk Removal Orange County | Balderas Demolition Inc.",
+      "Demolition and Junk Removal Orange County | Demolition OC",
     description: SITE.description,
     images: [
       {
@@ -60,7 +58,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Demolition and Junk Removal Orange County | Balderas Demolition Inc.",
+      "Demolition and Junk Removal Orange County | Demolition OC",
     description: SITE.description,
     images: [SITE.defaultOgImage],
     creator: SITE.twitterHandle,
@@ -131,7 +129,6 @@ export default function RootLayout({
       </head>
 
       <body className="min-h-full flex flex-col">
-        <CallRailLoader />
         <Script
           src="https://www.despora.ai/despora-pixel.js"
           data-project="demolitionoc"

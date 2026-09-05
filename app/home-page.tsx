@@ -94,15 +94,15 @@ export default function HomePage() {
             </HeroHeading>
             <HeroSubheading>
               From tearing down a kitchen to hauling away years of garage
-              clutter, Balderas Demolition Inc. clears the way for your next
+              clutter, Demolition OC clears the way for your next
               big project. Safe, systematic, and 100% committed to your
               satisfaction.
             </HeroSubheading>
             <HeroCtas
               primaryHref="#contact"
               primaryLabel="Get Your Free Quote"
-              secondaryHref="tel:+17143408108"
-              secondaryLabel="(714) 340-8108"
+              secondaryHref="tel:+17143330178"
+              secondaryLabel="(714) 333-0178"
               showSecondaryArrow={false}
             />
           </div>
@@ -120,9 +120,9 @@ export default function HomePage() {
       <div className="section-lazy">
         <ContactCtaSection
           backgroundImageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/contactbg.webp"
-          backgroundImageAlt="Contact Balderas Demolition"
+          backgroundImageAlt="Contact Demolition OC"
           title="Start Your Demolition or Junk Removal Project Today"
-          description="Ready to clear the way? Get a fast, friendly estimate from Abel Balderas and the team. We respond same day."
+          description="Ready to clear the way? Get a fast, friendly estimate from Demolition OC. We respond same day."
           fields={homeContactFields}
           submitLabel="Get My Free Quote"
         />

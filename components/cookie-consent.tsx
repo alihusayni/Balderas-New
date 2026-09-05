@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 
-const CONSENT_KEY = "balderas_cookie_consent";
+const CONSENT_KEY = "demolition_oc_cookie_consent";
 
 type ConsentValue = "accepted" | "declined";
 
@@ -12,10 +12,8 @@ type ConsentValue = "accepted" | "declined";
  *
  * - Shows on first visit (no localStorage entry).
  * - Persists the user's choice in localStorage.
- * - When "Accept" is clicked, GA4 + CallRail scripts are already loaded
- *   (they run via next/script in layout.tsx), so this simply records consent.
- * - When "Decline" is clicked, we set a flag — a future enhancement could
- *   conditionally load analytics based on this value.
+ * - When "Accept" is clicked, analytics scripts record consent.
+ * - When "Decline" is clicked, we set a flag.
  */
 export function CookieConsent() {
   const [visible, setVisible] = useState(false);
@@ -43,7 +41,7 @@ export function CookieConsent() {
     >
       <div className="mx-auto flex w-full max-w-container flex-col items-start gap-4 px-5 py-4 sm:flex-row sm:items-center sm:gap-6 sm:px-8 sm:py-5">
         <p className="flex-1 font-maison text-xs leading-[1.5] text-white/80 sm:text-sm">
-          We use cookies (Google Analytics &amp; CallRail) to understand how
+          We use cookies (Google Analytics) to understand how
           visitors use our site and to improve your experience. By clicking
           &ldquo;Accept&rdquo; you consent to the use of these cookies. See our{" "}
           <Link

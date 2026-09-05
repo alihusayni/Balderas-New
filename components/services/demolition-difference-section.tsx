@@ -47,15 +47,15 @@ const DIFFERENCE_FEATURES = [
 export function DemolitionDifferenceSection() {
   return (
     <FullBleedImageSection
-      imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img4.png"
-      imageAlt="Balderas worksite background"
+      imageSrc="/images/services/img4.png"
+      imageAlt="Demolition OC worksite background"
       overlayClassName="bg-[#06182C]/72"
       className="py-20 lg:py-24"
       contentClassName="mx-auto flex w-full max-w-container flex-col gap-16 px-6 lg:px-10"
     >
       <SplitHeroText
-        title="The Balderas Demolition Inc. Difference: Safety First, Every Time"
-        description="We know that demolition can be stressful for neighbors and homeowners. That's why Abel Balderas oversees a process designed to minimize disruption and maximize safety."
+        title="The Demolition OC Difference: Safety First, Every Time"
+        description="We know that demolition can be stressful for neighbors and homeowners. That's why Demolition OC oversees a process designed to minimize disruption and maximize safety."
         titleClassName="text-white"
         descriptionClassName="text-white"
       />

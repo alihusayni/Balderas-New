@@ -22,7 +22,7 @@ import {
   DrivewaySafePlacementIcon,
   EcoFriendlyDisposalIcon,
   OnSiteConsultationIcon,
-  AbelsPersonalGuaranteeIcon,
+  PersonalGuaranteeIcon,
   BroomCleanStandardIcon,
   FullSiteClearanceIcon,
   ReliableSchedulingIcon,
@@ -33,13 +33,13 @@ function getTextPhotoSmsHref(): string {
   const digits = SITE.telephone.replace(/\D/g, "");
   if (digits.length === 10) {
     const body = encodeURIComponent(
-      "Hi Abel—I need a furniture removal estimate. I'll send photos next. ",
+      "Hi Demolition OC—I need a furniture removal estimate. I'll send photos next. ",
     );
     return `sms:+1${digits}?body=${body}`;
   }
   if (digits.length >= 11) {
     const body = encodeURIComponent(
-      "Hi Abel—I need a furniture removal estimate. I'll send photos next. ",
+      "Hi Demolition OC—I need a furniture removal estimate. I'll send photos next. ",
     );
     return `sms:+${digits}?body=${body}`;
   }
@@ -125,7 +125,7 @@ export function FurnitureRemovalLanding({ children }: { children?: React.ReactNo
     <main className="flex min-h-screen flex-col bg-[var(--color-brand-dark)]">
       <section className="-mt-[130px] relative min-h-screen w-full overflow-hidden pt-[230px]">
         <HeroParallaxBackground
-          src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img1.png"
+          src="/images/junk_removal/img1.png"
           alt="Professional furniture removal in Orange County"
           priority
         />
@@ -143,20 +143,20 @@ export function FurnitureRemovalLanding({ children }: { children?: React.ReactNo
               exciting—until you realize you have to get the old, heavy
               furniture out of the house. Don&apos;t risk a back injury or a
               scratched wall trying to navigate a bulky mattress down a flight
-              of stairs. At Balderas Demolition Inc., we specialize in
-              professional furniture removal. Abel Balderas and his experienced
-              crew handle the disassembly, lifting, and hauling, so you
-              don&apos;t have to lift a finger.
+              of stairs. At Demolition OC, we specialize in
+              professional furniture removal. Our experienced
+              team handles the heavy lifting, maneuvering, loading, and disposal
+              so you don&apos;t have to lift a finger.
             </HeroSubheading>
 
             <HeroCtas
               className="mt-10 flex-wrap"
-              primaryHref="/contact"
+              primaryHref="#schedule-pickup"
               primaryLabel="Get a Furniture Removal Quote"
-              primaryButtonClassName="lg:w-[300px] xl:w-[340px]"
-              secondaryHref="tel:+17143408108"
-              secondaryLabel="(714) 340-8108"
-              secondaryButtonClassName="md:min-w-[260px] md:w-[280px] lg:w-[340px] xl:w-[400px] 2xl:w-[440px]"
+              primaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[290px]"
+              secondaryHref="tel:+17143330178"
+              secondaryLabel="(714) 333-0178"
+              secondaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[240px]"
               showSecondaryArrow={false}
             />
           </div>
@@ -173,7 +173,7 @@ export function FurnitureRemovalLanding({ children }: { children?: React.ReactNo
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img2.png"
+                src="/images/junk_removal/img2.png"
                 alt="Crew lifting furniture safely from a home"
                 fill
                 sizes="100vw"
@@ -183,7 +183,7 @@ export function FurnitureRemovalLanding({ children }: { children?: React.ReactNo
           </div>
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img2.png"
+            imageSrc="/images/junk_removal/img2.png"
             imageAlt="Furniture pickup and hauling in Orange County"
             imageSide="right"
             hideImageOnSmallScreens
@@ -232,7 +232,7 @@ export function FurnitureRemovalLanding({ children }: { children?: React.ReactNo
 
           <div className="mt-8">
             <SplitHeroText
-              title='The Balderas Demolition Inc. Advantage: More Than Just a Hauling Service'
+              title='The Demolition OC Advantage: More Than Just a Hauling Service'
               description="Why hire a demolition professional for a furniture job? Because we understand structural safety and property protection better than a standard junk company."
               titleClassName="text-white"
               descriptionClassName="text-white"
@@ -254,9 +254,9 @@ export function FurnitureRemovalLanding({ children }: { children?: React.ReactNo
               description="If that oversized desk won't fit through the office door, don't worry. We bring the tools necessary to disassemble large furniture items on the spot for easier removal."
             />
             <GlassFeatureCard
-              icon={<AbelsPersonalGuaranteeIcon className="h-full w-full" />}
+              icon={<PersonalGuaranteeIcon className="h-full w-full" />}
               title="Donation-First Policy:"
-              description="Abel believes in giving back to the Orange County community. If your furniture is still in good, usable condition, we do our best to drop it off at local charities or non-profits so it can find a second home rather than ending up in a landfill."
+              description="We believe in giving back to the Orange County community. If your furniture is still in good, usable condition, we do our best to drop it off at local charities or non-profits so it can find a second home rather than ending up in a landfill."
             />
             <GlassFeatureCard
               icon={<EcoFriendlyDisposalIcon className="h-full w-full" />}
@@ -321,7 +321,7 @@ export function FurnitureRemovalLanding({ children }: { children?: React.ReactNo
               descriptionWrapClassName="mt-5 w-full lg:max-w-[420px] xl:max-w-[444px]"
               title="Ready to Reclaim Your Space?"
               description={
-                "Whether it\u2019s one single heavy recliner or an entire house worth of furniture, Abel Balderas is ready to help. Get your free, no-obligation estimate today."
+                "Whether it\u2019s one single heavy recliner or an entire house worth of furniture, Demolition OC is ready to help. Get your free, no-obligation estimate today."
               }
             />
 

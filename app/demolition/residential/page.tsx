@@ -32,11 +32,11 @@ import { SplitHeroText } from "@/components/split-hero-text";
 export const metadata: Metadata = pageMetadata({
   title: "Residential Demolition Orange County | Home Remodel Tear-Outs",
   description:
-    "Planning a home remodel? Get professional residential demolition in Orange County. Abel Balderas and his team specialize in kitchen, bath, and backyard demo.",
+    "Planning a home remodel? Get professional residential demolition in Orange County. Demolition OC specializes in kitchen, bath, and backyard demo.",
   path: "/demolition/residential",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img2.png",
+  image: "/images/services/img2.png",
   imageAlt:
-    "Balderas Demolition Inc. performing careful residential demolition in Orange County",
+    "Demolition OC performing careful residential demolition in Orange County",
   keywords: [
     "residential demolition Orange County",
     "home remodel demolition",
@@ -54,7 +54,7 @@ const residentialServiceJsonLd = getServiceJsonLd({
     "Surgical residential demolition for remodels: interior strip-outs, kitchen and bath gutting, wall removal, flooring removal, and exterior services including decks, sheds, and pool in-fills throughout Orange County.",
   path: "/demolition/residential",
   serviceType: "Residential Demolition",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img2.png",
+  image: "/images/services/img2.png",
 });
 
 const residentialBreadcrumbJsonLd = getBreadcrumbJsonLd([
@@ -137,7 +137,7 @@ const WHY_CHOOSE_FEATURES = [
     variant: "orange" as const,
     title: "Utility Awareness:",
     description:
-      "Abel performs a pre-demo check on water, gas, and electrical lines to prevent costly accidents.",
+      "Our team performs a pre-demo check on water, gas, and electrical lines to prevent costly accidents.",
     icon: <LicensedInsuredIcon className="h-full w-full" />,
     className: "order-3 md:order-none",
   },
@@ -147,7 +147,7 @@ const PROCESS_STEPS = [
   {
     title: "Walk-Through:",
     description:
-      "Abel visits your home to understand your vision and identify any structural concerns.",
+      "Our experienced team visits your home to understand your vision and identify any structural concerns.",
     icon: <OnSiteConsultationIcon className="h-full w-full" />,
   },
   {
@@ -179,10 +179,10 @@ function getCallPhone() {
         ? `tel:+1${digits}`
         : digits.length >= 11
           ? `tel:+${digits}`
-          : "tel:+17143408108";
+          : "tel:+17143330178";
     return { display: raw, href };
   }
-  return { display: "(714) 340-8108", href: "tel:+17143408108" };
+  return { display: "(714) 333-0178", href: "tel:+17143330178" };
 }
 
 export default function ResidentialDemolitionPage() {
@@ -202,7 +202,7 @@ export default function ResidentialDemolitionPage() {
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img2.png"
+                src="/images/services/img2.png"
                 alt="Residential kitchen and bath demolition prep"
                 fill
                 sizes="100vw"
@@ -225,7 +225,7 @@ export default function ResidentialDemolitionPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img2.png"
+            imageSrc="/images/services/img2.png"
             imageAlt="Interior residential strip-out and kitchen demolition"
             imageSide="right"
             hideImageOnSmallScreens
@@ -272,16 +272,16 @@ export default function ResidentialDemolitionPage() {
       </section>
 
       <FullBleedImageSection
-        imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img4.png"
-        imageAlt="Balderas residential demolition team"
+        imageSrc="/images/services/img4.png"
+        imageAlt="Demolition OC residential demolition team"
         overlayClassName="bg-[#06182C]/72"
         className="py-20 lg:py-24"
         contentClassName="mx-auto flex w-full max-w-container flex-col gap-16 px-6 lg:px-10"
       >
         <SplitHeroText
-          title="Why Homeowners Choose Abel Balderas"
+          title="Why Homeowners Choose Demolition OC"
           description={
-            "Demolition inside a home requires a different level of care than a commercial job site. Abel personally ensures his team follows a \u201cResident-First\u201d protocol:"
+            "Demolition inside a home requires a different level of care than a commercial job site. Demolition OC personally ensures our team follows a \u201cResident-First\u201d protocol:"
           }
           titleClassName="text-white"
           descriptionClassName="text-white"
@@ -306,7 +306,7 @@ export default function ResidentialDemolitionPage() {
               <div className="relative h-[460px] w-full overflow-hidden xl:h-[720px]">
                 <Image
                   src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img5.jpg"
-                  alt="Abel Balderas walking through a residential demo project"
+                  alt="Demolition OC supervisor walking through a residential demo project"
                   fill
                   sizes="(max-width: 1279px) 100vw, 50vw"
                   className="object-cover"
@@ -331,7 +331,7 @@ export default function ResidentialDemolitionPage() {
 
       <DemolitionContactSection
         title="Ready to Start Your Home Transformation"
-        description="Stop staring at that old tile and start your demo today. Join the hundreds of OC homeowners who trust Abel Balderas for a clean start."
+        description="Stop staring at that old tile and start your demo today. Join the hundreds of OC homeowners who trust Demolition OC for a clean start."
         fields={RESIDENTIAL_CONTACT_FIELDS}
         submitLabel="Submit"
         overlayClassName="bg-[#06182C]/72"
@@ -346,8 +346,8 @@ export default function ResidentialDemolitionPage() {
             </h2>
             <div className="mt-8 flex flex-col gap-6 text-[17px] leading-[1.7] text-[#3a3a3a]">
               <p>
-                Balderas Demolition Inc. is a C-21 CSLB licensed residential demolition contractor.
-                Abel Balderas leads every project personally across Orange County.
+                Demolition OC is a C-21 CSLB licensed residential demolition contractor.
+                Our experienced team leads every project personally across Orange County.
                 We handle full teardowns, partial demolitions, and everything in between.
               </p>
               <p><strong>Common questions answered:</strong></p>
@@ -362,7 +362,7 @@ export default function ResidentialDemolitionPage() {
                 C-21 CSLB certified, fully insured, and CalOSHA compliant.
                 We serve Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
                 Huntington Beach, Newport Beach, Tustin, Garden Grove, and Orange.
-                Call <strong>(714) 340-8108</strong> for a free estimate.
+                Call <strong>(714) 333-0178</strong> for a free estimate.
               </p>
             </div>
           </div>

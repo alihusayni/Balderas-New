@@ -8,7 +8,7 @@ export async function POST(request: Request) {
 
   if (password === DEMO_PASSWORD) {
     const response = NextResponse.json({ success: true });
-    response.cookies.set("balderas_demo_auth", "authenticated", {
+    response.cookies.set("demolition_oc_auth", "authenticated", {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",

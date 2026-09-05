@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Same Day Junk Removal Orange County | Balderas Demolition",
-  description: "Need it gone today? Balderas Demolition Inc. offers same-day junk removal across Orange County. Call for fast, reliable service.",
+  title: "Same Day Junk Removal Orange County | Demolition OC",
+  description: "Need it gone today? Demolition OC offers same-day junk removal across Orange County. Call for fast, reliable service.",
   path: "/junk-removal/same-day",
 });
 
@@ -20,7 +20,7 @@ export default function SameDayJunkRemovalPage() {
             </h2>
             <div className="mt-8 flex flex-col gap-6 text-[17px] leading-[1.7] text-[#3a3a3a]">
               <p>
-                Balderas Demolition Inc. offers genuine same-day junk removal across Orange County.
+                Demolition OC offers genuine same-day junk removal across Orange County.
                 Book before noon and we can typically be on-site the same day —
                 not a &quot;next available window&quot; promise.
               </p>
@@ -39,13 +39,13 @@ export default function SameDayJunkRemovalPage() {
               <ul className="ml-6 list-disc flex flex-col gap-2">
                 <li><strong>Cost:</strong> Single-item pickups start at $75–$150. Full truck loads run $400–$700. We give you a firm price on-site before loading begins.</li>
                 <li><strong>Timeline:</strong> Call before noon for same-day service. Jobs typically take 1–3 hours depending on volume.</li>
-                <li><strong>Licensing:</strong> Balderas Demolition Inc. holds a C-21 CSLB license and is fully bonded and insured in California.</li>
+                <li><strong>Licensing:</strong> Demolition OC holds a C-21 CSLB license and is fully bonded and insured in California.</li>
                 <li><strong>Disruption:</strong> We protect your driveway and property during loading. No mess left behind — broom-clean finish guaranteed.</li>
               </ul>
               <p>
                 <strong>Service areas:</strong> Anaheim, Irvine, Santa Ana, Costa Mesa, Huntington Beach,
                 Fullerton, Newport Beach, Garden Grove, Tustin, Orange, and all surrounding OC cities.
-                Call <strong>(714) 340-8108</strong> before noon for same-day service.
+                Call <strong>(714) 333-0178</strong> before noon for same-day service.
               </p>
             </div>
           </div>

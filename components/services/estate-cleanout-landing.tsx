@@ -18,7 +18,7 @@ import { ServiceDetailSection } from "@/components/service-detail-section";
 import { SplitHeroText } from "@/components/split-hero-text";
 import { MainHeading } from "@/components/main-heading";
 import {
-  AbelsPersonalGuaranteeIcon,
+  PersonalGuaranteeIcon,
   BroomCleanStandardIcon,
   DebrisSortingDisposalIcon,
   EcoFriendlyDisposalIcon,
@@ -35,7 +35,7 @@ function getTelHref(): string {
   const digits = SITE.telephone.replace(/\D/g, "");
   if (digits.length === 10) return `tel:+1${digits}`;
   if (digits.length >= 11) return `tel:+${digits}`;
-  return "tel:+17143408108";
+  return "tel:+17143330178";
 }
 
 const CONSULTATION_HASH = "#estate-consultation";
@@ -44,7 +44,7 @@ const ESTATE_PROCESS_STEPS = [
   {
     title: "Initial Consultation:",
     description:
-      "Abel meets with you at the property to determine the scope of the cleanout and what items need to stay or go.",
+      "Our team meets with you at the property to determine the scope of the cleanout and what items need to stay or go.",
     icon: <OnSiteConsultationIcon className="h-full w-full" />,
   },
   {
@@ -137,9 +137,9 @@ export function EstateCleanoutLanding({ children }: { children?: React.ReactNode
               Dealing with the loss of a loved one or managing the transition of an
               estate is a monumental task. The physical process of sorting through
               decades of belongings and clearing a property can be emotionally and
-              physically exhausting. At Balderas Demolition Inc., we provide
+              physically exhausting. At Demolition OC, we provide
               comprehensive estate cleanout services designed to lift that burden.
-              Led by Abel Balderas, our team approaches every estate with the
+              Our team approaches every estate with the
               sensitivity, patience, and professionalism required during difficult
               times.
             </HeroSubheading>
@@ -149,8 +149,8 @@ export function EstateCleanoutLanding({ children }: { children?: React.ReactNode
               primaryHref={CONSULTATION_HASH}
               primaryLabel="Request a Private Consultation"
               primaryButtonClassName="lg:min-w-[300px] lg:w-auto xl:min-w-[340px]"
-              secondaryHref="tel:+17143408108"
-              secondaryLabel="(714) 340-8108"
+              secondaryHref="tel:+17143330178"
+              secondaryLabel="(714) 333-0178"
               secondaryButtonClassName="md:min-w-[240px] md:w-auto lg:w-[280px]"
               showSecondaryArrow={false}
             />
@@ -168,7 +168,7 @@ export function EstateCleanoutLanding({ children }: { children?: React.ReactNode
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img2.png"
+                src="/images/junk_removal/img2.png"
                 alt="Estate cleanout crew clearing a home with care"
                 fill
                 sizes="100vw"
@@ -178,7 +178,7 @@ export function EstateCleanoutLanding({ children }: { children?: React.ReactNode
           </div>
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img2.png"
+            imageSrc="/images/junk_removal/img2.png"
             imageAlt="Estate cleanout crew clearing a home with care"
             imageSide="right"
             hideImageOnSmallScreens
@@ -225,7 +225,7 @@ export function EstateCleanoutLanding({ children }: { children?: React.ReactNode
 
           <div className="mt-8">
             <SplitHeroText
-              title="The Abel Balderas Promise: Respect and Integrity"
+              title="The Demolition OC Promise: Respect and Integrity"
               description={`An estate cleanout is different from a standard junk removal job. It requires a partner who understands the value of the items they are handling—both financial and sentimental.`}
               titleClassName="text-white"
               descriptionClassName="text-white"
@@ -237,14 +237,14 @@ export function EstateCleanoutLanding({ children }: { children?: React.ReactNode
 
           <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
             <GlassFeatureCard
-              icon={<AbelsPersonalGuaranteeIcon className="h-full w-full" />}
+              icon={<PersonalGuaranteeIcon className="h-full w-full" />}
               title='The "Find and Save" Protocol'
               description={`If our team comes across items that appear to be of high sentimental or financial value (such as photographs, legal documents, jewelry, or small heirlooms), we set them aside and notify you immediately. We don't just dump—we look out for your family's history.`}
             />
             <GlassFeatureCard
               icon={<EcoFriendlyDisposalIcon className="h-full w-full" />}
               title="Donation-First Approach:"
-              description="Abel believes in honoring the legacy of an estate by keeping as much as possible out of the landfill. We work with local Orange County charities to donate usable furniture, clothing, and household goods."
+              description="We believe in honoring the legacy of an estate by keeping as much as possible out of the landfill. We work with local Orange County charities to donate usable furniture, clothing, and household goods."
             />
             <GlassFeatureCard
               icon={<BroomCleanStandardIcon className="h-full w-full" />}
@@ -259,8 +259,8 @@ export function EstateCleanoutLanding({ children }: { children?: React.ReactNode
 
           <div className="mt-8">
             <SplitHeroText
-              title="Why Families and Realtors Trust Balderas Demolition Inc."
-              description="From first phone call to final walk-through, you get predictable pricing, insured crews, and one accountable point of contact—Abel himself."
+              title="Why Families and Realtors Trust Demolition OC"
+              description="From first phone call to final walk-through, you get predictable pricing, insured crews, and one accountable point of contact."
               titleClassName="text-white"
               descriptionClassName="text-white"
               leftWidthClassName="xl:max-w-[790px]"
@@ -283,7 +283,7 @@ export function EstateCleanoutLanding({ children }: { children?: React.ReactNode
             <GlassFeatureCard
               icon={<OnSiteConsultationIcon className="h-full w-full" />}
               title="Sensitive Communication:"
-              description="Abel personally manages these projects, providing a single point of contact who is responsive and understanding of the situation."
+              description="Our experienced project managers personally oversee these projects, providing a single point of contact who is responsive and understanding of the situation."
             />
             <GlassFeatureCard
               icon={<ReliableSchedulingIcon className="h-full w-full" />}
@@ -300,8 +300,8 @@ export function EstateCleanoutLanding({ children }: { children?: React.ReactNode
             <div className="w-full xl:w-1/2">
               <div className="relative h-[340px] w-full overflow-hidden sm:h-[400px] md:h-[460px] xl:h-[760px]">
                 <Image
-                  src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img1.png"
-                  alt="Estate property walk-through with Balderas Demolition"
+                  src="/images/junk_removal/img1.png"
+                  alt="Estate property walk-through with Demolition OC"
                   fill
                   sizes="(max-width: 1279px) 100vw, 50vw"
                   className="object-cover"
@@ -350,7 +350,7 @@ export function EstateCleanoutLanding({ children }: { children?: React.ReactNode
               titleWrapClassName="w-full lg:max-w-[420px] xl:max-w-[444px]"
               descriptionWrapClassName="mt-5 w-full lg:max-w-[420px] xl:max-w-[444px]"
               title="Let Us Help You Through This Transition"
-              description="You don&apos;t have to do this alone. Trust Abel Balderas and the team at Balderas Demolition Inc. to handle your estate cleanout with the dignity it deserves."
+              description="You don&apos;t have to do this alone. Trust Demolition OC to handle your estate cleanout with the dignity it deserves."
             />
 
             <ContactFormPanel

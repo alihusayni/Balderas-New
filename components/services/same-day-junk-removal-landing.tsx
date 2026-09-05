@@ -33,13 +33,13 @@ function getTelHref(): string {
   const digits = SITE.telephone.replace(/\D/g, "");
   if (digits.length === 10) return `tel:+1${digits}`;
   if (digits.length >= 11) return `tel:+${digits}`;
-  return "tel:+17143408108";
+  return "tel:+17143330178";
 }
 
 function getSameDaySmsHref(): string {
   const digits = SITE.telephone.replace(/\D/g, "");
   const body = encodeURIComponent(
-    "Hi Abel—I need same-day junk removal in Orange County. I'll send photos of the pile.",
+    "Hi Demolition OC—I need same-day junk removal in Orange County. I'll send photos of the pile.",
   );
   if (digits.length === 10) return `sms:+1${digits}?body=${body}`;
   if (digits.length >= 11) return `sms:+${digits}?body=${body}`;
@@ -136,8 +136,8 @@ export function SameDayJunkRemovalLanding({ children }: { children?: React.React
               project get out of hand? Or do you just need that old couch gone
               before your new one arrives this afternoon? Sometimes, you
               can&apos;t wait for a scheduled appointment next week. At
-              Balderas Demolition Inc., we prioritize &quot;on-call&quot; service
-              for our neighbors. Abel Balderas and his team offer same day junk
+              Demolition OC, we prioritize &quot;on-call&quot; service
+              for our neighbors. Our team offers same day junk
               removal across Orange County to help you reclaim your space
               without the wait.
             </HeroSubheading>
@@ -147,8 +147,8 @@ export function SameDayJunkRemovalLanding({ children }: { children?: React.React
               primaryHref={telHref}
               primaryLabel="Call for Same Day Service"
               primaryButtonClassName="lg:w-[300px] xl:w-[340px]"
-              secondaryHref="tel:+17143408108"
-              secondaryLabel="(714) 340-8108"
+              secondaryHref="tel:+17143330178"
+              secondaryLabel="(714) 333-0178"
               secondaryButtonClassName="md:min-w-[260px] md:w-[280px] lg:w-[340px] xl:w-[400px] 2xl:w-[440px]"
               showSecondaryArrow={false}
             />
@@ -166,7 +166,7 @@ export function SameDayJunkRemovalLanding({ children }: { children?: React.React
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img2.png"
+                src="/images/junk_removal/img2.png"
                 alt="Same day hauling and debris removal in Orange County"
                 fill
                 sizes="100vw"
@@ -176,7 +176,7 @@ export function SameDayJunkRemovalLanding({ children }: { children?: React.React
           </div>
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img2.png"
+            imageSrc="/images/junk_removal/img2.png"
             imageAlt="Urgent junk removal and property cleanouts in Orange County"
             imageSide="right"
             hideImageOnSmallScreens
@@ -225,8 +225,8 @@ export function SameDayJunkRemovalLanding({ children }: { children?: React.React
 
           <div className="mt-8">
             <SplitHeroText
-              title="Why Choose Abel Balderas for Urgent Hauling?"
-              description={`In Orange County, "same day" can often mean "hidden fees" or "unreliable crews." Abel Balderas does things differently. We bring the same level of professional demolition-grade service to our express junk removal calls.`}
+              title="Why Choose Demolition OC for Urgent Hauling?"
+              description={`In Orange County, "same day" can often mean "hidden fees" or "unreliable crews." Demolition OC does things differently. We bring the same level of professional demolition-grade service to our express junk removal calls.`}
               titleClassName="text-white"
               descriptionClassName="text-white"
               leftWidthClassName="xl:max-w-[790px]"
@@ -239,7 +239,7 @@ export function SameDayJunkRemovalLanding({ children }: { children?: React.React
             <GlassFeatureCard
               icon={<OnSiteConsultationIcon className="h-full w-full" />}
               title="Real-Time Communication:"
-              description="When you call, you speak to a local professional, not a national call center. Abel knows OC traffic and schedules, so he'll give you an honest arrival window."
+              description="When you call, you speak to a local professional, not a national call center. Our dispatch team knows OC traffic and schedules, giving you an honest arrival window."
             />
             <GlassFeatureCard
               icon={<FullSiteClearanceIcon className="h-full w-full" />}
@@ -265,7 +265,7 @@ export function SameDayJunkRemovalLanding({ children }: { children?: React.React
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img1.png"
+                src="/images/junk_removal/img1.png"
                 alt="Junk removal truck serving Orange County neighborhoods"
                 fill
                 sizes="100vw"
@@ -276,13 +276,13 @@ export function SameDayJunkRemovalLanding({ children }: { children?: React.React
 
           <ServiceIntroSection
             title="Service Areas for Same Day Pickups"
-            description="When you call in the morning, our goal is to load and haul the same afternoon. Abel routes crews across Orange County for express junk pickup—prioritizing these corridors for same-day service."
+            description="When you call in the morning, our goal is to load and haul the same afternoon. Demolition OC routes crews across Orange County for express junk pickup—prioritizing these corridors for same-day service."
             titleClassName="text-[#0b0300]"
             descriptionClassName="text-[#0b0300]"
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img1.png"
+            imageSrc="/images/junk_removal/img1.png"
             imageAlt="Junk removal truck serving Orange County neighborhoods"
             imageSide="right"
             hideImageOnSmallScreens
@@ -323,7 +323,7 @@ export function SameDayJunkRemovalLanding({ children }: { children?: React.React
               </a>{" "}
               or text a photo of your pile. We regularly extend same-day junk
               removal into other Orange County cities when trucks and crew are
-              available—ask Abel for an honest arrival window.
+              available—ask our team for an honest arrival window.
             </BodyText>
           </aside>
         </div>
@@ -366,7 +366,7 @@ export function SameDayJunkRemovalLanding({ children }: { children?: React.React
       <section className="relative w-full overflow-hidden py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img1.png"
+            src="/images/junk_removal/img1.png"
             alt=""
             fill
             sizes="100vw"
@@ -382,7 +382,7 @@ export function SameDayJunkRemovalLanding({ children }: { children?: React.React
               titleWrapClassName="w-full lg:max-w-[420px] xl:max-w-[444px]"
               descriptionWrapClassName="mt-5 w-full lg:max-w-[420px] xl:max-w-[444px]"
               title={"Don't Wait—Let's Get It Done Today!"}
-              description='Why spend another night with that clutter? Join the hundreds of OC residents who trust Abel Balderas for the fastest junk removal in the county.'
+              description='Why spend another night with that clutter? Join the hundreds of OC residents who trust Demolition OC for the fastest junk removal in the county.'
             />
 
             <ContactFormPanel

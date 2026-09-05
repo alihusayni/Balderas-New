@@ -24,20 +24,20 @@ const CONCRETE_FAQ_ITEMS: FaqItem[] = [
   {
     question: "How Much Does Concrete Removal Cost?",
     answer:
-      "Pricing for concrete removal depends on thickness, reinforcement (like rebar), and accessibility. Abel provides transparent, flat-rate quotes so there are no surprises on your final bill.",
+      "Pricing for concrete removal depends on thickness, reinforcement (like rebar), and accessibility. Demolition OC provides transparent, flat-rate quotes so there are no surprises on your final bill.",
   },
 ];
 
 const concreteFaqJsonLd = getFaqJsonLd(CONCRETE_FAQ_ITEMS);
 
 export const metadata: Metadata = pageMetadata({
-  title: "Concrete Removal and Hauling Orange County | Balderas Demolition Inc.",
+  title: "Concrete Removal and Hauling Orange County | Demolition OC",
   description:
-    "Need old concrete gone? Abel Balderas and Balderas Demolition Inc. specialize in concrete removal and hauling. From patios to driveways, we break it, load it, and haul it!",
+    "Need old concrete gone? Demolition OC specializes in concrete removal and hauling. From patios to driveways, we break it, load it, and haul it!",
   path: "/demolition/concrete-removal-hauling",
   image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img6.png",
   imageAlt:
-    "Balderas Demolition Inc. loading concrete debris for hauling in Orange County",
+    "Demolition OC loading concrete debris for hauling in Orange County",
   keywords: [
     "concrete removal Orange County",
     "concrete hauling",
@@ -45,8 +45,8 @@ export const metadata: Metadata = pageMetadata({
     "patio demolition",
     "garage slab removal",
     "concrete recycling Orange County",
-    "Balderas Demolition",
-    "Abel Balderas",
+    "Demolition OC",
+    "Orange County concrete demolition",
   ],
 });
 
@@ -123,10 +123,10 @@ function getCallPhone() {
         ? `tel:+1${digits}`
         : digits.length >= 11
           ? `tel:+${digits}`
-          : "tel:+17143408108";
+          : "tel:+17143330178";
     return { href };
   }
-  return { href: "tel:+17143408108" };
+  return { href: "tel:+17143330178" };
 }
 
 export default function ConcreteRemovalHaulingPage() {
@@ -165,7 +165,7 @@ export default function ConcreteRemovalHaulingPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img1.png"
+            imageSrc="/images/services/img1.png"
             imageAlt="Residential driveway and patio concrete removal"
             imageSide="right"
             hideImageOnSmallScreens
@@ -229,7 +229,7 @@ export default function ConcreteRemovalHaulingPage() {
               },
               {
                 heading: "Broom-Clean Finish:",
-                text: "Concrete removal is messy. Abel ensures that once the last piece of rebar is loaded, your site is scraped and swept clean of dust and gravel.",
+                text: "Concrete removal is messy. Demolition OC ensures that once the last piece of rebar is loaded, your site is scraped and swept clean of dust and gravel.",
               },
             ]}
           />
@@ -244,8 +244,8 @@ export default function ConcreteRemovalHaulingPage() {
         <div className="mx-auto grid w-full max-w-container grid-cols-1 items-start gap-8 px-4 sm:gap-10 sm:px-6 md:gap-12 md:px-8 lg:grid-cols-2 lg:gap-14 lg:px-10 xl:items-center">
           <div className="relative order-2 min-h-[300px] overflow-hidden sm:min-h-[360px] md:min-h-[500px] lg:order-1">
             <Image
-              src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/about/2.jpg"
-              alt="Abel Balderas, owner of Balderas Demolition Inc., overseeing concrete removal and hauling"
+              src="/images/about/2.jpg"
+              alt="Demolition OC supervisor overseeing concrete removal and hauling"
               fill
               sizes="(max-width: 1024px) 100vw, 650px"
               className="object-cover object-[40%_30%]"
@@ -254,12 +254,12 @@ export default function ConcreteRemovalHaulingPage() {
 
           <div className="order-1 text-[#0b0b0b] lg:order-2">
             <MainHeading className="text-[#0b0300]" as="h2">
-              Why Trust Balderas Demolition Inc. with Your Concrete Project?
+              Why Trust Demolition OC with Your Concrete Project?
             </MainHeading>
 
             <SimpleText className="mt-6 text-[#0b0300]">
               Concrete removal carries risks—from hitting underground utility lines to
-              damaging nearby structures. Abel Balderas brings a level of expertise that
+              damaging nearby structures. Demolition OC brings a level of expertise that
               guarantees a smooth experience:
             </SimpleText>
 
@@ -283,10 +283,10 @@ export default function ConcreteRemovalHaulingPage() {
               </div>
               <div>
                 <SubHeading className="text-[#0b0300]">
-                  Abel&apos;s Personal Oversight:
+                  Dedicated Project Oversight:
                 </SubHeading>
                 <SimpleText className="mt-2 text-[#0b0300]">
-                  Abel stays in constant communication from the initial quote to the
+                  Our project managers stay in constant communication from the initial quote to the
                   final haul, ensuring the project stays on schedule and on budget.
                 </SimpleText>
               </div>
@@ -296,7 +296,7 @@ export default function ConcreteRemovalHaulingPage() {
               &ldquo;Concrete work is about power and precision. We have the tools
               to do it fast, and the respect to do it right.&rdquo;{" "}
               <span className="mt-2 block font-bold not-italic">
-                &mdash; Abel Balderas
+                &mdash; Demolition OC Team
               </span>
             </blockquote>
           </div>
@@ -327,7 +327,7 @@ export default function ConcreteRemovalHaulingPage() {
 
       <DemolitionContactSection
         title="Ready to Clear Your Concrete?"
-        description="Tell us about your driveway, patio, or slab—we'll get you a straight answer and a firm plan. Contact Balderas Demolition Inc. for a professional quote."
+        description="Tell us about your driveway, patio, or slab—we'll get you a straight answer and a firm plan. Contact Demolition OC for a professional quote."
         fields={CONCRETE_CONTACT_FIELDS}
         submitLabel="Submit"
         overlayClassName="bg-[#06182C]/72"
@@ -341,7 +341,7 @@ export default function ConcreteRemovalHaulingPage() {
             </h2>
             <div className="mt-8 flex flex-col gap-6 text-[17px] leading-[1.7] text-[#3a3a3a]">
               <p>
-                Balderas Demolition Inc. is a C-21 CSLB licensed concrete removal contractor
+                Demolition OC is a C-21 CSLB licensed concrete removal contractor
                 serving Orange County for over 15 years. We handle everything from residential
                 driveways to commercial foundation slabs.
               </p>
@@ -357,7 +357,7 @@ export default function ConcreteRemovalHaulingPage() {
                 C-21 CSLB certified, and fully insured.
                 We serve Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
                 Huntington Beach, Newport Beach, Tustin, Garden Grove, and Orange.
-                Call <strong>(714) 340-8108</strong> for a free estimate.
+                Call <strong>(714) 333-0178</strong> for a free estimate.
               </p>
             </div>
           </div>

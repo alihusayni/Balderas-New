@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Terms of Use | Balderas Demolition Inc.",
+  title: "Terms of Use | Demolition OC",
   description:
-    "Review the terms and conditions governing your use of the Balderas Demolition Inc. website and services across Orange County, CA.",
+    "Review the terms and conditions governing your use of the Demolition OC website and services across Orange County, CA.",
   path: "/terms",
   noIndex: true,
 });
@@ -25,7 +25,7 @@ export default function TermsPage() {
             1. Acceptance of Terms
           </h2>
           <p>
-            By accessing and using the Balderas Demolition Inc. website
+            By accessing and using the Demolition OC website
             (&quot;demolitionoc.com&quot;), you agree to be bound by these Terms
             of Use. If you do not agree with any part of these terms, please do
             not use our website. These terms apply to all visitors, users, and
@@ -38,7 +38,7 @@ export default function TermsPage() {
             2. Description of Services
           </h2>
           <p>
-            Balderas Demolition Inc. provides demolition, junk removal, dumpster
+            Demolition OC provides demolition, junk removal, dumpster
             rental, and hauling services across Orange County, California. This
             website is intended to provide general information about our services
             and to facilitate contact between prospective clients and our team.
@@ -66,7 +66,7 @@ export default function TermsPage() {
           </h2>
           <p>
             All content on this website — including text, images, logos, design
-            elements, and graphics — is the property of Balderas Demolition Inc.
+            elements, and graphics — is the property of Demolition OC
             and is protected by applicable copyright and trademark laws. You may
             not reproduce, distribute, or create derivative works from any
             content without our express written permission.
@@ -80,8 +80,8 @@ export default function TermsPage() {
           <p>
             Any pricing information, cost estimates, or quotes mentioned on this
             website are for general informational purposes only. Actual project
-            costs are determined after an on-site evaluation by Abel Balderas or
-            an authorized representative. Written quotes provided directly to
+            costs are determined after an on-site evaluation by an authorized
+            project manager or representative. Written quotes provided directly to
             you supersede any general pricing information found on this website.
           </p>
         </section>
@@ -91,10 +91,10 @@ export default function TermsPage() {
             6. Limitation of Liability
           </h2>
           <p>
-            Balderas Demolition Inc. makes every effort to ensure the accuracy of
+            Demolition OC makes every effort to ensure the accuracy of
             information on this site, but we do not warrant that the content is
             error-free, complete, or current. To the fullest extent permitted by
-            California law, Balderas Demolition Inc. shall not be liable for any
+            California law, Demolition OC shall not be liable for any
             direct, indirect, incidental, or consequential damages arising from
             your use of this website or reliance on any information provided
             herein.
@@ -107,7 +107,7 @@ export default function TermsPage() {
           </h2>
           <p>
             This website may contain links to third-party websites for your
-            convenience. Balderas Demolition Inc. does not endorse, control, or
+            convenience. Demolition OC does not endorse, control, or
             assume responsibility for the content, privacy policies, or
             practices of any third-party sites. You access linked sites at your
             own risk.
@@ -119,8 +119,8 @@ export default function TermsPage() {
             8. Indemnification
           </h2>
           <p>
-            You agree to indemnify, defend, and hold harmless Balderas Demolition
-            Inc., its owner, employees, and agents from any claims, damages,
+            You agree to indemnify, defend, and hold harmless Demolition
+            OC, its owners, employees, and agents from any claims, damages,
             losses, or expenses (including reasonable attorney fees) arising out
             of your use of this website or violation of these Terms of Use.
           </p>
@@ -158,8 +158,8 @@ export default function TermsPage() {
             If you have questions about these Terms of Use, please contact us:
           </p>
           <ul className="mt-3 space-y-1 pl-6">
-            <li><strong>Balderas Demolition Inc.</strong></li>
-            <li>Phone: (714) 340-8108</li>
+            <li><strong>Demolition OC</strong></li>
+            <li>Phone: (714) 333-0178</li>
             <li>Website: demolitionoc.com</li>
             <li>Serving all of Orange County, CA</li>
           </ul>

@@ -13,7 +13,7 @@ const PROCESS_STEPS = [
   {
     title: "On-Site Consultation:",
     description:
-      "Abel meets you on-site to evaluate the scope and provide a transparent, no-obligation quote.",
+      "Our experienced team meets you on-site to evaluate the scope and provide a transparent, no-obligation quote.",
     icon: <OnSiteConsultationIcon className="h-full w-full" />,
   },
   {
@@ -50,7 +50,7 @@ export function DemolitionProcessSection() {
             <div className="relative h-[460px] w-full overflow-hidden xl:h-[777px]">
               <Image
                 src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img5.jpg"
-                alt="Balderas team planning a demolition process"
+                alt="Demolition OC team planning a demolition process"
                 fill
                 sizes="(max-width: 1279px) 100vw, 50vw"
                 className="object-cover"

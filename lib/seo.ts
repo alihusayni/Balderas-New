@@ -8,12 +8,12 @@ import type { Metadata } from "next";
  * domain documented in the site copy.
  */
 export const SITE = {
-  name: "Balderas Demolition Inc.",
-  shortName: "Balderas Demolition",
-  legalName: "Balderas Demolition Inc.",
+  name: "Demolition OC",
+  shortName: "Demolition OC",
+  legalName: "Demolition OC",
   tagline: "Demolition, Dumpster Rentals & Junk Removal in Orange County",
   description:
-    "Balderas Demolition Inc. provides licensed, insured demolition, dumpster rentals, and junk removal across Orange County, CA. Get a fast, friendly free quote from Abel Balderas and the team.",
+    "Demolition OC provides licensed, insured demolition, dumpster rentals, and junk removal across Orange County, CA. Get a fast, friendly free quote from our experienced team.",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.demolitionoc.com").replace(
     /\/$/,
     "",
@@ -21,13 +21,13 @@ export const SITE = {
   locale: "en_US",
   defaultOgImage: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/hero.webp",
   defaultOgImageAlt:
-    "Balderas Demolition Inc. crew on a residential demolition site in Orange County",
-  /** X (Twitter) handle, e.g. `@balderasdemo` — leave empty until you have one. */
+    "Demolition OC crew on a residential demolition site in Orange County",
+  /** X (Twitter) handle, e.g. `@demolitionoc` — leave empty until you have one. */
   twitterHandle: "",
-  founder: "Abel Balderas",
+  founder: "",
   /** California C-21 contractor license number — fill when available. */
   c21LicenseNumber: "",
-  telephone: "(714) 340-8108",
+  telephone: "(714) 333-0178",
   email: "info@demolitionoc.com",
   address: {
     streetAddress: "11431 Westminster Ave",
@@ -86,8 +86,7 @@ export const SITE = {
     "estate cleanout Orange County",
     "Tustin demolition",
     "Irvine demolition",
-    "Balderas Demolition",
-    "Abel Balderas",
+    "Demolition OC",
     "C-21 licensed contractor",
   ],
 };
@@ -220,7 +219,7 @@ export function getLocalBusinessJsonLd() {
     image: absoluteUrl(SITE.defaultOgImage),
     logo: absoluteUrl("/logo.svg"),
     priceRange: "$$",
-    founder: { "@type": "Person", name: SITE.founder },
+    ...(SITE.founder ? { founder: { "@type": "Person", name: SITE.founder } } : {}),
     areaServed: SITE.areasServed.map((name) => ({
       "@type": "City",
       name,

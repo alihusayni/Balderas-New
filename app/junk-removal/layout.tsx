@@ -7,9 +7,9 @@ import {
 import { JsonLd } from "@/components/json-ld";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Junk Removal Orange County | Fast & Affordable | Balderas Demolition",
+  title: "Junk Removal Orange County | Fast & Affordable | Demolition OC",
   description:
-    "Professional junk removal services across Orange County, CA. Furniture removal, estate cleanouts, same-day pickup. Upfront pricing, eco-friendly disposal. Call (714) 340-8108.",
+    "Professional junk removal services across Orange County, CA. Furniture removal, estate cleanouts, same-day pickup. Upfront pricing, eco-friendly disposal. Call (714) 333-0178.",
   path: "/junk-removal",
   keywords: [
     "junk removal Orange County",
@@ -17,7 +17,7 @@ export const metadata: Metadata = pageMetadata({
     "estate cleanout Orange County",
     "same day junk removal",
     "junk hauling Orange County",
-    "Balderas Demolition junk removal",
+    "Demolition OC junk removal",
   ],
 });
 

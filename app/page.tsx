@@ -10,19 +10,19 @@ import {
 
 export const metadata: Metadata = pageMetadata({
   title:
-    "Demolition, Junk Removal & Dumpster Rental Orange County | Balderas Demolition Inc.",
+    "Demolition, Junk Removal & Dumpster Rental Orange County | Demolition OC",
   description:
-    "Balderas Demolition Inc. — Orange County's trusted source for licensed demolition, junk removal, and dumpster rentals. Abel Balderas leads every project personally. Get a free same-day quote!",
+    "Demolition OC — Orange County's trusted source for licensed demolition, junk removal, and dumpster rentals. Professional crews, fast turnarounds, and expert service. Get a free same-day quote!",
   path: "/",
   image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/hero.webp",
   imageAlt:
-    "Balderas Demolition Inc. demolition crew on an Orange County job site",
+    "Demolition OC demolition crew on an Orange County job site",
   keywords: [
     "demolition Orange County",
     "junk removal Orange County",
     "dumpster rental Orange County",
-    "Balderas Demolition Inc.",
-    "Abel Balderas",
+    "Demolition OC",
+    "Orange County demolition",
     "Tustin demolition contractor",
     "residential demolition OC",
     "same day junk removal Orange County",
@@ -72,9 +72,9 @@ export default function Page() {
             </h2>
             <div className="mt-8 flex flex-col gap-6 text-[17px] leading-[1.7] text-[#3a3a3a]">
               <p>
-                Balderas Demolition Inc. is a C-21 CSLB licensed demolition contractor
-                serving Orange County for over 15 years. Every project is led personally
-                by Abel Balderas — not subcontracted to an unknown crew.
+                Demolition OC is a C-21 CSLB licensed demolition contractor
+                serving Orange County for over 15 years. Every project is led
+                by our experienced team — not subcontracted to an unknown crew.
               </p>
               <p><strong>Our services:</strong></p>
               <ul className="ml-6 list-disc flex flex-col gap-2">
@@ -91,11 +91,11 @@ export default function Page() {
                 <li><strong>Disruption:</strong> We handle permit filing, utility disconnects, and CalOSHA compliance. Neighbors and adjacent structures are protected throughout.</li>
               </ul>
               <p>
-                <strong>Why Orange County chooses Balderas:</strong> 5-star rated on Google,
+                <strong>Why Orange County chooses Demolition OC:</strong> 5-star rated on Google,
                 500+ projects completed, C-21 CSLB certified, and fully insured.
                 We serve Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
                 Huntington Beach, Newport Beach, Tustin, Garden Grove, and Orange.
-                Call <strong>(714) 340-8108</strong> for a free same-day quote.
+                Call <strong>(714) 333-0178</strong> for a free same-day quote.
               </p>
             </div>
           </div>

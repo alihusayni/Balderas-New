@@ -27,7 +27,7 @@ export function ResidentialDemolitionHero({
   return (
     <section className="-mt-[130px] relative min-h-screen w-full overflow-hidden pt-[230px]">
       <HeroParallaxBackground
-        src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img2.png"
+        src="/images/services/img2.png"
         alt="Residential interior demolition in Orange County"
         priority
       />
@@ -43,8 +43,8 @@ export function ResidentialDemolitionHero({
             Taking the first step toward your dream home can be intimidating.
               Whether you&apos;re gutting a 1970s kitchen or clearing out a
               backyard structure, you need a team that respects your property as
-              much as you do. At Balderas Demolition Inc., Abel Balderas and his
-              crew specialize in &ldquo;surgical&rdquo; residential
+              much as you do. At Demolition OC, our
+              crew specializes in &ldquo;surgical&rdquo; residential
               demolition—tearing down exactly what needs to go while protecting
               everything that stays.
             
@@ -52,8 +52,8 @@ export function ResidentialDemolitionHero({
           <HeroCtas
             primaryHref={quoteHref}
             primaryLabel="Get a Residential Demo Quote"
-            secondaryHref="tel:+17143408108"
-            secondaryLabel="(714) 340-8108"
+            secondaryHref="tel:+17143330178"
+            secondaryLabel="(714) 333-0178"
             showSecondaryArrow={false}
             primaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[260px]"
             secondaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[220px]"

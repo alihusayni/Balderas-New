@@ -25,7 +25,7 @@ export function InteriorDemolitionHero({
   return (
     <section className="-mt-[130px] relative min-h-screen w-full overflow-hidden pt-[230px]">
       <HeroParallaxBackground
-        src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img2.png"
+        src="/images/services/img2.png"
         alt="Interior kitchen and bath demolition prep in Orange County"
         priority
       />
@@ -40,9 +40,9 @@ export function InteriorDemolitionHero({
           </HeroHeading>
           <HeroSubheading>
             Remodeling your home starts with a clean slate, but getting there
-            shouldn&apos;t mean a mess in the rest of your house. At Balderas
-            Demolition Inc., we specialize in interior &ldquo;surgical&rdquo;
-            demolition. Led by Abel Balderas, our team focuses on removing
+            shouldn&apos;t mean a mess in the rest of your house. At Demolition
+            OC, we specialize in interior &ldquo;surgical&rdquo;
+            demolition. Our team focuses on removing
             exactly what you don&apos;t want while meticulously protecting the
             parts of your home you love.
           </HeroSubheading>
@@ -50,8 +50,8 @@ export function InteriorDemolitionHero({
           
             primaryHref={quoteHref}
             primaryLabel="Get an Interior Demo Quote"
-            secondaryHref="tel:+17143408108"
-            secondaryLabel="(714) 340-8108"
+            secondaryHref="tel:+17143330178"
+            secondaryLabel="(714) 333-0178"
             showSecondaryArrow={false}
             primaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[260px]"
             secondaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[220px]"

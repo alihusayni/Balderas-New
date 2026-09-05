@@ -28,11 +28,11 @@ import { SplitHeroText } from "@/components/split-hero-text";
 export const metadata: Metadata = pageMetadata({
   title: "Interior Demolition Services Orange County | Kitchen & Bath Strip-Outs",
   description:
-    "Professional interior demolition in Orange County. Specializing in kitchen, bathroom, and flooring removal with dust control and surgical precision. Call Abel Balderas today!",
+    "Professional interior demolition in Orange County. Specializing in kitchen, bathroom, and flooring removal with dust control and surgical precision. Get a free quote today!",
   path: "/demolition/residential/interior",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img2.png",
+  image: "/images/services/img2.png",
   imageAlt:
-    "Balderas Demolition Inc. performing careful interior demolition in Orange County",
+    "Demolition OC performing careful interior demolition in Orange County",
   keywords: [
     "interior demolition Orange County",
     "kitchen gutting Orange County",
@@ -40,8 +40,8 @@ export const metadata: Metadata = pageMetadata({
     "flooring removal contractor",
     "interior demo dust control",
     "residential demolition remodel",
-    "Abel Balderas",
-    "Balderas Demolition",
+    "Demolition OC",
+    "Orange County interior demolition",
   ],
 });
 
@@ -51,7 +51,7 @@ const interiorServiceJsonLd = getServiceJsonLd({
     "Surgical interior residential demolition for remodels: kitchen and bathroom gutting, non-load-bearing wall removal, drywall and ceiling stripping, closet and built-in removal, and complete flooring tear-out—contractor-ready with dust containment and debris management throughout Orange County.",
   path: "/demolition/residential/interior",
   serviceType: "Interior Demolition",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img2.png",
+  image: "/images/services/img2.png",
 });
 
 const interiorBreadcrumbJsonLd = getBreadcrumbJsonLd([
@@ -151,10 +151,10 @@ function getCallPhone() {
         ? `tel:+1${digits}`
         : digits.length >= 11
           ? `tel:+${digits}`
-          : "tel:+17143408108";
+          : "tel:+17143330178";
     return { display: raw, href };
   }
-  return { display: "(714) 340-8108", href: "tel:+17143408108" };
+  return { display: "(714) 333-0178", href: "tel:+17143330178" };
 }
 
 export default function InteriorDemolitionPage() {
@@ -171,7 +171,7 @@ export default function InteriorDemolitionPage() {
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img2.png"
+                src="/images/services/img2.png"
                 alt="Interior kitchen and bath demolition"
                 fill
                 sizes="100vw"
@@ -192,7 +192,7 @@ export default function InteriorDemolitionPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img2.png"
+            imageSrc="/images/services/img2.png"
             imageAlt="Kitchen and bathroom gutting and strip-out"
             imageSide="right"
             hideImageOnSmallScreens
@@ -261,8 +261,8 @@ export default function InteriorDemolitionPage() {
       </section>
 
       <FullBleedImageSection
-        imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img4.png"
-        imageAlt="Balderas Demolition team at a residential interior project"
+        imageSrc="/images/services/img4.png"
+        imageAlt="Demolition OC team at a residential interior project"
         overlayClassName="bg-[#06182C]/72"
         className="py-20 lg:py-24"
         contentClassName="mx-auto flex w-full max-w-container flex-col gap-16 px-6 lg:px-10"
@@ -270,7 +270,7 @@ export default function InteriorDemolitionPage() {
         <SplitHeroText
           title='The "White Glove" Approach to Interior Demolition'
           description={
-            "Abel Balderas understands that we are working inside your sanctuary. That\u2019s why we\u2019ve developed a protocol specifically for interior residential work:"
+            "Demolition OC understands that we are working inside your sanctuary. That\u2019s why we\u2019ve developed a protocol specifically for interior residential work:"
           }
           titleClassName="text-white"
           descriptionClassName="text-white"
@@ -292,8 +292,8 @@ export default function InteriorDemolitionPage() {
         <div className="mx-auto grid w-full max-w-container grid-cols-1 items-center gap-8 px-4 sm:gap-10 sm:px-6 md:gap-12 md:px-8 lg:grid-cols-2 lg:gap-14 lg:px-10">
           <div className="relative order-2 min-h-[300px] overflow-hidden sm:min-h-[360px] md:min-h-[500px] lg:order-1">
             <Image
-              src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/about/2.jpg"
-              alt="Abel Balderas on a demolition job site, your interior demo partner"
+              src="/images/about/2.jpg"
+              alt="Demolition OC site supervisor on a demolition job site, your interior demo partner"
               fill
               sizes="(max-width: 1024px) 100vw, 650px"
               className="object-cover object-[40%_30%]"
@@ -302,7 +302,7 @@ export default function InteriorDemolitionPage() {
 
           <div className="order-1 text-[#0b0b0b] lg:order-2">
             <MainHeading className="text-[#0b0300]" as="h2">
-              Meet Abel Balderas:{" "}
+              Hands-On Leadership:{" "}
               <span className="text-[var(--color-brand-orange)]">
                 Your Interior Demo Partner
               </span>
@@ -311,9 +311,9 @@ export default function InteriorDemolitionPage() {
 
             <SimpleText className="mt-8 text-[#0b0300] sm:mt-12">
               When it comes to working inside your home, trust is everything.
-              Abel Balderas is known across Orange County for his professional
-              communication and his hands-on approach. Abel doesn&apos;t just send
-              a crew; he ensures the plan is executed with the care and respect
+              Demolition OC is known across Orange County for professional
+              communication and a hands-on approach. We don&apos;t just send
+              a crew; our experienced project supervisors ensure the plan is executed with the care and respect
               your home deserves.
             </SimpleText>
 
@@ -322,7 +322,7 @@ export default function InteriorDemolitionPage() {
               make the demolition the easiest part of your entire
               remodel.&rdquo;{" "}
               <span className="mt-2 block font-bold not-italic">
-                &mdash; Abel Balderas
+                &mdash; Demolition OC Team
               </span>
             </blockquote>
           </div>
@@ -332,7 +332,7 @@ export default function InteriorDemolitionPage() {
       <DemolitionContactSection
         title="Get a Clean Start on Your Remodel Today"
         description={
-          'Don\u2019t let the \u201cdirty work\u201d delay your design. Contact Abel Balderas at Balderas Demolition Inc. for a fast, friendly, and professional interior estimate.'
+          'Don\u2019t let the \u201cdirty work\u201d delay your design. Contact Demolition OC for a fast, friendly, and professional interior estimate.'
         }
         fields={INTERIOR_CONTACT_FIELDS}
         submitLabel="Submit"
@@ -347,7 +347,7 @@ export default function InteriorDemolitionPage() {
             </h2>
             <div className="mt-8 flex flex-col gap-6 text-[17px] leading-[1.7] text-[#3a3a3a]">
               <p>
-                Balderas Demolition Inc. provides interior demolition services across Orange County.
+                Demolition OC provides interior demolition services across Orange County.
                 C-21 CSLB licensed and CalOSHA compliant, we remove walls, flooring, ceilings,
                 and fixtures while keeping the exterior structure fully intact.
               </p>
@@ -363,7 +363,7 @@ export default function InteriorDemolitionPage() {
                 C-21 CSLB certified, fully insured, and CalOSHA compliant.
                 We serve Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
                 Huntington Beach, Newport Beach, Tustin, Garden Grove, and Orange.
-                Call <strong>(714) 340-8108</strong> for a free estimate.
+                Call <strong>(714) 333-0178</strong> for a free estimate.
               </p>
             </div>
           </div>

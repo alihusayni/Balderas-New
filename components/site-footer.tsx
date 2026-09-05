@@ -41,7 +41,7 @@ export function SiteFooter() {
           >
             <Image
               src="/logo.svg"
-              alt="Balderas Demolition Inc."
+              alt="Demolition OC"
               fill
               sizes="160px"
               className="object-contain object-left"
@@ -76,7 +76,7 @@ export function SiteFooter() {
           </div>
           <div className="flex items-center gap-2">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 text-[var(--color-brand-orange)]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <a href="tel:+17143408108" className="transition-colors hover:text-white">(714) 340-8108</a>
+            <a href="tel:+17143330178" className="transition-colors hover:text-white">(714) 333-0178</a>
           </div>
         </div>
 
@@ -98,7 +98,7 @@ export function SiteFooter() {
             </Link>
           </div>
           <SimpleText className="text-[14px] font-medium leading-[22px] tracking-[-0.02em] text-white/80 sm:text-[16px]">
-            Copyright &copy; {year} Balderas Demolition Inc. All Rights
+            Copyright &copy; {year} Demolition OC. All Rights
             Reserved. Powered by{" "}
             <a
               href="https://www.toporganicleads.com"

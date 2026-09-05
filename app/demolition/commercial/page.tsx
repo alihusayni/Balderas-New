@@ -27,13 +27,13 @@ import {
 import { SplitHeroText } from "@/components/split-hero-text";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Commercial Demolition Services Orange County | Balderas Demolition Inc.",
+  title: "Commercial Demolition Services Orange County | Demolition OC",
   description:
     "Leading commercial demolition in Orange County. We specialize in office strip-outs, retail deconstruction, and industrial clearing. Licensed, insured, and deadline-driven.",
   path: "/demolition/commercial",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img1.png",
+  image: "/images/services/img1.png",
   imageAlt:
-    "Balderas Demolition Inc. crew performing commercial demolition in Orange County",
+    "Demolition OC crew performing commercial demolition in Orange County",
   keywords: [
     "commercial demolition Orange County",
     "office strip-out",
@@ -51,7 +51,7 @@ const commercialServiceJsonLd = getServiceJsonLd({
     "Office and retail strip-outs, white-box prep, industrial and warehouse clearing, CALGreen-compliant debris reporting, and deadline-driven scheduling for property managers and general contractors across Orange County.",
   path: "/demolition/commercial",
   serviceType: "Commercial Demolition",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img1.png",
+  image: "/images/services/img1.png",
 });
 
 const commercialBreadcrumbJsonLd = getBreadcrumbJsonLd([
@@ -150,10 +150,10 @@ function getCallPhone() {
         ? `tel:+1${digits}`
         : digits.length >= 11
           ? `tel:+${digits}`
-          : "tel:+17143408108";
+          : "tel:+17143330178";
     return { display: raw, href };
   }
-  return { display: "(714) 340-8108", href: "tel:+17143408108" };
+  return { display: "(714) 333-0178", href: "tel:+17143330178" };
 }
 
 export default function CommercialDemolitionPage() {
@@ -195,7 +195,7 @@ export default function CommercialDemolitionPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img2.png"
+            imageSrc="/images/services/img2.png"
             imageAlt="Retail and restaurant commercial strip-out"
             imageSide="right"
             hideImageOnSmallScreens
@@ -218,7 +218,7 @@ export default function CommercialDemolitionPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img4.png"
+            imageSrc="/images/services/img4.png"
             imageAlt="Office deconstruction and furniture removal"
             imageSide="left"
             title="Office & Corporate Deconstruction"
@@ -273,7 +273,7 @@ export default function CommercialDemolitionPage() {
       >
         <SplitHeroText
           className="lg:mb-8 xl:mb-12 2xl:mb-12"
-          title="Why Balderas Demolition is the Preferred Commercial Partner"
+          title="Why Demolition OC is the Preferred Commercial Partner"
           description={
             "Commercial demolition in Orange County requires more than just a truck; it requires a deep understanding of local compliance and site-specific logistics."
           }
@@ -297,8 +297,8 @@ export default function CommercialDemolitionPage() {
         <div className="mx-auto grid w-full max-w-container grid-cols-1 items-center gap-8 px-4 sm:gap-10 sm:px-6 md:gap-12 md:px-8 lg:grid-cols-2 lg:gap-14 lg:px-10">
           <div className="relative order-2 min-h-[300px] overflow-hidden sm:min-h-[360px] md:min-h-[500px] lg:order-1">
             <Image
-              src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/about/2.jpg"
-              alt="Abel Balderas, owner of Balderas Demolition Inc., on a commercial job site wearing safety gear"
+              src="/images/about/2.jpg"
+              alt="Demolition OC supervisor on a commercial job site wearing safety gear"
               fill
               sizes="(max-width: 1024px) 100vw, 650px"
               className="object-cover object-[40%_30%]"
@@ -307,16 +307,16 @@ export default function CommercialDemolitionPage() {
 
           <div className="order-1 text-[#0b0b0b] lg:order-2">
             <SectionHeading className="uppercase leading-[0.92] sm:text-[56px] md:text-[68px] lg:text-[78px]">
-              Meet the owner
+              Commercial
               <span className="block normal-case tracking-[-0.03em] text-[var(--color-brand-orange)]">
-                Abel Balderas
+                Leadership
               </span>
             </SectionHeading>
             <div className="hidden sm:block sm:mt-12" aria-hidden />
 
             <SectionSubheading className="mt-8 text-[#1f1f1f] sm:mt-12 sm:text-base md:text-[19px] md:leading-[1.5]">
-              When you partner with Balderas Demolition Inc., you get a dedicated
-              project manager. Abel Balderas personally ensures that every
+              When you partner with Demolition OC, you get a dedicated
+              project manager. Our leadership personally ensures that every
               commercial site is clean, safe, and organized. We pride ourselves
               on clear communication—providing daily progress updates and
               immediate solutions to on-site challenges.
@@ -327,7 +327,7 @@ export default function CommercialDemolitionPage() {
               depends on it—because it does. Your project&apos;s success is our
               highest priority.&rdquo;{" "}
               <span className="mt-2 block font-bold not-italic">
-                &mdash; Abel Balderas
+                &mdash; Demolition OC Team
               </span>
             </blockquote>
           </div>

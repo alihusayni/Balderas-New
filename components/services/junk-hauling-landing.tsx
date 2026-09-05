@@ -30,7 +30,7 @@ function getTelHref(): string {
   const digits = SITE.telephone.replace(/\D/g, "");
   if (digits.length === 10) return `tel:+1${digits}`;
   if (digits.length >= 11) return `tel:+${digits}`;
-  return "tel:+17143408108";
+  return "tel:+17143330178";
 }
 
 const junkHaulingContactFields: ContactFormField[] = [
@@ -38,37 +38,36 @@ const junkHaulingContactFields: ContactFormField[] = [
     id: "junk-hauling-name",
     type: "text",
     label: "Name",
-    placeholder: "Your full name",
-    width: "half",
+    placeholder: "Your Name",
   },
   {
     id: "junk-hauling-phone",
     type: "text",
     inputType: "tel",
     label: "Phone Number",
-    placeholder: "Enter your phone number",
-    width: "half",
+    placeholder: "(714) 000-0000",
   },
   {
     id: "junk-hauling-city",
     type: "text",
     label: "City",
-    placeholder: "Enter your city",
-    width: "full",
+    placeholder: "e.g., Tustin, Irvine, Newport Beach",
   },
   {
     id: "junk-hauling-description",
     type: "textarea",
     label: "Description of Items to be Hauled",
-    placeholder:
-      "Describe what you need removed (furniture, appliances, debris, etc.)",
-    width: "full",
+    placeholder: "Tell us what needs hauling (furniture, debris, dirt, appliances, etc.)",
     rows: 4,
   },
 ];
 
-export function JunkHaulingLanding({ children }: { children?: React.ReactNode }) {
-  const telHref = getTelHref();
+export function JunkHaulingLanding({
+  children,
+}: {
+  children?: React.ReactNode;
+}) {
+  const quoteHref = "#schedule-pickup";
 
   const scrollToNextSection = () => {
     window.scrollTo({
@@ -79,17 +78,20 @@ export function JunkHaulingLanding({ children }: { children?: React.ReactNode })
 
   return (
     <main className="flex min-h-screen flex-col bg-[var(--color-brand-dark)]">
-      <section className="relative -mt-[130px] min-h-screen w-full overflow-hidden pt-[230px]">
+      <section className="-mt-[130px] relative w-full overflow-hidden">
         <HeroParallaxBackground
           src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img6.jpg"
-          alt="Junk hauling crew and truck loading debris in Orange County"
+          alt="Junk hauling truck and crew ready for debris removal in Orange County"
           priority
+          overlayClassName="bg-[#06182C]/65"
         />
 
-        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-container items-end px-6 pb-[180px] lg:px-10">
-          <div className="max-w-[920px] text-[var(--color-brand-white)]">
-            <HeroHeading className="max-w-[920px]">
-              Professional Junk Hauling Services Across Orange County
+        <div className="relative z-10 mx-auto flex min-h-[760px] w-full max-w-container items-end px-6 pt-[200px] pb-[80px] lg:min-h-[1040px] lg:px-10 lg:pt-[230px] lg:pb-[100px]">
+          <div className="max-w-[760px] text-[var(--color-brand-white)] sm:max-w-[680px] md:max-w-[1100px]">
+            <HeroHeading>
+              Professional Junk Hauling Services in Orange County:{" "}
+              <br className="hidden sm:block" />
+              Heavy-Duty Muscle for Your Toughest Cleanups
             </HeroHeading>
 
             <HeroSubheading className="max-w-[940px]">
@@ -99,9 +101,9 @@ export function JunkHaulingLanding({ children }: { children?: React.ReactNode })
               When you have more than just a few bags of trash, you need more
               than just a pickup truck. You need a professional hauling partner
               who can manage the logistics of heavy loads and large-scale
-              removals. At Balderas Demolition Inc., we provide high-capacity
+              removals. At Demolition OC, we provide high-capacity
               junk hauling services that take the stress out of your biggest
-              cleanups. Led by Abel Balderas, our team is equipped to handle
+              cleanups. Our team is equipped to handle
               everything from old appliances to massive piles of construction
               debris, ensuring your property is cleared quickly and safely.
             </HeroSubheading>
@@ -111,8 +113,8 @@ export function JunkHaulingLanding({ children }: { children?: React.ReactNode })
               primaryHref="/contact"
               primaryLabel="Get a Hauling Quote"
               primaryButtonClassName="lg:w-[260px] xl:w-[280px]"
-              secondaryHref="tel:+17143408108"
-              secondaryLabel="(714) 340-8108"
+              secondaryHref="tel:+17143330178"
+              secondaryLabel="(714) 333-0178"
               secondaryButtonClassName="sm:w-auto md:w-auto sm:shrink-0"
               showSecondaryArrow={false}
             />
@@ -221,7 +223,7 @@ export function JunkHaulingLanding({ children }: { children?: React.ReactNode })
         <div className="absolute inset-0">
           <Image
             src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img5.jpg"
-            alt="Balderas Demolition hauling truck in Orange County"
+            alt="Demolition OC hauling truck in Orange County"
             fill
             sizes="100vw"
             className="object-cover"
@@ -232,13 +234,13 @@ export function JunkHaulingLanding({ children }: { children?: React.ReactNode })
         <div className="relative z-10 mx-auto flex w-full max-w-container flex-col gap-10 px-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12 lg:px-10">
           <div className="w-full lg:max-w-[560px]">
             <MainHeading className="text-white">
-              Why Balderas Demolition Inc. is the Top Choice for Hauling
+              Why Demolition OC is the Top Choice for Hauling
             </MainHeading>
             <div className="mt-6 w-full lg:max-w-[500px]">
               <BoldText className="text-white">
-                In Orange County, reliability is everything. Abel Balderas has
+                In Orange County, reliability is everything. Demolition OC has
                 built a reputation for being the hauler who actually shows up on
-                time and does exactly what he promised.
+                time and does exactly what was promised.
               </BoldText>
             </div>
           </div>
@@ -266,9 +268,9 @@ export function JunkHaulingLanding({ children }: { children?: React.ReactNode })
               },
               {
                 icon: <OnSiteConsultationIcon className="h-full w-full" />,
-                title: "Abel's Personal Oversight:",
+                title: "Hands-On Professional Oversight:",
                 description:
-                  "Every hauling project is managed with the same precision as a full-scale demolition job. Abel ensures the crew is efficient, respectful, and thorough.",
+                  "Every hauling project is managed with the same precision as a full-scale demolition job. Our leadership ensures the crew is efficient, respectful, and thorough.",
               },
             ]}
           />
@@ -277,10 +279,10 @@ export function JunkHaulingLanding({ children }: { children?: React.ReactNode })
 
       <ServiceStepsSection
         imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img6.jpg"
-        imageAlt="Balderas Demolition truck loaded for junk hauling in Orange County"
+        imageAlt="Demolition OC truck loaded for junk hauling in Orange County"
         imageSide="left"
         title="Transparent, Volume-Based Pricing"
-        intro="We believe in fair, honest pricing. You shouldn't pay for a full truck if you only have a half-load. Abel provides upfront, all-inclusive quotes based on how much space your items take up in our truck."
+        intro="We believe in fair, honest pricing. You shouldn't pay for a full truck if you only have a half-load. Demolition OC provides upfront, all-inclusive quotes based on how much space your items take up in our truck."
         steps={[
           {
             icon: <UpfrontVolumePricingIcon className="h-[25px] w-[31px]" />,
@@ -292,7 +294,7 @@ export function JunkHaulingLanding({ children }: { children?: React.ReactNode })
             icon: <NoHiddenFeesIcon className="h-[25px] w-[31px]" />,
             title: "No Surprise Disposal Fees",
             description:
-              "Disposal and diversion costs are built into the price Abel confirms before we haul—nothing sneaky at the dump.",
+              "Disposal and diversion costs are built into the price we confirm before we haul—nothing sneaky at the dump.",
           },
           {
             icon: <FastDeliveryIcon className="h-[29px] w-[31px]" />,
@@ -324,7 +326,7 @@ export function JunkHaulingLanding({ children }: { children?: React.ReactNode })
               titleWrapClassName="w-full lg:max-w-[420px] xl:max-w-[444px]"
               descriptionWrapClassName="mt-5 w-full lg:max-w-[420px] xl:w-[444px]"
               title="Ready to Get Those Heavy Items Hauled Away?"
-              description="Stop looking at that pile and start enjoying your space again. Contact the Balderas Demolition Inc. team for the most reliable junk hauling in the county."
+              description="Stop looking at that pile and start enjoying your space again. Contact the Demolition OC team for the most reliable junk hauling in the county."
             />
 
             <ContactFormPanel

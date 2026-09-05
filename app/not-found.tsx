@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "404 — Page Not Found | Balderas Demolition Inc.",
+  title: "404 — Page Not Found | Demolition OC",
   description: "Sorry, we can't find the page you are looking for.",
 };
 

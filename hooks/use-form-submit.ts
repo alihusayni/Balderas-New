@@ -38,10 +38,10 @@ export function useFormSubmit() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            siteName: "Balderas",
+            siteName: "Demolition OC",
             pageUrl: window.location.href,
             errorDetails: err.message || "Failed to submit form (network error)",
-            clientEmail: "balderas293@gmail.com",
+            clientEmail: "ali.h@toporganicleads.com",
             leadData: data,
           }),
         });

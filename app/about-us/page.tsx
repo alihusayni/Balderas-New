@@ -16,18 +16,18 @@ import { getBreadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title:
-    "About Abel Balderas & Balderas Demolition Inc. | Orange County's Trusted Team",
+    "About Us | Demolition OC - Orange County's Trusted Demolition Team",
   description:
-    "Meet Abel Balderas, the founder of Balderas Demolition Inc. Learn about our commitment to safe demolition, eco-friendly junk removal, and superior service across Orange County.",
+    "Learn about Demolition OC's commitment to safe demolition, eco-friendly junk removal, and superior service across Orange County.",
   path: "/about-us",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/about/2.jpg",
-  imageAlt: "Abel Balderas, founder of Balderas Demolition Inc., on a job site",
+  image: "/images/about/2.jpg",
+  imageAlt: "Demolition OC project supervisor on a job site",
   keywords: [
-    "Abel Balderas",
-    "Balderas Demolition Inc.",
+    "Demolition OC",
     "Orange County demolition contractor",
     "Tustin demolition company",
-    "C-21 licensed contractor",
+    "residential demolition OC",
+    "commercial demolition Orange County",
   ],
 });
 
@@ -74,8 +74,8 @@ export default function AboutPage() {
           <div className="w-full lg:w-[611px] lg:shrink-0">
             <div className="relative h-[420px] w-full overflow-hidden sm:h-[520px] lg:h-[761px]">
               <Image
-                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/about/2.jpg"
-                alt="Abel Balderas, founder, on a job site wearing safety gear"
+                src="/images/about/2.jpg"
+                alt="Demolition OC project supervisor on a job site wearing safety gear"
                 fill
                 sizes="(max-width: 1024px) 100vw, 611px"
                 className="object-cover"
@@ -85,25 +85,25 @@ export default function AboutPage() {
 
           <div className="flex w-full flex-col gap-8 lg:flex-1 lg:gap-16">
             <MainHeading className="text-[#0b0300]">
-              Meet Abel Balderas:{" "}
+              Hands-On Leadership:{" "}
               <span className="text-[var(--color-brand-orange)]">
-                A Hands-On Leader
+                A Higher Standard
               </span>
             </MainHeading>
 
             <div className="flex flex-col gap-6">
               <SimpleText className="text-[#0b0300]">
-                In an industry where many owners sit behind a desk, Abel
-                Balderas is a familiar face on every job site. With years of
+                In an industry where many contractors sit behind a desk, our
+                project managers are a familiar face on every job site. With years of
                 experience in the specialized trades of demolition and
-                hauling, Abel recognized a gap in the Orange County market: a
-                contractor who combined high-level technical expertise with
+                hauling, Demolition OC was built to fill a critical need in Orange County:
+                a contractor who combines high-level technical expertise with
                 the &ldquo;white-glove&rdquo; service of a boutique business.
               </SimpleText>
 
               <SimpleText className="text-[#0b0300]">
-                Abel&rsquo;s philosophy is rooted in responsiveness and
-                reliability. When you call Balderas Demolition Inc., you
+                Our philosophy is rooted in responsiveness and
+                reliability. When you call Demolition OC, you
                 aren&rsquo;t talking to a national dispatch center &mdash;
                 you&rsquo;re talking to a local professional who knows your
                 neighborhood, understands the local permits, and takes
@@ -111,11 +111,11 @@ export default function AboutPage() {
               </SimpleText>
 
               <SimpleText className="font-semibold text-[#0b0300]">
-                &ldquo;I started this company because I saw how stressful
-                demolition could be for homeowners. My goal is to take that
+                &ldquo;We started this company because we saw how stressful
+                demolition could be for property owners. Our goal is to take that
                 stress off your shoulders, treat your property with respect,
                 and leave you with a blank canvas for your vision.&rdquo;{" "}
-                <span className="whitespace-nowrap">&mdash; Abel Balderas</span>
+                <span className="whitespace-nowrap">&mdash; Demolition OC Team</span>
               </SimpleText>
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function AboutPage() {
 
       <section className="relative w-full overflow-hidden">
         <Image
-          src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/about/3.png"
+          src="/images/about/3.png"
           alt=""
           aria-hidden
           fill
@@ -186,7 +186,7 @@ export default function AboutPage() {
         <div className="mx-auto flex w-full max-w-[1610px] flex-col gap-12 px-6 lg:px-12 xl:flex-row xl:items-stretch xl:gap-[50px]">
           <div className="flex w-full flex-col gap-12 xl:w-[780px] xl:gap-[60px]">
             <MainHeading className="max-w-[654px] text-[#1E1E1E]">
-              Our Core Values: The Balderas Difference
+              Our Core Values: The Demolition OC Difference
             </MainHeading>
 
             <div className="flex flex-col gap-8 xl:gap-[30px]">
@@ -204,8 +204,8 @@ export default function AboutPage() {
           <div className="w-full xl:flex-1">
             <div className="relative h-[360px] w-full overflow-hidden sm:h-[520px] xl:h-full xl:min-h-[856px]">
               <Image
-                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/about/3.png"
-                alt="Balderas Demolition crew working safely on a residential demolition"
+                src="/images/about/3.png"
+                alt="Demolition OC crew working safely on a residential demolition"
                 fill
                 sizes="(max-width: 1279px) 100vw, 780px"
                 className="object-cover"
@@ -217,13 +217,13 @@ export default function AboutPage() {
 
       <CtaBanner
         title="Ready to clear the way?"
-        description="When you hire Balderas Demolition Inc., you are partnering with a licensed, insured, and dedicated team that cares about the outcome as much as you do. Experience the difference that professional communication and a customer-first attitude can make."
+        description="When you hire Demolition OC, you are partnering with a licensed, insured, and dedicated team that cares about the outcome as much as you do. Experience the difference that professional communication and a customer-first attitude can make."
         backgroundSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/about/about-footer.webp"
         backgroundAlt=""
         titleClassName="text-[40px] sm:text-[56px] lg:text-[68px] lg:leading-[70px]"
         ctas={[
           {
-            label: "Get a Quote from Abel",
+            label: "Get Your Free Quote",
             href: "/#contact",
             variant: "primary",
             showArrow: false,

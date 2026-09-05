@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Preview Access | Balderas Demolition Inc.",
+  title: "Preview Access | Demolition OC",
   robots: {
     index: false,
     follow: false,

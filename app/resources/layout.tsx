@@ -8,20 +8,20 @@ import {
 
 export const metadata: Metadata = pageMetadata({
   title:
-    "Demolition & Junk Removal Resources Orange County | Balderas Demolition Inc.",
+    "Demolition & Junk Removal Resources Orange County | Demolition OC",
   description:
-    "Guides, FAQs, and 2026 cost articles on demolition, dumpster rentals, and junk removal in Orange County. Tips and answers from Abel Balderas and the Balderas Demolition Inc. team.",
+    "Guides, FAQs, and 2026 cost articles on demolition, dumpster rentals, and junk removal in Orange County. Tips and answers from Demolition OC.",
   path: "/resources",
   image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/top-bg.png",
   imageAlt:
-    "Balderas Demolition Inc. resources, guides, and FAQs about demolition in Orange County",
+    "Demolition OC resources, guides, and FAQs about demolition in Orange County",
   keywords: [
     "demolition guide Orange County",
     "house demolition cost",
     "junk removal tips",
     "dumpster rental guide",
     "C-21 licensed demolition",
-    "Balderas Demolition blog",
+    "Demolition OC blog",
   ],
 });
 
@@ -31,7 +31,7 @@ export const metadata: Metadata = pageMetadata({
  */
 const RESOURCES_FAQ = [
   {
-    question: "What services does Balderas Demolition Inc. offer?",
+    question: "What services does Demolition OC offer?",
     answer:
       "We offer interior and exterior residential demolition, structural demolition, dumpster rentals, and full-service junk removal across Orange County.",
   },

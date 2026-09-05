@@ -25,7 +25,7 @@ export function CommercialDemolitionHero({
   return (
     <section className="-mt-[130px] relative min-h-screen w-full overflow-hidden pt-[230px]">
       <HeroParallaxBackground
-        src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img1.png"
+        src="/images/services/img1.png"
         alt="Commercial demolition and heavy equipment in Orange County"
         priority
       />
@@ -42,15 +42,15 @@ export function CommercialDemolitionHero({
             property manager prepping a retail space for a new tenant or a general
             contractor needing a reliable sub-partner for a large-scale office
             strip-out, you need a team that understands the complexity of
-            commercial environments. Balderas Demolition Inc., led by Abel
-            Balderas, provides systematic, high-efficiency commercial demolition
+            commercial environments. Demolition OC
+            provides systematic, high-efficiency commercial demolition
             services across Orange County.
           </HeroSubheading>
           <HeroCtas
             primaryHref={quoteHref}
             primaryLabel="Request a Commercial Bid"
-            secondaryHref="tel:+17143408108"
-            secondaryLabel="(714) 340-8108"
+            secondaryHref="tel:+17143330178"
+            secondaryLabel="(714) 333-0178"
             showSecondaryArrow={false}
             primaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[280px]"
             secondaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[260px]"

@@ -262,7 +262,7 @@ export function SiteHeader() {
         >
           <Image
             src="/logo.svg"
-            alt="Balderas Demolition Inc."
+            alt="Demolition OC"
             fill
             className="object-contain object-left"
             sizes="(max-width: 640px) 120px, 200px"
@@ -502,7 +502,7 @@ export function SiteHeader() {
               >
                 <Image
                   src="/logo.svg"
-                  alt="Balderas Demolition Inc."
+                  alt="Demolition OC"
                   fill
                   className="object-contain object-left"
                   sizes="184px"

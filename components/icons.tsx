@@ -201,6 +201,8 @@ export function SurgicalPrecisionIcon(props: IconProps) {
   );
 }
 
+export const PersonalGuaranteeIcon = AbelsPersonalGuaranteeIcon;
+
 export function AbelsPersonalGuaranteeIcon(props: IconProps) {
   return (
     <svg viewBox="0 0 35 32" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>

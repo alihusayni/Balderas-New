@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Waste Disposal Services Orange County | Balderas Demolition",
-  description: "Professional waste disposal in Orange County by Balderas Demolition Inc. C&D debris, bulk household waste, and construction materials hauled away safely.",
+  title: "Waste Disposal Services Orange County | Demolition OC",
+  description: "Professional waste disposal in Orange County by Demolition OC. C&D debris, bulk household waste, and construction materials hauled away safely.",
   path: "/dumpster-rental/waste-disposal",
 });
 
@@ -20,7 +20,7 @@ export default function WasteDisposalPage() {
             </h2>
             <div className="mt-8 flex flex-col gap-6 text-[17px] leading-[1.7] text-[#3a3a3a]">
               <p>
-                Balderas Demolition Inc. provides professional waste disposal across Orange County.
+                Demolition OC provides professional waste disposal across Orange County.
                 California CALGreen requires 65% diversion of construction and demolition debris from landfills.
                 OC cities add their own ordinances on top. We manage all compliance for you.
               </p>
@@ -38,13 +38,13 @@ export default function WasteDisposalPage() {
               <ul className="ml-6 list-disc flex flex-col gap-2">
                 <li><strong>Cost:</strong> Most OC waste disposal jobs run $200–$800 depending on volume and material type. All-in pricing — no hidden fees.</li>
                 <li><strong>Timeline:</strong> Same-day and next-day service available. We respond the same business day.</li>
-                <li><strong>Licensing:</strong> Balderas Demolition Inc. holds a C-21 CSLB license, is fully bonded and insured, and certified for C&amp;D debris transport in California.</li>
+                <li><strong>Licensing:</strong> Demolition OC holds a C-21 CSLB license, is fully bonded and insured, and certified for C&amp;D debris transport in California.</li>
                 <li><strong>Disruption:</strong> Our crew handles all loading with professional equipment — no damage to driveways or landscaping.</li>
               </ul>
               <p>
                 <strong>Service areas:</strong> Anaheim, Irvine, Santa Ana, Huntington Beach, Costa Mesa,
                 Fullerton, Newport Beach, Tustin, Garden Grove, Orange, and all surrounding OC areas.
-                Call <strong>(714) 340-8108</strong> for a free on-site estimate.
+                Call <strong>(714) 333-0178</strong> for a free on-site estimate.
               </p>
             </div>
           </div>

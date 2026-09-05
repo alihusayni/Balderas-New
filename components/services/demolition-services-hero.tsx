@@ -17,7 +17,7 @@ export function DemolitionServicesHero() {
   return (
     <section className="-mt-[130px] relative min-h-screen w-full overflow-hidden pt-[230px]">
       <HeroParallaxBackground
-        src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img1.png"
+        src="/images/services/img1.png"
         alt="Workers performing interior demolition"
         priority
       />
@@ -32,16 +32,16 @@ export function DemolitionServicesHero() {
           </HeroHeading>
           <HeroSubheading>
             Demolition isn&apos;t just about tearing things down &mdash;
-            it&apos;s about setting the stage for what comes next. At Balderas
-            Demolition Inc., Abel Balderas oversees a systematic, safe, and
+            it&apos;s about setting the stage for what comes next. At Demolition
+            OC, our team oversees a systematic, safe, and
             efficient process that leaves your site broom-clean and ready for
             the next phase.
           </HeroSubheading>
           <HeroCtas
             primaryHref="/contact"
             primaryLabel="Request a Free Estimate"
-            secondaryHref="tel:+17143408108"
-            secondaryLabel="(714) 340-8108"
+            secondaryHref="tel:+17143330178"
+            secondaryLabel="(714) 333-0178"
             showSecondaryArrow={false}
             primaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[200px]"
           />

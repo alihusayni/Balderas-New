@@ -26,7 +26,7 @@ const FEATURED_ARTICLE_SLUG =
 
 const FAQ_ITEMS: FaqItem[] = [
   {
-    question: "What services does Balderas Demolition Inc. offer?",
+    question: "What services does Demolition OC offer?",
     answer:
       "We offer interior and exterior residential demolition, structural demolition, dumpster rentals, and full-service junk removal across Orange County.",
   },
@@ -100,7 +100,7 @@ export default function ResourcesPage() {
         <div className="relative h-[420px] w-full sm:h-[480px] lg:h-[530px]">
           <HeroParallaxBackground
             src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/top-bg.png"
-            alt="Balderas Demolition Inc. service truck on site"
+            alt="Demolition OC service truck on site"
             priority
             overlayClassName="bg-[#06182C]/60"
           />
