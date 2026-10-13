@@ -41,45 +41,11 @@ function GateForm() {
   };
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        background: "linear-gradient(135deg, #06182C 0%, #0f2b47 50%, #162d44 100%)",
-        fontFamily: "var(--font-maison), 'Helvetica Neue', Arial, sans-serif",
-        padding: "1rem",
-      }}
-    >
-      <div
-        style={{
-          width: "100%",
-          maxWidth: "420px",
-          background: "rgba(255, 255, 255, 0.04)",
-          backdropFilter: "blur(24px)",
-          WebkitBackdropFilter: "blur(24px)",
-          border: "1px solid rgba(255, 255, 255, 0.08)",
-          borderRadius: "20px",
-          padding: "3rem 2.5rem",
-          boxShadow: "0 32px 64px rgba(0, 0, 0, 0.4)",
-        }}
-      >
+    <div className="gate-container">
+      <div className="gate-card">
         {/* Logo / Brand */}
-        <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-          <div
-            style={{
-              width: "56px",
-              height: "56px",
-              borderRadius: "14px",
-              background: "linear-gradient(135deg, #dc5a31, #e87b5a)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              margin: "0 auto 1.25rem",
-              boxShadow: "0 8px 24px rgba(220, 90, 49, 0.3)",
-            }}
-          >
+        <div className="gate-header">
+          <div className="gate-logo-icon">
             <svg
               width="28"
               height="28"
@@ -94,32 +60,13 @@ function GateForm() {
               <path d="M7 11V7a5 5 0 0 1 10 0v4" />
             </svg>
           </div>
-          <h1
-            style={{
-              color: "#ffffff",
-              fontSize: "1.5rem",
-              fontWeight: 600,
-              margin: "0 0 0.5rem",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Preview Access
-          </h1>
-          <p
-            style={{
-              color: "rgba(255, 255, 255, 0.45)",
-              fontSize: "0.9rem",
-              margin: 0,
-              lineHeight: 1.5,
-            }}
-          >
-            Enter the password to view this site
-          </p>
+          <h1 className="gate-title">Preview Access</h1>
+          <p className="gate-subtitle">Enter the password to view this site</p>
         </div>
 
         {/* Form */}
         <form onSubmit={handleSubmit}>
-          <div style={{ marginBottom: "1.25rem" }}>
+          <div className="gate-form-group">
             <input
               id="gate-password"
               type="password"
@@ -128,45 +75,12 @@ function GateForm() {
               placeholder="Enter password"
               autoFocus
               required
-              style={{
-                width: "100%",
-                padding: "14px 16px",
-                fontSize: "0.95rem",
-                color: "#ffffff",
-                background: "rgba(255, 255, 255, 0.06)",
-                border: error
-                  ? "1px solid rgba(239, 68, 68, 0.5)"
-                  : "1px solid rgba(255, 255, 255, 0.1)",
-                borderRadius: "12px",
-                outline: "none",
-                transition: "all 0.2s ease",
-                boxSizing: "border-box",
-              }}
-              onFocus={(e) => {
-                e.target.style.borderColor = "rgba(220, 90, 49, 0.5)";
-                e.target.style.boxShadow =
-                  "0 0 0 3px rgba(220, 90, 49, 0.15)";
-              }}
-              onBlur={(e) => {
-                e.target.style.borderColor = error
-                  ? "rgba(239, 68, 68, 0.5)"
-                  : "rgba(255, 255, 255, 0.1)";
-                e.target.style.boxShadow = "none";
-              }}
+              className={`gate-input ${error ? "gate-input--error" : ""}`}
             />
           </div>
 
           {error && (
-            <div
-              style={{
-                color: "#ef4444",
-                fontSize: "0.85rem",
-                marginBottom: "1rem",
-                display: "flex",
-                alignItems: "center",
-                gap: "6px",
-              }}
-            >
+            <div className="gate-error-message">
               <svg
                 width="14"
                 height="14"
@@ -188,45 +102,11 @@ function GateForm() {
           <button
             type="submit"
             disabled={loading || !password}
-            style={{
-              width: "100%",
-              padding: "14px",
-              fontSize: "0.95rem",
-              fontWeight: 600,
-              color: "#ffffff",
-              background:
-                loading || !password
-                  ? "rgba(220, 90, 49, 0.4)"
-                  : "linear-gradient(135deg, #dc5a31, #c44a25)",
-              border: "none",
-              borderRadius: "12px",
-              cursor: loading || !password ? "not-allowed" : "pointer",
-              transition: "all 0.2s ease",
-              letterSpacing: "0.01em",
-              boxShadow:
-                loading || !password
-                  ? "none"
-                  : "0 4px 16px rgba(220, 90, 49, 0.3)",
-            }}
+            className="gate-button"
           >
             {loading ? (
-              <span
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                }}
-              >
-                <span
-                  style={{
-                    width: "16px",
-                    height: "16px",
-                    border: "2px solid rgba(255,255,255,0.3)",
-                    borderTopColor: "#fff",
-                    borderRadius: "50%",
-                    animation: "spin 0.6s linear infinite",
-                  }}
-                />
+              <span className="gate-loading-content">
+                <span className="gate-spinner" />
                 Verifying...
               </span>
             ) : (
@@ -236,11 +116,123 @@ function GateForm() {
         </form>
 
         <style>{`
+          .gate-container, .suspense-fallback {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #06182C 0%, #0f2b47 50%, #162d44 100%);
+          }
+          .gate-container {
+            font-family: var(--font-maison), 'Helvetica Neue', Arial, sans-serif;
+            padding: 1rem;
+          }
+          .gate-card {
+            width: 100%;
+            max-width: 420px;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4);
+          }
+          .gate-header {
+            text-align: center;
+            margin-bottom: 2rem;
+          }
+          .gate-logo-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #dc5a31, #e87b5a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem;
+            box-shadow: 0 8px 24px rgba(220, 90, 49, 0.3);
+          }
+          .gate-title {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 0 0.5rem;
+            letter-spacing: -0.02em;
+          }
+          .gate-subtitle {
+            color: rgba(255, 255, 255, 0.45);
+            font-size: 0.9rem;
+            margin: 0;
+            line-height: 1.5;
+          }
+          .gate-form-group {
+            margin-bottom: 1.25rem;
+          }
+          .gate-input {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 0.95rem;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            outline: none;
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+          }
+          .gate-input::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+          }
+          .gate-input:focus {
+            border-color: rgba(220, 90, 49, 0.5);
+            box-shadow: 0 0 0 3px rgba(220, 90, 49, 0.15);
+          }
+          .gate-input.gate-input--error {
+            border-color: rgba(239, 68, 68, 0.5);
+          }
+          .gate-error-message {
+            color: #ef4444;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+          }
+          .gate-button {
+            width: 100%;
+            padding: 14px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #ffffff;
+            background: linear-gradient(135deg, #dc5a31, #c44a25);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            letter-spacing: 0.01em;
+            box-shadow: 0 4px 16px rgba(220, 90, 49, 0.3);
+          }
+          .gate-button:disabled {
+            background: rgba(220, 90, 49, 0.4);
+            cursor: not-allowed;
+            box-shadow: none;
+          }
+          .gate-loading-content {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+          }
+          .gate-spinner {
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+          }
           @keyframes spin {
             to { transform: rotate(360deg); }
-          }
-          input::placeholder {
-            color: rgba(255, 255, 255, 0.3);
           }
         `}</style>
       </div>
@@ -250,19 +242,7 @@ function GateForm() {
 
 export default function GatePage() {
   return (
-    <Suspense
-      fallback={
-        <div
-          style={{
-            minHeight: "100vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "linear-gradient(135deg, #06182C 0%, #0f2b47 50%, #162d44 100%)",
-          }}
-        />
-      }
-    >
+    <Suspense fallback={<div className="suspense-fallback" />}>
       <GateForm />
     </Suspense>
   );
