@@ -27,7 +27,7 @@ export const SITE = {
   founder: "",
   /** California C-21 contractor license number — fill when available. */
   c21LicenseNumber: "",
-  telephone: "(714) 333-0178",
+  telephone: "(714) 584-6049",
   email: "info@demolitionoc.com",
   address: {
     streetAddress: "11431 Westminster Ave",

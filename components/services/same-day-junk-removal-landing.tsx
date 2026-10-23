@@ -33,7 +33,7 @@ function getTelHref(): string {
   const digits = SITE.telephone.replace(/\D/g, "");
   if (digits.length === 10) return `tel:+1${digits}`;
   if (digits.length >= 11) return `tel:+${digits}`;
-  return "tel:+17143330178";
+  return "tel:+17145846049";
 }
 
 function getSameDaySmsHref(): string {
@@ -147,8 +147,8 @@ export function SameDayJunkRemovalLanding({ children }: { children?: React.React
               primaryHref={telHref}
               primaryLabel="Call for Same Day Service"
               primaryButtonClassName="lg:w-[300px] xl:w-[340px]"
-              secondaryHref="tel:+17143330178"
-              secondaryLabel="(714) 333-0178"
+              secondaryHref="tel:+17145846049"
+              secondaryLabel="(714) 584-6049"
               secondaryButtonClassName="md:min-w-[260px] md:w-[280px] lg:w-[340px] xl:w-[400px] 2xl:w-[440px]"
               showSecondaryArrow={false}
             />

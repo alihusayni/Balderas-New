@@ -123,10 +123,10 @@ function getCallPhone() {
         ? `tel:+1${digits}`
         : digits.length >= 11
           ? `tel:+${digits}`
-          : "tel:+17143330178";
+          : "tel:+17145846049";
     return { href };
   }
-  return { href: "tel:+17143330178" };
+  return { href: "tel:+17145846049" };
 }
 
 export default function ConcreteRemovalHaulingPage() {
@@ -357,7 +357,7 @@ export default function ConcreteRemovalHaulingPage() {
                 C-21 CSLB certified, and fully insured.
                 We serve Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
                 Huntington Beach, Newport Beach, Tustin, Garden Grove, and Orange.
-                Call <strong>(714) 333-0178</strong> for a free estimate.
+                Call <strong>(714) 584-6049</strong> for a free estimate.
               </p>
             </div>
           </div>

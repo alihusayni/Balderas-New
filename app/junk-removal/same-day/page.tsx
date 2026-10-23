@@ -45,7 +45,7 @@ export default function SameDayJunkRemovalPage() {
               <p>
                 <strong>Service areas:</strong> Anaheim, Irvine, Santa Ana, Costa Mesa, Huntington Beach,
                 Fullerton, Newport Beach, Garden Grove, Tustin, Orange, and all surrounding OC cities.
-                Call <strong>(714) 333-0178</strong> before noon for same-day service.
+                Call <strong>(714) 584-6049</strong> before noon for same-day service.
               </p>
             </div>
           </div>

@@ -9,7 +9,7 @@ import { JsonLd } from "@/components/json-ld";
 export const metadata: Metadata = pageMetadata({
   title: "Junk Removal Orange County | Fast & Affordable | Demolition OC",
   description:
-    "Professional junk removal services across Orange County, CA. Furniture removal, estate cleanouts, same-day pickup. Upfront pricing, eco-friendly disposal. Call (714) 333-0178.",
+    "Professional junk removal services across Orange County, CA. Furniture removal, estate cleanouts, same-day pickup. Upfront pricing, eco-friendly disposal. Call (714) 584-6049.",
   path: "/junk-removal",
   keywords: [
     "junk removal Orange County",

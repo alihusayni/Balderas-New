@@ -253,7 +253,7 @@ export default function DemolitionPage() {
                 C-21 CSLB certified, fully insured, and members of the National Demolition Association.
                 We serve Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
                 Huntington Beach, Newport Beach, Tustin, Garden Grove, and Orange.
-                Call <strong>(714) 333-0178</strong> for a free estimate.
+                Call <strong>(714) 584-6049</strong> for a free estimate.
               </p>
             </div>
           </div>

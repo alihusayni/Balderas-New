@@ -49,7 +49,7 @@ export default function EstateCleanoutPage() {
               <p>
                 <strong>We serve all of Orange County</strong>, including Anaheim, Irvine, Santa Ana,
                 Fullerton, Costa Mesa, Huntington Beach, Newport Beach, Tustin, Garden Grove, and Orange.
-                Call <strong>(714) 333-0178</strong> for a free on-site assessment.
+                Call <strong>(714) 584-6049</strong> for a free on-site assessment.
               </p>
             </div>
           </div>

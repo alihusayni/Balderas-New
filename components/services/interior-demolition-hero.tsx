@@ -50,8 +50,8 @@ export function InteriorDemolitionHero({
           
             primaryHref={quoteHref}
             primaryLabel="Get an Interior Demo Quote"
-            secondaryHref="tel:+17143330178"
-            secondaryLabel="(714) 333-0178"
+            secondaryHref="tel:+17145846049"
+            secondaryLabel="(714) 584-6049"
             showSecondaryArrow={false}
             primaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[260px]"
             secondaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[220px]"

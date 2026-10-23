@@ -154,8 +154,8 @@ export function FurnitureRemovalLanding({ children }: { children?: React.ReactNo
               primaryHref="#schedule-pickup"
               primaryLabel="Get a Furniture Removal Quote"
               primaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[290px]"
-              secondaryHref="tel:+17143330178"
-              secondaryLabel="(714) 333-0178"
+              secondaryHref="tel:+17145846049"
+              secondaryLabel="(714) 584-6049"
               secondaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[240px]"
               showSecondaryArrow={false}
             />

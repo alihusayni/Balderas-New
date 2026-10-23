@@ -5,6 +5,7 @@ import Script from 'next/script';
 // globals.css, which eliminates the cold-CDN delay (~1,000 ms) caused by
 // next/font stamping a new ?dpl=<deploy-hash> URL on every build.
 // --font-anton CSS variable is now defined in globals.css :root.
+import ForSalePopup from "@/components/ForSalePopup";
 import { DeferredClientShell } from "@/components/deferred-client-shell";
 import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
@@ -142,6 +143,7 @@ export default function RootLayout({
           <SiteHeader />
         </SiteShell>
         {children}
+        <ForSalePopup phone="(714) 584-6049" tel="+17145846049" />
         <SiteShell>
           <SiteFooter />
         </SiteShell>

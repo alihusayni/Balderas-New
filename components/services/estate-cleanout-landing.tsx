@@ -35,7 +35,7 @@ function getTelHref(): string {
   const digits = SITE.telephone.replace(/\D/g, "");
   if (digits.length === 10) return `tel:+1${digits}`;
   if (digits.length >= 11) return `tel:+${digits}`;
-  return "tel:+17143330178";
+  return "tel:+17145846049";
 }
 
 const CONSULTATION_HASH = "#estate-consultation";
@@ -149,8 +149,8 @@ export function EstateCleanoutLanding({ children }: { children?: React.ReactNode
               primaryHref={CONSULTATION_HASH}
               primaryLabel="Request a Private Consultation"
               primaryButtonClassName="lg:min-w-[300px] lg:w-auto xl:min-w-[340px]"
-              secondaryHref="tel:+17143330178"
-              secondaryLabel="(714) 333-0178"
+              secondaryHref="tel:+17145846049"
+              secondaryLabel="(714) 584-6049"
               secondaryButtonClassName="md:min-w-[240px] md:w-auto lg:w-[280px]"
               showSecondaryArrow={false}
             />

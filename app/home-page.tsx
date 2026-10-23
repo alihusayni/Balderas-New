@@ -101,8 +101,8 @@ export default function HomePage() {
             <HeroCtas
               primaryHref="#contact"
               primaryLabel="Get Your Free Quote"
-              secondaryHref="tel:+17143330178"
-              secondaryLabel="(714) 333-0178"
+              secondaryHref="tel:+17145846049"
+              secondaryLabel="(714) 584-6049"
               showSecondaryArrow={false}
             />
           </div>

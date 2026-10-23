@@ -30,7 +30,7 @@ function getTelHref(): string {
   const digits = SITE.telephone.replace(/\D/g, "");
   if (digits.length === 10) return `tel:+1${digits}`;
   if (digits.length >= 11) return `tel:+${digits}`;
-  return "tel:+17143330178";
+  return "tel:+17145846049";
 }
 
 const junkHaulingContactFields: ContactFormField[] = [
@@ -113,8 +113,8 @@ export function JunkHaulingLanding({
               primaryHref="/contact"
               primaryLabel="Get a Hauling Quote"
               primaryButtonClassName="lg:w-[260px] xl:w-[280px]"
-              secondaryHref="tel:+17143330178"
-              secondaryLabel="(714) 333-0178"
+              secondaryHref="tel:+17145846049"
+              secondaryLabel="(714) 584-6049"
               secondaryButtonClassName="sm:w-auto md:w-auto sm:shrink-0"
               showSecondaryArrow={false}
             />

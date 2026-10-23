@@ -179,10 +179,10 @@ function getCallPhone() {
         ? `tel:+1${digits}`
         : digits.length >= 11
           ? `tel:+${digits}`
-          : "tel:+17143330178";
+          : "tel:+17145846049";
     return { display: raw, href };
   }
-  return { display: "(714) 333-0178", href: "tel:+17143330178" };
+  return { display: "(714) 584-6049", href: "tel:+17145846049" };
 }
 
 export default function ResidentialDemolitionPage() {
@@ -362,7 +362,7 @@ export default function ResidentialDemolitionPage() {
                 C-21 CSLB certified, fully insured, and CalOSHA compliant.
                 We serve Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
                 Huntington Beach, Newport Beach, Tustin, Garden Grove, and Orange.
-                Call <strong>(714) 333-0178</strong> for a free estimate.
+                Call <strong>(714) 584-6049</strong> for a free estimate.
               </p>
             </div>
           </div>

@@ -159,7 +159,7 @@ export default function TermsPage() {
           </p>
           <ul className="mt-3 space-y-1 pl-6">
             <li><strong>Demolition OC</strong></li>
-            <li>Phone: (714) 333-0178</li>
+            <li>Phone: (714) 584-6049</li>
             <li>Website: demolitionoc.com</li>
             <li>Serving all of Orange County, CA</li>
           </ul>

@@ -131,8 +131,8 @@ export default function JunkRemovalPage() {
               primaryHref="/contact"
               primaryLabel="Get a Junk Removal Quote"
               primaryButtonClassName="lg:w-[300px] xl:w-[340px]"
-              secondaryHref="tel:+17143330178"
-              secondaryLabel="(714) 333-0178"
+              secondaryHref="tel:+17145846049"
+              secondaryLabel="(714) 584-6049"
               showSecondaryArrow={false}
             />
           </div>

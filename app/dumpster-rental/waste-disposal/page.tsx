@@ -44,7 +44,7 @@ export default function WasteDisposalPage() {
               <p>
                 <strong>Service areas:</strong> Anaheim, Irvine, Santa Ana, Huntington Beach, Costa Mesa,
                 Fullerton, Newport Beach, Tustin, Garden Grove, Orange, and all surrounding OC areas.
-                Call <strong>(714) 333-0178</strong> for a free on-site estimate.
+                Call <strong>(714) 584-6049</strong> for a free on-site estimate.
               </p>
             </div>
           </div>

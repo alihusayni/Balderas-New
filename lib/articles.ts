@@ -501,7 +501,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "Demolition OC serves all of Orange County, CA. Call Demolition OC today: (714) 333-0178.",
+          "Demolition OC serves all of Orange County, CA. Call Demolition OC today: (714) 584-6049.",
       },
     ],
     cta: {
@@ -792,7 +792,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "If you\u2019re ready to stop guessing about where your debris goes and start your project with a clear plan, call us at (714) 333-0178 or use the contact form below. We\u2019ll walk you through sizing, scheduling, and pricing in a single conversation.",
+          "If you\u2019re ready to stop guessing about where your debris goes and start your project with a clear plan, call us at (714) 584-6049 or use the contact form below. We\u2019ll walk you through sizing, scheduling, and pricing in a single conversation.",
       },
     ],
     cta: {
@@ -897,7 +897,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "If the clutter has been piling up and you\u2019re finally ready to deal with it, we make the process as easy as a single phone call. We serve all of Orange County \u2014 from Anaheim to San Clemente \u2014 with same-day and next-day availability. Call (714) 333-0178 or use the contact form to get a no-obligation quote.",
+          "If the clutter has been piling up and you\u2019re finally ready to deal with it, we make the process as easy as a single phone call. We serve all of Orange County \u2014 from Anaheim to San Clemente \u2014 with same-day and next-day availability. Call (714) 584-6049 or use the contact form to get a no-obligation quote.",
       },
     ],
     cta: {
@@ -982,7 +982,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "If you\u2019re planning a demolition project in Orange County and want a team that treats your timeline with the same urgency you do, call Demolition OC at (714) 333-0178 for a free on-site assessment and quote.",
+          "If you\u2019re planning a demolition project in Orange County and want a team that treats your timeline with the same urgency you do, call Demolition OC at (714) 584-6049 for a free on-site assessment and quote.",
       },
     ],
     cta: {
@@ -1017,7 +1017,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "When you call (714) 333-0178, you’re talking to a real person — not a call center or an automated booking system. We ask you a few quick questions: What are you removing? Where is it located in the property? Are there any access constraints (narrow gate, second floor, no elevator)? Based on your answers, we give you an estimated price range on the phone and confirm availability.",
+          "When you call (714) 584-6049, you’re talking to a real person — not a call center or an automated booking system. We ask you a few quick questions: What are you removing? Where is it located in the property? Are there any access constraints (narrow gate, second floor, no elevator)? Based on your answers, we give you an estimated price range on the phone and confirm availability.",
       },
       {
         type: "paragraph",
@@ -1082,7 +1082,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "If you’re ready to clear the space, call (714) 333-0178 or submit a contact request below. We’ll have a crew at your door as soon as today.",
+          "If you’re ready to clear the space, call (714) 584-6049 or submit a contact request below. We’ll have a crew at your door as soon as today.",
       },
     ],
     cta: {
@@ -1195,7 +1195,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "If you\u2019re unsure what size you need, call us at (714) 333-0178. We\u2019ll ask a few questions about your project and give you a recommendation before your delivery day. Getting the size right the first time is always cheaper than finding out you need more capacity after the container is already at your curb.",
+          "If you\u2019re unsure what size you need, call us at (714) 584-6049. We\u2019ll ask a few questions about your project and give you a recommendation before your delivery day. Getting the size right the first time is always cheaper than finding out you need more capacity after the container is already at your curb.",
       },
     ],
     cta: {
@@ -1285,7 +1285,7 @@ export const ARTICLES: Article[] = [
       {
         type: "paragraph",
         text:
-          "If you\u2019re planning a demolition project in Orange County and want to work with a team that treats safety as the foundation of every decision \u2014 not an afterthought \u2014 call Demolition OC at (714) 333-0178 for a free on-site consultation.",
+          "If you\u2019re planning a demolition project in Orange County and want to work with a team that treats safety as the foundation of every decision \u2014 not an afterthought \u2014 call Demolition OC at (714) 584-6049 for a free on-site consultation.",
       },
     ],
     cta: {

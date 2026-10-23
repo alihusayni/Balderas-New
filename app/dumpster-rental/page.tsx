@@ -136,8 +136,8 @@ export default function DumpstersRentalPage() {
               primaryHref="/contact"
               primaryLabel="Dumpster Sizes & Pricing"
               primaryButtonClassName="lg:w-[250px] xl:w-[270px]"
-              secondaryHref="tel:+17143330178"
-              secondaryLabel="(714) 333-0178"
+              secondaryHref="tel:+17145846049"
+              secondaryLabel="(714) 584-6049"
               showSecondaryArrow={false}
             />
           </div>
@@ -392,7 +392,7 @@ export default function DumpstersRentalPage() {
                 C-21 CSLB certified, and fully insured.
                 We serve Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
                 Huntington Beach, Newport Beach, Tustin, Garden Grove, and Orange.
-                Call <strong>(714) 333-0178</strong> to book your dumpster today.
+                Call <strong>(714) 584-6049</strong> to book your dumpster today.
               </p>
             </div>
           </div>

@@ -47,7 +47,7 @@ export default function FurnitureRemovalPage() {
               <p>
                 <strong>Service areas:</strong> Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
                 Huntington Beach, Newport Beach, Tustin, Garden Grove, Orange, and all surrounding OC cities.
-                Call <strong>(714) 333-0178</strong> for same-day or next-day scheduling.
+                Call <strong>(714) 584-6049</strong> for same-day or next-day scheduling.
               </p>
             </div>
           </div>

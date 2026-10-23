@@ -95,7 +95,7 @@ export default function Page() {
                 500+ projects completed, C-21 CSLB certified, and fully insured.
                 We serve Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
                 Huntington Beach, Newport Beach, Tustin, Garden Grove, and Orange.
-                Call <strong>(714) 333-0178</strong> for a free same-day quote.
+                Call <strong>(714) 584-6049</strong> for a free same-day quote.
               </p>
             </div>
           </div>
