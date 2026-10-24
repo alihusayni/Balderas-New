@@ -32,7 +32,7 @@ export function WhyTrustSection() {
   return (
     <section className="relative overflow-hidden">
       <Image
-        src="/images/homepage/whyUs/bg.webp"
+        src="/media/beam-685289.webp"
         alt="Why trust Demolition OC"
         fill
         quality={100}

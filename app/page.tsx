@@ -14,7 +14,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Demolition OC — Orange County's trusted source for licensed demolition, junk removal, and dumpster rentals. Professional crews, fast turnarounds, and expert service. Get a free same-day quote!",
   path: "/",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/hero.webp",
+  image: "/media/spall-0dabb4.webp",
   imageAlt:
     "Demolition OC demolition crew on an Orange County job site",
   keywords: [

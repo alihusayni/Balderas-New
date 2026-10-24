@@ -27,7 +27,7 @@ export function DemolitionContactSection({
 }: DemolitionContactSectionProps) {
   return (
     <FullBleedImageSection
-      imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img6.png"
+      imageSrc="/media/beam-816b64.png"
       imageAlt="Excavator at demolition site"
       overlayClassName={overlayClassName}
       className="py-20 lg:py-24"

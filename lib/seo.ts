@@ -19,7 +19,7 @@ export const SITE = {
     "",
   ),
   locale: "en_US",
-  defaultOgImage: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/hero.webp",
+  defaultOgImage: "https://www.demolitionoc.com/media/spall-0dabb4.webp",
   defaultOgImageAlt:
     "Demolition OC crew on a residential demolition site in Orange County",
   /** X (Twitter) handle, e.g. `@demolitionoc` — leave empty until you have one. */
@@ -140,7 +140,7 @@ export function pageMetadata({
   noIndex,
 }: PageMetadataInput): Metadata {
   const canonicalUrl = absoluteUrl(path);
-  const ogImage = image ?? SITE.defaultOgImage;
+  const ogImage = absoluteUrl(image ?? SITE.defaultOgImage);
   const ogAlt = imageAlt ?? SITE.defaultOgImageAlt;
 
   return {

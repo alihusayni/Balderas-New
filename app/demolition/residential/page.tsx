@@ -34,7 +34,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Planning a home remodel? Get professional residential demolition in Orange County. Demolition OC specializes in kitchen, bath, and backyard demo.",
   path: "/demolition/residential",
-  image: "/images/services/img2.png",
+  image: "/media/plank-6c7060.png",
   imageAlt:
     "Demolition OC performing careful residential demolition in Orange County",
   keywords: [
@@ -54,7 +54,7 @@ const residentialServiceJsonLd = getServiceJsonLd({
     "Surgical residential demolition for remodels: interior strip-outs, kitchen and bath gutting, wall removal, flooring removal, and exterior services including decks, sheds, and pool in-fills throughout Orange County.",
   path: "/demolition/residential",
   serviceType: "Residential Demolition",
-  image: "/images/services/img2.png",
+  image: "/media/plank-6c7060.png",
 });
 
 const residentialBreadcrumbJsonLd = getBreadcrumbJsonLd([
@@ -202,7 +202,7 @@ export default function ResidentialDemolitionPage() {
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="/images/services/img2.png"
+                src="/media/plank-6c7060.png"
                 alt="Residential kitchen and bath demolition prep"
                 fill
                 sizes="100vw"
@@ -225,7 +225,7 @@ export default function ResidentialDemolitionPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="/images/services/img2.png"
+            imageSrc="/media/plank-6c7060.png"
             imageAlt="Interior residential strip-out and kitchen demolition"
             imageSide="right"
             hideImageOnSmallScreens
@@ -248,7 +248,7 @@ export default function ResidentialDemolitionPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img3.jpg"
+            imageSrc="/media/mesa-5aa260.jpg"
             imageAlt="Exterior residential demolition and debris removal"
             imageSide="left"
             title="Exterior Residential Services"
@@ -272,7 +272,7 @@ export default function ResidentialDemolitionPage() {
       </section>
 
       <FullBleedImageSection
-        imageSrc="/images/services/img4.png"
+        imageSrc="/media/lintel-18eb08.png"
         imageAlt="Demolition OC residential demolition team"
         overlayClassName="bg-[#06182C]/72"
         className="py-20 lg:py-24"
@@ -305,7 +305,7 @@ export default function ResidentialDemolitionPage() {
             <div className="w-full xl:w-1/2">
               <div className="relative h-[460px] w-full overflow-hidden xl:h-[720px]">
                 <Image
-                  src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img5.jpg"
+                  src="/media/delta-b2a8d1.jpg"
                   alt="Demolition OC supervisor walking through a residential demo project"
                   fill
                   sizes="(max-width: 1279px) 100vw, 50vw"

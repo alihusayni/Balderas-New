@@ -16,7 +16,7 @@ export function AboutHeroSection() {
   return (
     <section className="-mt-[130px] relative w-full overflow-hidden">
       <HeroParallaxBackground
-        src="/images/about/1.png"
+        src="/media/slab-197a62.png"
         alt="Demolition OC crew loading a dumpster on site in Orange County"
         priority
         overlayClassName="bg-[#06182C]/60"

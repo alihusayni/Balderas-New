@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Need to get rid of an old sofa, mattress, or dining set? Demolition OC provides professional furniture removal in Orange County. We do all the heavy lifting!",
   path: "/junk-removal/furniture-removal",
-  image: "/images/junk_removal/img1.png",
+  image: "/media/lintel-43839e.png",
   imageAlt:
     "Demolition OC hauling furniture safely in Orange County",
   keywords: [
@@ -31,7 +31,7 @@ const furnitureServiceJsonLd = getServiceJsonLd({
     "Professional residential and office furniture removal in Orange County: sectionals and mattresses, disassembly included, donation-first disposition when possible, and responsible recycling with wall and floor protection.",
   path: "/junk-removal/furniture-removal",
   serviceType: "Furniture Removal",
-  image: "/images/junk_removal/img1.png",
+  image: "/media/lintel-43839e.png",
 });
 
 const furnitureBreadcrumbJsonLd = getBreadcrumbJsonLd([

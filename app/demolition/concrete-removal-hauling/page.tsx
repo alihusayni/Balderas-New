@@ -35,7 +35,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Need old concrete gone? Demolition OC specializes in concrete removal and hauling. From patios to driveways, we break it, load it, and haul it!",
   path: "/demolition/concrete-removal-hauling",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img6.png",
+  image: "/media/beam-816b64.png",
   imageAlt:
     "Demolition OC loading concrete debris for hauling in Orange County",
   keywords: [
@@ -56,7 +56,7 @@ const concreteServiceJsonLd = getServiceJsonLd({
     "Residential concrete demolition and hauling: driveways and walkways, patio and pool deck removal, steps and retaining walls, garage slabs, shed pads, and post footing removal—with high-capacity trucks, eco-friendly recycling, and broom-clean site finishing throughout Orange County.",
   path: "/demolition/concrete-removal-hauling",
   serviceType: "Concrete Removal and Hauling",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img6.png",
+  image: "/media/beam-816b64.png",
 });
 
 const concreteBreadcrumbJsonLd = getBreadcrumbJsonLd([
@@ -144,7 +144,7 @@ export default function ConcreteRemovalHaulingPage() {
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img6.png"
+                src="/media/beam-816b64.png"
                 alt="Concrete removal and hauling equipment on site"
                 fill
                 sizes="100vw"
@@ -165,7 +165,7 @@ export default function ConcreteRemovalHaulingPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="/images/services/img1.png"
+            imageSrc="/media/stud-19edcd.png"
             imageAlt="Residential driveway and patio concrete removal"
             imageSide="right"
             hideImageOnSmallScreens
@@ -188,7 +188,7 @@ export default function ConcreteRemovalHaulingPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img3.jpg"
+            imageSrc="/media/mesa-5aa260.jpg"
             imageAlt="Slab and foundation concrete breaking and removal"
             imageSide="left"
             title="Slab & Foundation Work"
@@ -210,7 +210,7 @@ export default function ConcreteRemovalHaulingPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img6.png"
+            imageSrc="/media/beam-816b64.png"
             imageAlt="Concrete debris loaded for professional hauling"
             imageSide="right"
             hideImageOnSmallScreens
@@ -244,7 +244,7 @@ export default function ConcreteRemovalHaulingPage() {
         <div className="mx-auto grid w-full max-w-container grid-cols-1 items-start gap-8 px-4 sm:gap-10 sm:px-6 md:gap-12 md:px-8 lg:grid-cols-2 lg:gap-14 lg:px-10 xl:items-center">
           <div className="relative order-2 min-h-[300px] overflow-hidden sm:min-h-[360px] md:min-h-[500px] lg:order-1">
             <Image
-              src="/images/about/2.jpg"
+              src="/media/pier-eee4a9.jpg"
               alt="Demolition OC supervisor overseeing concrete removal and hauling"
               fill
               sizes="(max-width: 1024px) 100vw, 650px"

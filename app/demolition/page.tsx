@@ -20,7 +20,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Need safe, reliable demolition in Orange County? From kitchen tear-downs to full structural removal, Demolition OC handles it all. Get your free estimate!",
   path: "/demolition",
-  image: "/images/services/img1.png",
+  image: "/media/stud-19edcd.png",
   imageAlt:
     "Demolition OC crew performing residential demolition in Orange County",
   keywords: [
@@ -41,7 +41,7 @@ const demolitionServiceJsonLd = getServiceJsonLd({
     "Licensed, insured residential and commercial demolition: interior strip-outs, structural tear-downs, concrete removal, and full site clearance throughout Orange County.",
   path: "/demolition",
   serviceType: "Demolition",
-  image: "/images/services/img1.png",
+  image: "/media/stud-19edcd.png",
 });
 
 const demolitionBreadcrumbJsonLd = getBreadcrumbJsonLd([
@@ -158,7 +158,7 @@ export default function DemolitionPage() {
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="/images/services/img2.png"
+                src="/media/plank-6c7060.png"
                 alt="Interior demolition work in progress"
                 fill
                 sizes="100vw"
@@ -177,7 +177,7 @@ export default function DemolitionPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="/images/services/img2.png"
+            imageSrc="/media/plank-6c7060.png"
             imageAlt="Interior demolition work in progress"
             imageSide="right"
             hideImageOnSmallScreens
@@ -200,7 +200,7 @@ export default function DemolitionPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img3.jpg"
+            imageSrc="/media/mesa-5aa260.jpg"
             imageAlt="Exterior and structural demolition with heavy equipment"
             imageSide="left"
             title="Exterior & Structural Demolition"

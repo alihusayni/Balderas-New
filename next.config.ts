@@ -42,14 +42,8 @@ const nextConfig: NextConfig = {
     //   55 → grid/card images (services-detail-grid)
     //   75 → default (auto-preloads, fallback)
     qualities: [22, 55, 75],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'qxwyml8xuwxdgws0.public.blob.vercel-storage.com',
-        port: '',
-        pathname: '/**',
-      },
-    ],
+    // Images are same-origin (/media/*, proxied from the site's own bucket server-side); no remote host is allow-listed.
+    localPatterns: [{ pathname: "/media/**" }],
   },
   async rewrites() {
     return [

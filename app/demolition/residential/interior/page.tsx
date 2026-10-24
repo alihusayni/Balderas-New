@@ -30,7 +30,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Professional interior demolition in Orange County. Specializing in kitchen, bathroom, and flooring removal with dust control and surgical precision. Get a free quote today!",
   path: "/demolition/residential/interior",
-  image: "/images/services/img2.png",
+  image: "/media/plank-6c7060.png",
   imageAlt:
     "Demolition OC performing careful interior demolition in Orange County",
   keywords: [
@@ -51,7 +51,7 @@ const interiorServiceJsonLd = getServiceJsonLd({
     "Surgical interior residential demolition for remodels: kitchen and bathroom gutting, non-load-bearing wall removal, drywall and ceiling stripping, closet and built-in removal, and complete flooring tear-out—contractor-ready with dust containment and debris management throughout Orange County.",
   path: "/demolition/residential/interior",
   serviceType: "Interior Demolition",
-  image: "/images/services/img2.png",
+  image: "/media/plank-6c7060.png",
 });
 
 const interiorBreadcrumbJsonLd = getBreadcrumbJsonLd([
@@ -171,7 +171,7 @@ export default function InteriorDemolitionPage() {
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="/images/services/img2.png"
+                src="/media/plank-6c7060.png"
                 alt="Interior kitchen and bath demolition"
                 fill
                 sizes="100vw"
@@ -192,7 +192,7 @@ export default function InteriorDemolitionPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="/images/services/img2.png"
+            imageSrc="/media/plank-6c7060.png"
             imageAlt="Kitchen and bathroom gutting and strip-out"
             imageSide="right"
             hideImageOnSmallScreens
@@ -215,7 +215,7 @@ export default function InteriorDemolitionPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img3.jpg"
+            imageSrc="/media/mesa-5aa260.jpg"
             imageAlt="Interior wall removal and drywall stripping"
             imageSide="left"
             title="Wall & Space Transformation"
@@ -237,7 +237,7 @@ export default function InteriorDemolitionPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/services/img5.jpg"
+            imageSrc="/media/delta-b2a8d1.jpg"
             imageAlt="Flooring removal and surface prep"
             imageSide="right"
             title="Surface & Flooring Removal"
@@ -261,7 +261,7 @@ export default function InteriorDemolitionPage() {
       </section>
 
       <FullBleedImageSection
-        imageSrc="/images/services/img4.png"
+        imageSrc="/media/lintel-18eb08.png"
         imageAlt="Demolition OC team at a residential interior project"
         overlayClassName="bg-[#06182C]/72"
         className="py-20 lg:py-24"
@@ -292,7 +292,7 @@ export default function InteriorDemolitionPage() {
         <div className="mx-auto grid w-full max-w-container grid-cols-1 items-center gap-8 px-4 sm:gap-10 sm:px-6 md:gap-12 md:px-8 lg:grid-cols-2 lg:gap-14 lg:px-10">
           <div className="relative order-2 min-h-[300px] overflow-hidden sm:min-h-[360px] md:min-h-[500px] lg:order-1">
             <Image
-              src="/images/about/2.jpg"
+              src="/media/pier-eee4a9.jpg"
               alt="Demolition OC site supervisor on a demolition job site, your interior demo partner"
               fill
               sizes="(max-width: 1024px) 100vw, 650px"

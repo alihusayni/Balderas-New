@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Compassionate and efficient estate cleanout services in Orange County. Demolition OC handles full-property clearing with respect and care. Get a free consultation.",
   path: "/junk-removal/estate-cleanout",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img3.jpg",
+  image: "/media/hoist-90d9bd.jpg",
   imageAlt:
     "Compassionate estate cleanout and property clearing in Orange County by Demolition OC",
   keywords: [
@@ -30,7 +30,7 @@ const estateServiceJsonLd = getServiceJsonLd({
     "Compassionate whole-home and property estate cleanouts in Orange County for families, executors, and realtors: sorting, donation-first disposition, valuables protocol, insured crews, and broom-clean handoff.",
   path: "/junk-removal/estate-cleanout",
   serviceType: "Estate Cleanout",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img3.jpg",
+  image: "/media/hoist-90d9bd.jpg",
 });
 
 const estateBreadcrumbJsonLd = getBreadcrumbJsonLd([

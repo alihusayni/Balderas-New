@@ -125,7 +125,6 @@ export default function RootLayout({
           URL in globals.css — the font is available the instant CSS parses.
           No network request needed, no preload link needed.
         */}
-        <link rel="preconnect" href="https://y5judepxfpr0logb.public.blob.vercel-storage.com" crossOrigin="anonymous" />
       </head>
 
       <body className="min-h-full flex flex-col">

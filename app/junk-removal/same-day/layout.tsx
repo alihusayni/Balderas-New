@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Need junk gone today? Demolition OC offers same day junk removal in Orange County. Call or text our team now for a fast, free estimate and immediate service!",
   path: "/junk-removal/same-day",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img5.jpg",
+  image: "/media/wedge-bd6b57.jpg",
   imageAlt:
     "Demolition OC same day junk removal and hauling in Orange County",
   keywords: [
@@ -30,7 +30,7 @@ const sameDayServiceJsonLd = getServiceJsonLd({
     "Express junk removal across Orange County: on-call pickups, urgent property cleanouts, move-outs, renovation debris, and estate situations with transparent volume-based quotes and professional loading.",
   path: "/junk-removal/same-day",
   serviceType: "Same Day Junk Removal",
-  image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img5.jpg",
+  image: "/media/wedge-bd6b57.jpg",
 });
 
 const sameDayBreadcrumbJsonLd = getBreadcrumbJsonLd([

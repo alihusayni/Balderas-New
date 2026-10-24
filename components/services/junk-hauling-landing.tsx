@@ -80,7 +80,7 @@ export function JunkHaulingLanding({
     <main className="flex min-h-screen flex-col bg-[var(--color-brand-dark)]">
       <section className="-mt-[130px] relative w-full overflow-hidden">
         <HeroParallaxBackground
-          src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img6.jpg"
+          src="/media/ledger-090cd2.jpg"
           alt="Junk hauling truck and crew ready for debris removal in Orange County"
           priority
           overlayClassName="bg-[#06182C]/65"
@@ -133,7 +133,7 @@ export function JunkHaulingLanding({
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img2.jpg"
+                src="/media/girder-d9da30.jpg"
                 alt="Residential junk and debris ready for hauling in Orange County"
                 fill
                 sizes="100vw"
@@ -150,7 +150,7 @@ export function JunkHaulingLanding({
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img2.jpg"
+            imageSrc="/media/girder-d9da30.jpg"
             imageAlt="Residential junk and debris ready for hauling in Orange County"
             imageSide="right"
             hideImageOnSmallScreens
@@ -174,7 +174,7 @@ export function JunkHaulingLanding({
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img4.jpg"
+            imageSrc="/media/ember-255729.jpg"
             imageAlt="Yard waste and exterior debris hauling in Orange County"
             imageSide="left"
             title="Yard & Exterior Hauling"
@@ -196,7 +196,7 @@ export function JunkHaulingLanding({
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img3.jpg"
+            imageSrc="/media/rebar-93403a.jpg"
             imageAlt="Construction and commercial debris hauling in Orange County"
             imageSide="right"
             title="Commercial & Construction Hauling"
@@ -222,7 +222,7 @@ export function JunkHaulingLanding({
       <section className="relative w-full overflow-hidden py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img5.jpg"
+            src="/media/truss-661739.jpg"
             alt="Demolition OC hauling truck in Orange County"
             fill
             sizes="100vw"
@@ -278,7 +278,7 @@ export function JunkHaulingLanding({
       </section>
 
       <ServiceStepsSection
-        imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img6.jpg"
+        imageSrc="/media/ledger-090cd2.jpg"
         imageAlt="Demolition OC truck loaded for junk hauling in Orange County"
         imageSide="left"
         title="Transparent, Volume-Based Pricing"
@@ -310,7 +310,7 @@ export function JunkHaulingLanding({
       <section className="relative w-full overflow-hidden py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img8.png"
+            src="/media/joist-1c6481.png"
             alt="Junk hauling contact section background"
             fill
             sizes="100vw"

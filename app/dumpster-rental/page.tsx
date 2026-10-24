@@ -41,7 +41,7 @@ const dumpsterRentalServiceJsonLd = getServiceJsonLd({
     "Affordable roll-off dumpster rental throughout Orange County. Flat-rate pricing, same-week delivery, driveway-safe containers for residential and commercial projects.",
   path: "/dumpster-rental",
   serviceType: "Dumpster Rental",
-  image: "/images/dumpsters_rental/img1.png",
+  image: "/media/truss-947d83.png",
 });
 
 const dumpsterRentalBreadcrumbJsonLd = getBreadcrumbJsonLd([
@@ -112,7 +112,7 @@ export default function DumpstersRentalPage() {
       <JsonLd id="ld-dumpster-rental-faq" data={dumpsterRentalFaqJsonLd} />
       <section className="-mt-[130px] relative min-h-screen w-full overflow-hidden pt-[230px]">
         <HeroParallaxBackground
-          src="/images/dumpsters_rental/img1.png"
+          src="/media/truss-947d83.png"
           alt="Dumpster rental truck in Orange County"
           priority
         />
@@ -150,7 +150,7 @@ export default function DumpstersRentalPage() {
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img2.jpg"
+                src="/media/girder-d9da30.jpg"
                 alt="Residential cleanup debris and dumpster"
                 fill
                 sizes="100vw"
@@ -167,7 +167,7 @@ export default function DumpstersRentalPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img2.jpg"
+            imageSrc="/media/girder-d9da30.jpg"
             imageAlt="Residential cleanup debris and dumpster"
             imageSide="right"
             hideImageOnSmallScreens
@@ -187,7 +187,7 @@ export default function DumpstersRentalPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img3.jpg"
+            imageSrc="/media/rebar-93403a.jpg"
             imageAlt="Construction dumpster with remodeling debris"
             imageSide="left"
             title="Remodeling & Construction Debris"
@@ -205,7 +205,7 @@ export default function DumpstersRentalPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img4.jpg"
+            imageSrc="/media/ember-255729.jpg"
             imageAlt="Yard and landscape waste dumpsters"
             imageSide="right"
             title="Yard & Landscape Waste"
@@ -227,7 +227,7 @@ export default function DumpstersRentalPage() {
       <section className="relative w-full overflow-hidden py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img5.jpg"
+            src="/media/truss-661739.jpg"
             alt="Dumpster truck and bins on residential street"
             fill
             sizes="100vw"
@@ -285,7 +285,7 @@ export default function DumpstersRentalPage() {
       </section>
 
       <ServiceStepsSection
-        imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img6.jpg"
+        imageSrc="/media/ledger-090cd2.jpg"
         imageAlt="Dumpster rental process truck on city street"
         imageSide="left"
         title="How Our Dumpster Rental Process Works"
@@ -311,7 +311,7 @@ export default function DumpstersRentalPage() {
       />
 
       <ServiceStepsSection
-        imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img7.jpg"
+        imageSrc="/media/delta-4d678f.jpg"
         imageAlt="Safety first road marking"
         imageSide="right"
         title="Important Rental Reminders"
@@ -339,7 +339,7 @@ export default function DumpstersRentalPage() {
       <section className="relative w-full overflow-hidden py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/dumpsters_rental/img8.png"
+            src="/media/joist-1c6481.png"
             alt="Dumpster rental contact section background"
             fill
             sizes="100vw"

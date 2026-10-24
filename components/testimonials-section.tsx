@@ -20,25 +20,25 @@ const TESTIMONIALS: Testimonial[] = [
     name: "Cindy Young-West",
     date: "April 2026",
     text: "Great experience! Ordered a trailer for whole-house trash out. The crew was on time and courteous. Highly recommend!",
-    image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/testimonial/cindy.jpg",
+    image: "/media/plank-beb312.jpg",
   },
   {
     name: "Patricia Andrews",
     date: "February 2026",
     text: "Very happy with their service. I would definitely use them again. They arrived exactly at the time they said. Very polite, very friendly. And a very reasonable price.",
-    image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/testimonial/patricia.jpg",
+    image: "/media/granite-cf5975.jpg",
   },
   {
     name: "Nancy Thompson",
     date: "January 2026",
     text: "I had a great experience with Demolition OC! They got the job done quickly and efficiently and I look forward to working with them again when I need to!",
-    image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/testimonial/nancy.jpg",
+    image: "/media/joist-d84c9b.jpg",
   },
   {
     name: "Brice Nzeukou",
     date: "December 2025",
     text: "Great and professional service. They worked quickly, communicated well ahead of time, and were competitive with price. I'll definitely consider them again!",
-    image: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/testimonial/brice.jpg",
+    image: "/media/quarry-8fad5b.jpg",
   },
 ];
 

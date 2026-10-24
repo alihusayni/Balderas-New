@@ -36,7 +36,7 @@ const junkRemovalServiceJsonLd = getServiceJsonLd({
     "Fast, affordable, eco-friendly junk removal throughout Orange County. We handle furniture, appliances, yard waste, construction debris, and full estate cleanouts.",
   path: "/junk-removal",
   serviceType: "Junk Removal",
-  image: "/images/junk_removal/img1.png",
+  image: "/media/lintel-43839e.png",
 });
 
 const junkRemovalBreadcrumbJsonLd = getBreadcrumbJsonLd([
@@ -106,7 +106,7 @@ export default function JunkRemovalPage() {
       <JsonLd id="ld-junk-removal-faq" data={junkRemovalFaqJsonLd} />
       <section className="-mt-[130px] relative min-h-screen w-full overflow-hidden pt-[230px]">
         <HeroParallaxBackground
-          src="/images/junk_removal/img1.png"
+          src="/media/lintel-43839e.png"
           alt="Professional junk removal service in Orange County"
           priority
         />
@@ -145,7 +145,7 @@ export default function JunkRemovalPage() {
           <div className="w-full lg:hidden">
             <div className="relative h-[360px] w-full overflow-hidden">
               <Image
-                src="/images/junk_removal/img2.png"
+                src="/media/mesa-03cbb7.png"
                 alt="Residential junk hauling team loading debris"
                 fill
                 sizes="100vw"
@@ -162,7 +162,7 @@ export default function JunkRemovalPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="/images/junk_removal/img2.png"
+            imageSrc="/media/mesa-03cbb7.png"
             imageAlt="Residential junk hauling team loading debris"
             imageSide="right"
             hideImageOnSmallScreens
@@ -189,7 +189,7 @@ export default function JunkRemovalPage() {
           />
 
           <ServiceDetailSection
-            imageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img3.jpg"
+            imageSrc="/media/hoist-90d9bd.jpg"
             imageAlt="Construction and commercial debris cleanup site"
             imageSide="left"
             title="Construction & Commercial Debris"
@@ -215,7 +215,7 @@ export default function JunkRemovalPage() {
       <section className="relative w-full overflow-hidden py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img4.jpg"
+            src="/media/willow-a353a8.jpg"
             alt="Junk removal staging background"
             fill
             sizes="100vw"
@@ -270,7 +270,7 @@ export default function JunkRemovalPage() {
       <section className="relative w-full overflow-hidden py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/junk_removal/img5.jpg"
+            src="/media/wedge-bd6b57.jpg"
             alt="Junk removal quote section background"
             fill
             sizes="100vw"

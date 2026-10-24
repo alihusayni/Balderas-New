@@ -73,7 +73,7 @@ export default function HomePage() {
       <section className="relative min-h-[100svh] w-full overflow-hidden pt-[clamp(10.5rem,18vh,12rem)] lg:pt-[clamp(8.75rem,12vh,9rem)]">
         {/* Parallax background — client component, isolated from LCP critical path */}
         <HeroParallaxBackground
-          src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/hero.webp"
+          src="/media/spall-0dabb4.webp"
           alt="Demolition service hero"
           priority
           speed={0.25}
@@ -119,7 +119,7 @@ export default function HomePage() {
       <div className="section-lazy"><TestimonialsSection /></div>
       <div className="section-lazy">
         <ContactCtaSection
-          backgroundImageSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/contactbg.webp"
+          backgroundImageSrc="/media/bracket-bba74a.webp"
           backgroundImageAlt="Contact Demolition OC"
           title="Start Your Demolition or Junk Removal Project Today"
           description="Ready to clear the way? Get a fast, friendly estimate from Demolition OC. We respond same day."

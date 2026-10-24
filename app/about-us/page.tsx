@@ -20,7 +20,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Learn about Demolition OC's commitment to safe demolition, eco-friendly junk removal, and superior service across Orange County.",
   path: "/about-us",
-  image: "/images/about/2.jpg",
+  image: "/media/pier-eee4a9.jpg",
   imageAlt: "Demolition OC project supervisor on a job site",
   keywords: [
     "Demolition OC",
@@ -74,7 +74,7 @@ export default function AboutPage() {
           <div className="w-full lg:w-[611px] lg:shrink-0">
             <div className="relative h-[420px] w-full overflow-hidden sm:h-[520px] lg:h-[761px]">
               <Image
-                src="/images/about/2.jpg"
+                src="/media/pier-eee4a9.jpg"
                 alt="Demolition OC project supervisor on a job site wearing safety gear"
                 fill
                 sizes="(max-width: 1024px) 100vw, 611px"
@@ -124,7 +124,7 @@ export default function AboutPage() {
 
       <section className="relative w-full overflow-hidden">
         <Image
-          src="/images/about/3.png"
+          src="/media/delta-2a9512.png"
           alt=""
           aria-hidden
           fill
@@ -160,7 +160,7 @@ export default function AboutPage() {
             <div className="relative h-[360px] w-[320px] sm:h-[480px] sm:w-[420px] lg:h-[640px] lg:w-[556px]">
               <div className="absolute left-0 top-0 h-[78%] w-[58%]">
                 <Image
-                  src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/about/california-top.png"
+                  src="/media/granite-d9bbac.png"
                   alt=""
                   aria-hidden
                   fill
@@ -170,7 +170,7 @@ export default function AboutPage() {
               </div>
               <div className="absolute bottom-0 right-0 h-[88%] w-[78%]">
                 <Image
-                  src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/about/california.png"
+                  src="/media/cedar-987dd9.png"
                   alt="Outline of California highlighting Orange County service area"
                   fill
                   sizes="(max-width: 1024px) 330px, 435px"
@@ -204,7 +204,7 @@ export default function AboutPage() {
           <div className="w-full xl:flex-1">
             <div className="relative h-[360px] w-full overflow-hidden sm:h-[520px] xl:h-full xl:min-h-[856px]">
               <Image
-                src="/images/about/3.png"
+                src="/media/delta-2a9512.png"
                 alt="Demolition OC crew working safely on a residential demolition"
                 fill
                 sizes="(max-width: 1279px) 100vw, 780px"
@@ -218,7 +218,7 @@ export default function AboutPage() {
       <CtaBanner
         title="Ready to clear the way?"
         description="When you hire Demolition OC, you are partnering with a licensed, insured, and dedicated team that cares about the outcome as much as you do. Experience the difference that professional communication and a customer-first attitude can make."
-        backgroundSrc="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/about/about-footer.webp"
+        backgroundSrc="/media/canyon-f0b895.webp"
         backgroundAlt=""
         titleClassName="text-[40px] sm:text-[56px] lg:text-[68px] lg:leading-[70px]"
         ctas={[

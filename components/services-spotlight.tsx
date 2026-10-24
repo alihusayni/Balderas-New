@@ -8,7 +8,7 @@ export function ServicesSpotlight() {
   return (
     <section className="relative w-full overflow-hidden">
       <Image
-        src="https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/homepage/servicesSpotlight.webp"
+        src="/media/lintel-545db8.webp"
         alt="Dumpster rental service spotlight"
         fill
         quality={22}

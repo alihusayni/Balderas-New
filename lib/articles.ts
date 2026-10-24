@@ -63,7 +63,7 @@ export const ARTICLES: Article[] = [
       "The Ultimate Guide to House Demolition in Orange County: Process, Regulations, and 2026 Cost Expectations",
     description:
       "Planning a residential teardown? Learn the step-by-step house demolition process in Orange County, including 2026 cost factors, permits, and asbestos rules with Demolition OC.",
-    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/6.jpg",
+    imageSrc: "/media/lintel-d0007e.jpg",
     imageAlt:
       "Excavator carefully demolishing a residential structure in Orange County",
     categories: ["industry", "services"],
@@ -272,7 +272,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "image",
-        src: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/2.jpg",
+        src: "/media/rebar-752c2c.jpg",
         alt: "Heavy equipment demolishing a building with water spray for dust control and crew on site in Orange County",
       },
       {
@@ -327,7 +327,7 @@ export const ARTICLES: Article[] = [
         "Free on-site consultation for residential demolition across Orange County\u2014permits, labor, hauling, and final sweep, explained upfront.",
       label: "Contact Demolition OC",
       href: "/#contact",
-      backgroundSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/3.jpg",
+      backgroundSrc: "/media/pier-f56a25.jpg",
     },
   },
   {
@@ -339,7 +339,7 @@ export const ARTICLES: Article[] = [
       "Hut Top & Structure Removal in Orange County: 2026 Cost and Process Guide",
     description:
       "What does it cost to remove a backyard hut or top-down structure in OC? See our 2026 pricing guide for deconstruction and hauling with Demolition OC.",
-    imageSrc: "/images/services/img2.png",
+    imageSrc: "/media/plank-6c7060.png",
     imageAlt:
       "Careful residential structure removal and demolition in Orange County",
     categories: ["services", "industry"],
@@ -428,7 +428,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "image",
-        src: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/2.jpg",
+        src: "/media/rebar-752c2c.jpg",
         alt: "Controlled structure demolition with equipment and crew on a residential lot in Orange County",
       },
       {
@@ -510,7 +510,7 @@ export const ARTICLES: Article[] = [
         "Tell us about your backyard hut, gazebo, or accessory structure\u2014we\u2019ll walk you through scope, permits, and a clear, upfront price.",
       label: "Request a Free Hut Removal Quote",
       href: "/#contact",
-      backgroundSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/3.jpg",
+      backgroundSrc: "/media/pier-f56a25.jpg",
     },
   },
   {
@@ -520,7 +520,7 @@ export const ARTICLES: Article[] = [
       "The High Cost of \u201CCheap\u201D: Why a Licensed Demolition Contractor is Non-Negotiable in Orange County",
     description:
       "Why hiring an unlicensed contractor for demolition in Orange County can cost you 10x what you saved\u2014and how a licensed C-21 team protects your property, your wallet, and your family.",
-    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/1.jpg",
+    imageSrc: "/media/granite-514d1a.jpg",
     imageAlt: "Yellow excavator demolishing a residential structure",
     categories: ["industry", "services"],
     author: { name: "Demolition OC Team" },
@@ -643,7 +643,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "image",
-        src: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/2.jpg",
+        src: "/media/rebar-752c2c.jpg",
         alt: "Worker spraying water for dust suppression at a demolition site",
       },
       {
@@ -684,7 +684,7 @@ export const ARTICLES: Article[] = [
         "The \u201Csavings\u201D from hiring an unlicensed contractor are an illusion. One accident, one missed permit, or one asbestos exposure will cost you 10x what you saved.",
       label: "Verify Our License & Get a Quote",
       href: "/#contact",
-      backgroundSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/3.jpg",
+      backgroundSrc: "/media/pier-f56a25.jpg",
     },
   },
   {
@@ -694,7 +694,7 @@ export const ARTICLES: Article[] = [
       "Affordable Dumpster Rental and Demolition Services in Orange County: Get a Free Quote Today",
     description:
       "Flat-rate dumpster rentals and demolition services across Orange County. Driveway-safe containers, same-week delivery, zero hidden fees. Free quote from Demolition OC",
-    imageSrc: "/images/resources/1.png",
+    imageSrc: "/media/slab-a2c3f4.png",
     imageAlt:
       "Demolition OC driveway-safe dumpster trailer rental in Orange County",
     categories: ["sales", "services"],
@@ -801,7 +801,7 @@ export const ARTICLES: Article[] = [
         "Driveway-safe roll-off containers for OC homeowners, contractors, and landlords. Same-week delivery, zero hidden fees. Tell us about your project and we\u2019ll give you an all-in price.",
       label: "Get a Free Dumpster Quote",
       href: "/#contact",
-      backgroundSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/3.jpg",
+      backgroundSrc: "/media/pier-f56a25.jpg",
     },
   },
   {
@@ -810,7 +810,7 @@ export const ARTICLES: Article[] = [
     title: "Top Reasons to Hire a Professional Junk Removal Service",
     description:
       "Hiring a professional junk removal service in Orange County saves time, protects your body, and ensures eco-friendly disposal. Here\u2019s what sets licensed haulers apart.",
-    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/2.png",
+    imageSrc: "/media/quarry-a2583b.png",
     imageAlt: "Construction debris being loaded into a truck for junk removal",
     categories: ["services", "industry"],
     author: { name: "Marcus Hale" },
@@ -906,7 +906,7 @@ export const ARTICLES: Article[] = [
         "Same-day and next-day junk removal across Orange County. We handle the loading, hauling, and eco-friendly disposal \u2014 you just point at what needs to go.",
       label: "Get a Free Junk Removal Quote",
       href: "/#contact",
-      backgroundSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/3.jpg",
+      backgroundSrc: "/media/pier-f56a25.jpg",
     },
   },
   {
@@ -916,7 +916,7 @@ export const ARTICLES: Article[] = [
     seoTitle: "Systematic Demolition Project Control | Demolition OC Orange County",
     description:
       "How Demolition OC manages permits, scheduling, and site coordination to keep every OC demolition project on time, on budget, and stress-free for homeowners.",
-    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/3.jpg",
+    imageSrc: "/media/rebar-53d2fb.jpg",
     imageAlt: "Two crew members in safety vests reviewing demolition plans",
     categories: ["company", "services"],
     author: { name: "Marcus Hale" },
@@ -991,7 +991,7 @@ export const ARTICLES: Article[] = [
         "Every Demolition OC quote includes a written project sequence. No surprises, no delays, no \u201Cwe\u2019ll figure it out when we get there.\u201D Call for a free on-site assessment.",
       label: "Request a Free Assessment",
       href: "/#contact",
-      backgroundSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/3.jpg",
+      backgroundSrc: "/media/pier-f56a25.jpg",
     },
   },
   {
@@ -1001,7 +1001,7 @@ export const ARTICLES: Article[] = [
     seoTitle: "Fast Junk Removal Orange County | Same-Day Service | Demolition OC",
     description:
       "What does same-day junk removal actually look like in Orange County? Here’s what to expect when you book Demolition OC — from call to broom-clean.",
-    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/4.jpg",
+    imageSrc: "/media/beam-f84ef9.jpg",
     imageAlt: "Workers loading household junk into a removal truck",
     categories: ["services"],
     author: { name: "Marcus Hale" },
@@ -1091,7 +1091,7 @@ export const ARTICLES: Article[] = [
         "Orange County’s most straightforward junk removal service. You point, we load, we sweep. Call before noon for same-day service.",
       label: "Get Your Free Junk Removal Quote",
       href: "/#contact",
-      backgroundSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/3.jpg",
+      backgroundSrc: "/media/pier-f56a25.jpg",
     },
   },
   {
@@ -1101,7 +1101,7 @@ export const ARTICLES: Article[] = [
     seoTitle: "Choose the Right Dumpster Size Orange County | Demolition OC",
     description:
       "Picking the wrong dumpster size wastes money. This guide helps OC homeowners match the right roll-off container to their project before delivery day.",
-    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/5.jpg",
+    imageSrc: "/media/crane-1f9dec.jpg",
     imageAlt: "Green dumpster placed in front of a residential garage",
     categories: ["sales", "industry"],
     author: { name: "Marcus Hale" },
@@ -1204,7 +1204,7 @@ export const ARTICLES: Article[] = [
         "Call us and we\u2019ll size your job in five minutes. Flat-rate dumpster rentals across Orange County \u2014 driveway-safe delivery, same-week scheduling, zero hidden fees.",
       label: "Get a Dumpster Rental Quote",
       href: "/#contact",
-      backgroundSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/3.jpg",
+      backgroundSrc: "/media/pier-f56a25.jpg",
     },
   },
   {
@@ -1214,7 +1214,7 @@ export const ARTICLES: Article[] = [
     seoTitle: "Safe Controlled Demolition Process Orange County | Demolition OC",
     description:
       "What actually makes demolition safe in Orange County? Demolition OC explains the controlled process our team uses to protect property, neighbors, and crew on every job.",
-    imageSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/resources/6.jpg",
+    imageSrc: "/media/lintel-d0007e.jpg",
     imageAlt: "Excavator carefully demolishing a residential structure",
     categories: ["services", "environmental", "industry"],
     author: { name: "Marcus Hale" },
@@ -1294,7 +1294,7 @@ export const ARTICLES: Article[] = [
         "Safe, compliant demolition across Orange County. Permits, dust control, hazardous material coordination, and a broom-clean finish \u2014 included in every quote.",
       label: "Request a Free Consultation",
       href: "/#contact",
-      backgroundSrc: "https://qxwyml8xuwxdgws0.public.blob.vercel-storage.com/balderas-assets/images/article/3.jpg",
+      backgroundSrc: "/media/pier-f56a25.jpg",
     },
   },
 ];
