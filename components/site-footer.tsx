@@ -67,10 +67,6 @@ export function SiteFooter() {
 
         <div className="flex flex-col items-center gap-4 text-center font-maison text-[15px] font-medium leading-[22px] tracking-[-0.02em] text-white/70 sm:flex-row sm:justify-center sm:gap-8 sm:text-left">
           <div className="flex items-center gap-2">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 text-[var(--color-brand-orange)]"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>11431 Westminster Ave, Garden Grove, CA 92843</span>
-          </div>
-          <div className="flex items-center gap-2">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 text-[var(--color-brand-orange)]"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             <span>Mon – Sat: 8:00 AM – 7:00 PM</span>
           </div>

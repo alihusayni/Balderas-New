@@ -30,16 +30,16 @@ export const SITE = {
   telephone: "(714) 584-6049",
   email: "info@demolitionoc.com",
   address: {
-    streetAddress: "11431 Westminster Ave",
-    addressLocality: "Garden Grove",
-    addressRegion: "CA",
-    postalCode: "92843",
-    addressCountry: "US",
+    streetAddress: "",
+    addressLocality: "",
+    addressRegion: "",
+    postalCode: "",
+    addressCountry: "",
   },
   /** Set when you have a verified office / yard location for maps rich results. */
   geo: {
-    latitude: 33.7748 as number | null,
-    longitude: -117.9463 as number | null,
+    latitude: null as number | null,
+    longitude: null as number | null,
   },
   areasServed: [
     "Tustin, CA",
