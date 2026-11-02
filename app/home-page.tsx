@@ -15,9 +15,7 @@ import { InfoTicker } from "@/components/info-ticker";
 import { MeetOwnerSection } from "@/components/meet-owner-section";
 import { ServicesDetailGrid } from "@/components/services-detail-grid";
 import { ServicesSpotlight } from "@/components/services-spotlight";
-// TestimonialsSection is a Server Component — no dynamic() wrapper needed.
 // Server Components have zero client JS so there's nothing to defer.
-import { TestimonialsSection } from "@/components/testimonials-section";
 import { WhyTrustSection } from "@/components/why-trust-section";
 import type { ContactFormField } from "@/components/contact-form-panel";
 
@@ -116,7 +114,6 @@ export default function HomePage() {
       <div className="section-lazy"><ServicesDetailGrid /></div>
       <div className="section-lazy"><WhyTrustSection /></div>
       <div className="section-lazy"><MeetOwnerSection /></div>
-      <div className="section-lazy"><TestimonialsSection /></div>
       <div className="section-lazy">
         <ContactCtaSection
           backgroundImageSrc="/media/bracket-bba74a.webp"
