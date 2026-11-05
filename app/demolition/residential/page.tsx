@@ -170,23 +170,7 @@ const PROCESS_STEPS = [
   },
 ];
 
-function getCallPhone() {
-  const raw = SITE.telephone.trim();
-  if (raw) {
-    const digits = raw.replace(/\D/g, "");
-    const href =
-      digits.length === 10
-        ? `tel:+1${digits}`
-        : digits.length >= 11
-          ? `tel:+${digits}`
-          : "tel:+17145846049";
-    return { display: raw, href };
-  }
-  return { display: "(714) 584-6049", href: "tel:+17145846049" };
-}
-
 export default function ResidentialDemolitionPage() {
-  const { display: phoneDisplay, href: callHref } = getCallPhone();
 
   return (
     <main className="flex min-h-screen flex-col bg-[var(--color-brand-dark)]">
@@ -195,7 +179,7 @@ export default function ResidentialDemolitionPage() {
         id="ld-residential-breadcrumb"
         data={residentialBreadcrumbJsonLd}
       />
-      <ResidentialDemolitionHero quoteHref="/contact" callHref={callHref} />
+      <ResidentialDemolitionHero quoteHref="/contact" />
 
       <section className="w-full bg-white py-24">
         <div className="mx-auto flex w-full max-w-container flex-col gap-20 px-6 lg:px-10 xl:gap-[120px]">
@@ -362,7 +346,7 @@ export default function ResidentialDemolitionPage() {
                 C-21 CSLB certified, fully insured, and CalOSHA compliant.
                 We serve Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
                 Huntington Beach, Newport Beach, Tustin, Garden Grove, and Orange.
-                Call <strong>(714) 584-6049</strong> for a free estimate.
+                Use the contact form for a free estimate.
               </p>
             </div>
           </div>

@@ -8,12 +8,10 @@ import { HeroSubheading } from "@/components/hero/hero-subheading";
 
 type ConcreteRemovalHeroProps = {
   quoteHref: string;
-  callHref: string;
 };
 
 export function ConcreteRemovalHero({
   quoteHref,
-  callHref,
 }: ConcreteRemovalHeroProps) {
   const scrollToNextSection = () => {
     window.scrollTo({
@@ -52,8 +50,6 @@ export function ConcreteRemovalHero({
           <HeroCtas
             primaryHref={quoteHref}
             primaryLabel="Get a Concrete Removal Quote"
-            secondaryHref="tel:+17145846049"
-            secondaryLabel="(714) 584-6049"
             showSecondaryArrow={false}
             primaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[280px]"
             secondaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[220px]"

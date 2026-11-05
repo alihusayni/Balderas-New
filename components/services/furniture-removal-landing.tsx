@@ -27,24 +27,6 @@ import {
   FullSiteClearanceIcon,
   ReliableSchedulingIcon,
 } from "@/components/icons";
-import { SITE } from "@/lib/seo";
-
-function getTextPhotoSmsHref(): string {
-  const digits = SITE.telephone.replace(/\D/g, "");
-  if (digits.length === 10) {
-    const body = encodeURIComponent(
-      "Hi Demolition OC—I need a furniture removal estimate. I'll send photos next. ",
-    );
-    return `sms:+1${digits}?body=${body}`;
-  }
-  if (digits.length >= 11) {
-    const body = encodeURIComponent(
-      "Hi Demolition OC—I need a furniture removal estimate. I'll send photos next. ",
-    );
-    return `sms:+${digits}?body=${body}`;
-  }
-  return "/contact";
-}
 
 const PROCESS_STEPS = [
   {
@@ -74,7 +56,6 @@ const PROCESS_STEPS = [
 ];
 
 export function FurnitureRemovalLanding({ children }: { children?: React.ReactNode }) {
-  const textPhotoHref = getTextPhotoSmsHref();
 
   const furnitureContactFields: ContactFormField[] = [
     {
@@ -154,8 +135,6 @@ export function FurnitureRemovalLanding({ children }: { children?: React.ReactNo
               primaryHref="#schedule-pickup"
               primaryLabel="Get a Furniture Removal Quote"
               primaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[290px]"
-              secondaryHref="tel:+17145846049"
-              secondaryLabel="(714) 584-6049"
               secondaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[240px]"
               showSecondaryArrow={false}
             />

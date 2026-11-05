@@ -9,13 +9,10 @@ import { HeroSubheading } from "@/components/hero/hero-subheading";
 type ResidentialDemolitionHeroProps = {
   /** Primary CTA typically `/contact`. */
   quoteHref: string;
-  /** Use `tel:…` so mobile devices can dial. */
-  callHref: string;
 };
 
 export function ResidentialDemolitionHero({
   quoteHref,
-  callHref,
 }: ResidentialDemolitionHeroProps) {
   const scrollToNextSection = () => {
     window.scrollTo({
@@ -52,8 +49,6 @@ export function ResidentialDemolitionHero({
           <HeroCtas
             primaryHref={quoteHref}
             primaryLabel="Get a Residential Demo Quote"
-            secondaryHref="tel:+17145846049"
-            secondaryLabel="(714) 584-6049"
             showSecondaryArrow={false}
             primaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[260px]"
             secondaryButtonClassName="sm:w-auto sm:min-w-[200px] md:w-auto md:min-w-[220px]"

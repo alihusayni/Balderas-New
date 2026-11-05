@@ -27,7 +27,7 @@ export const SITE = {
   founder: "",
   /** California C-21 contractor license number — fill when available. */
   c21LicenseNumber: "",
-  telephone: "(714) 584-6049",
+  telephone: "",
   email: "info@demolitionoc.com",
   address: {
     streetAddress: "",

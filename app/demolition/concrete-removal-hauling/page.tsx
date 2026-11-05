@@ -114,30 +114,14 @@ const CONCRETE_CONTACT_FIELDS: ContactFormField[] = [
   },
 ];
 
-function getCallPhone() {
-  const raw = SITE.telephone.trim();
-  if (raw) {
-    const digits = raw.replace(/\D/g, "");
-    const href =
-      digits.length === 10
-        ? `tel:+1${digits}`
-        : digits.length >= 11
-          ? `tel:+${digits}`
-          : "tel:+17145846049";
-    return { href };
-  }
-  return { href: "tel:+17145846049" };
-}
-
 export default function ConcreteRemovalHaulingPage() {
-  const { href: callHref } = getCallPhone();
 
   return (
     <main className="flex min-h-screen flex-col bg-[var(--color-brand-dark)]">
       <JsonLd id="ld-concrete-service" data={concreteServiceJsonLd} />
       <JsonLd id="ld-concrete-breadcrumb" data={concreteBreadcrumbJsonLd} />
       <JsonLd id="ld-concrete-faq" data={concreteFaqJsonLd} />
-      <ConcreteRemovalHero quoteHref="/contact" callHref={callHref} />
+      <ConcreteRemovalHero quoteHref="/contact" />
 
       <section className="w-full bg-white py-24">
         <div className="mx-auto flex w-full max-w-container flex-col gap-20 px-6 lg:px-10 xl:gap-[120px]">
@@ -357,7 +341,7 @@ export default function ConcreteRemovalHaulingPage() {
                 C-21 CSLB certified, and fully insured.
                 We serve Anaheim, Irvine, Santa Ana, Fullerton, Costa Mesa,
                 Huntington Beach, Newport Beach, Tustin, Garden Grove, and Orange.
-                Call <strong>(714) 584-6049</strong> for a free estimate.
+                Use the contact form for a free estimate.
               </p>
             </div>
           </div>

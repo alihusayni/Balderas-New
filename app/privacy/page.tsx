@@ -95,8 +95,7 @@ export default function PrivacyPage() {
             <li>Not be discriminated against for exercising your privacy rights.</li>
           </ul>
           <p className="mt-3">
-            To exercise any of these rights, please contact us at
-            <strong> (714) 584-6049</strong>.
+            To exercise any of these rights, please contact us through the <a href="/contact">contact form</a>.
           </p>
         </section>
 
@@ -206,7 +205,6 @@ export default function PrivacyPage() {
           </p>
           <ul className="mt-3 space-y-1 pl-6">
             <li><strong>Demolition OC</strong></li>
-            <li>Phone: (714) 584-6049</li>
             <li>Website: demolitionoc.com</li>
             <li>Serving all of Orange County, CA</li>
           </ul>

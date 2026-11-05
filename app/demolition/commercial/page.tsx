@@ -141,23 +141,7 @@ const PREFERRED_PARTNER_FEATURES = [
   },
 ];
 
-function getCallPhone() {
-  const raw = SITE.telephone.trim();
-  if (raw) {
-    const digits = raw.replace(/\D/g, "");
-    const href =
-      digits.length === 10
-        ? `tel:+1${digits}`
-        : digits.length >= 11
-          ? `tel:+${digits}`
-          : "tel:+17145846049";
-    return { display: raw, href };
-  }
-  return { display: "(714) 584-6049", href: "tel:+17145846049" };
-}
-
 export default function CommercialDemolitionPage() {
-  const { display: phoneDisplay, href: callHref } = getCallPhone();
   const siteHost = SITE.url.replace(/^https?:\/\//, "").replace(/\/$/, "");
 
   return (
@@ -167,7 +151,7 @@ export default function CommercialDemolitionPage() {
         id="ld-commercial-breadcrumb"
         data={commercialBreadcrumbJsonLd}
       />
-      <CommercialDemolitionHero quoteHref="/contact" callHref={callHref} />
+      <CommercialDemolitionHero quoteHref="/contact" />
 
       <section className="w-full bg-white py-24">
         <div className="mx-auto flex w-full max-w-container flex-col gap-20 px-6 lg:px-10 xl:gap-[120px]">

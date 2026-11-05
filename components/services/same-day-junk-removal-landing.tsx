@@ -27,29 +27,11 @@ import {
   OnSiteConsultationIcon,
   UpfrontVolumePricingIcon,
 } from "@/components/icons";
-import { SITE } from "@/lib/seo";
-
-function getTelHref(): string {
-  const digits = SITE.telephone.replace(/\D/g, "");
-  if (digits.length === 10) return `tel:+1${digits}`;
-  if (digits.length >= 11) return `tel:+${digits}`;
-  return "tel:+17145846049";
-}
-
-function getSameDaySmsHref(): string {
-  const digits = SITE.telephone.replace(/\D/g, "");
-  const body = encodeURIComponent(
-    "Hi Demolition OC—I need same-day junk removal in Orange County. I'll send photos of the pile.",
-  );
-  if (digits.length === 10) return `sms:+1${digits}?body=${body}`;
-  if (digits.length >= 11) return `sms:+${digits}?body=${body}`;
-  return "/contact";
-}
 
 const STEPS_SAME_DAY = [
   {
-    title: "Call or Text Now",
-    description: `Dial ${SITE.telephone} or text us a photo of your pile.`,
+    title: "Send Your Request",
+    description: "Fill out the contact form and tell us about your pile.",
     icon: <OnSiteConsultationIcon className="h-full w-full" />,
   },
   {
@@ -67,8 +49,6 @@ const STEPS_SAME_DAY = [
 ];
 
 export function SameDayJunkRemovalLanding({ children }: { children?: React.ReactNode }) {
-  const telHref = getTelHref();
-  const smsHref = getSameDaySmsHref();
 
   const sameDayContactFields: ContactFormField[] = [
     {
@@ -144,11 +124,9 @@ export function SameDayJunkRemovalLanding({ children }: { children?: React.React
 
             <HeroCtas
               className="mt-10 flex-wrap"
-              primaryHref={telHref}
-              primaryLabel="Call for Same Day Service"
+              primaryHref="/contact"
+              primaryLabel="Request Same Day Service"
               primaryButtonClassName="lg:w-[300px] xl:w-[340px]"
-              secondaryHref="tel:+17145846049"
-              secondaryLabel="(714) 584-6049"
               secondaryButtonClassName="md:min-w-[260px] md:w-[280px] lg:w-[340px] xl:w-[400px] 2xl:w-[440px]"
               showSecondaryArrow={false}
             />
@@ -314,14 +292,7 @@ export function SameDayJunkRemovalLanding({ children }: { children?: React.React
               Don&apos;t see your neighborhood listed?
             </SubHeading>
             <BodyText className="mt-4 max-w-[820px] text-xl leading-[1.65] text-[#0b0300] md:mt-5 md:text-2xl md:leading-[1.6]">
-              Still call{" "}
-              <a
-                href={telHref}
-                className="font-semibold text-[var(--color-brand-orange)] underline decoration-[var(--color-brand-orange)]/35 underline-offset-[5px] transition hover:decoration-[var(--color-brand-orange)]"
-              >
-                {SITE.telephone}
-              </a>{" "}
-              or text a photo of your pile. We regularly extend same-day junk
+              Still send us a request through the contact form with a photo description of your pile. We regularly extend same-day junk
               removal into other Orange County cities when trucks and crew are
               available—ask our team for an honest arrival window.
             </BodyText>
